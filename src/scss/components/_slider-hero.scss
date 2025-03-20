@@ -1,0 +1,91 @@
+/*------------------------------------------------------------------
+[ section__slider-hero ]*/
+
+.section__slider-hero {
+    padding: 10px 0 24px;
+}
+
+/*------------------------------------------------------------------
+[ swiperHero ]*/
+
+.swiperHero {
+    --swiper-pagination-bullet-width: 50px;
+    --swiper-pagination-bullet-height: 3px;
+    --swiper-pagination-bottom: 8px;
+    --swiper-pagination-bullet-border-radius: 5px;
+    --swiper-pagination-bullet-horizontal-gap: 3px;
+    --swiper-pagination-color: #F0F0F0;
+    --swiper-pagination-bullet-inactive-color: #F0F0F0;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    height: 320px;
+
+    .swiper-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .swiper-pagination-bullet {
+        position: relative;
+    }
+
+    .swiper-pagination-bullet::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #566B61;
+        z-index: 1;
+    }
+
+    .swiper-pagination-bullet-active::before {
+        animation-name: countingBar;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes countingBar {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .swiperHero {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .swiperHero {
+        --swiper-pagination-bullet-width: 40px;
+        --swiper-pagination-bottom: 4px;
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .swiperHero {
+        height: 170px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .swiperHero {
+        --swiper-pagination-bullet-width: 30px;
+        --swiper-pagination-bottom: 2px;
+        height: 150px;
+    }
+}

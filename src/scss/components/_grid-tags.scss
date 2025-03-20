@@ -1,0 +1,30 @@
+/*------------------------------------------------------------------
+[ section__grid-tags ]*/
+
+.section__grid-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.tag-item {
+    --bs-link-color-rgb: 167, 127, 90;
+    --bs-link-hover-color-rgb: 31, 51, 38;
+    display: inline-block;
+    padding: 12px 18px;
+    margin-right: 14px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    white-space: nowrap;
+    background-color: #FFF;
+}
+
+@media screen and (max-width: 991px) {
+    .tag-item {
+        padding: 10px 12px;
+        font-size: 16px;
+    }
+}

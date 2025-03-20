@@ -1,0 +1,28 @@
+/*//////////////////////////////////////////////////////////////////
+[ FORMS ]*/
+
+input,
+textarea,
+label {
+    display: block;
+    outline: none;
+    border: none;
+}
+
+.form-control,
+.form-select {
+    height: auto;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+
+.form-select {
+    padding-right: 2.25rem;
+    background-image: url(../img/icons/select.svg);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--bs-secondary);
+    box-shadow: none;
+}

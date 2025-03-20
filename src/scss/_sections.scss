@@ -1,0 +1,28 @@
+/*//////////////////////////////////////////////////////////////////
+[ SECTIONS ]*/
+
+.section {
+    position: relative;
+    padding: 30px 0px;
+}
+
+.section-heading {
+    margin-bottom: 15px;
+}
+
+.section-heading:has(a) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.section-heading .section-title {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 991px) {
+    .section {
+        padding: 24px 0px;
+    }
+}

@@ -1,0 +1,188 @@
+/*------------------------------------------------------------------
+[ card__book ]*/
+
+.card__book {
+    --bs-card-spacer-y: 14px;
+    --bs-card-spacer-x: 0px;
+    --bs-card-cap-padding-y: 0px;
+    --bs-card-cap-padding-x: 0px;
+    --bs-card-bg: var(--bs-body-bg);
+    --card-cover-height: 250px;
+    --card-badge-height: 25px;
+    width: min-content;
+
+    .card-header {
+        margin-top: var(--card-badge-height);
+    }
+
+    .card-badge {
+        --card-badge-color: #1F3326;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: var(--card-badge-height);
+        padding: 1px 10px;
+        border: 1px solid #ebebeb;
+        border-bottom: 0;
+        border-radius: 4px 4px 0 0;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: var(--card-badge-height);
+        color: var(--card-badge-color);
+        background-color: #efefef;
+        opacity: 0.95;
+        transform: translateY(calc(0px - var(--card-badge-height)));
+        z-index: 1;
+
+        &.badge-exclusive {
+            --card-badge-color: #566B61;
+        }
+    
+        &.badge-bestseller {
+            --card-badge-color: #C3846F;
+        }
+    
+        &.badge-new {
+            --card-badge-color: #1F3326;
+        }
+    }
+
+
+    .btn-add-whishlist {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 0 !important;
+        border: none !important;
+        opacity: 0.95;
+        z-index: 1;
+    }
+
+    .btn-add-whishlist.js-active .icon-heart-empty,
+    .btn-add-whishlist:not(.js-active) .icon-heart-filled {
+        display: none;
+    }
+
+    .btn-add-whishlist.js-active .icon-heart-filled {
+        animation-name: btnBounce;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        /* animation-fill-mode: forwards; */
+        will-change: transform;
+    }
+
+    .card-img-wrapper {
+        height: var(--card-cover-height);
+
+        .card-img {
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08), 5px 74px 29px 0px rgba(0, 0, 0, 0.01), 3px 41px 25px 0px rgba(0, 0, 0, 0.04), 1px 18px 18px 0px rgba(0, 0, 0, 0.07), 8px 115px 32px 0px rgba(0, 0, 0, 0);
+        }
+    }
+
+    .card-title {
+        --bs-link-color-rgb: 31, 51, 38;
+        --bs-link-hover-color-rgb: 86, 107, 97;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-family: var(--theme-ff-title);
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .card-author {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+
+    .card-rating {
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+
+    .card-rating__average {
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+        font-weight: 500;
+    }
+
+    .card-rating__total {
+        color: #9B9B9B;
+    }
+
+    .card-info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        line-height: 1;
+    }
+
+    .card-info__format {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .card-info__price {
+        font-size: 16px;
+    }
+}
+
+@keyframes btnBounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .card__book {
+        --bs-card-spacer-y: 12px;
+        --card-cover-height: 170px;
+
+        .card-title,
+        .card-author,
+        .card-rating {
+            margin-bottom: 6px;
+        }
+
+        .card-title {
+            font-size: 16px;
+        }
+
+        .card-author {
+            font-size: 12px;
+        }
+
+        .card-rating__total .rating-legend {
+            display: none;
+        }
+
+        .card-info__price {
+            font-size: 12px;
+        }
+    }
+}

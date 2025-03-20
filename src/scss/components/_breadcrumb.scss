@@ -1,0 +1,15 @@
+/*------------------------------------------------------------------
+[ breadcrumb ]*/
+
+.section-breadcrumb {
+    margin-bottom: 40px;
+}
+
+.breadcrumb-item {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.breadcrumb-item.active {
+    color: #b8b8b8;
+}

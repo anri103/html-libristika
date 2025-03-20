@@ -1,0 +1,24 @@
+{
+  "name": "html-libristika",
+  "version": "1.0.0",
+  "description": "Large portal for selling books with a personal account for readers and authors",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "browser-sync": "^3.0.3",
+    "del": "^6.1.1",
+    "gulp": "^5.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.86.0",
+    "swiper": "^11.2.6"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8"
+  }
+}

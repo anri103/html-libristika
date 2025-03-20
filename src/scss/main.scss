@@ -1,1 +1,29 @@
-@import "~bootstrap/scss/bootstrap";
+/*!
+ * Theme: Libristika
+ * Author: Andrew G
+ * Version: 1.0.0
+ */
+
+@use 'fonts';
+@use 'variables';
+@use 'typography';
+@use 'links';
+@use 'forms';
+@use 'buttons';
+@use 'swiper';
+@use 'sections';
+@use 'cards';
+
+/*//////////////////////////////////////////////////////////////////
+[ COMPONENTS ]*/
+
+@use 'components/header';
+@use 'components/footer';
+@use 'components/breadcrumb';
+@use 'components/pagination';
+@use 'components/slider-hero';
+@use 'components/grid-tags';
+@use 'components/card-book';
+@use 'components/card-collection';
+@use 'components/card-genre';
+@use 'components/card-author';

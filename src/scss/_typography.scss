@@ -1,0 +1,117 @@
+/*//////////////////////////////////////////////////////////////////
+[ TYPOGRAPHY ]*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.75rem;
+  font-family: var(--theme-ff-title);
+  font-weight: 500;
+}
+
+h1,
+.h1 {
+  font-size: 3.4rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.5rem;
+}
+
+h3,
+.h3 {
+  font-size: 2.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.5rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.25rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+
+  h1,
+  .h1 {
+    font-size: 3.4rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.75rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 2.5rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.5rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1.25rem;
+  }
+
+  h6,
+  .h6 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .fs-1 {
+    font-size: 3.4rem !important;
+  }
+
+  .fs-2 {
+    font-size: 2.7rem !important;
+  }
+
+  .fs-3 {
+    font-size: 2.5rem !important;
+  }
+
+  .fs-4 {
+    font-size: 1.5rem !important;
+  }
+
+  .fs-5 {
+    font-size: 1.25rem !important;
+  }
+
+  .fs-6 {
+    font-size: 1rem !important;
+  }
+}
+
+.small {
+  font-size: 0.93rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}

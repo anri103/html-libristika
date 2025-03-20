@@ -1,0 +1,96 @@
+/*//////////////////////////////////////////////////////////////////
+[ ROOT ]*/
+
+:root {
+  --theme-ff-main: 'Muller-Trial', sans-serif;
+  --theme-ff-title: 'Spectral', serif;
+
+  --bs-primary: #566B61;
+  --bs-secondary: #B4664C;
+  --bs-success: #1AB86D;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+
+  --bs-primary-rgb: 86, 107, 97;
+  --bs-secondary-rgb: 180, 102, 76;
+  --bs-success-rgb: 26, 184, 109;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark-rgb: 33, 37, 41;
+
+  --bs-body-font-family: var(--theme-ff-main);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.25;
+  --bs-body-color: #1F3326;
+  --bs-body-color-rgb: 31, 51, 38;
+  --bs-body-bg: #F6F6F6;
+  --bs-body-bg-rgb: 246, 246, 246;
+  --bs-border-width: 1px;
+  --bs-border-style: solid;
+  --bs-border-color: #dee2e6;
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --bs-border-radius: 0.625rem;
+  --bs-border-radius-sm: 0.25rem;
+  --bs-border-radius-lg: 0.5rem;
+  --bs-border-radius-xl: 1rem;
+  --bs-border-radius-2xl: 2rem;
+  --bs-border-radius-pill: 50rem;
+
+  --bs-link-color: #566B61;
+  --bs-link-color-rgb: 86, 107, 97;
+  --bs-link-hover-color: #1F3326;
+  --bs-link-hover-color-rgb: 31, 51, 38;
+
+  --swiper-theme-color: #C3846F;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+
+/* ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  } */
+
+/* ::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+  } */
+
+/* ::-webkit-scrollbar-thumb {
+    background-color: #120E1E;
+  } */
+
+/*//////////////////////////////////////////////////////////////////
+[ BASE STYLES ]*/
+
+.bg-img {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inline-icon {
+  vertical-align: baseline;
+}
+
+@media (min-width: 1600px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    --container-xxxl: 1400px;
+    max-width: calc(var(--container-xxxl) + var(--bs-gutter-x));
+  }
+}

@@ -1,0 +1,25 @@
+/*//////////////////////////////////////////////////////////////////
+[ CARDS ]*/
+
+.card {
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-border-width: 1px;
+    --bs-card-border-color: transparent;
+    --bs-card-border-radius: 0px;
+    --bs-card-inner-border-radius: 0px;
+    --bs-card-cap-padding-y: 1rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: #fff;
+    --bs-card-bg: #fff;
+    word-wrap: normal;
+}
+
+.card-header {
+    position: relative;
+}
+
+.card-footer {
+    border-top: none;
+}

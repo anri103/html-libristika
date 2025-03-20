@@ -1,0 +1,45 @@
+/*------------------------------------------------------------------
+[ pagination ]*/
+
+.navigation-pagination {
+    margin-top: 60px;
+}
+
+.navigation-pagination ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.navigation-pagination ul li .page-numbers {
+    display: inline-block;
+    padding: 2px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 300;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation-pagination ul li .current {
+    color: #1F3326;
+    font-weight: 400;
+    border-color: transparent;
+}
+
+@media screen and (max-width: 991px) {
+    .navigation-pagination ul {
+        gap: 8px;
+    }
+
+    .navigation-pagination ul li .page-numbers {
+        padding: 2px 9px;
+        font-size: 16px;
+    }
+}

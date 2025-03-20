@@ -1,0 +1,68 @@
+/*//////////////////////////////////////////////////////////////////
+[ FONTS ]*/
+
+@font-face {
+  font-family: 'Muller-Trial';
+  src: local('Muller Trial'), local('Muller-Trial'),
+    url('../fonts/muller/Muller-Trial-Regular.woff2') format('woff2'),
+    url('../fonts/muller/Muller-Trial-Regular.woff') format('woff'),
+    url('../fonts/muller/Muller-Trial-Regular.ttf') format('truetype'),
+    url('../fonts/muller/Muller-Trial-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller-Trial';
+  src: local('Muller Trial Medium'), local('Muller-Trial Medium'),
+    url('../fonts/muller/Muller-Trial-Medium.woff2') format('woff2'),
+    url('../fonts/muller/Muller-Trial-Medium.woff') format('woff'),
+    url('../fonts/muller/Muller-Trial-Medium.ttf') format('truetype'),
+    url('../fonts/muller/Muller-Trial-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller-Trial';
+  src: local('Muller Trial Light'), local('Muller-Trial Light'),
+    url('../fonts/muller/Muller-Trial-Light.woff2') format('woff2'),
+    url('../fonts/muller/Muller-Trial-Light.woff') format('woff'),
+    url('../fonts/muller/Muller-Trial-Light.ttf') format('truetype'),
+    url('../fonts/muller/Muller-Trial-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller-Trial';
+  src: local('Muller Trial Bold'), local('Muller-Trial Bold'),
+    url('../fonts/muller/Muller-Trial-Bold.woff2') format('woff2'),
+    url('../fonts/muller/Muller-Trial-Bold.woff') format('woff'),
+    url('../fonts/muller/Muller-Trial-Bold.ttf') format('truetype'),
+    url('../fonts/muller/Muller-Trial-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Spectral */
+
+@font-face {
+  font-family: 'Spectral';
+  src: local('Spectral Medium'),
+    url('../fonts/spectral/Spectral-Medium.woff2') format('woff2'),
+    url('../fonts/spectral/Spectral-Medium.woff') format('woff'),
+    url('../fonts/spectral/Spectral-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: local('Spectral SemiBold'),
+    url('../fonts/spectral/Spectral-SemiBold.woff2') format('woff2'),
+    url('../fonts/spectral/Spectral-SemiBold.woff') format('woff'),
+    url('../fonts/spectral/Spectral-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

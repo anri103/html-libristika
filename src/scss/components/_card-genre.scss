@@ -1,0 +1,26 @@
+/*------------------------------------------------------------------
+[ card__genre ]*/
+
+.card__genre {
+    --bs-card-bg: var(--bs-body-bg);
+    --card-cover-height: 205px;
+    width: 205px;
+
+    .card-img-wrapper {
+        height: var(--card-cover-height);
+
+        .card-img {
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .card__genre {
+        --card-cover-height: 170px;
+        width: 170px;
+    }
+}
