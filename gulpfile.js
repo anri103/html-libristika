@@ -109,11 +109,6 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
-// Удаление пустых папок
-function cleanEmptyDirs() {
-  return del(['dist/**/*', '!dist/**/*.*']); // Удаляем только пустые папки
-}
-
 // Запуск сервера и отслеживание изменений
 function serve() {
   browserSync.init({
@@ -140,7 +135,7 @@ exports.html = html;
 exports.serve = serve;
 
 // Сборка проекта
-exports.build = series(clean, parallel(styles, scripts, images, fonts, html), cleanEmptyDirs);
+exports.build = series(clean, parallel(styles, scripts, images, fonts, html));
 
 // Задача по умолчанию
 exports.default = series(clean, parallel(styles, scripts, images, fonts, html), parallel(sync, serve));
