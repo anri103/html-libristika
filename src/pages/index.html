@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../img/favicon/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon/favicon.png" type="image/png">
+
     <title>Главная</title>
+
+    <!-- styles -->
     @@include('../components/styles.html')
 </head>
 
@@ -28,17 +31,17 @@
                             <a href="#">
                                 <picture>
                                     <!-- For Mobile screens -->
-                                    <source media="(max-width: 991px)" srcset="../img/hero-banner/01(900x300).webp"
+                                    <source media="(max-width: 991px)" srcset="img/hero-banner/01(900x300).webp"
                                         type="image/webp">
-                                    <source media="(max-width: 991px)" srcset="../img/hero-banner/01(900x300).jpg"
+                                    <source media="(max-width: 991px)" srcset="img/hero-banner/01(900x300).jpg"
                                         type="image/jpeg">
                                     <!-- For Desktop screens -->
-                                    <source media="(min-width: 992px)" srcset="../img/hero-banner/01(2400x600).webp"
+                                    <source media="(min-width: 992px)" srcset="img/hero-banner/01(2400x600).webp"
                                         type="image/webp">
-                                    <source media="(min-width: 992px)" srcset="../img/hero-banner/01(2400x600).jpg"
+                                    <source media="(min-width: 992px)" srcset="img/hero-banner/01(2400x600).jpg"
                                         type="image/jpeg">
                                     <!-- Fallback for browsers that do not support <picture> or WebP -->
-                                    <img class="swiper-img" src="../img/hero-banner/01(2400x600).jpg"
+                                    <img class="swiper-img" src="img/hero-banner/01(2400x600).jpg"
                                         alt="Лучшие книги февраля 2025. Либристика" loading="lazy" decoding="async">
                                 </picture>
                             </a>
@@ -47,17 +50,17 @@
                             <a href="#">
                                 <picture>
                                     <!-- For Mobile screens -->
-                                    <source media="(max-width: 991px)" srcset="../img/hero-banner/02(900x300).webp"
+                                    <source media="(max-width: 991px)" srcset="img/hero-banner/02(900x300).webp"
                                         type="image/webp">
-                                    <source media="(max-width: 991px)" srcset="../img/hero-banner/02(900x300).jpg"
+                                    <source media="(max-width: 991px)" srcset="img/hero-banner/02(900x300).jpg"
                                         type="image/jpeg">
                                     <!-- For Desktop screens -->
-                                    <source media="(min-width: 992px)" srcset="../img/hero-banner/02(2400x600).webp"
+                                    <source media="(min-width: 992px)" srcset="img/hero-banner/02(2400x600).webp"
                                         type="image/webp">
-                                    <source media="(min-width: 992px)" srcset="../img/hero-banner/02(2400x600).jpg"
+                                    <source media="(min-width: 992px)" srcset="img/hero-banner/02(2400x600).jpg"
                                         type="image/jpeg">
                                     <!-- Fallback for browsers that do not support <picture> or WebP -->
-                                    <img class="swiper-img" src="../img/hero-banner/02(2400x600).jpg"
+                                    <img class="swiper-img" src="img/hero-banner/02(2400x600).jpg"
                                         alt="Лия Арден Морана и Тень. Либристика" loading="lazy" decoding="async">
                                 </picture>
                             </a>
@@ -66,17 +69,17 @@
                             <a href="#">
                                 <picture>
                                     <!-- For Mobile screens -->
-                                    <source media="(max-width: 991px)" srcset="../img/hero-banner/03(900x300).webp"
+                                    <source media="(max-width: 991px)" srcset="img/hero-banner/03(900x300).webp"
                                         type="image/webp">
-                                    <source media="(max-width: 991px)" srcset="../img/hero-banner/03(900x300).jpg"
+                                    <source media="(max-width: 991px)" srcset="img/hero-banner/03(900x300).jpg"
                                         type="image/jpeg">
                                     <!-- For Desktop screens -->
-                                    <source media="(min-width: 992px)" srcset="../img/hero-banner/03(2400x600).webp"
+                                    <source media="(min-width: 992px)" srcset="img/hero-banner/03(2400x600).webp"
                                         type="image/webp">
-                                    <source media="(min-width: 992px)" srcset="../img/hero-banner/03(2400x600).jpg"
+                                    <source media="(min-width: 992px)" srcset="img/hero-banner/03(2400x600).jpg"
                                         type="image/jpeg">
                                     <!-- Fallback for browsers that do not support <picture> or WebP -->
-                                    <img class="swiper-img" src="../img/hero-banner/03(2400x600).jpg"
+                                    <img class="swiper-img" src="img/hero-banner/03(2400x600).jpg"
                                         alt="Марина Суржевская Совершенные. Либристика" loading="lazy" decoding="async">
                                 </picture>
                             </a>
@@ -113,8 +116,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/01.webp",
-                                    "imgJpg": "../img/card-book-cover/01.jpg",
+                                    "imgWebp": "img/card-book-cover/01.webp",
+                                    "imgJpg": "img/card-book-cover/01.jpg",
                                     "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
                                     "title": "Девушка с татуировкой дракона",
                                     "author": "Стиг Ларссон",
@@ -133,8 +136,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-bestseller",
                                     "badgeText": "Хит продаж",
-                                    "imgWebp": "../img/card-book-cover/02.webp",
-                                    "imgJpg": "../img/card-book-cover/02.jpg",
+                                    "imgWebp": "img/card-book-cover/02.webp",
+                                    "imgJpg": "img/card-book-cover/02.jpg",
                                     "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
                                     "title": "Ведьмак в озвучке Всеволода Кузнецова",
                                     "author": "Анджей Сапковский",
@@ -153,8 +156,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-new",
                                     "badgeText": "Новинка",
-                                    "imgWebp": "../img/card-book-cover/03.webp",
-                                    "imgJpg": "../img/card-book-cover/03.jpg",
+                                    "imgWebp": "img/card-book-cover/03.webp",
+                                    "imgJpg": "img/card-book-cover/03.jpg",
                                     "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
                                     "title": "Тайна мертвого ректора. Книга 2",
                                     "author": "Виктор Дашкевич",
@@ -173,8 +176,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "",
                                     "badgeText": "",
-                                    "imgWebp": "../img/card-book-cover/04.webp",
-                                    "imgJpg": "../img/card-book-cover/04.jpg",
+                                    "imgWebp": "img/card-book-cover/04.webp",
+                                    "imgJpg": "img/card-book-cover/04.jpg",
                                     "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
                                     "title": "Тайна мертвого ректора. Книга 1",
                                     "author": "Виктор Дашкевич",
@@ -193,8 +196,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/05.webp",
-                                    "imgJpg": "../img/card-book-cover/05.jpg",
+                                    "imgWebp": "img/card-book-cover/05.webp",
+                                    "imgJpg": "img/card-book-cover/05.jpg",
                                     "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
                                     "title": "Ведьмак: Сезон гроз. Дорога без возврата",
                                     "author": "Анджей Сапковский",
@@ -213,8 +216,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/06.webp",
-                                    "imgJpg": "../img/card-book-cover/06.jpg",
+                                    "imgWebp": "img/card-book-cover/06.webp",
+                                    "imgJpg": "img/card-book-cover/06.jpg",
                                     "imgAlt": "АтакА. Anne Dar. Либристика.",
                                     "title": "АтакА",
                                     "author": "Anne Dar",
@@ -233,8 +236,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/07.webp",
-                                    "imgJpg": "../img/card-book-cover/07.jpg",
+                                    "imgWebp": "img/card-book-cover/07.webp",
+                                    "imgJpg": "img/card-book-cover/07.jpg",
                                     "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
                                     "title": "Дом лжи",
                                     "author": "Дэвид Эллис",
@@ -253,8 +256,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/08.webp",
-                                    "imgJpg": "../img/card-book-cover/08.jpg",
+                                    "imgWebp": "img/card-book-cover/08.webp",
+                                    "imgJpg": "img/card-book-cover/08.jpg",
                                     "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
                                     "title": "Кукомоя",
                                     "author": "Полина Луговцова",
@@ -301,8 +304,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/07.webp",
-                                    "imgJpg": "../img/card-book-cover/07.jpg",
+                                    "imgWebp": "img/card-book-cover/07.webp",
+                                    "imgJpg": "img/card-book-cover/07.jpg",
                                     "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
                                     "title": "Дом лжи",
                                     "author": "Дэвид Эллис",
@@ -321,8 +324,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/08.webp",
-                                    "imgJpg": "../img/card-book-cover/08.jpg",
+                                    "imgWebp": "img/card-book-cover/08.webp",
+                                    "imgJpg": "img/card-book-cover/08.jpg",
                                     "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
                                     "title": "Кукомоя",
                                     "author": "Полина Луговцова",
@@ -369,8 +372,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-bestseller",
                                     "badgeText": "Хит продаж",
-                                    "imgWebp": "../img/card-book-cover/02.webp",
-                                    "imgJpg": "../img/card-book-cover/02.jpg",
+                                    "imgWebp": "img/card-book-cover/02.webp",
+                                    "imgJpg": "img/card-book-cover/02.jpg",
                                     "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
                                     "title": "Ведьмак в озвучке Всеволода Кузнецова",
                                     "author": "Анджей Сапковский",
@@ -389,8 +392,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/06.webp",
-                                    "imgJpg": "../img/card-book-cover/06.jpg",
+                                    "imgWebp": "img/card-book-cover/06.webp",
+                                    "imgJpg": "img/card-book-cover/06.jpg",
                                     "imgAlt": "АтакА. Anne Dar. Либристика.",
                                     "title": "АтакА",
                                     "author": "Anne Dar",
@@ -409,8 +412,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "",
                                     "badgeText": "",
-                                    "imgWebp": "../img/card-book-cover/04.webp",
-                                    "imgJpg": "../img/card-book-cover/04.jpg",
+                                    "imgWebp": "img/card-book-cover/04.webp",
+                                    "imgJpg": "img/card-book-cover/04.jpg",
                                     "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
                                     "title": "Тайна мертвого ректора. Книга 1",
                                     "author": "Виктор Дашкевич",
@@ -429,8 +432,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/01.webp",
-                                    "imgJpg": "../img/card-book-cover/01.jpg",
+                                    "imgWebp": "img/card-book-cover/01.webp",
+                                    "imgJpg": "img/card-book-cover/01.jpg",
                                     "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
                                     "title": "Девушка с татуировкой дракона",
                                     "author": "Стиг Ларссон",
@@ -449,8 +452,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-new",
                                     "badgeText": "Новинка",
-                                    "imgWebp": "../img/card-book-cover/03.webp",
-                                    "imgJpg": "../img/card-book-cover/03.jpg",
+                                    "imgWebp": "img/card-book-cover/03.webp",
+                                    "imgJpg": "img/card-book-cover/03.jpg",
                                     "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
                                     "title": "Тайна мертвого ректора. Книга 2",
                                     "author": "Виктор Дашкевич",
@@ -469,8 +472,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/05.webp",
-                                    "imgJpg": "../img/card-book-cover/05.jpg",
+                                    "imgWebp": "img/card-book-cover/05.webp",
+                                    "imgJpg": "img/card-book-cover/05.jpg",
                                     "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
                                     "title": "Ведьмак: Сезон гроз. Дорога без возврата",
                                     "author": "Анджей Сапковский",
@@ -489,8 +492,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/07.webp",
-                                    "imgJpg": "../img/card-book-cover/07.jpg",
+                                    "imgWebp": "img/card-book-cover/07.webp",
+                                    "imgJpg": "img/card-book-cover/07.jpg",
                                     "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
                                     "title": "Дом лжи",
                                     "author": "Дэвид Эллис",
@@ -509,8 +512,8 @@
                                 @@include('../components/card/book.html', {
                                     "badgeClass": "badge-exclusive",
                                     "badgeText": "Эксклюзив",
-                                    "imgWebp": "../img/card-book-cover/08.webp",
-                                    "imgJpg": "../img/card-book-cover/08.jpg",
+                                    "imgWebp": "img/card-book-cover/08.webp",
+                                    "imgJpg": "img/card-book-cover/08.jpg",
                                     "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
                                     "title": "Кукомоя",
                                     "author": "Полина Луговцова",
@@ -555,8 +558,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/genre.html', {
-                                    "imgWebp": "../img/card-genre/01.webp",
-                                    "imgPng": "../img/card-genre/01.png",
+                                    "imgWebp": "img/card-genre/01.webp",
+                                    "imgPng": "img/card-genre/01.png",
                                     "imgAlt": "Жанр Фентези. Либристика."
                                 })
                             </div>
@@ -564,8 +567,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/genre.html', {
-                                    "imgWebp": "../img/card-genre/01.webp",
-                                    "imgPng": "../img/card-genre/01.png",
+                                    "imgWebp": "img/card-genre/01.webp",
+                                    "imgPng": "img/card-genre/01.png",
                                     "imgAlt": "Жанр Фентези. Либристика."
                                 })
                             </div>
@@ -573,8 +576,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/genre.html', {
-                                    "imgWebp": "../img/card-genre/01.webp",
-                                    "imgPng": "../img/card-genre/01.png",
+                                    "imgWebp": "img/card-genre/01.webp",
+                                    "imgPng": "img/card-genre/01.png",
                                     "imgAlt": "Жанр Фентези. Либристика."
                                 })
                             </div>
@@ -582,8 +585,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/genre.html', {
-                                    "imgWebp": "../img/card-genre/01.webp",
-                                    "imgPng": "../img/card-genre/01.png",
+                                    "imgWebp": "img/card-genre/01.webp",
+                                    "imgPng": "img/card-genre/01.png",
                                     "imgAlt": "Жанр Фентези. Либристика."
                                 })
                             </div>
@@ -591,8 +594,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/genre.html', {
-                                    "imgWebp": "../img/card-genre/01.webp",
-                                    "imgPng": "../img/card-genre/01.png",
+                                    "imgWebp": "img/card-genre/01.webp",
+                                    "imgPng": "img/card-genre/01.png",
                                     "imgAlt": "Жанр Фентези. Либристика."
                                 })
                             </div>
@@ -600,8 +603,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/genre.html', {
-                                    "imgWebp": "../img/card-genre/01.webp",
-                                    "imgPng": "../img/card-genre/01.png",
+                                    "imgWebp": "img/card-genre/01.webp",
+                                    "imgPng": "img/card-genre/01.png",
                                     "imgAlt": "Жанр Фентези. Либристика."
                                 })
                             </div>
@@ -609,8 +612,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/genre.html', {
-                                    "imgWebp": "../img/card-genre/01.webp",
-                                    "imgPng": "../img/card-genre/01.png",
+                                    "imgWebp": "img/card-genre/01.webp",
+                                    "imgPng": "img/card-genre/01.png",
                                     "imgAlt": "Жанр Фентези. Либристика."
                                 })
                             </div>
@@ -646,8 +649,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/collection.html', {
-                                    "imgWebp": "../img/card-collection/01.webp",
-                                    "imgPng": "../img/card-collection/01.png",
+                                    "imgWebp": "img/card-collection/01.webp",
+                                    "imgPng": "img/card-collection/01.png",
                                     "imgAlt": "Современная зарубежная классика: Обязательно к прочтению. Либристика.",
                                     "title": "Современная зарубежная классика: Обязательно к прочтению"
                                 })
@@ -656,8 +659,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/collection.html', {
-                                    "imgWebp": "../img/card-collection/01.webp",
-                                    "imgPng": "../img/card-collection/01.png",
+                                    "imgWebp": "img/card-collection/01.webp",
+                                    "imgPng": "img/card-collection/01.png",
                                     "imgAlt": "Современная зарубежная классика: Обязательно к прочтению. Либристика.",
                                     "title": "Современная зарубежная классика: Обязательно к прочтению"
                                 })
@@ -666,8 +669,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/collection.html', {
-                                    "imgWebp": "../img/card-collection/01.webp",
-                                    "imgPng": "../img/card-collection/01.png",
+                                    "imgWebp": "img/card-collection/01.webp",
+                                    "imgPng": "img/card-collection/01.png",
                                     "imgAlt": "Современная зарубежная классика: Обязательно к прочтению. Либристика.",
                                     "title": "Современная зарубежная классика: Обязательно к прочтению"
                                 })
@@ -676,8 +679,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/collection.html', {
-                                    "imgWebp": "../img/card-collection/01.webp",
-                                    "imgPng": "../img/card-collection/01.png",
+                                    "imgWebp": "img/card-collection/01.webp",
+                                    "imgPng": "img/card-collection/01.png",
                                     "imgAlt": "Современная зарубежная классика: Обязательно к прочтению. Либристика.",
                                     "title": "Современная зарубежная классика: Обязательно к прочтению"
                                 })
@@ -686,8 +689,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/collection.html', {
-                                    "imgWebp": "../img/card-collection/01.webp",
-                                    "imgPng": "../img/card-collection/01.png",
+                                    "imgWebp": "img/card-collection/01.webp",
+                                    "imgPng": "img/card-collection/01.png",
                                     "imgAlt": "Современная зарубежная классика: Обязательно к прочтению. Либристика.",
                                     "title": "Современная зарубежная классика: Обязательно к прочтению"
                                 })
@@ -696,8 +699,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/collection.html', {
-                                    "imgWebp": "../img/card-collection/01.webp",
-                                    "imgPng": "../img/card-collection/01.png",
+                                    "imgWebp": "img/card-collection/01.webp",
+                                    "imgPng": "img/card-collection/01.png",
                                     "imgAlt": "Современная зарубежная классика: Обязательно к прочтению. Либристика.",
                                     "title": "Современная зарубежная классика: Обязательно к прочтению"
                                 })
@@ -752,8 +755,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/author.html', {
-                                    "imgCover": "../img/card-author/cover-01.jpg",
-                                    "avatar": "../img/card-author/avatar-01.jpg",
+                                    "imgCover": "img/card-author/cover-01.jpg",
+                                    "avatar": "img/card-author/avatar-01.jpg",
                                     "avatarAlt": "Автор Александра Кронос. Либристика.",
                                     "title": "Александра Кронос",
                                     "subscribers": "3416"
@@ -763,8 +766,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/author.html', {
-                                    "imgCover": "../img/card-author/cover-02.jpg",
-                                    "avatar": "../img/card-author/avatar-02.jpg",
+                                    "imgCover": "img/card-author/cover-02.jpg",
+                                    "avatar": "img/card-author/avatar-02.jpg",
                                     "avatarAlt": "Автор Ланцов Михаил Алексеевич. Либристика.",
                                     "title": "Ланцов Михаил Алексеевич",
                                     "subscribers": "3416"
@@ -774,8 +777,8 @@
                             <div class="swiper-slide">
                                 <!-- card -->
                                 @@include('../components/card/author.html', {
-                                    "imgCover": "../img/card-author/cover-01.jpg",
-                                    "avatar": "../img/card-author/avatar-default.jpg",
+                                    "imgCover": "img/card-author/cover-01.jpg",
+                                    "avatar": "img/card-author/avatar-default.jpg",
                                     "avatarAlt": "Автор Александр Якубович. Либристика.",
                                     "title": "Александр Якубович",
                                     "subscribers": "3416"
@@ -793,6 +796,8 @@
 
     <!-- footer -->
     @@include('../components/footer.html')
+
+    <!-- scripts -->
     @@include('../components/scripts.html')
 </body>
 

@@ -1,4 +1,25 @@
-<header class="header">
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon/favicon.png" type="image/png">
+
+    <title>Регистрация</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<!-- Динамические классы в зависимости от типа страницы -->
+
+<body class="page-home">
+
+    <!-- header -->
+    <header class="header">
     <div class="container">
 
         <!-- header-logo -->
@@ -118,3 +139,104 @@
 
     </div>
 </header>
+
+    <!-- main -->
+    <main class="main">
+
+        <section class="section">
+            <div class="container">
+                <!-- Content -->
+                <div class="section-body">
+                    <div class="row gy-4">
+                        <div class="col-lg-6">
+                            <div style="max-width: 430px;">
+                                <h1 class="section-title">Регистрация</h1>
+                                <div class="h4 text-primary">На указанный в форме email придет запрос на подтверждение
+                                    регистрации!</div>
+                            </div>
+                            <div class="d-none d-lg-block">
+                                <picture>
+                                    <img class="img-fluid" src="img/user/register-bg.png"
+                                        alt="Регистрация пользователя. Либристика">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="registration-form-wrapper">
+                                <form class="needs-validation" action="#" method="post">
+                                    <div class="row gy-3 gy-lg-4">
+                                        <div class="col-lg-6">
+                                            <label class="form-label" for="formSignupfname">Имя</label>
+                                            <input placeholder="" id="formSignupfname" class="form-control" type="text"
+                                                name="firstName">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label class="form-label" for="formSignuplname">Фамилия</label>
+                                            <input placeholder="" id="formSignuplname" class="form-control" type="text"
+                                                name="lastName">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label" for="formSignupEmail">Email</label>
+                                            <input placeholder="" id="formSignupEmail" class="form-control" type="email"
+                                                name="email">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label class="form-label" for="formSignupPassword">Пароль</label>
+                                            <input placeholder="" id="formSignupPassword" class="form-control"
+                                                type="password" name="password" aria-describedby="passwordHelpBlock">
+                                            <div id="passwordHelpBlock" class="form-text">
+                                                Ваш пароль должен быть 8-20 символов, содержать буквы и цифры без
+                                                пробелов.
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label class="form-label" for="formSignupCheckPassword">Подтверждение
+                                                пароля</label>
+                                            <input placeholder="" id="formSignupCheckPassword" class="form-control"
+                                                type="password" name="password">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div style="height:75px;background-color: #D9D9D9;"></div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label class="form-label" for="formSignupCaptcha">Введите текст с
+                                                картинки</label>
+                                            <input placeholder="" id="formSignupCaptcha" class="form-control"
+                                                type="text" name="captcha">
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                    Я ознакомлен (а) и соглашаюсь на <a href="#" class="text-decoration-underline">обработку персональных данных</a>.
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100 mt-3">Регистрация</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+    <div class="container">
+        <h2>Здесь должен быть ФУТЕР!</h2>
+    </div>
+</footer>
+
+    <!-- scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
