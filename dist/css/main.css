@@ -6,28 +6,22 @@
 /*//////////////////////////////////////////////////////////////////
 [ FONTS ]*/
 @font-face {
-  font-family: "Muller-Trial";
-  src: local("Muller Trial"), local("Muller-Trial"), url("../fonts/muller/Muller-Trial-Regular.woff2") format("woff2"), url("../fonts/muller/Muller-Trial-Regular.woff") format("woff"), url("../fonts/muller/Muller-Trial-Regular.ttf") format("truetype"), url("../fonts/muller/Muller-Trial-Regular.otf") format("opentype");
+  font-family: "Muller Next Trial";
+  font-style: normal;
   font-weight: 400;
-  font-style: normal;
+  src: local("Muller Next Trial"), url("https://fonts.cdnfonts.com/s/91239/MullerNextTrial-Regular.woff") format("woff");
 }
 @font-face {
-  font-family: "Muller-Trial";
-  src: local("Muller Trial Medium"), local("Muller-Trial Medium"), url("../fonts/muller/Muller-Trial-Medium.woff2") format("woff2"), url("../fonts/muller/Muller-Trial-Medium.woff") format("woff"), url("../fonts/muller/Muller-Trial-Medium.ttf") format("truetype"), url("../fonts/muller/Muller-Trial-Medium.otf") format("opentype");
-  font-weight: 500;
+  font-family: "Muller Next Trial";
   font-style: normal;
+  font-weight: 100;
+  src: local("Muller Next Trial"), url("https://fonts.cdnfonts.com/s/91239/MullerNextTrial-Thin.woff") format("woff");
 }
 @font-face {
-  font-family: "Muller-Trial";
-  src: local("Muller Trial Light"), local("Muller-Trial Light"), url("../fonts/muller/Muller-Trial-Light.woff2") format("woff2"), url("../fonts/muller/Muller-Trial-Light.woff") format("woff"), url("../fonts/muller/Muller-Trial-Light.ttf") format("truetype"), url("../fonts/muller/Muller-Trial-Light.otf") format("opentype");
-  font-weight: 300;
+  font-family: "Muller Next Trial";
   font-style: normal;
-}
-@font-face {
-  font-family: "Muller-Trial";
-  src: local("Muller Trial Bold"), local("Muller-Trial Bold"), url("../fonts/muller/Muller-Trial-Bold.woff2") format("woff2"), url("../fonts/muller/Muller-Trial-Bold.woff") format("woff"), url("../fonts/muller/Muller-Trial-Bold.ttf") format("truetype"), url("../fonts/muller/Muller-Trial-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
+  font-weight: 750;
+  src: local("Muller Next Trial"), url("https://fonts.cdnfonts.com/s/91239/MullerNextTrial-ExtraBold.woff") format("woff");
 }
 /* Spectral */
 @font-face {
@@ -45,7 +39,7 @@
 /*//////////////////////////////////////////////////////////////////
 [ ROOT ]*/
 :root {
-  --theme-ff-main: "Muller-Trial", sans-serif;
+  --theme-ff-main: "Muller Next Trial", sans-serif;
   --theme-ff-title: "Spectral", serif;
   --bs-primary: #566B61;
   --bs-secondary: #B4664C;
@@ -201,6 +195,30 @@ h6,
     font-size: 1.125rem;
   }
 }
+.fs-1 {
+  font-size: 1.625rem !important;
+}
+
+.fs-2 {
+  font-size: 1.5rem !important;
+}
+
+.fs-3 {
+  font-size: 1.375rem !important;
+}
+
+.fs-4 {
+  font-size: 1rem !important;
+}
+
+.fs-5 {
+  font-size: 1.125rem !important;
+}
+
+.fs-6 {
+  font-size: 1rem !important;
+}
+
 @media screen and (min-width: 1200px) {
   .fs-1 {
     font-size: 2rem !important;
