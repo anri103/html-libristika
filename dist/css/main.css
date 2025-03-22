@@ -281,7 +281,6 @@ label {
 
 .form-control,
 .form-select {
-  --bs-border-color: var(--bs-body-bg);
   height: auto;
   border-radius: 4px;
   padding: 0.5rem 0.75rem;
@@ -303,12 +302,37 @@ label {
   color: #566B61;
 }
 
+.form-check-wrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.form-check-input {
+  width: 1.125em;
+  height: 1.125em;
+  margin-top: initial;
+}
+.form-check-input:focus {
+  border-color: var(--bs-border-color);
+  box-shadow: none !important;
+}
+.form-check-input:checked {
+  background-color: #C3846F;
+  border-color: #C3846F;
+}
+
 .form-label {
   color: #9B9B9B;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
   margin-bottom: 0.25rem;
+}
+
+.form-text {
+  color: #9B9B9B;
+  font-size: 0.75em;
 }
 
 @media screen and (max-width: 991px) {
@@ -319,10 +343,16 @@ label {
 /*------------------------------------------------------------------
 [ registration-form ]*/
 .registration-form-wrapper {
+  color: #9B9B9B;
   padding: 44px 34px;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.04), 0px 36px 36px 0px rgba(0, 0, 0, 0.03), 0px 81px 48px 0px rgba(0, 0, 0, 0.02), 0px 143px 57px 0px rgba(0, 0, 0, 0.01), 0px 224px 63px 0px rgba(0, 0, 0, 0);
+}
+.registration-form-wrapper .buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 @media screen and (max-width: 991px) {
@@ -376,6 +406,7 @@ label {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #1F3326;
   --bs-btn-disabled-border-color: #1F3326;
+  --bs-btn-disabled-opacity: 0.5;
 }
 
 /*//////////////////////////////////////////////////////////////////

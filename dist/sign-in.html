@@ -252,7 +252,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="registration-form-wrapper">
-                                <form class="needs-validation" action="#" method="post">
+                                <form class="form-sign-in" action="#" method="post">
                                     <div class="row gy-3 gy-lg-4">
                                         <div class="col-12">
                                             <label class="form-label" for="formSignupEmail">Email</label>
@@ -263,19 +263,25 @@
                                             <input placeholder="" id="formSignupPassword" class="form-control" type="password" name="password" aria-describedby="passwordHelpBlock">
                                         </div>
                                         <div class="col-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                <label class="form-check-label" for="gridCheck">
-                                                    Я ознакомился и принимаю условия <a href="#" class="text-decoration-underline">публичной оферты</a> и <a href="#" class="text-decoration-underline">обработки персональных данных</a>.
+                                            <div class="form-check-wrapper">
+                                                <!-- Событие "onchange" только для демонстрации валидации, НЕ ВКЛЮЧАТЬ В ИТОГОВЫЙ ПРОЕКТ! -->
+                                                <input class="form-check-input" type="checkbox" id="sellSoulCheck" checked onchange="validateForm(this)">
+                                                <label class="form-check-label fs-small" for="sellSoulCheck">
+                                                    Я ознакомлен(а) и принимаю условия <a href="#" class="text-decoration-underline">публичной оферты</a> и <a href="#" class="text-decoration-underline">обработки персональных данных</a>.
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100 mt-3">Войти</button>
+                                            <div class="buttons-wrapper">
+                                                <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100">Войти</button>
+                                            </div>
                                         </div>
                                         <div class="col-12">
-                                            <a href="forgot-password.html">Забыли пароль?</a>/
-                                            <a href="sign-up.html">Зарегистрироваться</a>
+                                            <div class="text-center">
+                                                <a href="forgot-password.html">Забыли пароль?</a>
+                                                /
+                                                <a href="sign-up.html">Зарегистрироваться</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>

@@ -29,6 +29,8 @@ const swiperCards = new Swiper('.swiperCards', {
     },
 });
 
+// Button Add to whishlist
+
 document.addEventListener('DOMContentLoaded', function () {
     const wishlistButtons = document.querySelectorAll('.btn-add-whishlist');
 
@@ -38,3 +40,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Validate Forms checkbox
+// Функция валидации только для демонстрации, НЕ ВКЛЮЧАТЬ В ИТОГОВЫЙ ПРОЕКТ!
+
+function validateForm(checkbox) {
+    const form = checkbox.closest('form');
+    const checkboxes = form.querySelectorAll('input[type="checkbox"][onchange]');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+    submitButton.disabled = !allChecked;
+  }

@@ -39,7 +39,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="registration-form-wrapper">
-                                <form class="needs-validation" action="#" method="post">
+                                <form class="form-sign-up" action="#" method="post">
                                     <div class="row gy-3 gy-lg-4">
                                         <div class="col-lg-6">
                                             <label class="form-label" for="formSignupfname">Имя</label>
@@ -81,15 +81,24 @@
                                                 type="text" name="captcha">
                                         </div>
                                         <div class="col-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                <label class="form-check-label" for="gridCheck">
-                                                    Я ознакомлен (а) и соглашаюсь на <a href="#" class="text-decoration-underline">обработку персональных данных</a>.
+                                            <div class="form-check-wrapper">
+                                                <!-- Событие "onchange" только для демонстрации валидации, НЕ ВКЛЮЧАТЬ В ИТОГОВЫЙ ПРОЕКТ! -->
+                                                <input class="form-check-input" type="checkbox" id="sellSoulCheck" checked onchange="validateForm(this)">
+                                                <label class="form-check-label" for="sellSoulCheck">
+                                                    Я ознакомлен(а) и соглашаюсь на <a href="#" class="text-decoration-underline">обработку персональных данных</a>.
+                                                </label>
+                                            </div>
+                                            <div class="form-check-wrapper">
+                                                <input class="form-check-input" type="checkbox" id="adsForeverCheck2" checked>
+                                                <label class="form-check-label" for="adsForeverCheck2">
+                                                    Я хочу получать новые рекламные уведомления на свой email.
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100 mt-3">Регистрация</button>
+                                            <div class="buttons-wrapper">
+                                                <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100" id="formSubmit">Регистрация</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
