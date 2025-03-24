@@ -11,7 +11,7 @@
 
 <!-- Динамические классы в зависимости от типа страницы -->
 
-<body class="page-home">
+<body class="page-sign">
 
     <!-- header -->
     @@include('../components/header.html')
@@ -43,22 +43,22 @@
                                     <div class="row gy-3 gy-lg-4">
                                         <div class="col-lg-6">
                                             <label class="form-label" for="formSignupfname">Имя</label>
-                                            <input placeholder="" id="formSignupfname" class="form-control" type="text"
+                                            <input id="formSignupfname" class="form-control" type="text"
                                                 name="firstName">
                                         </div>
                                         <div class="col-lg-6">
                                             <label class="form-label" for="formSignuplname">Фамилия</label>
-                                            <input placeholder="" id="formSignuplname" class="form-control" type="text"
+                                            <input id="formSignuplname" class="form-control" type="text"
                                                 name="lastName">
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label" for="formSignupEmail">Email</label>
-                                            <input placeholder="" id="formSignupEmail" class="form-control" type="email"
+                                            <input id="formSignupEmail" class="form-control" type="email"
                                                 name="email">
                                         </div>
                                         <div class="col-lg-6">
                                             <label class="form-label" for="formSignupPassword">Пароль</label>
-                                            <input placeholder="" id="formSignupPassword" class="form-control"
+                                            <input id="formSignupPassword" class="form-control"
                                                 type="password" name="password" aria-describedby="passwordHelpBlock">
                                             <div id="passwordHelpBlock" class="form-text">
                                                 Ваш пароль должен быть 8-20 символов, содержать буквы и цифры без
@@ -68,7 +68,7 @@
                                         <div class="col-lg-6">
                                             <label class="form-label" for="formSignupCheckPassword">Подтверждение
                                                 пароля</label>
-                                            <input placeholder="" id="formSignupCheckPassword" class="form-control"
+                                            <input id="formSignupCheckPassword" class="form-control"
                                                 type="password" name="password">
                                         </div>
                                         <div class="col-lg-6">
@@ -77,7 +77,7 @@
                                         <div class="col-lg-6">
                                             <label class="form-label" for="formSignupCaptcha">Введите текст с
                                                 картинки</label>
-                                            <input placeholder="" id="formSignupCaptcha" class="form-control"
+                                            <input id="formSignupCaptcha" class="form-control"
                                                 type="text" name="captcha">
                                         </div>
                                         <div class="col-12">

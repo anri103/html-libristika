@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛК - Читатель</title>
+    <!-- styles -->
+    @@include('../components/styles.html')
+</head>
+
+<!-- Динамические классы в зависимости от типа страницы -->
+
+<body class="page-account">
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <section class="section">
+            <div class="container">
+                <div class="account-cover">
+                    <picture>
+                        <img class="cover-img" src="img/user/account-cover-bg.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <div class="container-narrow">
+                <div class="section-body">
+                    <div class="row gy-4">
+                        <div class="col-lg-4">
+                            <div class="account-info-area">
+                                <div class="account-avatar">
+                                    <div class="avatar-wrapper">
+                                        <img class="avatar-img" src="img/user/account-avatar-xl.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="account-age">
+                                    <div><span>зарегистрирован</span> 21.08.2007</div>
+                                </div>
+                                <div class="account-name">
+                                    <h1>Имя Фамилия</h1>
+                                </div>
+                                <div class="account-menu-wrapper">
+                                    <nav class="account-menu">
+                                        <div class="links-wrapper">
+                                            <a href="#" class="menu-link active">Мой профиль</a>
+                                            <a href="#" class="menu-link">Стать автором</a>
+                                            <a href="#" class="menu-link">Предпочтения </a>
+                                            <a href="#" class="menu-link">Приватность</a>
+                                            <a href="#" class="menu-link">Уведомления</a>
+                                            <a href="#" class="menu-link">Подписка</a>
+                                            <a href="#" class="menu-link">Способ оплаты</a>
+                                            <a href="#" class="menu-link">История покупок</a>
+                                            <a href="#" class="menu-link logout-link">Выход</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="account-content-area">
+                                <div class="account-content-widget">
+                                    <h2 class="h3">Личные данные</h2>
+                                    <div class="account-form-wrapper">
+                                        <form class="form-account" action="#" method="post">
+                                            <div class="row gy-3 gy-lg-4">
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignupfname">Имя</label>
+                                                    <input id="formSignupfname" class="form-control" type="text"
+                                                        name="firstName">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignuplname">Фамилия</label>
+                                                    <input id="formSignuplname" class="form-control" type="text"
+                                                        name="lastName">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignupEmail">Email</label>
+                                                    <input id="formSignupEmail" class="form-control" type="email"
+                                                        name="email">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignupfname">Дата рождения</label>
+                                                    <input id="formSignupfname" class="form-control" type="text"
+                                                        name="firstName">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="exampleFormControlTextarea1">Example textarea</label>
+                                                    <textarea id="exampleFormControlTextarea1" class="form-control" rows="3"></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="buttons-wrapper">
+                                                        <button type="submit" class="btn btn-primary btn-lg rounded-pill" id="formSubmit">Сохранить изменения</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="account-content-widget">
+                                    <h2 class="h3">Личные данные</h2>
+                                    <div class="account-form-wrapper">
+                                        <form class="form-account" action="#" method="post">
+                                            <div class="row gy-3 gy-lg-4">
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignupfname">Имя</label>
+                                                    <input id="formSignupfname" class="form-control" type="text"
+                                                        name="firstName">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignuplname">Фамилия</label>
+                                                    <input id="formSignuplname" class="form-control" type="text"
+                                                        name="lastName">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignupEmail">Email</label>
+                                                    <input id="formSignupEmail" class="form-control" type="email"
+                                                        name="email">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignupfname">Дата рождения</label>
+                                                    <input id="formSignupfname" class="form-control" type="text"
+                                                        name="firstName">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="exampleFormControlTextarea1">Example textarea</label>
+                                                    <textarea id="exampleFormControlTextarea1" class="form-control" rows="3"></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="buttons-wrapper">
+                                                        <button type="submit" class="btn btn-primary btn-lg rounded-pill" id="formSubmit">Сохранить изменения</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+
+    <!-- scripts -->
+    @@include('../components/scripts.html')
+</body>
+
+</html>

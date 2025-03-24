@@ -120,6 +120,36 @@ html {
   vertical-align: baseline;
 }
 
+.container-narrow {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-narrow {
+    max-width: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .container-narrow {
+    max-width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .container-narrow {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-narrow {
+    max-width: 1045px;
+  }
+}
 @media (min-width: 1600px) {
   .container,
   .container-lg,
@@ -534,6 +564,7 @@ label {
 .header > .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 /* header-logo */
@@ -574,18 +605,16 @@ label {
   --bs-btn-disabled-border-color: #566B61;
 }
 
-/* header-main-menu */
+/* header-menu */
 .header-main-menu {
   flex-grow: 1;
 }
-
-.main-menu {
+.header-main-menu .links-wrapper {
   display: flex;
   gap: 20px;
   margin: 0 20px;
 }
-
-.main-menu a {
+.header-main-menu .menu-link {
   white-space: nowrap;
   text-decoration: none;
   text-transform: lowercase;
@@ -643,7 +672,7 @@ label {
     max-width: 165px;
   }
   .header-catalog-btn,
-  .main-menu,
+  .header-main-menu,
   .header-user-menu {
     display: none;
   }
@@ -766,17 +795,64 @@ label {
 [ footer ]*/
 .footer {
   position: relative;
-  padding: 60px 0 30px;
+  padding: 40px 0;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  background-color: #fff;
+}
+.footer .footer-bottom-bar {
+  margin-top: 2rem;
+}
+
+.footer-widget {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.footer-widget .footer-logo {
+  margin-bottom: 0.5rem;
+}
+.footer-widget .widget-title {
+  font-family: var(--theme-ff-title);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.footer-widget-menu {
+  position: relative;
+}
+.footer-widget-menu .links-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-social-menu {
+  position: relative;
+}
+.footer-social-menu .links-wrapper {
+  display: flex;
+  gap: 8px;
+}
+.footer-social-menu .menu-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.footer-social-menu .menu-link:hover {
+  opacity: 0.75;
 }
 
 .copyright-text {
-  color: #212529;
+  color: var(--bs-body-color);
   opacity: 0.6;
 }
 
 @media screen and (max-width: 991px) {
   .footer {
-    padding: 30px 0 10px;
+    padding: 30px 0;
   }
 }
 /*------------------------------------------------------------------
@@ -1229,4 +1305,88 @@ label {
   color: #9B9B9B;
   font-size: 14px;
   font-weight: 400;
+}
+
+.account-info-area {
+  margin-top: -120px;
+}
+
+.account-cover {
+  position: relative;
+  overflow: hidden;
+  height: 260px;
+  border-radius: 10px;
+}
+.account-cover .cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.account-avatar {
+  margin-bottom: 24px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 170px;
+  height: 170px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+.avatar-wrapper .avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.account-age {
+  color: #9B9B9B;
+  margin-bottom: 14px;
+}
+
+.account-name {
+  margin-bottom: 14px;
+}
+.account-name h1 {
+  margin-bottom: 0;
+}
+
+.account-menu {
+  position: relative;
+}
+.account-menu .links-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.account-menu .menu-link {
+  position: relative;
+}
+.account-menu .menu-link.active {
+  color: #B4664C;
+  pointer-events: none;
+}
+.account-menu .menu-link.logout-link {
+  color: #9B9B9B;
+  text-transform: lowercase;
+}
+
+@media screen and (max-width: 991px) {
+  .account-cover {
+    height: 135px;
+  }
+}
+.account-content-area {
+  max-width: 758px;
+  width: 100%;
+  padding: 34px;
+  background-color: #fff;
+}
+
+.account-content-widget {
+  margin-bottom: 34px;
 }

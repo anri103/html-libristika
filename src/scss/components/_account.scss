@@ -1,0 +1,95 @@
+// account-info-area
+
+.account-info-area {
+    margin-top: -120px;
+}
+
+.account-cover {
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+    border-radius: 10px;
+
+    .cover-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.account-avatar {
+    margin-bottom: 24px;
+}
+
+.avatar-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 170px;
+    height: 170px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+
+    .avatar-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.account-age {
+    color: #9B9B9B;
+    margin-bottom: 14px;
+}
+
+.account-name {
+    margin-bottom: 14px;
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+.account-menu {
+    position: relative;
+
+    .links-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    
+    .menu-link {
+        position: relative;
+
+        &.active {
+            color: #B4664C;
+            pointer-events: none;
+        }
+
+        &.logout-link {
+            color: #9B9B9B;
+            text-transform: lowercase;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .account-cover {
+        height: 135px;
+    }
+}
+
+// account-content-area
+
+.account-content-area {
+    max-width: 758px;
+    width: 100%;
+    padding: 34px;
+    background-color: #fff;
+}
+
+.account-content-widget {
+    margin-bottom: 34px;
+}
