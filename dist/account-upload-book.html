@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЛК - Читатель</title>
+    <title>ЛК - Публикация книги</title>
     <!-- styles -->
     <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
@@ -235,125 +235,155 @@
 
         <section class="section">
             <div class="container">
-                <div class="account-cover">
-                    <picture>
-                        <img class="cover-img" src="img/user/account-cover-bg.jpg" alt="">
-                    </picture>
-                </div>
-                <div class="account-area">
-                    <div class="row gy-4 justify-content-center">
-                        <div class="col-lg-3">
-                            <div class="account-info-area">
-                                <div class="account-avatar">
-                                    <div class="avatar-wrapper">
-                                        <img class="avatar-img" src="img/user/account-avatar-xl.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="account-age">
-                                    <div><span>зарегистрирован</span> 21.08.2007</div>
-                                </div>
-                                <div class="account-name">
-                                    <h1>Имя Фамилия</h1>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
-                                        <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
-                                        <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.00114"/>
-                                    </svg>
-                                </div>
-                                <div class="account-menu-wrapper">
-                                    <nav class="account-menu">
-                                        <div class="links-wrapper">
-                                            <a href="account-user.html" class="menu-link active">Мой профиль</a>
-                                            <a href="#" class="menu-link">Стать автором</a>
-                                            <a href="#" class="menu-link">Предпочтения </a>
-                                            <a href="#" class="menu-link">Приватность</a>
-                                            <a href="#" class="menu-link">Уведомления</a>
-                                            <a href="#" class="menu-link">Подписка</a>
-                                            <a href="#" class="menu-link">Способ оплаты</a>
-                                            <a href="#" class="menu-link">История покупок</a>
-                                            <a href="#" class="menu-link logout-link">Выход</a>
-                                        </div>
-                                    </nav>
-                                </div>
-                            </div>
+                <div class="row gy-4 justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="d-flex justify-content-between mb-3">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Сохранить и выйти</span>
+                            </a>
+                            <div class="badge rounded-pill text-bg-danger">необупликованная</div>
                         </div>
-                        <div class="col-lg-7">
-                            <div class="account-content-area">
-                                <div class="account-content-widget">
-                                    <h2 class="widget-title">Личные данные</h2>
-                                    <div class="account-form-wrapper">
-                                        <form class="form-account" action="#" method="post">
-                                            <div class="row gy-3 gy-lg-4">
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupfname">Имя</label>
-                                                    <input id="formSignupfname" class="form-control" type="text"
-                                                        name="firstName">
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignuplname">Фамилия</label>
-                                                    <input id="formSignuplname" class="form-control" type="text"
-                                                        name="lastName">
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupEmail">Email</label>
-                                                    <input id="formSignupEmail" class="form-control" type="email"
-                                                        name="email">
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="d-flex gap-4 flex-wrap">
-                                                        <div class="form-check-wrapper">
-                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                                мужчина
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check-wrapper">
-                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                                женщина
-                                                            </label>
-                                                        </div>
+                        
+                        <div class="account-content-area">
+                            <div class="account-content-widget">
+                                <div class="account-form-wrapper">
+                                    <form class="form-account" action="#" method="post">
+                                        <div class="row gy-3 gy-lg-4">
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookName">Название</label>
+                                                <input id="bookName" class="form-control" type="text" name="book-name">
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookFile">Файл книги</label>
+                                                <input id="bookFile" class="form-control" type="file" name="book-file">
+                                                <div class="form-text text-primary">Информация о том как правильно подготовить файл к загрузке на сервис</div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookAuthor">Автор</label>
+                                                <input id="bookAuthor" placeholder="Сергей Александрович" class="form-control" type="email" name="book-author" disabled>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookSubAuthor">Соавтор</label>
+                                                <input id="bookSubAuthor" class="form-control" type="text" name="book-subauthor">
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookSeries">Серия книг</label>
+                                                <select id="bookSeries" class="form-select" name="book-series">
+                                                    <option selected>выберите из списка</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookAnnotation">Анотация</label>
+                                                <textarea id="bookAnnotation" class="form-control" rows="3"></textarea>
+                                                <div class="form-text">Не менее 50 символов</div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookGenres">Жанры</label>
+                                                <select id="bookGenres" class="form-select" name="book-series">
+                                                    <option selected>выберите из списка</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookTags">Теги</label>
+                                                <select id="bookTags" class="form-select" name="book-series">
+                                                    <option selected>выберите из списка</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div>
+                                                        <label class="widget-title mb-2" for="bookForAdults">Категория 18+</label>
+                                                        <div class="text-muted">В тексте книги есть нецензурная лексика</div>
                                                     </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formBirth">Дата рождения</label>
-                                                    <input id="formBirth" class="form-control" type="text"
-                                                        name="birthDate">
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="exampleFormControlTextarea1">О себе</label>
-                                                    <textarea id="exampleFormControlTextarea1" class="form-control" rows="3"></textarea>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="buttons-wrapper">
-                                                        <button type="submit" class="btn btn-secondary btn-lg rounded-pill">Сохранить изменения</button>
+                                                    <div class="form-switch-xl">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="bookForAdults">
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="account-content-widget">
-                                    <h2 class="widget-title">Изменить пароль</h2>
-                                    <div class="account-form-wrapper">
-                                        <form class="form-account" action="#" method="post">
-                                            <div class="row gy-3 gy-lg-4">
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupPassword">Новый пароль</label>
-                                                    <input id="formSignupPassword" class="form-control" type="password" name="password">
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupCheckPassword">Подтверждение пароля</label>
-                                                    <input id="formSignupCheckPassword" class="form-control" type="password" name="password">
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="buttons-wrapper">
-                                                        <button type="submit" class="btn btn-secondary btn-lg rounded-pill">Сохранить изменения</button>
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookAgeRating">Возрастной рейтинг</label>
+                                                <div class="d-flex gap-4 flex-wrap">
+                                                    <div class="form-check-wrapper">
+                                                        <input class="form-check-input" type="radio" name="radioAgeRating" id="bookAgeRating0">
+                                                        <label class="form-check-label" for="bookAgeRating0">
+                                                            0+
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check-wrapper">
+                                                        <input class="form-check-input" type="radio" name="radioAgeRating" id="bookAgeRating6">
+                                                        <label class="form-check-label" for="bookAgeRating6">
+                                                            6+
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check-wrapper">
+                                                        <input class="form-check-input" type="radio" name="radioAgeRating" id="bookAgeRating12">
+                                                        <label class="form-check-label" for="bookAgeRating12">
+                                                            12+
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check-wrapper">
+                                                        <input class="form-check-input" type="radio" name="radioAgeRating" id="bookAgeRating16">
+                                                        <label class="form-check-label" for="bookAgeRating16">
+                                                            16+
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check-wrapper">
+                                                        <input class="form-check-input" type="radio" name="radioAgeRating" id="bookAgeRating18">
+                                                        <label class="form-check-label" for="bookAgeRating18">
+                                                            18+
+                                                        </label>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
-                                    </div>
+                                            <div class="col-12">
+                                                <div class="widget-title">Упоминание нетрадиционных сексуальных установок</div>
+                                                <div class="form-check-wrapper">
+                                                    <input class="form-check-input" type="checkbox" id="bookAgitationForPidors">
+                                                    <label class="form-check-label" for="bookAgitationForPidors">Я подтверждаю, что в произведении не содержится <a href="#" class="text-decoration-underline">пропаганда ЛГБТ</a></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookCover">Обложка</label>
+                                                <input id="bookCover" class="form-control" type="file" name="book-cover">
+                                                <div class="form-text text-primary">JPG или PNG, не менее 500x625 px.<br> Размер файла до 20 MB.</div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="widget-title" for="bookTags">Цена за книгу</label>
+                                                <select id="bookTags" class="form-select" name="book-series">
+                                                    <option selected>выберите из списка</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+
+
+
+                                            <div class="col-12">
+                                                <div class="form-check-wrapper">
+                                                    <input class="form-check-input" type="checkbox" id="agreeForAll">
+                                                    <label class="form-check-label" for="agreeForAll">Я подтверждаю, что ознакомился с <a href="#" class="text-decoration-underline">Правилами публикации</a></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="buttons-wrapper">
+                                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill">Опубликовать</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

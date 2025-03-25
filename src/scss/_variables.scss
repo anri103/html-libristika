@@ -22,6 +22,8 @@
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
+  --bs-secondary-color: rgba(155, 155, 155, 0.875);
+  --bs-secondary-color-rgb: 155, 155, 155;
 
   --bs-body-font-family: var(--theme-ff-main);
   --bs-body-font-size: 1rem;
@@ -82,38 +84,8 @@ html {
   vertical-align: baseline;
 }
 
-.container-narrow {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  width: 100%;
-  padding-right: calc(var(--bs-gutter-x)* 0.5);
-  padding-left: calc(var(--bs-gutter-x)* 0.5);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  .container-narrow {
-      max-width: 500px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container-narrow {
-      max-width: 700px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container-narrow {
-      max-width: 900px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container-narrow {
-      max-width: 1045px;
-  }
+.mb-2rem {
+  margin-bottom: 2rem !important;
 }
 
 @media (min-width: 1600px) {

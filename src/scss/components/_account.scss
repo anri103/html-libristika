@@ -1,14 +1,8 @@
-// account-info-area
-
-.account-info-area {
-    margin-top: -120px;
-}
-
 .account-cover {
     position: relative;
     overflow: hidden;
     height: 260px;
-    border-radius: 10px;
+    border-radius: 0;
 
     .cover-img {
         width: 100%;
@@ -16,6 +10,22 @@
         object-fit: cover;
         object-position: center;
     }
+}
+
+@media screen and (max-width: 991px) {
+    .account-cover {
+        height: 135px;
+    }
+}
+
+.account-area {
+    padding: 40px 0;
+}
+
+// account-info-area
+
+.account-info-area {
+    margin-top: -120px;
 }
 
 .account-avatar {
@@ -44,6 +54,8 @@
 }
 
 .account-name {
+    display: flex;
+    gap: 4px;
     margin-bottom: 14px;
 
     h1 {
@@ -76,20 +88,46 @@
 }
 
 @media screen and (max-width: 991px) {
-    .account-cover {
-        height: 135px;
+    .account-info-area {
+        margin-top: -90px;
+    }
+
+    .account-avatar {
+        padding: 0 24px;
+    }
+
+    .avatar-wrapper {
+        width: 100px;
+        height: 100px;
+        border: 3px solid #fff;
     }
 }
 
 // account-content-area
 
 .account-content-area {
-    max-width: 758px;
-    width: 100%;
     padding: 34px;
     background-color: #fff;
 }
 
 .account-content-widget {
     margin-bottom: 34px;
+
+    .widget-title {
+        font-family: var(--theme-ff-title);
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 0.875rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .account-content-area {
+        padding: 24px 16px;
+    }
 }
