@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЛК - Публикация</title>
+    <title>ЛК - Автор - Публикация</title>
     <!-- styles -->
     <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
@@ -263,9 +263,8 @@
                                 <div class="account-menu-wrapper">
                                     <nav class="account-menu">
                                         <div class="links-wrapper">
-                                            <a href="#" class="menu-link active">Профиль автора</a>
-                                            <a href="#" class="menu-link">Публикация книги</a>
-                                            <a href="#" class="menu-link">Мои книги</a>
+                                            <a href="#" class="menu-link">Профиль автора</a>
+                                            <a href="account-upload-book.html" class="menu-link active">Мои книги</a>
                                             <a href="#" class="menu-link">Персоны</a>
                                             <a href="#" class="menu-link">Статистика</a>
                                             <a href="#" class="menu-link">Уведомления</a>
@@ -279,9 +278,9 @@
                         </div>
                         <div class="col-lg-7">
                             <div class="account-content-widget">
-                                <div class="d-flex gap-4 align-items-center mb-2">
+                                <div class="d-flex flex-wrap align-items-center gap-4 row-gap-2 mb-2">
                                     <h2 class="widget-title mb-0">Мои книги</h2>
-                                    <span class="text-muted">0 книг</span>
+                                    <span class="text-muted">2 книги</span>
                                 </div>
                             </div>
                             <div class="account-content-widget">
@@ -293,18 +292,402 @@
                                     </div>
                                 </nav>
                                 <div class="tab-content" id="nav-tabContent">
+                                    <!-- Загрузить книгу/фанфик -->
                                     <div class="tab-pane fade show active" id="nav-upload-book" role="tabpanel" aria-labelledby="nav-upload-book-tab" tabindex="0">
-                                        <div class="d-flex gap-4 flex-wrap">
-                                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Создать книгу</button>
+                                        <div class="d-flex flex-wrap gap-4 row-gap-2 mb-4">
+                                            <a href="account-upload-book.html" class="btn btn-primary btn-lg rounded-pill">Создать книгу</a>
                                             <button type="submit" class="btn btn-secondary btn-lg rounded-pill">Выложить фанфик</button>
                                         </div>
+                                        <!-- sorting -->
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="position-relative">
+                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span>Сортировка по статусу</span>
+                                                    <span class="icon-arrow-down">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                            <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-select">
+                                                    <li><a class="dropdown-item" href="#">Опубликована</a></li>
+                                                    <li><a class="dropdown-item" href="#">Не опубликована</a></li>
+                                                    <li><a class="dropdown-item" href="#">На модерации</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- items-list -->
+                                        <div class="my-items-list">
+                                            <!-- item 01 -->
+                                            <div class="item-my-book">
+                                                <div class="item-body">
+                                                    <!-- item-img-wrapper -->
+                                                    <div class="item-img-wrapper">
+                                                        <a href="#">
+                                                            <picture>
+                                                                <source srcset="img/card-book-cover/03.webp" type="image/webp">
+                                                                <source srcset="img/card-book-cover/03.jpg" type="image/jpeg">
+                                                                <img class="item-img" src="img/card-book-cover/03.jpg" alt="Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.">
+                                                            </picture>
+                                                        </a>
+                                                    </div>
+                                                    <!-- item-content -->
+                                                    <div class="item-content">
+                                                        <div class="item-status-wrapper">
+                                                            <div class="badge badge-publication-status item-unpublished">не опубликована</div>
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <a href="#">Тайна мертвого ректора</a>
+                                                        </div>
+                                                        <div class="item-info-table">
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">лицензия</div>
+                                                                <div class="table-value">название</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">роялти</div>
+                                                                <div class="table-value">34%</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">стоимость</div>
+                                                                <div class="table-value">132.50 ₽</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-action-button-wrapper">
+                                                            <a href="#" class="btn btn-white rounded-pill">редактировать</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item-dropdown-wrapper -->
+                                                    <div class="item-dropdown-wrapper">
+                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <span class="icon-dots">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
+                                                                    <path d="M1.452 2.794C1.02667 2.794 0.674667 2.662 0.396 2.398C0.132 2.11933 0 1.78933 0 1.408C0 1.012 0.132 0.682 0.396 0.418C0.674667 0.139333 1.02667 0 1.452 0C1.87733 0 2.222 0.139333 2.486 0.418C2.75 0.682 2.882 1.012 2.882 1.408C2.882 1.78933 2.75 2.11933 2.486 2.398C2.222 2.662 1.87733 2.794 1.452 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M6.17856 2.794C5.75323 2.794 5.40123 2.662 5.12256 2.398C4.85856 2.11933 4.72656 1.78933 4.72656 1.408C4.72656 1.012 4.85856 0.682 5.12256 0.418C5.40123 0.139333 5.75323 0 6.17856 0C6.6039 0 6.94856 0.139333 7.21256 0.418C7.47656 0.682 7.60856 1.012 7.60856 1.408C7.60856 1.78933 7.47656 2.11933 7.21256 2.398C6.94856 2.662 6.6039 2.794 6.17856 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M10.9051 2.794C10.4798 2.794 10.1278 2.662 9.84912 2.398C9.58512 2.11933 9.45312 1.78933 9.45312 1.408C9.45312 1.012 9.58512 0.682 9.84912 0.418C10.1278 0.139333 10.4798 0 10.9051 0C11.3305 0 11.6751 0.139333 11.9391 0.418C12.2031 0.682 12.3351 1.012 12.3351 1.408C12.3351 1.78933 12.2031 2.11933 11.9391 2.398C11.6751 2.662 11.3305 2.794 10.9051 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-select">
+                                                            <li><a class="dropdown-item" href="#">Пункт 1</a></li>
+                                                            <li><a class="dropdown-item" href="#">Пункт 2</a></li>
+                                                            <li><a class="dropdown-item text-danger" href="#">Удалить</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- item 02 -->
+                                            <div class="item-my-book">
+                                                <div class="item-body">
+                                                    <!-- item-img-wrapper -->
+                                                    <div class="item-img-wrapper">
+                                                        <a href="#">
+                                                            <picture>
+                                                                <source srcset="img/card-book-cover/07.webp" type="image/webp">
+                                                                <source srcset="img/card-book-cover/07.jpg" type="image/jpeg">
+                                                                <img class="item-img" src="img/card-book-cover/07.jpg" alt="Дом лжи. Дэвид Эллис. Либристика.">
+                                                            </picture>
+                                                        </a>
+                                                    </div>
+                                                    <!-- item-content -->
+                                                    <div class="item-content">
+                                                        <div class="item-status-wrapper">
+                                                            <div class="badge badge-publication-status item-on-moderation">на модерации</div>
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <a href="#">Дом лжи</a>
+                                                        </div>
+                                                        <div class="item-info-table">
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">лицензия</div>
+                                                                <div class="table-value">Длинное название лицензии</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">роялти</div>
+                                                                <div class="table-value">34%</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">стоимость</div>
+                                                                <div class="table-value">132.50 ₽</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-action-button-wrapper">
+                                                            <a href="#" class="btn btn-white rounded-pill">предпросмотр</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item-dropdown-wrapper -->
+                                                    <div class="item-dropdown-wrapper">
+                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <span class="icon-dots">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
+                                                                    <path d="M1.452 2.794C1.02667 2.794 0.674667 2.662 0.396 2.398C0.132 2.11933 0 1.78933 0 1.408C0 1.012 0.132 0.682 0.396 0.418C0.674667 0.139333 1.02667 0 1.452 0C1.87733 0 2.222 0.139333 2.486 0.418C2.75 0.682 2.882 1.012 2.882 1.408C2.882 1.78933 2.75 2.11933 2.486 2.398C2.222 2.662 1.87733 2.794 1.452 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M6.17856 2.794C5.75323 2.794 5.40123 2.662 5.12256 2.398C4.85856 2.11933 4.72656 1.78933 4.72656 1.408C4.72656 1.012 4.85856 0.682 5.12256 0.418C5.40123 0.139333 5.75323 0 6.17856 0C6.6039 0 6.94856 0.139333 7.21256 0.418C7.47656 0.682 7.60856 1.012 7.60856 1.408C7.60856 1.78933 7.47656 2.11933 7.21256 2.398C6.94856 2.662 6.6039 2.794 6.17856 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M10.9051 2.794C10.4798 2.794 10.1278 2.662 9.84912 2.398C9.58512 2.11933 9.45312 1.78933 9.45312 1.408C9.45312 1.012 9.58512 0.682 9.84912 0.418C10.1278 0.139333 10.4798 0 10.9051 0C11.3305 0 11.6751 0.139333 11.9391 0.418C12.2031 0.682 12.3351 1.012 12.3351 1.408C12.3351 1.78933 12.2031 2.11933 11.9391 2.398C11.6751 2.662 11.3305 2.794 10.9051 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-select">
+                                                            <li><a class="dropdown-item" href="#">Пункт 1</a></li>
+                                                            <li><a class="dropdown-item" href="#">Пункт 2</a></li>
+                                                            <li><a class="dropdown-item text-danger" href="#">Удалить</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <!-- Загрузить аудиокнигу -->
                                     <div class="tab-pane fade" id="nav-upload-audio" role="tabpanel" aria-labelledby="nav-upload-audio-tab" tabindex="0">
-                                        <button type="submit" class="btn btn-primary btn-lg rounded-pill">Создать аудиокнигу</button>
+                                        <div class="d-flex flex-wrap gap-4 row-gap-2 mb-4">
+                                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Создать аудиокнигу</button>
+                                        </div>
+                                        <!-- sorting -->
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="position-relative">
+                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span>Сортировка по статусу</span>
+                                                    <span class="icon-arrow-down">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                            <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-select">
+                                                    <li><a class="dropdown-item" href="#">Опубликована</a></li>
+                                                    <li><a class="dropdown-item" href="#">Не опубликована</a></li>
+                                                    <li><a class="dropdown-item" href="#">На модерации</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- items-list -->
+                                        <div class="my-items-list">
+                                            <!-- item 01 -->
+                                            <div class="item-my-book">
+                                                <div class="item-body">
+                                                    <!-- item-img-wrapper -->
+                                                    <div class="item-img-wrapper">
+                                                        <a href="#">
+                                                            <picture>
+                                                                <source srcset="img/card-book-cover/04.webp" type="image/webp">
+                                                                <source srcset="img/card-book-cover/04.jpg" type="image/jpeg">
+                                                                <img class="item-img" src="img/card-book-cover/04.jpg" alt="Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.">
+                                                            </picture>
+                                                        </a>
+                                                    </div>
+                                                    <!-- item-content -->
+                                                    <div class="item-content">
+                                                        <div class="item-status-wrapper">
+                                                            <div class="badge badge-publication-status item-unpublished">не опубликована</div>
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <a href="#">Тайна мертвого ректора. Книга 1</a>
+                                                        </div>
+                                                        <div class="item-info-table">
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">лицензия</div>
+                                                                <div class="table-value">название</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">роялти</div>
+                                                                <div class="table-value">34%</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">стоимость</div>
+                                                                <div class="table-value">132.50 ₽</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-action-button-wrapper">
+                                                            <a href="#" class="btn btn-white rounded-pill">редактировать</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item-dropdown-wrapper -->
+                                                    <div class="item-dropdown-wrapper">
+                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <span class="icon-dots">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
+                                                                    <path d="M1.452 2.794C1.02667 2.794 0.674667 2.662 0.396 2.398C0.132 2.11933 0 1.78933 0 1.408C0 1.012 0.132 0.682 0.396 0.418C0.674667 0.139333 1.02667 0 1.452 0C1.87733 0 2.222 0.139333 2.486 0.418C2.75 0.682 2.882 1.012 2.882 1.408C2.882 1.78933 2.75 2.11933 2.486 2.398C2.222 2.662 1.87733 2.794 1.452 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M6.17856 2.794C5.75323 2.794 5.40123 2.662 5.12256 2.398C4.85856 2.11933 4.72656 1.78933 4.72656 1.408C4.72656 1.012 4.85856 0.682 5.12256 0.418C5.40123 0.139333 5.75323 0 6.17856 0C6.6039 0 6.94856 0.139333 7.21256 0.418C7.47656 0.682 7.60856 1.012 7.60856 1.408C7.60856 1.78933 7.47656 2.11933 7.21256 2.398C6.94856 2.662 6.6039 2.794 6.17856 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M10.9051 2.794C10.4798 2.794 10.1278 2.662 9.84912 2.398C9.58512 2.11933 9.45312 1.78933 9.45312 1.408C9.45312 1.012 9.58512 0.682 9.84912 0.418C10.1278 0.139333 10.4798 0 10.9051 0C11.3305 0 11.6751 0.139333 11.9391 0.418C12.2031 0.682 12.3351 1.012 12.3351 1.408C12.3351 1.78933 12.2031 2.11933 11.9391 2.398C11.6751 2.662 11.3305 2.794 10.9051 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-select">
+                                                            <li><a class="dropdown-item" href="#">Пункт 1</a></li>
+                                                            <li><a class="dropdown-item" href="#">Пункт 2</a></li>
+                                                            <li><a class="dropdown-item text-danger" href="#">Удалить</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <!-- Загрузить черновик -->
                                     <div class="tab-pane fade" id="nav-upload-draft" role="tabpanel" aria-labelledby="nav-upload-draft-tab" tabindex="0">
-                                        <p>Черновик – это описание формата загрузки книги.</p>
-                                        <button type="submit" class="btn btn-primary btn-lg rounded-pill">Создать черновик</button>
+                                        <div class="d-none d-lg-block">
+                                            <p>Черновик – это описание формата загрузки книги.</p>
+                                            <div class="d-flex flex-wrap gap-4 row-gap-2 mb-4">
+                                                <button type="submit" class="btn btn-primary btn-lg rounded-pill">Создать черновик</button>
+                                            </div>
+                                        </div>
+                                        <!-- message -->
+                                        <div class="alert alert-danger d-lg-none" role="alert">
+                                            <div class="d-flex">
+                                                <svg class="flex-shrink-0 me-3" xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M1 21L12 2L23 21H1ZM3.6 19.5H20.4L12 5L3.6 19.5ZM12.1045 18.075C12.3181 18.075 12.4958 18.0026 12.6375 17.858C12.7792 17.7135 12.85 17.5343 12.85 17.3205C12.85 17.1068 12.7777 16.9292 12.633 16.7875C12.4885 16.6459 12.3094 16.575 12.0955 16.575C11.8819 16.575 11.7042 16.6473 11.5625 16.792C11.4208 16.9365 11.35 17.1157 11.35 17.3295C11.35 17.5431 11.4223 17.7208 11.567 17.8625C11.7115 18.0041 11.8906 18.075 12.1045 18.075ZM11.35 15.3H12.85V9.7H11.35V15.3Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                </svg>
+                                                <div>В мобильной версии нельзя опубликовать черновик</div>
+                                            </div>
+                                        </div>
+                                        <!-- sorting -->
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="position-relative">
+                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span>Сортировка по статусу</span>
+                                                    <span class="icon-arrow-down">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                            <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-select">
+                                                    <li><a class="dropdown-item" href="#">Опубликована</a></li>
+                                                    <li><a class="dropdown-item" href="#">Не опубликована</a></li>
+                                                    <li><a class="dropdown-item" href="#">На модерации</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- items-list -->
+                                        <div class="my-items-list">
+                                            <!-- item 01 -->
+                                            <div class="item-my-book">
+                                                <div class="item-body">
+                                                    <!-- item-img-wrapper -->
+                                                    <div class="item-img-wrapper">
+                                                        <a href="#">
+                                                            <picture>
+                                                                <source srcset="img/card-book-cover/03.webp" type="image/webp">
+                                                                <source srcset="img/card-book-cover/03.jpg" type="image/jpeg">
+                                                                <img class="item-img" src="img/card-book-cover/03.jpg" alt="Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.">
+                                                            </picture>
+                                                        </a>
+                                                    </div>
+                                                    <!-- item-content -->
+                                                    <div class="item-content">
+                                                        <div class="item-status-wrapper">
+                                                            <div class="badge badge-publication-status item-unpublished">не опубликована</div>
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <a href="#">Тайна мертвого ректора</a>
+                                                        </div>
+                                                        <div class="item-info-table">
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">обновить до</div>
+                                                                <div class="table-value">-</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">завершить до</div>
+                                                                <div class="table-value">23.23.2025</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">объем</div>
+                                                                <div class="table-value">1 а.л. из 8</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">стоимость</div>
+                                                                <div class="table-value">132.50 ₽</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-action-button-wrapper">
+                                                            <a href="#" class="btn btn-white rounded-pill">редактировать</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item-dropdown-wrapper -->
+                                                    <div class="item-dropdown-wrapper">
+                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <span class="icon-dots">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
+                                                                    <path d="M1.452 2.794C1.02667 2.794 0.674667 2.662 0.396 2.398C0.132 2.11933 0 1.78933 0 1.408C0 1.012 0.132 0.682 0.396 0.418C0.674667 0.139333 1.02667 0 1.452 0C1.87733 0 2.222 0.139333 2.486 0.418C2.75 0.682 2.882 1.012 2.882 1.408C2.882 1.78933 2.75 2.11933 2.486 2.398C2.222 2.662 1.87733 2.794 1.452 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M6.17856 2.794C5.75323 2.794 5.40123 2.662 5.12256 2.398C4.85856 2.11933 4.72656 1.78933 4.72656 1.408C4.72656 1.012 4.85856 0.682 5.12256 0.418C5.40123 0.139333 5.75323 0 6.17856 0C6.6039 0 6.94856 0.139333 7.21256 0.418C7.47656 0.682 7.60856 1.012 7.60856 1.408C7.60856 1.78933 7.47656 2.11933 7.21256 2.398C6.94856 2.662 6.6039 2.794 6.17856 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M10.9051 2.794C10.4798 2.794 10.1278 2.662 9.84912 2.398C9.58512 2.11933 9.45312 1.78933 9.45312 1.408C9.45312 1.012 9.58512 0.682 9.84912 0.418C10.1278 0.139333 10.4798 0 10.9051 0C11.3305 0 11.6751 0.139333 11.9391 0.418C12.2031 0.682 12.3351 1.012 12.3351 1.408C12.3351 1.78933 12.2031 2.11933 11.9391 2.398C11.6751 2.662 11.3305 2.794 10.9051 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-select">
+                                                            <li><a class="dropdown-item" href="#">Пункт 1</a></li>
+                                                            <li><a class="dropdown-item" href="#">Пункт 2</a></li>
+                                                            <li><a class="dropdown-item text-danger" href="#">Удалить</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- message -->
+                                                <div class="alert alert-danger" role="alert">
+                                                    <div class="d-flex">
+                                                        <svg class="flex-shrink-0 me-3" xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M1 21L12 2L23 21H1ZM3.6 19.5H20.4L12 5L3.6 19.5ZM12.1045 18.075C12.3181 18.075 12.4958 18.0026 12.6375 17.858C12.7792 17.7135 12.85 17.5343 12.85 17.3205C12.85 17.1068 12.7777 16.9292 12.633 16.7875C12.4885 16.6459 12.3094 16.575 12.0955 16.575C11.8819 16.575 11.7042 16.6473 11.5625 16.792C11.4208 16.9365 11.35 17.1157 11.35 17.3295C11.35 17.5431 11.4223 17.7208 11.567 17.8625C11.7115 18.0041 11.8906 18.075 12.1045 18.075ZM11.35 15.3H12.85V9.7H11.35V15.3Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                        </svg>
+                                                        <div>Информация о важных для автора вещах: сроки, предупреждение и тд.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- item 02 -->
+                                            <div class="item-my-book">
+                                                <div class="item-body">
+                                                    <!-- item-img-wrapper -->
+                                                    <div class="item-img-wrapper">
+                                                        <a href="#">
+                                                            <picture>
+                                                                <source srcset="img/card-book-cover/07.webp" type="image/webp">
+                                                                <source srcset="img/card-book-cover/07.jpg" type="image/jpeg">
+                                                                <img class="item-img" src="img/card-book-cover/07.jpg" alt="Дом лжи. Дэвид Эллис. Либристика.">
+                                                            </picture>
+                                                        </a>
+                                                    </div>
+                                                    <!-- item-content -->
+                                                    <div class="item-content">
+                                                        <div class="item-status-wrapper">
+                                                            <div class="badge badge-publication-status item-on-moderation">на модерации</div>
+                                                        </div>
+                                                        <div class="item-title">
+                                                            <a href="#">Дом лжи</a>
+                                                        </div>
+                                                        <div class="item-info-table">
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">лицензия</div>
+                                                                <div class="table-value">Длинное название лицензии</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">роялти</div>
+                                                                <div class="table-value">34%</div>
+                                                            </div>
+                                                            <div class="d-flex flex-column">
+                                                                <div class="table-title">стоимость</div>
+                                                                <div class="table-value">132.50 ₽</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-action-button-wrapper">
+                                                            <a href="#" class="btn btn-white rounded-pill">предпросмотр</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- item-dropdown-wrapper -->
+                                                    <div class="item-dropdown-wrapper">
+                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <span class="icon-dots">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
+                                                                    <path d="M1.452 2.794C1.02667 2.794 0.674667 2.662 0.396 2.398C0.132 2.11933 0 1.78933 0 1.408C0 1.012 0.132 0.682 0.396 0.418C0.674667 0.139333 1.02667 0 1.452 0C1.87733 0 2.222 0.139333 2.486 0.418C2.75 0.682 2.882 1.012 2.882 1.408C2.882 1.78933 2.75 2.11933 2.486 2.398C2.222 2.662 1.87733 2.794 1.452 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M6.17856 2.794C5.75323 2.794 5.40123 2.662 5.12256 2.398C4.85856 2.11933 4.72656 1.78933 4.72656 1.408C4.72656 1.012 4.85856 0.682 5.12256 0.418C5.40123 0.139333 5.75323 0 6.17856 0C6.6039 0 6.94856 0.139333 7.21256 0.418C7.47656 0.682 7.60856 1.012 7.60856 1.408C7.60856 1.78933 7.47656 2.11933 7.21256 2.398C6.94856 2.662 6.6039 2.794 6.17856 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M10.9051 2.794C10.4798 2.794 10.1278 2.662 9.84912 2.398C9.58512 2.11933 9.45312 1.78933 9.45312 1.408C9.45312 1.012 9.58512 0.682 9.84912 0.418C10.1278 0.139333 10.4798 0 10.9051 0C11.3305 0 11.6751 0.139333 11.9391 0.418C12.2031 0.682 12.3351 1.012 12.3351 1.408C12.3351 1.78933 12.2031 2.11933 11.9391 2.398C11.6751 2.662 11.3305 2.794 10.9051 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-select">
+                                                            <li><a class="dropdown-item" href="#">Пункт 1</a></li>
+                                                            <li><a class="dropdown-item" href="#">Пункт 2</a></li>
+                                                            <li><a class="dropdown-item text-danger" href="#">Удалить</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -88,6 +88,19 @@ html {
   margin-bottom: 2rem !important;
 }
 
+.g-2rem,
+.gy-2rem {
+  --bs-gutter-y: 2rem;
+}
+
+@media (min-width: 992px) {
+
+  .g-lg-2rem,
+  .gy-lg-2rem {
+    --bs-gutter-y: 2rem;
+  }
+}
+
 @media (min-width: 1600px) {
 
   .container,

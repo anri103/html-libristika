@@ -1,0 +1,12 @@
+.alert {
+    --bs-alert-border-radius: 10px;
+    font-size: 0.875rem;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+}
+
+.alert-danger {
+    --bs-alert-color: var(--bs-body-color);
+    --bs-alert-bg: #FBF4F3;
+    --bs-alert-border-color: #FBF4F3;
+    --bs-alert-link-color: var(--bs-danger-text-emphasis);
+}

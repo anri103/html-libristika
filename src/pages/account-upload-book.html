@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЛК - Публикация книги</title>
+    <title>ЛК - Автор - Публикация книги</title>
     <!-- styles -->
     @@include('../components/styles.html')
 </head>
@@ -23,21 +23,21 @@
             <div class="container">
                 <div class="row gy-4 justify-content-center">
                     <div class="col-lg-7">
-                        <div class="d-flex justify-content-between mb-3">
-                            <a href="#">
+                        <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
+                            <a href="account-upload.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                                 <span>Сохранить и выйти</span>
                             </a>
-                            <div class="badge rounded-pill text-bg-danger">необупликованная</div>
+                            <div class="badge badge-publication-status item-unpublished">неопубликовано</div>
                         </div>
                         
                         <div class="account-content-area">
                             <div class="account-content-widget">
                                 <div class="account-form-wrapper">
                                     <form class="form-account" action="#" method="post">
-                                        <div class="row gy-3 gy-lg-4">
+                                        <div class="row gy-2rem">
                                             <div class="col-12">
                                                 <label class="widget-title" for="bookName">Название</label>
                                                 <input id="bookName" class="form-control" type="text" name="book-name">
@@ -65,7 +65,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-12">
-                                                <label class="widget-title" for="bookAnnotation">Анотация</label>
+                                                <label class="widget-title" for="bookAnnotation">Аннотация</label>
                                                 <textarea id="bookAnnotation" class="form-control" rows="3"></textarea>
                                                 <div class="form-text">Не менее 50 символов</div>
                                             </div>
@@ -88,7 +88,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-12">
-                                                <div class="d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
                                                     <div>
                                                         <label class="widget-title mb-2" for="bookForAdults">Категория 18+</label>
                                                         <div class="text-muted">В тексте книги есть нецензурная лексика</div>
@@ -100,36 +100,78 @@
                                             </div>
                                             <div class="col-12">
                                                 <label class="widget-title" for="bookAgeRating">Возрастной рейтинг</label>
-                                                <div class="d-flex gap-4 flex-wrap">
-                                                    <div class="form-check-wrapper">
-                                                        <input class="form-check-input" type="radio" name="radioAgeRating" id="bookAgeRating0">
-                                                        <label class="form-check-label" for="bookAgeRating0">
-                                                            0+
-                                                        </label>
+                                                <div class="book-rating-options" role="tablist">
+                                                    <div class="rating-option" role="presentation">
+                                                        <input type="radio" name="radioAgeRating" id="bookAgeRating-0" value="0" checked>
+                                                        <label
+                                                        class="rating-label active"
+                                                        for="bookAgeRating-0"
+                                                        data-bs-toggle="tab"
+                                                        data-bs-target="#ratingDesc-0"
+                                                        role="tab"
+                                                        aria-controls="ratingDesc-0"
+                                                        aria-selected="true">0+</label>
                                                     </div>
-                                                    <div class="form-check-wrapper">
-                                                        <input class="form-check-input" type="radio" name="radioAgeRating" id="bookAgeRating6">
-                                                        <label class="form-check-label" for="bookAgeRating6">
-                                                            6+
-                                                        </label>
+                                                    <div class="rating-option" role="presentation">
+                                                        <input type="radio" name="radioAgeRating" id="bookAgeRating-6" value="6">
+                                                        <label
+                                                        class="rating-label"
+                                                        for="bookAgeRating-6"
+                                                        data-bs-toggle="tab"
+                                                        data-bs-target="#ratingDesc-6"
+                                                        role="tab"
+                                                        aria-controls="ratingDesc-6"
+                                                        aria-selected="false">6+</label>
                                                     </div>
-                                                    <div class="form-check-wrapper">
-                                                        <input class="form-check-input" type="radio" name="radioAgeRating" id="bookAgeRating12">
-                                                        <label class="form-check-label" for="bookAgeRating12">
-                                                            12+
-                                                        </label>
+                                                    <div class="rating-option" role="presentation">
+                                                        <input type="radio" name="radioAgeRating" id="bookAgeRating-12" value="12">
+                                                        <label
+                                                        class="rating-label"
+                                                        for="bookAgeRating-12"
+                                                        data-bs-toggle="tab"
+                                                        data-bs-target="#ratingDesc-12"
+                                                        role="tab"
+                                                        aria-controls="ratingDesc-12"
+                                                        aria-selected="false">12+</label>
                                                     </div>
-                                                    <div class="form-check-wrapper">
-                                                        <input class="form-check-input" type="radio" name="radioAgeRating" id="bookAgeRating16">
-                                                        <label class="form-check-label" for="bookAgeRating16">
-                                                            16+
-                                                        </label>
+                                                    <div class="rating-option" role="presentation">
+                                                        <input type="radio" name="radioAgeRating" id="bookAgeRating-16" value="16">
+                                                        <label
+                                                        class="rating-label"
+                                                        for="bookAgeRating-16"
+                                                        data-bs-toggle="tab"
+                                                        data-bs-target="#ratingDesc-16"
+                                                        role="tab"
+                                                        aria-controls="ratingDesc-16"
+                                                        aria-selected="false">16+</label>
                                                     </div>
-                                                    <div class="form-check-wrapper">
-                                                        <input class="form-check-input" type="radio" name="radioAgeRating" id="bookAgeRating18">
-                                                        <label class="form-check-label" for="bookAgeRating18">
-                                                            18+
-                                                        </label>
+                                                    <div class="rating-option" role="presentation">
+                                                        <input type="radio" name="radioAgeRating" id="bookAgeRating-18" value="18">
+                                                        <label
+                                                        class="rating-label"
+                                                        for="bookAgeRating-18"
+                                                        data-bs-toggle="tab"
+                                                        data-bs-target="#ratingDesc-18"
+                                                        role="tab"
+                                                        aria-controls="ratingDesc-18"
+                                                        aria-selected="false">18+</label>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content book-rating-descriptions" id="ratingTabContent">
+                                                    <div class="rating-description tab-pane fade active show" id="ratingDesc-0" role="tabpanel">
+                                                        <p>Контент, который можно показывать любой аудитории без ограничений. Нет сцен насилия, нецензурной лексики или материалов, которые могут напугать детей.</p>
+                                                    </div>
+                                                    <div class="rating-description tab-pane fade" id="ratingDesc-6" role="tabpanel">
+                                                        <p>Могут присутствовать редкие ненатуралистические сцены насилия, не содержащие детализации. Нет грубой лексики, но могут быть отдельные бранные слова.</p>
+                                                    </div>
+                                                    <div class="rating-description tab-pane fade" id="ratingDesc-12" role="tabpanel">
+                                                        <p>Может содержать умеренное насилие без детализации, намёки на сексуальные отношения, редкое использование ненормативной лексики.</p>
+                                                    </div>
+                                                    <div class="rating-description tab-pane fade" id="ratingDesc-16" role="tabpanel">
+                                                        <p>Может содержать сцены насилия (без натуралистичных деталей), употребление алкоголя и табака, более частую ненормативную лексику, откровенные сцены без демонстрации.</p>
+                                                    </div>
+                                                    <div class="rating-description tab-pane fade" id="ratingDesc-18" role="tabpanel">
+                                                        <p>Может содержать сцены жестокого насилия, употребление наркотиков, откровенные сексуальные сцены, частую ненормативную лексику и другие материалы, не предназначенные для детей.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -146,20 +188,73 @@
                                                 <div class="form-text text-primary">JPG или PNG, не менее 500x625 px.<br> Размер файла до 20 MB.</div>
                                             </div>
                                             <div class="col-12">
-                                                <label class="widget-title" for="bookTags">Цена за книгу</label>
-                                                <select id="bookTags" class="form-select" name="book-series">
+                                                <label class="widget-title" for="bookPrice">Цена за книгу</label>
+                                                <select id="bookPrice" class="form-select" name="book-series">
                                                     <option selected>выберите из списка</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
                                                 </select>
                                             </div>
-
-
-
+                                            <div class="col-12">
+                                                <div class="widget-title">Оплата за публикацию</div>
+                                                <div class="d-flex flex-column gap-3">
+                                                    <div class="radio-payment-method">
+                                                        <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-1" value="1">
+                                                        <label class="card card-payment-method payment-method-label" for="bookPaymentMethod-1">
+                                                            <div class="card-body">
+                                                                <div class="card-title">Эксклюзивная</div>
+                                                                <div class="card-subtitle"><b>35%</b> роялти с каждой продажи</div>
+                                                                <div class="card-content">
+                                                                    <p><span class="text-primary fs-5 fw-medium">58,04 руб</span> доход с каждой продажи</p>
+                                                                    <ul>
+                                                                        <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                        <li>Вы можете размещать книгу только на нашей платформе</li>
+                                                                        <li>После публикации доступна запись аудиокниги</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio-payment-method">
+                                                        <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-2" value="2">
+                                                        <label class="card card-payment-method payment-method-label" for="bookPaymentMethod-2">
+                                                            <div class="card-body">
+                                                                <div class="card-title">Базовая</div>
+                                                                <div class="card-subtitle"><b>25%</b> роялти с каждой продажи</div>
+                                                                <div class="card-content">
+                                                                    <p><span class="text-primary fs-5 fw-medium">41,45 руб</span> доход с каждой продажи</p>
+                                                                    <ul>
+                                                                        <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                        <li>Вы можете размещать книгу на других площадках</li>
+                                                                        <li>После публикации доступна запись аудиокниги</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio-payment-method">
+                                                        <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-3" value="3">
+                                                        <label class="card card-payment-method payment-method-label" for="bookPaymentMethod-3">
+                                                            <div class="card-body">
+                                                                <div class="card-title">Бесплатная</div>
+                                                                <div class="card-subtitle">Распространяется <b>бесплатно</b></div>
+                                                                <div class="card-content">
+                                                                    <p><span class="text-primary fs-5 fw-medium">0 руб</span> доход с каждой продажи</p>
+                                                                    <ul>
+                                                                        <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                        <li>Вы можете размещать книгу на других площадках</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="col-12">
                                                 <div class="form-check-wrapper">
-                                                    <input class="form-check-input" type="checkbox" id="agreeForAll">
+                                                    <!-- Событие "onchange" только для демонстрации валидации, НЕ ВКЛЮЧАТЬ В ИТОГОВЫЙ ПРОЕКТ! -->
+                                                    <input class="form-check-input" type="checkbox" id="agreeForAll" checked onchange="validateForm(this)">
                                                     <label class="form-check-label" for="agreeForAll">Я подтверждаю, что ознакомился с <a href="#" class="text-decoration-underline">Правилами публикации</a></label>
                                                 </div>
                                             </div>
