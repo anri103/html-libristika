@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const fileInclude = require('gulp-file-include');
+const merge = require('merge-stream');
 
 // Пути к исходным файлам и папке назначения
 const paths = {
@@ -37,39 +38,31 @@ function clean() {
   return del(['dist/**/*']);
 }
 
-// Удаление файлов из dist, если они удалены или переименованы в src
-function sync() {
-  return watch('src/**/*.html', { events: ['unlink', 'rename'] }, function (event, file) {
-    if (event === 'unlink') {
-      // Удаление файла
-      const filePath = file.path.replace('src', 'dist');
-      return del(filePath);
-    } else if (event === 'rename') {
-      // Переименование файла
-      const oldFilePath = file.oldPath.replace('src', 'dist');
-      const newFilePath = file.path.replace('src', 'dist');
-      return del(oldFilePath).then(() => {
-        return src(newFilePath.replace('dist', 'src'))
-          .pipe(fileInclude({
-            prefix: '@@',
-            basepath: '@file'
-          }))
-          .pipe(dest(paths.pages.dest))
-          .pipe(browserSync.stream());
-      });
-    }
-  });
+// Компиляция SCSS в CSS и копирование CSS-файлов (включая Bootstrap и Swiper)
+function styles() {
+  const scssStream = src(paths.styles.src)
+    .pipe(sass().on('error', sass.logError));
+
+  const cssStream = src([
+    'node_modules/bootstrap/dist/css/bootstrap.min.css', // Bootstrap CSS
+    'node_modules/@coreui/coreui-pro/dist/css/coreui.min.css', // CoreUI PRO
+    'node_modules/swiper/swiper-bundle.min.css' // Swiper CSS
+  ]);
+
+  return merge(scssStream, cssStream)
+    .pipe(dest(paths.styles.dest))
+    .pipe(browserSync.stream());
 }
 
-// Компиляция SCSS в CSS
-function styles() {
+// Копирование JS-файлов (включая Bootstrap и Swiper)
+function scripts() {
   return src([
-    'node_modules/bootstrap/dist/css/bootstrap.min.css', // Bootstrap CSS
-    'node_modules/swiper/swiper-bundle.min.css', // Swiper CSS
-    paths.styles.src // Ваши CSS-файлы
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', // Bootstrap JS
+    'node_modules/@coreui/coreui-pro/js/dist/multi-select.js', // CoreUI PRO Multi Select
+    'node_modules/swiper/swiper-bundle.min.js', // Swiper JS
+    paths.scripts.src // Ваши JS-файлы
   ])
-    .pipe(sass().on('error', sass.logError))
-    .pipe(dest(paths.styles.dest))
+    .pipe(dest(paths.scripts.dest))
     .pipe(browserSync.stream());
 }
 
@@ -98,17 +91,6 @@ function images() {
     .pipe(browserSync.stream());
 }
 
-// Копирование JS-файлов (включая Bootstrap и Swiper)
-function scripts() {
-  return src([
-    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', // Bootstrap JS
-    'node_modules/swiper/swiper-bundle.min.js', // Swiper JS
-    paths.scripts.src // Ваши JS-файлы
-  ])
-    .pipe(dest(paths.scripts.dest))
-    .pipe(browserSync.stream());
-}
-
 // Запуск сервера и отслеживание изменений
 function serve() {
   browserSync.init({
@@ -125,17 +107,9 @@ function serve() {
 }
 
 // Основные задачи
-exports.clean = clean;
-exports.sync = sync;
-exports.styles = styles;
-exports.scripts = scripts;
-exports.images = images;
-exports.fonts = fonts;
-exports.html = html;
-exports.serve = serve;
 
 // Сборка проекта
 exports.build = series(clean, parallel(styles, scripts, images, fonts, html));
 
 // Задача по умолчанию
-exports.default = series(clean, parallel(styles, scripts, images, fonts, html), parallel(sync, serve));
+exports.default = series(clean, parallel(styles, scripts, images, fonts, html), serve);

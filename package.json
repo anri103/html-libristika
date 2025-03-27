@@ -14,9 +14,11 @@
     "gulp": "^5.0.0",
     "gulp-file-include": "^2.3.0",
     "gulp-sass": "^6.0.1",
+    "merge-stream": "^2.0.0",
     "sass": "^1.86.0"
   },
   "dependencies": {
+    "@coreui/coreui-pro": "^5.9.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "swiper": "^11.2.6"
