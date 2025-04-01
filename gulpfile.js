@@ -44,9 +44,9 @@ function styles() {
     .pipe(sass().on('error', sass.logError));
 
   const cssStream = src([
-    'node_modules/bootstrap/dist/css/bootstrap.min.css', // Bootstrap CSS
+    'node_modules/bootstrap/dist/css/bootstrap.min.css', // Bootstrap
     'node_modules/@coreui/coreui-pro/dist/css/coreui.min.css', // CoreUI PRO
-    'node_modules/swiper/swiper-bundle.min.css' // Swiper CSS
+    'node_modules/swiper/swiper-bundle.min.css' // Swiper
   ]);
 
   return merge(scssStream, cssStream)
@@ -57,9 +57,9 @@ function styles() {
 // Копирование JS-файлов (включая Bootstrap и Swiper)
 function scripts() {
   return src([
-    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', // Bootstrap JS
-    'node_modules/@coreui/coreui-pro/js/dist/multi-select.js', // CoreUI PRO Multi Select
-    'node_modules/swiper/swiper-bundle.min.js', // Swiper JS
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', // Bootstrap
+    'node_modules/@coreui/coreui-pro/dist/js/coreui.bundle.min.js', // CoreUI PRO
+    'node_modules/swiper/swiper-bundle.min.js', // Swiper
     paths.scripts.src // Ваши JS-файлы
   ])
     .pipe(dest(paths.scripts.dest))
