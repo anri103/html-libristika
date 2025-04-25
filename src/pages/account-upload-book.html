@@ -22,14 +22,16 @@
         <section class="section">
             <div class="container">
                 <div class="row gy-4 justify-content-center">
-                    <div class="col-lg-7">
+                    <div class="col-lg-2">
+                        <a href="account-upload.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Сохранить и выйти</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-8">
                         <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
-                            <a href="account-upload.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span>Сохранить и выйти</span>
-                            </a>
                             <div class="badge badge-publication-status item-unpublished">неопубликовано</div>
                         </div>
                         
@@ -210,56 +212,71 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="widget-title">Оплата за публикацию</div>
-                                                <div class="d-flex flex-column gap-3">
-                                                    <div class="radio-payment-method">
-                                                        <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-1" value="1">
-                                                        <label class="card card-payment-method payment-method-label" for="bookPaymentMethod-1">
-                                                            <div class="card-body">
-                                                                <div class="card-title">Эксклюзивная</div>
-                                                                <div class="card-subtitle"><b>35%</b> роялти с каждой продажи</div>
-                                                                <div class="card-content">
-                                                                    <p><span class="text-primary fs-5 fw-medium">58,04 руб</span> доход с каждой продажи</p>
-                                                                    <ul>
-                                                                        <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
-                                                                        <li>Вы можете размещать книгу только на нашей платформе</li>
-                                                                        <li>После публикации доступна запись аудиокниги</li>
-                                                                    </ul>
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-4">
+                                                        <div class="radio-payment-method h-100">
+                                                            <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-1" value="1">
+                                                            <label class="card card-payment-method payment-method-label h-100" for="bookPaymentMethod-1">
+                                                                <div class="card-body">
+                                                                    <div class="card-title">Эксклюзивная</div>
+                                                                    <div class="card-subtitle"><b>35%</b> роялти с каждой продажи</div>
+                                                                    <div class="card-content">
+                                                                        <p><span class="text-primary fs-5 fw-medium">58,04 руб</span> доход с каждой продажи</p>
+                                                                        <ul>
+                                                                            <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                            <li>Вы можете размещать книгу только на нашей платформе</li>
+                                                                            <li>После публикации доступна запись аудиокниги</li>
+                                                                        </ul>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        </label>
+                                                                <div class="card-footer">
+                                                                    <div class="btn btn-secondary rounded-pill">Выбрать</div>
+                                                                </div>
+                                                            </label>
+                                                        </div>
                                                     </div>
-                                                    <div class="radio-payment-method">
-                                                        <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-2" value="2">
-                                                        <label class="card card-payment-method payment-method-label" for="bookPaymentMethod-2">
-                                                            <div class="card-body">
-                                                                <div class="card-title">Базовая</div>
-                                                                <div class="card-subtitle"><b>25%</b> роялти с каждой продажи</div>
-                                                                <div class="card-content">
-                                                                    <p><span class="text-primary fs-5 fw-medium">41,45 руб</span> доход с каждой продажи</p>
-                                                                    <ul>
-                                                                        <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
-                                                                        <li>Вы можете размещать книгу на других площадках</li>
-                                                                        <li>После публикации доступна запись аудиокниги</li>
-                                                                    </ul>
+                                                    <div class="col-lg-4">
+                                                        <div class="radio-payment-method h-100">
+                                                            <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-2" value="2">
+                                                            <label class="card card-payment-method payment-method-label h-100" for="bookPaymentMethod-2">
+                                                                <div class="card-body">
+                                                                    <div class="card-title">Базовая</div>
+                                                                    <div class="card-subtitle"><b>25%</b> роялти с каждой продажи</div>
+                                                                    <div class="card-content">
+                                                                        <p><span class="text-primary fs-5 fw-medium">41,45 руб</span> доход с каждой продажи</p>
+                                                                        <ul>
+                                                                            <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                            <li>Вы можете размещать книгу на других площадках</li>
+                                                                            <li>После публикации доступна запись аудиокниги</li>
+                                                                        </ul>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        </label>
+                                                                <div class="card-footer">
+                                                                    <div class="btn btn-secondary rounded-pill">Выбрать</div>
+                                                                </div>
+                                                            </label>
+                                                        </div>
                                                     </div>
-                                                    <div class="radio-payment-method">
-                                                        <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-3" value="3">
-                                                        <label class="card card-payment-method payment-method-label" for="bookPaymentMethod-3">
-                                                            <div class="card-body">
-                                                                <div class="card-title">Бесплатная</div>
-                                                                <div class="card-subtitle">Распространяется <b>бесплатно</b></div>
-                                                                <div class="card-content">
-                                                                    <p><span class="text-primary fs-5 fw-medium">0 руб</span> доход с каждой продажи</p>
-                                                                    <ul>
-                                                                        <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
-                                                                        <li>Вы можете размещать книгу на других площадках</li>
-                                                                    </ul>
+                                                    <div class="col-lg-4">
+                                                        <div class="radio-payment-method h-100">
+                                                            <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-3" value="3">
+                                                            <label class="card card-payment-method payment-method-label h-100" for="bookPaymentMethod-3">
+                                                                <div class="card-body">
+                                                                    <div class="card-title">Бесплатная</div>
+                                                                    <div class="card-subtitle">Распространяется <b>бесплатно</b></div>
+                                                                    <div class="card-content">
+                                                                        <p><span class="text-primary fs-5 fw-medium">0 руб</span> доход с каждой продажи</p>
+                                                                        <ul>
+                                                                            <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                            <li>Вы можете размещать книгу на других площадках</li>
+                                                                        </ul>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        </label>
+                                                                <div class="card-footer">
+                                                                    <div class="btn btn-secondary rounded-pill">Выбрать</div>
+                                                                </div>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -281,6 +298,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-2"></div>
                 </div>
             </div>
         </section>

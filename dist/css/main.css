@@ -800,6 +800,7 @@ label {
 /*------------------------------------------------------------------
 [ footer ]*/
 .footer {
+  display: block;
   position: relative;
   padding: 40px 0;
   margin-top: 2rem;
@@ -1407,6 +1408,7 @@ label {
 }
 .account-content-area {
   padding: 34px;
+  border-radius: 10px;
   background-color: #fff;
 }
 
@@ -1491,7 +1493,9 @@ label {
   --bs-card-subtitle-color: var(--bs-body-color);
   --bs-card-border-color: var(--bs-body-bg);
   --bs-card-border-radius: 10px;
+  --bs-card-inner-border-radius: 10px;
   --bs-card-bg: var(--bs-body-bg);
+  --bs-card-cap-bg: var(--bs-body-bg);
   --bs-card-color: #6A6969;
   font-size: 14px;
 }

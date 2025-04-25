@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛК - Автор - Текстовый редактор глав</title>
+    <!-- styles -->
+    @@include('../components/styles.html')
+</head>
+
+<!-- Динамические классы в зависимости от типа страницы -->
+
+<body class="page-account">
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <section class="section">
+            <div class="container">
+                <div class="row gy-4 justify-content-center">
+                    <div class="col-lg-2">
+                        <div class="mb-4">
+                            <a href="account-upload.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Сохранить и выйти</span>
+                            </a>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-baseline gap-2 mb-4">
+                            <div class="h3 mb-0">Содержание</div>
+                            <div class="text-muted">0 глав</div>
+                        </div>
+                        <div class="mb-4">
+                            <button type="button" class="btn btn-secondary btn-lg rounded-pill">Добавить главу</button>
+                        </div>
+                        <div>
+                            <div class="mb-4">
+                                <div class="h6 mb-1 text-secondary">Глава 1. Название</div>
+                                <div class="fs-small text-muted">Опубликовано 21.03.2025</div>
+                                <div class="text-success mt-2">бесплатно</div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="h6 mb-1">Глава 2. Название</div>
+                                <div class="fs-small text-muted">Опубликовать 17.03.2025</div>
+                                <div class="text-success mt-2">бесплатно</div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="h6 mb-1">Глава 3. Название</div>
+                                <div class="fs-small text-muted">Опубликовать после модерации</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="text-editor-area">
+                            <div style="
+                            min-height: 700px;
+                            border-radius: 10px;
+                            background-color: #fff;
+                            "></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="h3 mb-3">Настройки главы</div>
+                        <div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <div>
+                                        <label class="widget-title" for="publishImmediatelyAfterModeration">Опубликовать сразу после модерации</label>
+                                    </div>
+                                    <div>
+                                        <div class="form-switch-xl">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-muted mt-1">Необходимые комментарии об модерации</div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <div>
+                                        <label class="widget-title" for="freeChapter">Бесплатная глава</label>
+                                    </div>
+                                    <div>
+                                        <div class="form-switch-xl">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="freeChapter">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline btn-lg rounded-pill">Удалить главу</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+
+    <!-- scripts -->
+    @@include('../components/scripts.html')
+</body>
+
+</html>
