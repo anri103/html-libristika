@@ -3,12 +3,12 @@ const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const fileInclude = require('gulp-file-include');
-const merge = require('merge-stream');
 
 // Пути к исходным файлам и папке назначения
 const paths = {
   styles: {
     src: 'src/scss/**/*.scss',
+    main: 'src/scss/main.scss',
     dest: 'dist/css/'
   },
   scripts: {
@@ -40,16 +40,13 @@ function clean() {
 
 // Компиляция SCSS в CSS и копирование CSS-файлов (включая Bootstrap и Swiper)
 function styles() {
-  const scssStream = src(paths.styles.src)
-    .pipe(sass().on('error', sass.logError));
-
-  const cssStream = src([
-    'node_modules/bootstrap/dist/css/bootstrap.min.css', // Bootstrap
-    'node_modules/@coreui/coreui-pro/dist/css/coreui.min.css', // CoreUI PRO
-    'node_modules/swiper/swiper-bundle.min.css' // Swiper
-  ]);
-
-  return merge(scssStream, cssStream)
+  return src(paths.styles.main)
+    .pipe(sass({
+      outputStyle: 'compressed', // Минификация CSS
+      includePaths: [
+        'node_modules' // Путь к node_modules для импорта библиотек
+      ]
+    }).on('error', sass.logError))
     .pipe(dest(paths.styles.dest))
     .pipe(browserSync.stream());
 }
