@@ -4,16 +4,10 @@
  * Version: 1.0.0
  */
 
-/*//////////////////////////////////////////////////////////////////
-[ IMPORT ]*/
+// vendors
+@use 'vendors';
 
-// Bootstrap components
-// CoreUI PRO components
-// Swiper components
-
-/*//////////////////////////////////////////////////////////////////
-[ BASE ]*/
-
+// base
 @use 'fonts';
 @use 'variables';
 @use 'typography';
@@ -24,9 +18,7 @@
 @use 'sections';
 @use 'cards';
 
-/*//////////////////////////////////////////////////////////////////
-[ COMPONENTS ]*/
-
+// components
 @use 'components/header';
 @use 'components/fixed-mobile-menu';
 @use 'components/footer';

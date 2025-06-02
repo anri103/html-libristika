@@ -7,8 +7,7 @@ const fileInclude = require('gulp-file-include');
 // Пути к исходным файлам и папке назначения
 const paths = {
   styles: {
-    src: 'src/scss/**/*.scss',
-    main: 'src/scss/main.scss',
+    src: 'src/scss/main.scss',
     dest: 'dist/css/'
   },
   scripts: {
@@ -40,13 +39,8 @@ function clean() {
 
 // Компиляция SCSS в CSS и копирование CSS-файлов (включая Bootstrap и Swiper)
 function styles() {
-  return src(paths.styles.main)
-    .pipe(sass({
-      outputStyle: 'compressed', // Минификация CSS
-      includePaths: [
-        'node_modules' // Путь к node_modules для импорта библиотек
-      ]
-    }).on('error', sass.logError))
+  return src(paths.styles.src)
+    .pipe(sass().on('error', sass.logError))
     .pipe(dest(paths.styles.dest))
     .pipe(browserSync.stream());
 }
