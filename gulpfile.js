@@ -7,7 +7,7 @@ const fileInclude = require('gulp-file-include');
 // Пути к исходным файлам и папке назначения
 const paths = {
   styles: {
-    src: 'src/scss/main.scss',
+    src: 'src/scss/**/*.scss',
     dest: 'dist/css/'
   },
   scripts: {
@@ -48,7 +48,6 @@ function styles() {
 // Копирование JS-файлов (включая Bootstrap и Swiper)
 function scripts() {
   return src([
-    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', // Bootstrap
     'node_modules/@coreui/coreui-pro/dist/js/coreui.bundle.min.js', // CoreUI PRO
     'node_modules/swiper/swiper-bundle.min.js', // Swiper
     paths.scripts.src // Ваши JS-файлы

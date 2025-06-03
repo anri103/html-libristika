@@ -1,18 +1,18 @@
-/*//////////////////////////////////////////////////////////////////
-[ CARDS ]*/
+/*------------------------------------------------------------------
+[ cards ]*/
 
 .card {
-    --bs-card-spacer-y: 1rem;
-    --bs-card-spacer-x: 1rem;
-    --bs-card-title-spacer-y: 0.5rem;
-    --bs-card-border-width: 1px;
-    --bs-card-border-color: transparent;
-    --bs-card-border-radius: 0px;
-    --bs-card-inner-border-radius: 0px;
-    --bs-card-cap-padding-y: 1rem;
-    --bs-card-cap-padding-x: 1rem;
-    --bs-card-cap-bg: #fff;
-    --bs-card-bg: #fff;
+    --cui-card-spacer-y: 1rem;
+    --cui-card-spacer-x: 1rem;
+    --cui-card-title-spacer-y: 0.5rem;
+    --cui-card-border-width: 1px;
+    --cui-card-border-color: transparent;
+    --cui-card-border-radius: 0px;
+    --cui-card-inner-border-radius: 0px;
+    --cui-card-cap-padding-y: 1rem;
+    --cui-card-cap-padding-x: 1rem;
+    --cui-card-cap-bg: #fff;
+    --cui-card-bg: #fff;
     word-wrap: normal;
 }
 

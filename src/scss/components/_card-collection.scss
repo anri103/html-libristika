@@ -2,11 +2,11 @@
 [ card__collection ]*/
 
 .card__collection {
-    --bs-card-spacer-y: 10px;
-    --bs-card-spacer-x: 0px;
-    --bs-card-cap-padding-y: 0px;
-    --bs-card-cap-padding-x: 0px;
-    --bs-card-bg: var(--bs-body-bg);
+    --cui-card-spacer-y: 10px;
+    --cui-card-spacer-x: 0px;
+    --cui-card-cap-padding-y: 0px;
+    --cui-card-cap-padding-x: 0px;
+    --cui-card-bg: var(--cui-body-bg);
     --card-cover-height: 250px;
     width: 320px;
 
@@ -22,8 +22,8 @@
     }
 
     .card-title {
-        --bs-link-color-rgb: 31, 51, 38;
-        --bs-link-hover-color-rgb: 86, 107, 97;
+        --cui-link-color-rgb: 31, 51, 38;
+        --cui-link-hover-color-rgb: 86, 107, 97;
         font-family: var(--theme-ff-title);
         font-size: 20px;
         font-weight: 500;

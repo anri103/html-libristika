@@ -2,19 +2,19 @@
 [ card__author ]*/
 
 .card__author {
-    --bs-card-spacer-y: 24px;
-    --bs-card-spacer-x: 15px;
-    --bs-card-border-radius: 10px;
-    --bs-card-cap-padding-y: 0px;
-    --bs-card-cap-padding-x: 0px;
-    --bs-card-bg: #fff;
+    --cui-card-spacer-y: 24px;
+    --cui-card-spacer-x: 15px;
+    --cui-card-border-radius: 10px;
+    --cui-card-cap-padding-y: 0px;
+    --cui-card-cap-padding-x: 0px;
+    --cui-card-bg: #fff;
     --card-cover-height: 120px;
     width: 250px;
 
     .card-img-cover {
         width: 100%;
         height: var(--card-cover-height);
-        border-radius: var(--bs-card-border-radius);
+        border-radius: var(--cui-card-border-radius);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -42,8 +42,8 @@
     }
 
     .card-title {
-        --bs-link-color-rgb: 31, 51, 38;
-        --bs-link-hover-color-rgb: 86, 107, 97;
+        --cui-link-color-rgb: 31, 51, 38;
+        --cui-link-hover-color-rgb: 86, 107, 97;
         font-family: var(--theme-ff-title);
         font-size: 20px;
         font-weight: 500;
@@ -51,8 +51,8 @@
     }
 
     .card-author-genres {
-        --bs-link-color-rgb: 180, 102, 76;
-        --bs-link-hover-color-rgb: 31, 51, 38;
+        --cui-link-color-rgb: 180, 102, 76;
+        --cui-link-hover-color-rgb: 31, 51, 38;
         display: -webkit-box;
         overflow: hidden;
         text-overflow: ellipsis;

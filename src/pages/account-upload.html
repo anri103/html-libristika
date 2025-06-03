@@ -44,11 +44,13 @@
                                 </div>
                                 <div class="account-name">
                                     <h1>Имя Фамилия</h1>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
-                                        <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
-                                        <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.00114"/>
-                                    </svg>
+                                    <span class="account-verify">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
+                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
+                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.00114"/>
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="account-menu-wrapper">
                                     <nav class="account-menu">
@@ -76,9 +78,9 @@
                             <div class="account-content-widget">
                                 <nav class="mb-2rem">
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <button type="button" class="nav-link active" data-bs-toggle="tab" data-bs-target="#nav-upload-book" role="tab" aria-controls="nav-upload-book" aria-selected="true">Электронные книги</button>
-                                        <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-upload-audio" role="tab" aria-controls="nav-upload-audio" aria-selected="false">Аудиокниги</button>
-                                        <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-upload-draft" role="tab" aria-controls="nav-upload-draft" aria-selected="false">Черновики</button>
+                                        <button type="button" class="nav-link active" data-coreui-toggle="tab" data-coreui-target="#nav-upload-book" role="tab" aria-controls="nav-upload-book" aria-selected="true">Электронные книги</button>
+                                        <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-upload-audio" role="tab" aria-controls="nav-upload-audio" aria-selected="false">Аудиокниги</button>
+                                        <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-upload-draft" role="tab" aria-controls="nav-upload-draft" aria-selected="false">Черновики</button>
                                     </div>
                                 </nav>
                                 <div class="tab-content" id="nav-tabContent">
@@ -91,7 +93,7 @@
                                         <!-- sorting -->
                                         <div class="d-flex justify-content-between mb-4">
                                             <div class="position-relative">
-                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
                                                     <span>Сортировка по статусу</span>
                                                     <span class="icon-arrow-down">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -149,7 +151,7 @@
                                                     </div>
                                                     <!-- item-dropdown-wrapper -->
                                                     <div class="item-dropdown-wrapper">
-                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
                                                             <span class="icon-dots">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
                                                                     <path d="M1.452 2.794C1.02667 2.794 0.674667 2.662 0.396 2.398C0.132 2.11933 0 1.78933 0 1.408C0 1.012 0.132 0.682 0.396 0.418C0.674667 0.139333 1.02667 0 1.452 0C1.87733 0 2.222 0.139333 2.486 0.418C2.75 0.682 2.882 1.012 2.882 1.408C2.882 1.78933 2.75 2.11933 2.486 2.398C2.222 2.662 1.87733 2.794 1.452 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
@@ -207,7 +209,7 @@
                                                     </div>
                                                     <!-- item-dropdown-wrapper -->
                                                     <div class="item-dropdown-wrapper">
-                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
                                                             <span class="icon-dots">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
                                                                     <path d="M1.452 2.794C1.02667 2.794 0.674667 2.662 0.396 2.398C0.132 2.11933 0 1.78933 0 1.408C0 1.012 0.132 0.682 0.396 0.418C0.674667 0.139333 1.02667 0 1.452 0C1.87733 0 2.222 0.139333 2.486 0.418C2.75 0.682 2.882 1.012 2.882 1.408C2.882 1.78933 2.75 2.11933 2.486 2.398C2.222 2.662 1.87733 2.794 1.452 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
@@ -234,7 +236,7 @@
                                         <!-- sorting -->
                                         <div class="d-flex justify-content-between mb-4">
                                             <div class="position-relative">
-                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
                                                     <span>Сортировка по статусу</span>
                                                     <span class="icon-arrow-down">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -292,7 +294,7 @@
                                                     </div>
                                                     <!-- item-dropdown-wrapper -->
                                                     <div class="item-dropdown-wrapper">
-                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
                                                             <span class="icon-dots">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
                                                                     <path d="M1.452 2.794C1.02667 2.794 0.674667 2.662 0.396 2.398C0.132 2.11933 0 1.78933 0 1.408C0 1.012 0.132 0.682 0.396 0.418C0.674667 0.139333 1.02667 0 1.452 0C1.87733 0 2.222 0.139333 2.486 0.418C2.75 0.682 2.882 1.012 2.882 1.408C2.882 1.78933 2.75 2.11933 2.486 2.398C2.222 2.662 1.87733 2.794 1.452 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
@@ -331,7 +333,7 @@
                                         <!-- sorting -->
                                         <div class="d-flex justify-content-between mb-4">
                                             <div class="position-relative">
-                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
                                                     <span>Сортировка по статусу</span>
                                                     <span class="icon-arrow-down">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -393,7 +395,7 @@
                                                     </div>
                                                     <!-- item-dropdown-wrapper -->
                                                     <div class="item-dropdown-wrapper">
-                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
                                                             <span class="icon-dots">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
                                                                     <path d="M1.452 2.794C1.02667 2.794 0.674667 2.662 0.396 2.398C0.132 2.11933 0 1.78933 0 1.408C0 1.012 0.132 0.682 0.396 0.418C0.674667 0.139333 1.02667 0 1.452 0C1.87733 0 2.222 0.139333 2.486 0.418C2.75 0.682 2.882 1.012 2.882 1.408C2.882 1.78933 2.75 2.11933 2.486 2.398C2.222 2.662 1.87733 2.794 1.452 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
@@ -460,7 +462,7 @@
                                                     </div>
                                                     <!-- item-dropdown-wrapper -->
                                                     <div class="item-dropdown-wrapper">
-                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <button type="button" class="btn btn-dropdown-dots border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
                                                             <span class="icon-dots">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3" fill="none">
                                                                     <path d="M1.452 2.794C1.02667 2.794 0.674667 2.662 0.396 2.398C0.132 2.11933 0 1.78933 0 1.408C0 1.012 0.132 0.682 0.396 0.418C0.674667 0.139333 1.02667 0 1.452 0C1.87733 0 2.222 0.139333 2.486 0.418C2.75 0.682 2.882 1.012 2.882 1.408C2.882 1.78933 2.75 2.11933 2.486 2.398C2.222 2.662 1.87733 2.794 1.452 2.794Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>

@@ -2,11 +2,11 @@
 [ card__book ]*/
 
 .card__book {
-    --bs-card-spacer-y: 14px;
-    --bs-card-spacer-x: 0px;
-    --bs-card-cap-padding-y: 0px;
-    --bs-card-cap-padding-x: 0px;
-    --bs-card-bg: var(--bs-body-bg);
+    --cui-card-spacer-y: 14px;
+    --cui-card-spacer-x: 0px;
+    --cui-card-cap-padding-y: 0px;
+    --cui-card-cap-padding-x: 0px;
+    --cui-card-bg: var(--cui-body-bg);
     --card-cover-height: 250px;
     --card-badge-height: 25px;
     width: min-content;
@@ -86,8 +86,8 @@
     }
 
     .card-title {
-        --bs-link-color-rgb: 31, 51, 38;
-        --bs-link-hover-color-rgb: 86, 107, 97;
+        --cui-link-color-rgb: 31, 51, 38;
+        --cui-link-hover-color-rgb: 86, 107, 97;
         display: -webkit-box;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -160,7 +160,7 @@
 
 @media screen and (max-width: 991px) {
     .card__book {
-        --bs-card-spacer-y: 12px;
+        --cui-card-spacer-y: 12px;
         --card-cover-height: 170px;
 
         .card-title,
