@@ -16209,10 +16209,17 @@ html {
   --cui-gutter-y: 2rem;
 }
 
+.p-16 {
+  padding: 16px;
+}
+
 @media (min-width: 992px) {
   .g-lg-2rem,
   .gy-lg-2rem {
     --cui-gutter-y: 2rem;
+  }
+  .p-lg-32 {
+    padding: 32px;
   }
 }
 @media (min-width: 1600px) {
@@ -16882,7 +16889,7 @@ label {
 /*------------------------------------------------------------------
 [ footer ]*/
 .footer {
-  --cui-footer-bg: var(--cui-white);
+  --cui-footer-bg: var(--cui-body-bg);
   --cui-footer-border: none;
   display: block;
   padding: 40px 0;

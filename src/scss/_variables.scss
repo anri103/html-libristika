@@ -93,11 +93,19 @@ html {
   --cui-gutter-y: 2rem;
 }
 
+.p-16 {
+  padding: 16px;
+}
+
 @media (min-width: 992px) {
 
   .g-lg-2rem,
   .gy-lg-2rem {
     --cui-gutter-y: 2rem;
+  }
+
+  .p-lg-32 {
+    padding: 32px;
   }
 }
 

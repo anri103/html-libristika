@@ -13,9 +13,7 @@
     @@include('../components/head-styles.html')
 </head>
 
-<!-- Динамические классы в зависимости от типа страницы -->
-
-<body class="page-account">
+<body>
 
     <!-- header -->
     @@include('../components/header.html')
@@ -27,93 +25,141 @@
             <div class="container">
                 <div class="account-cover">
                     <picture>
-                        <img class="cover-img" src="img/user/account-cover-bg.jpg" alt="">
+                        <img class="cover-img" src="img/user/verification-bg.jpg" alt="">
                     </picture>
                 </div>
-                <div class="account-area">
-                    <div class="row gy-4 justify-content-center">
+                <div class="bg-white p-16 p-lg-32">
+                    <div class="row gy-4">
                         <div class="col-lg-7">
-                            <div class="account-content-area">
-                                <div class="account-content-widget">
-                                    <h1 class="h1 widget-title">Верификация</h1>
-                                    <p class="h3">Личные данные</p>
-                                    <div class="account-form-wrapper">
-                                        <form class="form-account" action="#" method="post">
+                            <div class="mb-4">
+                                <h1 class="h1 mb-4">Верификация</h1>
+                                <form class="form-account" action="#" method="post">
+                                    <div class="row gy-3 gy-lg-4">
+                                        <div class="col-12">
                                             <div class="row gy-3 gy-lg-4">
                                                 <div class="col-12">
-                                                    <label class="form-label" for="formSignupfname">Имя</label>
-                                                    <input id="formSignupfname" class="form-control" type="text"
-                                                        name="firstName">
+                                                    <div class="widget-heading mb-3">
+                                                        <p class="h3 mb-2">Личные данные</p>
+                                                    </div>
                                                 </div>
                                                 <div class="col-12">
-                                                    <label class="form-label" for="formSignuplname">Фамилия</label>
-                                                    <input id="formSignuplname" class="form-control" type="text"
-                                                        name="lastName">
+                                                    <label class="form-label" for="formSignupFname">Имя</label>
+                                                    <input type="text" class="form-control" id="formSignupFname" value="Сергей" disabled readonly>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignupLname">Фамилия</label>
+                                                    <input type="text" class="form-control" id="formSignupLname" value="Александрович" disabled readonly>
                                                 </div>
                                                 <div class="col-12">
                                                     <label class="form-label" for="formSignupEmail">Email</label>
-                                                    <input id="formSignupEmail" class="form-control" type="email"
-                                                        name="email">
+                                                    <input type="email" class="form-control" id="formSignupEmail" value="info@mail.com" disabled readonly>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-flex flex-wrap gap-4 row-gap-2">
                                                         <div class="form-check-wrapper">
-                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                                мужчина
-                                                            </label>
+                                                            <input type="radio" class="form-check-input" name="radioSex" id="radioSexMale">
+                                                            <label class="form-check-label" for="radioSexMale">Мужчина</label>
                                                         </div>
                                                         <div class="form-check-wrapper">
-                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                                женщина
-                                                            </label>
+                                                            <input type="radio" class="form-check-input" name="radioSex" id="radioSexFemale">
+                                                            <label class="form-check-label" for="radioSexFemale">Женщина</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
-                                                    <label class="form-label" for="formBirth">Дата рождения</label>
-                                                    <input id="formBirth" class="form-control" type="text" name="birthDate">
+                                                    <label class="form-label" for="formBirthDate">Дата рождения</label>
+                                                    <input type="text" class="form-control" id="formBirthDate">
                                                 </div>
                                                 <div class="col-12">
                                                     <label class="form-label" for="formCitizenship">Гражданство</label>
-                                                    <input id="formCitizenship" class="form-control" type="text" name="Citizenship">
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="exampleFormControlTextarea1">О себе</label>
-                                                    <textarea id="exampleFormControlTextarea1" class="form-control" rows="3"></textarea>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="buttons-wrapper">
-                                                        <button type="submit" class="btn btn-secondary btn-lg rounded-pill">Сохранить изменения</button>
-                                                    </div>
+                                                    <input type="text" class="form-control" id="formCitizenship">
                                                 </div>
                                             </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="account-content-widget">
-                                    <h2 class="widget-title">Изменить пароль</h2>
-                                    <div class="account-form-wrapper">
-                                        <form class="form-account" action="#" method="post">
+                                        </div>
+                                        <div class="col-12">
                                             <div class="row gy-3 gy-lg-4">
                                                 <div class="col-12">
-                                                    <label class="form-label" for="formSignupPassword">Новый пароль</label>
-                                                    <input id="formSignupPassword" class="form-control" type="password" name="password">
+                                                    <div class="widget-heading mb-3">
+                                                        <p class="h3 mb-2">Паспортные данные</p>
+                                                    </div>
                                                 </div>
                                                 <div class="col-12">
-                                                    <label class="form-label" for="formSignupCheckPassword">Подтверждение пароля</label>
-                                                    <input id="formSignupCheckPassword" class="form-control" type="password" name="password">
+                                                    <label class="form-label" for="formPassportSeries">Серия и номер</label>
+                                                    <input type="text" class="form-control" id="formPassportSeries">
                                                 </div>
                                                 <div class="col-12">
-                                                    <div class="buttons-wrapper">
-                                                        <button type="submit" class="btn btn-secondary btn-lg rounded-pill">Сохранить изменения</button>
+                                                    <label class="form-label" for="formPassportWhoIssued">Кем выдан</label>
+                                                    <input type="text" class="form-control" id="formPassportWhoIssued">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formPassportDate">Дата выдачи</label>
+                                                    <input type="text" class="form-control" id="formPassportDate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row gy-3 gy-lg-4">
+                                                <div class="col-12">
+                                                    <div class="widget-heading mb-3">
+                                                        <p class="h3 mb-2">Фотографии документов</p>
+                                                        <p>Мы не храним фотографии документов.<br /> Они удаляются сразу после проверки профиля</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row gy-4">
+                                                        <div class="col-md-6">
+                                                            <div class="d-flex flex-column h-100 bg-light rounded p-4">
+                                                                <div style="flex: 1 1 auto;">
+                                                                    <p class="h5">Загрузите фото с документом</p>
+                                                                    <div class="text-muted small">
+                                                                        <p>На фото должны быть видны ваше лицо, серия и номер документа</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-4">
+                                                                    <img class="img-fluid w-100" src="img/user/ver-foto-01.jpg" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <button type="button" class="btn btn-secondary rounded-pill w-100">Загрузить фото</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="d-flex flex-column h-100 bg-light rounded p-4">
+                                                                <div style="flex: 1 1 auto;">
+                                                                    <p class="h5">Загрузите фото/скан документа</p>
+                                                                    <div class="text-muted small">
+                                                                        <p>На изображении должны быть видны серия, номер, дата и место выдачи</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-4">
+                                                                    <img class="img-fluid w-100" src="img/user/ver-foto-02.jpg" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <button type="button" class="btn btn-secondary rounded-pill w-100">Загрузить фото</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-check-wrapper">
+                                                        <input type="checkbox" class="form-check-input" id="checkboxAgreement">
+                                                        <label class="form-check-label" for="checkboxAgreement">Я ознакомился с <a href="#">Политикой сервиса</a> в отношении использования персональных данных и согласен на передачу персональных данных для прохождения процедуры идентификации согласно <a href="#">правилам</a> использования сервисом</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row gy-3 gy-lg-4">
+                                                <div class="col-12">
+                                                    <div class="buttons-wrapper">
+                                                        <button type="submit" class="btn btn-primary btn-lg rounded-pill">Подать заявку</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
