@@ -236,19 +236,16 @@
 
         <section class="section">
             <div class="container">
-                <div class="navigation-wrapper">
-                    
+                <div class="navigation-wrapper mb-4">
+                    <a href="account-upload.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Сохранить и выйти</span>
+                    </a>
                 </div>
-                <div class="row gy-4 justify-content-center">
+                <div class="row gy-4">
                     <div class="col-lg-3">
-                        <div class="mb-4">
-                            <a href="account-upload.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span>Сохранить и выйти</span>
-                            </a>
-                        </div>
                         <div class="d-flex flex-wrap align-items-baseline gap-2 mb-4">
                             <div class="h3 mb-0">Содержание</div>
                             <div class="text-muted">0 глав</div>
@@ -256,63 +253,511 @@
                         <div class="mb-4">
                             <button type="button" class="btn btn-secondary btn-lg rounded-pill">Добавить главу</button>
                         </div>
-                        <div>
-                            <div class="mb-4">
-                                <div class="h6 mb-1 text-secondary"><a href="#">Глава 1. Название</a></div>
+                        <div class="chapters-nav" role="tablist" id="chaptersNav">
+                            <div class="nav-item mb-4">
+                                <div class="h6 mb-1">
+                                    <a href="#tab-chapter-1" class="item-link active" data-coreui-toggle="tab" role="tab" aria-selected="true">Глава 1. Название</a>
+                                </div>
                                 <div class="fs-small text-muted">Опубликовано 21.03.2025</div>
                                 <div class="text-success mt-2">бесплатно</div>
                             </div>
-                            <div class="mb-4">
-                                <div class="h6 mb-1"><a href="#">Глава 2. Название</a></div>
+                            <div class="nav-item mb-4">
+                                <div class="h6 mb-1">
+                                    <a href="#tab-chapter-2" class="item-link" data-coreui-toggle="tab" role="tab" aria-selected="false">Глава 2. Название</a>
+                                </div>
                                 <div class="fs-small text-muted">Опубликовать 17.03.2025</div>
                                 <div class="text-success mt-2">бесплатно</div>
                             </div>
-                            <div class="mb-4">
-                                <div class="h6 mb-1"><a href="#">Глава 3. Название</a></div>
+                            <div class="nav-item mb-4">
+                                <div class="h6 mb-1">
+                                    <a href="#tab-chapter-3" class="item-link" data-coreui-toggle="tab" role="tab" aria-selected="false">Глава 3. Название</a>
+                                </div>
                                 <div class="fs-small text-muted">Опубликовать после модерации</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="text-editor-area">
-                            <div style="
-                            min-height: 700px;
-                            border-radius: 10px;
-                            background-color: #fff;
-                            "></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="h3 mb-3">Настройки главы</div>
-                        <div>
-                            <div class="mb-3">
-                                <div class="d-flex align-items-center justify-content-between gap-2">
-                                    <div>
-                                        <label class="widget-title" for="publishImmediatelyAfterModeration">Опубликовать сразу после модерации</label>
+                    <div class="col-lg-9">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="tab-chapter-1" role="tabpanel" tabindex="0">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8">
+                                        <div class="text-editor-area">
+                                            <div class="text-editor-chapter-name mb-4">
+                                                <div class="h3">Название главы</div>
+                                                <input type="text" class="form-control bg-white" id="formChapterName-1" placeholder="введите название">
+                                            </div>
+                                            <div class="text-editor-btns mb-2">
+                                                <div class="btns-group">
+                                                    <!-- B -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17" fill="none">
+                                                            <path d="M0.8078 17V16.6053L2.8058 15.6187V2.10133L0.8078 1.11467V0.72H7.44313C8.54491 0.72 9.53158 0.859778 10.4031 1.13933C11.2911 1.40244 11.9818 1.80533 12.4751 2.348C12.9849 2.87422 13.2398 3.54844 13.2398 4.37067C13.2398 5.20933 12.952 5.98222 12.3765 6.68933C11.8009 7.38 10.9705 7.87333 9.88513 8.16933C11.3816 8.36667 12.5491 8.82711 13.3878 9.55067C14.2429 10.2578 14.6705 11.1622 14.6705 12.264C14.6705 13.1684 14.3827 13.9824 13.8071 14.706C13.2316 15.4131 12.4422 15.9722 11.4391 16.3833C10.436 16.7944 9.29313 17 8.01047 17H0.8078ZM6.7278 2.07667H5.3958V7.94733H6.85113C8.01869 7.94733 8.92313 7.69244 9.56447 7.18267C10.2058 6.67289 10.5265 5.974 10.5265 5.086C10.5265 3.07978 9.26024 2.07667 6.7278 2.07667ZM7.64047 9.25467H5.3958V15.6433H7.81313C9.07936 15.6433 10.0742 15.3473 10.7978 14.7553C11.5378 14.1469 11.9078 13.374 11.9078 12.4367C11.9078 11.3349 11.5378 10.5291 10.7978 10.0193C10.0578 9.50956 9.00536 9.25467 7.64047 9.25467Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- I -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="17" viewBox="0 0 9 17" fill="none">
+                                                            <path d="M0.0036875 17L0.0776875 16.6053L2.00169 15.6187L4.39435 2.10133L2.59369 1.11467L2.66769 0.72H8.95769L8.88369 1.11467L6.86102 2.10133L4.46835 15.6187L6.34302 16.6053L6.26902 17H0.0036875Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- U -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+                                                            <path d="M10.9064 17.2467C9.64015 17.2467 8.50549 17.0164 7.50238 16.556C6.49926 16.0956 5.70993 15.372 5.13438 14.3853C4.57526 13.3987 4.29571 12.1078 4.29571 10.5127V2.10133L2.29771 1.11467V0.72H8.88371V1.11467L6.88571 2.10133V10.2413C6.88571 11.6062 7.09949 12.6916 7.52704 13.4973C7.9546 14.2867 8.53015 14.854 9.25371 15.1993C9.97726 15.5447 10.7913 15.7173 11.6957 15.7173C12.4193 15.7173 13.0853 15.5693 13.6937 15.2733C14.3186 14.9609 14.8119 14.4676 15.1737 13.7933C15.5519 13.1027 15.741 12.2064 15.741 11.1047V2.052L13.3237 1.11467V0.72H19.4657V1.11467L17.4677 2.07667V10.5127C17.4677 12.1078 17.1799 13.3987 16.6044 14.3853C16.0453 15.372 15.2724 16.0956 14.2857 16.556C13.299 17.0164 12.1726 17.2467 10.9064 17.2467Z" fill="currentColor"/>
+                                                            <path d="M0.817709 20.5767H20.9457V21.81H0.817709V20.5767Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- S -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
+                                                            <path d="M7.18178 17.2467C6.14578 17.2467 5.25778 17.148 4.51778 16.9507C3.79422 16.7533 3.046 16.4656 2.27311 16.0873L2.02644 12.0173H2.42111L3.72844 14.706C4.304 15.1829 4.87133 15.5282 5.43044 15.742C5.98955 15.9558 6.54867 16.0627 7.10778 16.0627C8.06155 16.0627 8.80978 15.816 9.35244 15.3227C9.91155 14.8293 10.1911 14.1551 10.1911 13.3C10.1911 12.6258 10.0349 12.0913 9.72244 11.6967C9.42644 11.2856 8.97422 10.9238 8.36578 10.6113C7.77378 10.2824 7.042 9.90422 6.17044 9.47667C5.00289 8.91756 4.10667 8.33378 3.48178 7.72533C2.85689 7.10044 2.54444 6.22889 2.54444 5.11067C2.54444 4.51867 2.68422 3.95133 2.96378 3.40867C3.25978 2.84956 3.65444 2.35622 4.14778 1.92867C4.64111 1.48467 5.192 1.13111 5.80044 0.867999C6.40889 0.604889 7.042 0.473333 7.69978 0.473333C8.47267 0.473333 9.19622 0.563778 9.87044 0.744666C10.5447 0.925556 11.2107 1.18867 11.8684 1.534L12.1151 5.48067H11.7204L10.4378 2.84133C9.91155 2.43022 9.43467 2.13422 9.00711 1.95333C8.57955 1.77244 8.09444 1.682 7.55178 1.682C6.84467 1.682 6.25267 1.92044 5.77578 2.39733C5.31533 2.87422 5.08511 3.47444 5.08511 4.198C5.08511 5.00378 5.33178 5.63689 5.82511 6.09733C6.33489 6.55778 7.14889 7.05111 8.26711 7.57733C9.25378 8.05422 10.0678 8.51467 10.7091 8.95867C11.3669 9.38622 11.852 9.87133 12.1644 10.414C12.4769 10.9567 12.6331 11.6473 12.6331 12.486C12.6331 13.2589 12.4687 13.9413 12.1398 14.5333C11.8109 15.1253 11.3751 15.6269 10.8324 16.038C10.2898 16.4327 9.69778 16.7369 9.05644 16.9507C8.43155 17.148 7.80667 17.2467 7.18178 17.2467Z" fill="currentColor"/>
+                                                            <path d="M0.620443 10.5867H13.9651V11.82H0.620443V10.5867Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="btns-divider"></div>
+                                                <div class="btns-group">
+                                                    <!-- symbol -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="20" viewBox="0 0 13 20" fill="none">
+                                                            <path d="M6.66387 19.7133V8.14467H5.60321C4.71521 8.14467 3.91765 7.98022 3.21054 7.65133C2.51987 7.32244 1.96898 6.87022 1.55787 6.29467C1.16321 5.70267 0.965872 5.04489 0.965872 4.32133C0.965872 3.07156 1.35232 2.15889 2.12521 1.58333C2.91454 1.00778 3.94232 0.72 5.20854 0.72H7.92187V19.7133H6.66387ZM9.37721 19.7133V0.72H12.6579V1.11467L10.6599 2.10133V19.7133H9.37721Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- align -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                                                            <path d="M0.6875 1.83301H21.8304" stroke="currentColor" stroke-width="2.64286"/>
+                                                            <path d="M0.6875 7.99951H21.8304" stroke="currentColor" stroke-width="2.64286"/>
+                                                            <path d="M0.6875 14.1665H13.0208" stroke="currentColor" stroke-width="2.64286"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- water -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none">
+                                                            <path d="M3.21213 6.50044L8.16134 1.55127L13.1105 6.50044C15.8439 9.23379 15.8439 13.6654 13.1105 16.3988C10.3771 19.1321 5.94548 19.1321 3.21213 16.3988C0.478771 13.6654 0.478771 9.23379 3.21213 6.50044Z" stroke="currentColor" stroke-width="1.8987"/>
+                                                            <path d="M8.15947 15.573C5.88168 15.573 4.03516 13.7265 4.03516 11.4487" stroke="currentColor" stroke-width="1.8987"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- quote -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                                                            <path d="M5.72385 15.0474C5.35042 15.0474 4.84629 14.9256 4.21147 14.682C2.82978 13.9163 1.78418 13.0636 1.07466 12.1239C0.402492 11.1494 0.0664062 10.0009 0.0664062 8.67843C0.0664062 7.70394 0.365149 6.69465 0.962635 5.65056C1.56012 4.60647 2.47502 3.66679 3.70734 2.83151C4.93965 1.96144 6.47071 1.33498 8.30051 0.952148V2.10065C6.99351 2.41388 5.85455 2.93592 4.88364 3.66679C3.95007 4.39765 3.48328 5.26773 3.48328 6.27702C3.48328 6.90347 3.65132 7.49512 3.98741 8.05197C4.36084 8.60882 5.12637 9.18307 6.284 9.77472L8.2445 10.7144L8.30051 11.3409L7.0682 13.8989C6.76945 14.6646 6.32134 15.0474 5.72385 15.0474ZM16.8707 15.0474C16.4973 15.0474 15.9931 14.9256 15.3583 14.682C13.9766 13.9163 12.931 13.0636 12.2215 12.1239C11.5493 11.1494 11.2133 10.0009 11.2133 8.67843C11.2133 7.70394 11.512 6.69465 12.1095 5.65056C12.707 4.60647 13.6219 3.66679 14.8542 2.83151C16.0865 1.96144 17.6176 1.33498 19.4474 0.952148V2.10065C18.1404 2.41388 17.0014 2.93592 16.0305 3.66679C15.0969 4.39765 14.6301 5.26773 14.6301 6.27702C14.6301 6.90347 14.7982 7.49512 15.1343 8.05197C15.5077 8.60882 16.2732 9.18307 17.4308 9.77472L19.3913 10.7144L19.4474 11.3409L18.215 13.8989C17.9163 14.6646 17.4682 15.0474 16.8707 15.0474Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- upload pic -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M21.7544 22.9464V16.3787C21.7544 15.4755 21.3956 14.6093 20.7569 13.9706C20.1183 13.3319 19.2521 12.9731 18.3489 12.9731C17.4457 12.9731 16.5795 13.3319 15.9408 13.9706C15.3022 14.6093 14.9434 15.4755 14.9434 16.3787V22.2167H18.3489V16.8652" stroke="currentColor" stroke-width="1.45951"/>
+                                                            <path d="M12.5134 19.7831H2.29688V2.26904H19.811V11.0261" stroke="currentColor" stroke-width="1.45951"/>
+                                                            <path d="M12.0254 7.6205C12.0254 8.26564 12.2817 8.88436 12.7379 9.34055C13.194 9.79673 13.8128 10.053 14.4579 10.053C15.103 10.053 15.7218 9.79673 16.1779 9.34055C16.6341 8.88436 16.8904 8.26564 16.8904 7.6205C16.8904 6.97536 16.6341 6.35664 16.1779 5.90045C15.7218 5.44427 15.103 5.18799 14.4579 5.18799C13.8128 5.18799 13.194 5.44427 12.7379 5.90045C12.2817 6.35664 12.0254 6.97536 12.0254 7.6205Z" stroke="currentColor" stroke-width="1.45951"/>
+                                                            <path d="M2.29688 11.0259H3.43432C6.95465 11.0259 10.2162 12.8726 12.0269 15.8909" stroke="currentColor" stroke-width="1.45951"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="btns-divider"></div>
+                                                <div class="btns-group">
+                                                    <!-- fullsreen -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                                                            <path d="M9.23831 1.68652L15.8203 1.68652L15.8203 8.26853" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M15.8203 1.68652L1.19364 16.3132" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M7.77539 16.3134L1.19339 16.3134L1.19339 9.73145" stroke="currentColor" stroke-width="1.56"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- code -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+                                                            <path d="M28.0338 15.0002L21.8671 21.1668L20.625 19.9247L25.5407 15.0002L20.625 10.0756L21.8671 8.8335L28.0338 15.0002Z" fill="currentColor"/>
+                                                            <path d="M1.60547 15.0002L7.77214 8.8335L9.01428 10.0756L4.09856 15.0002L9.01428 19.9247L7.77214 21.1668L1.60547 15.0002Z" fill="currentColor"/>
+                                                            <path d="M11.6641 23.3545L16.263 6.19114L17.9648 6.64715L13.3659 23.8105L11.6641 23.3545Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="btns-divider"></div>
+                                                <div class="btns-group">
+                                                    <!-- prev -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                                                            <path d="M1.4053 6.91797L13.134 6.91797C14.4897 6.93551 15.7839 7.4864 16.7363 8.45132C17.6888 9.41625 18.2228 10.7175 18.2227 12.0733C18.2225 13.4291 17.6883 14.7303 16.7357 15.6951C15.7831 16.6599 14.4888 17.2105 13.1331 17.2279L9.29004 17.2279" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M7.55078 13.0639L1.40438 6.91837L7.54993 0.771973" stroke="currentColor" stroke-width="1.56"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- next -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                                                            <path d="M17.6132 6.91797L6.1168 6.91797C4.78795 6.93551 3.51937 7.4864 2.58579 8.45132C1.65221 9.41625 1.1288 10.7175 1.12891 12.0733C1.12902 13.4291 1.65264 14.7303 2.58637 15.6951C3.52011 16.6599 4.78878 17.2105 6.11763 17.2279L9.88462 17.2279" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M11.5898 13.0639L17.6145 6.91837L11.5907 0.771973" stroke="currentColor" stroke-width="1.56"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="position-relative">
+                                                <div class="text-editor-content">
+                                                    <div class="form-control bg-white textarea-editable" contenteditable="true" role="textbox" aria-placeholder="текст..."></div>
+                                                </div>
+                                                <button type="button" class="btn btn-primary btn-lg rounded-pill w-100 position-absolute bottom-0 start-50 translate-middle-x mb-4" style="max-width: 300px;">Сохранить</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div class="form-switch-xl">
-                                            <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration">
+                                    <div class="col-lg-4">
+                                        <div class="h3 mb-3">Настройки главы</div>
+                                        <div>
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <div>
+                                                        <label class="h5 mb-0" for="publishImmediatelyAfterModeration-chapter-1">Опубликовать сразу после модерации</label>
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-switch-xl">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration-chapter-1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-muted mt-1">Необходимые комментарии о модерации</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <div>
+                                                        <label class="h5 mb-0" for="freeChapter-chapter-1">Бесплатная глава</label>
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-switch-xl">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="freeChapter-chapter-1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="h5">Дата публикации</div>
+                                                <div class="book-date-publication-input-wrapper" data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="__.__.____"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-outline btn-lg rounded-pill">Удалить главу</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="text-muted mt-1">Необходимые комментарии о модерации</div>
                             </div>
-                            <div class="mb-3">
-                                <div class="d-flex align-items-center justify-content-between gap-2">
-                                    <div>
-                                        <label class="widget-title" for="freeChapter">Бесплатная глава</label>
+                            <div class="tab-pane fade" id="tab-chapter-2" role="tabpanel" tabindex="0">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8">
+                                        <div class="text-editor-area">
+                                            <div class="text-editor-chapter-name mb-4">
+                                                <div class="h3">Название главы</div>
+                                                <input type="text" class="form-control bg-white" id="formChapterName-2" placeholder="введите название">
+                                            </div>
+                                            <div class="text-editor-btns mb-2">
+                                                <div class="btns-group">
+                                                    <!-- B -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17" fill="none">
+                                                            <path d="M0.8078 17V16.6053L2.8058 15.6187V2.10133L0.8078 1.11467V0.72H7.44313C8.54491 0.72 9.53158 0.859778 10.4031 1.13933C11.2911 1.40244 11.9818 1.80533 12.4751 2.348C12.9849 2.87422 13.2398 3.54844 13.2398 4.37067C13.2398 5.20933 12.952 5.98222 12.3765 6.68933C11.8009 7.38 10.9705 7.87333 9.88513 8.16933C11.3816 8.36667 12.5491 8.82711 13.3878 9.55067C14.2429 10.2578 14.6705 11.1622 14.6705 12.264C14.6705 13.1684 14.3827 13.9824 13.8071 14.706C13.2316 15.4131 12.4422 15.9722 11.4391 16.3833C10.436 16.7944 9.29313 17 8.01047 17H0.8078ZM6.7278 2.07667H5.3958V7.94733H6.85113C8.01869 7.94733 8.92313 7.69244 9.56447 7.18267C10.2058 6.67289 10.5265 5.974 10.5265 5.086C10.5265 3.07978 9.26024 2.07667 6.7278 2.07667ZM7.64047 9.25467H5.3958V15.6433H7.81313C9.07936 15.6433 10.0742 15.3473 10.7978 14.7553C11.5378 14.1469 11.9078 13.374 11.9078 12.4367C11.9078 11.3349 11.5378 10.5291 10.7978 10.0193C10.0578 9.50956 9.00536 9.25467 7.64047 9.25467Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- I -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="17" viewBox="0 0 9 17" fill="none">
+                                                            <path d="M0.0036875 17L0.0776875 16.6053L2.00169 15.6187L4.39435 2.10133L2.59369 1.11467L2.66769 0.72H8.95769L8.88369 1.11467L6.86102 2.10133L4.46835 15.6187L6.34302 16.6053L6.26902 17H0.0036875Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- U -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+                                                            <path d="M10.9064 17.2467C9.64015 17.2467 8.50549 17.0164 7.50238 16.556C6.49926 16.0956 5.70993 15.372 5.13438 14.3853C4.57526 13.3987 4.29571 12.1078 4.29571 10.5127V2.10133L2.29771 1.11467V0.72H8.88371V1.11467L6.88571 2.10133V10.2413C6.88571 11.6062 7.09949 12.6916 7.52704 13.4973C7.9546 14.2867 8.53015 14.854 9.25371 15.1993C9.97726 15.5447 10.7913 15.7173 11.6957 15.7173C12.4193 15.7173 13.0853 15.5693 13.6937 15.2733C14.3186 14.9609 14.8119 14.4676 15.1737 13.7933C15.5519 13.1027 15.741 12.2064 15.741 11.1047V2.052L13.3237 1.11467V0.72H19.4657V1.11467L17.4677 2.07667V10.5127C17.4677 12.1078 17.1799 13.3987 16.6044 14.3853C16.0453 15.372 15.2724 16.0956 14.2857 16.556C13.299 17.0164 12.1726 17.2467 10.9064 17.2467Z" fill="currentColor"/>
+                                                            <path d="M0.817709 20.5767H20.9457V21.81H0.817709V20.5767Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- S -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
+                                                            <path d="M7.18178 17.2467C6.14578 17.2467 5.25778 17.148 4.51778 16.9507C3.79422 16.7533 3.046 16.4656 2.27311 16.0873L2.02644 12.0173H2.42111L3.72844 14.706C4.304 15.1829 4.87133 15.5282 5.43044 15.742C5.98955 15.9558 6.54867 16.0627 7.10778 16.0627C8.06155 16.0627 8.80978 15.816 9.35244 15.3227C9.91155 14.8293 10.1911 14.1551 10.1911 13.3C10.1911 12.6258 10.0349 12.0913 9.72244 11.6967C9.42644 11.2856 8.97422 10.9238 8.36578 10.6113C7.77378 10.2824 7.042 9.90422 6.17044 9.47667C5.00289 8.91756 4.10667 8.33378 3.48178 7.72533C2.85689 7.10044 2.54444 6.22889 2.54444 5.11067C2.54444 4.51867 2.68422 3.95133 2.96378 3.40867C3.25978 2.84956 3.65444 2.35622 4.14778 1.92867C4.64111 1.48467 5.192 1.13111 5.80044 0.867999C6.40889 0.604889 7.042 0.473333 7.69978 0.473333C8.47267 0.473333 9.19622 0.563778 9.87044 0.744666C10.5447 0.925556 11.2107 1.18867 11.8684 1.534L12.1151 5.48067H11.7204L10.4378 2.84133C9.91155 2.43022 9.43467 2.13422 9.00711 1.95333C8.57955 1.77244 8.09444 1.682 7.55178 1.682C6.84467 1.682 6.25267 1.92044 5.77578 2.39733C5.31533 2.87422 5.08511 3.47444 5.08511 4.198C5.08511 5.00378 5.33178 5.63689 5.82511 6.09733C6.33489 6.55778 7.14889 7.05111 8.26711 7.57733C9.25378 8.05422 10.0678 8.51467 10.7091 8.95867C11.3669 9.38622 11.852 9.87133 12.1644 10.414C12.4769 10.9567 12.6331 11.6473 12.6331 12.486C12.6331 13.2589 12.4687 13.9413 12.1398 14.5333C11.8109 15.1253 11.3751 15.6269 10.8324 16.038C10.2898 16.4327 9.69778 16.7369 9.05644 16.9507C8.43155 17.148 7.80667 17.2467 7.18178 17.2467Z" fill="currentColor"/>
+                                                            <path d="M0.620443 10.5867H13.9651V11.82H0.620443V10.5867Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="btns-divider"></div>
+                                                <div class="btns-group">
+                                                    <!-- symbol -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="20" viewBox="0 0 13 20" fill="none">
+                                                            <path d="M6.66387 19.7133V8.14467H5.60321C4.71521 8.14467 3.91765 7.98022 3.21054 7.65133C2.51987 7.32244 1.96898 6.87022 1.55787 6.29467C1.16321 5.70267 0.965872 5.04489 0.965872 4.32133C0.965872 3.07156 1.35232 2.15889 2.12521 1.58333C2.91454 1.00778 3.94232 0.72 5.20854 0.72H7.92187V19.7133H6.66387ZM9.37721 19.7133V0.72H12.6579V1.11467L10.6599 2.10133V19.7133H9.37721Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- align -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                                                            <path d="M0.6875 1.83301H21.8304" stroke="currentColor" stroke-width="2.64286"/>
+                                                            <path d="M0.6875 7.99951H21.8304" stroke="currentColor" stroke-width="2.64286"/>
+                                                            <path d="M0.6875 14.1665H13.0208" stroke="currentColor" stroke-width="2.64286"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- water -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none">
+                                                            <path d="M3.21213 6.50044L8.16134 1.55127L13.1105 6.50044C15.8439 9.23379 15.8439 13.6654 13.1105 16.3988C10.3771 19.1321 5.94548 19.1321 3.21213 16.3988C0.478771 13.6654 0.478771 9.23379 3.21213 6.50044Z" stroke="currentColor" stroke-width="1.8987"/>
+                                                            <path d="M8.15947 15.573C5.88168 15.573 4.03516 13.7265 4.03516 11.4487" stroke="currentColor" stroke-width="1.8987"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- quote -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                                                            <path d="M5.72385 15.0474C5.35042 15.0474 4.84629 14.9256 4.21147 14.682C2.82978 13.9163 1.78418 13.0636 1.07466 12.1239C0.402492 11.1494 0.0664062 10.0009 0.0664062 8.67843C0.0664062 7.70394 0.365149 6.69465 0.962635 5.65056C1.56012 4.60647 2.47502 3.66679 3.70734 2.83151C4.93965 1.96144 6.47071 1.33498 8.30051 0.952148V2.10065C6.99351 2.41388 5.85455 2.93592 4.88364 3.66679C3.95007 4.39765 3.48328 5.26773 3.48328 6.27702C3.48328 6.90347 3.65132 7.49512 3.98741 8.05197C4.36084 8.60882 5.12637 9.18307 6.284 9.77472L8.2445 10.7144L8.30051 11.3409L7.0682 13.8989C6.76945 14.6646 6.32134 15.0474 5.72385 15.0474ZM16.8707 15.0474C16.4973 15.0474 15.9931 14.9256 15.3583 14.682C13.9766 13.9163 12.931 13.0636 12.2215 12.1239C11.5493 11.1494 11.2133 10.0009 11.2133 8.67843C11.2133 7.70394 11.512 6.69465 12.1095 5.65056C12.707 4.60647 13.6219 3.66679 14.8542 2.83151C16.0865 1.96144 17.6176 1.33498 19.4474 0.952148V2.10065C18.1404 2.41388 17.0014 2.93592 16.0305 3.66679C15.0969 4.39765 14.6301 5.26773 14.6301 6.27702C14.6301 6.90347 14.7982 7.49512 15.1343 8.05197C15.5077 8.60882 16.2732 9.18307 17.4308 9.77472L19.3913 10.7144L19.4474 11.3409L18.215 13.8989C17.9163 14.6646 17.4682 15.0474 16.8707 15.0474Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- upload pic -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M21.7544 22.9464V16.3787C21.7544 15.4755 21.3956 14.6093 20.7569 13.9706C20.1183 13.3319 19.2521 12.9731 18.3489 12.9731C17.4457 12.9731 16.5795 13.3319 15.9408 13.9706C15.3022 14.6093 14.9434 15.4755 14.9434 16.3787V22.2167H18.3489V16.8652" stroke="currentColor" stroke-width="1.45951"/>
+                                                            <path d="M12.5134 19.7831H2.29688V2.26904H19.811V11.0261" stroke="currentColor" stroke-width="1.45951"/>
+                                                            <path d="M12.0254 7.6205C12.0254 8.26564 12.2817 8.88436 12.7379 9.34055C13.194 9.79673 13.8128 10.053 14.4579 10.053C15.103 10.053 15.7218 9.79673 16.1779 9.34055C16.6341 8.88436 16.8904 8.26564 16.8904 7.6205C16.8904 6.97536 16.6341 6.35664 16.1779 5.90045C15.7218 5.44427 15.103 5.18799 14.4579 5.18799C13.8128 5.18799 13.194 5.44427 12.7379 5.90045C12.2817 6.35664 12.0254 6.97536 12.0254 7.6205Z" stroke="currentColor" stroke-width="1.45951"/>
+                                                            <path d="M2.29688 11.0259H3.43432C6.95465 11.0259 10.2162 12.8726 12.0269 15.8909" stroke="currentColor" stroke-width="1.45951"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="btns-divider"></div>
+                                                <div class="btns-group">
+                                                    <!-- fullsreen -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                                                            <path d="M9.23831 1.68652L15.8203 1.68652L15.8203 8.26853" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M15.8203 1.68652L1.19364 16.3132" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M7.77539 16.3134L1.19339 16.3134L1.19339 9.73145" stroke="currentColor" stroke-width="1.56"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- code -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+                                                            <path d="M28.0338 15.0002L21.8671 21.1668L20.625 19.9247L25.5407 15.0002L20.625 10.0756L21.8671 8.8335L28.0338 15.0002Z" fill="currentColor"/>
+                                                            <path d="M1.60547 15.0002L7.77214 8.8335L9.01428 10.0756L4.09856 15.0002L9.01428 19.9247L7.77214 21.1668L1.60547 15.0002Z" fill="currentColor"/>
+                                                            <path d="M11.6641 23.3545L16.263 6.19114L17.9648 6.64715L13.3659 23.8105L11.6641 23.3545Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="btns-divider"></div>
+                                                <div class="btns-group">
+                                                    <!-- prev -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                                                            <path d="M1.4053 6.91797L13.134 6.91797C14.4897 6.93551 15.7839 7.4864 16.7363 8.45132C17.6888 9.41625 18.2228 10.7175 18.2227 12.0733C18.2225 13.4291 17.6883 14.7303 16.7357 15.6951C15.7831 16.6599 14.4888 17.2105 13.1331 17.2279L9.29004 17.2279" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M7.55078 13.0639L1.40438 6.91837L7.54993 0.771973" stroke="currentColor" stroke-width="1.56"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- next -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                                                            <path d="M17.6132 6.91797L6.1168 6.91797C4.78795 6.93551 3.51937 7.4864 2.58579 8.45132C1.65221 9.41625 1.1288 10.7175 1.12891 12.0733C1.12902 13.4291 1.65264 14.7303 2.58637 15.6951C3.52011 16.6599 4.78878 17.2105 6.11763 17.2279L9.88462 17.2279" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M11.5898 13.0639L17.6145 6.91837L11.5907 0.771973" stroke="currentColor" stroke-width="1.56"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="position-relative">
+                                                <div class="text-editor-content">
+                                                    <div class="form-control bg-white textarea-editable" contenteditable="true" role="textbox" aria-placeholder="текст..."></div>
+                                                </div>
+                                                <button type="button" class="btn btn-primary btn-lg rounded-pill w-100 position-absolute bottom-0 start-50 translate-middle-x mb-4" style="max-width: 300px;">Сохранить</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div class="form-switch-xl">
-                                            <input class="form-check-input" type="checkbox" role="switch" id="freeChapter">
+                                    <div class="col-lg-4">
+                                        <div class="h3 mb-3">Настройки главы</div>
+                                        <div>
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <div>
+                                                        <label class="h5 mb-0" for="publishImmediatelyAfterModeration-chapter-1">Опубликовать сразу после модерации</label>
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-switch-xl">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration-chapter-2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-muted mt-1">Необходимые комментарии о модерации</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <div>
+                                                        <label class="h5 mb-0" for="freeChapter-chapter-1">Бесплатная глава</label>
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-switch-xl">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="freeChapter-chapter-2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="h5">Дата публикации</div>
+                                                <div class="book-date-publication-input-wrapper" data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="__.__.____"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-outline btn-lg rounded-pill">Удалить главу</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btn-outline btn-lg rounded-pill">Удалить главу</button>
+                            <div class="tab-pane fade" id="tab-chapter-3" role="tabpanel" tabindex="0">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8">
+                                        <div class="text-editor-area">
+                                            <div class="text-editor-chapter-name mb-4">
+                                                <div class="h3">Название главы</div>
+                                                <input type="text" class="form-control bg-white" id="formChapterName-3" placeholder="введите название">
+                                            </div>
+                                            <div class="text-editor-btns mb-2">
+                                                <div class="btns-group">
+                                                    <!-- B -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17" fill="none">
+                                                            <path d="M0.8078 17V16.6053L2.8058 15.6187V2.10133L0.8078 1.11467V0.72H7.44313C8.54491 0.72 9.53158 0.859778 10.4031 1.13933C11.2911 1.40244 11.9818 1.80533 12.4751 2.348C12.9849 2.87422 13.2398 3.54844 13.2398 4.37067C13.2398 5.20933 12.952 5.98222 12.3765 6.68933C11.8009 7.38 10.9705 7.87333 9.88513 8.16933C11.3816 8.36667 12.5491 8.82711 13.3878 9.55067C14.2429 10.2578 14.6705 11.1622 14.6705 12.264C14.6705 13.1684 14.3827 13.9824 13.8071 14.706C13.2316 15.4131 12.4422 15.9722 11.4391 16.3833C10.436 16.7944 9.29313 17 8.01047 17H0.8078ZM6.7278 2.07667H5.3958V7.94733H6.85113C8.01869 7.94733 8.92313 7.69244 9.56447 7.18267C10.2058 6.67289 10.5265 5.974 10.5265 5.086C10.5265 3.07978 9.26024 2.07667 6.7278 2.07667ZM7.64047 9.25467H5.3958V15.6433H7.81313C9.07936 15.6433 10.0742 15.3473 10.7978 14.7553C11.5378 14.1469 11.9078 13.374 11.9078 12.4367C11.9078 11.3349 11.5378 10.5291 10.7978 10.0193C10.0578 9.50956 9.00536 9.25467 7.64047 9.25467Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- I -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="17" viewBox="0 0 9 17" fill="none">
+                                                            <path d="M0.0036875 17L0.0776875 16.6053L2.00169 15.6187L4.39435 2.10133L2.59369 1.11467L2.66769 0.72H8.95769L8.88369 1.11467L6.86102 2.10133L4.46835 15.6187L6.34302 16.6053L6.26902 17H0.0036875Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- U -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+                                                            <path d="M10.9064 17.2467C9.64015 17.2467 8.50549 17.0164 7.50238 16.556C6.49926 16.0956 5.70993 15.372 5.13438 14.3853C4.57526 13.3987 4.29571 12.1078 4.29571 10.5127V2.10133L2.29771 1.11467V0.72H8.88371V1.11467L6.88571 2.10133V10.2413C6.88571 11.6062 7.09949 12.6916 7.52704 13.4973C7.9546 14.2867 8.53015 14.854 9.25371 15.1993C9.97726 15.5447 10.7913 15.7173 11.6957 15.7173C12.4193 15.7173 13.0853 15.5693 13.6937 15.2733C14.3186 14.9609 14.8119 14.4676 15.1737 13.7933C15.5519 13.1027 15.741 12.2064 15.741 11.1047V2.052L13.3237 1.11467V0.72H19.4657V1.11467L17.4677 2.07667V10.5127C17.4677 12.1078 17.1799 13.3987 16.6044 14.3853C16.0453 15.372 15.2724 16.0956 14.2857 16.556C13.299 17.0164 12.1726 17.2467 10.9064 17.2467Z" fill="currentColor"/>
+                                                            <path d="M0.817709 20.5767H20.9457V21.81H0.817709V20.5767Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- S -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
+                                                            <path d="M7.18178 17.2467C6.14578 17.2467 5.25778 17.148 4.51778 16.9507C3.79422 16.7533 3.046 16.4656 2.27311 16.0873L2.02644 12.0173H2.42111L3.72844 14.706C4.304 15.1829 4.87133 15.5282 5.43044 15.742C5.98955 15.9558 6.54867 16.0627 7.10778 16.0627C8.06155 16.0627 8.80978 15.816 9.35244 15.3227C9.91155 14.8293 10.1911 14.1551 10.1911 13.3C10.1911 12.6258 10.0349 12.0913 9.72244 11.6967C9.42644 11.2856 8.97422 10.9238 8.36578 10.6113C7.77378 10.2824 7.042 9.90422 6.17044 9.47667C5.00289 8.91756 4.10667 8.33378 3.48178 7.72533C2.85689 7.10044 2.54444 6.22889 2.54444 5.11067C2.54444 4.51867 2.68422 3.95133 2.96378 3.40867C3.25978 2.84956 3.65444 2.35622 4.14778 1.92867C4.64111 1.48467 5.192 1.13111 5.80044 0.867999C6.40889 0.604889 7.042 0.473333 7.69978 0.473333C8.47267 0.473333 9.19622 0.563778 9.87044 0.744666C10.5447 0.925556 11.2107 1.18867 11.8684 1.534L12.1151 5.48067H11.7204L10.4378 2.84133C9.91155 2.43022 9.43467 2.13422 9.00711 1.95333C8.57955 1.77244 8.09444 1.682 7.55178 1.682C6.84467 1.682 6.25267 1.92044 5.77578 2.39733C5.31533 2.87422 5.08511 3.47444 5.08511 4.198C5.08511 5.00378 5.33178 5.63689 5.82511 6.09733C6.33489 6.55778 7.14889 7.05111 8.26711 7.57733C9.25378 8.05422 10.0678 8.51467 10.7091 8.95867C11.3669 9.38622 11.852 9.87133 12.1644 10.414C12.4769 10.9567 12.6331 11.6473 12.6331 12.486C12.6331 13.2589 12.4687 13.9413 12.1398 14.5333C11.8109 15.1253 11.3751 15.6269 10.8324 16.038C10.2898 16.4327 9.69778 16.7369 9.05644 16.9507C8.43155 17.148 7.80667 17.2467 7.18178 17.2467Z" fill="currentColor"/>
+                                                            <path d="M0.620443 10.5867H13.9651V11.82H0.620443V10.5867Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="btns-divider"></div>
+                                                <div class="btns-group">
+                                                    <!-- symbol -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="20" viewBox="0 0 13 20" fill="none">
+                                                            <path d="M6.66387 19.7133V8.14467H5.60321C4.71521 8.14467 3.91765 7.98022 3.21054 7.65133C2.51987 7.32244 1.96898 6.87022 1.55787 6.29467C1.16321 5.70267 0.965872 5.04489 0.965872 4.32133C0.965872 3.07156 1.35232 2.15889 2.12521 1.58333C2.91454 1.00778 3.94232 0.72 5.20854 0.72H7.92187V19.7133H6.66387ZM9.37721 19.7133V0.72H12.6579V1.11467L10.6599 2.10133V19.7133H9.37721Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- align -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                                                            <path d="M0.6875 1.83301H21.8304" stroke="currentColor" stroke-width="2.64286"/>
+                                                            <path d="M0.6875 7.99951H21.8304" stroke="currentColor" stroke-width="2.64286"/>
+                                                            <path d="M0.6875 14.1665H13.0208" stroke="currentColor" stroke-width="2.64286"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- water -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none">
+                                                            <path d="M3.21213 6.50044L8.16134 1.55127L13.1105 6.50044C15.8439 9.23379 15.8439 13.6654 13.1105 16.3988C10.3771 19.1321 5.94548 19.1321 3.21213 16.3988C0.478771 13.6654 0.478771 9.23379 3.21213 6.50044Z" stroke="currentColor" stroke-width="1.8987"/>
+                                                            <path d="M8.15947 15.573C5.88168 15.573 4.03516 13.7265 4.03516 11.4487" stroke="currentColor" stroke-width="1.8987"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- quote -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                                                            <path d="M5.72385 15.0474C5.35042 15.0474 4.84629 14.9256 4.21147 14.682C2.82978 13.9163 1.78418 13.0636 1.07466 12.1239C0.402492 11.1494 0.0664062 10.0009 0.0664062 8.67843C0.0664062 7.70394 0.365149 6.69465 0.962635 5.65056C1.56012 4.60647 2.47502 3.66679 3.70734 2.83151C4.93965 1.96144 6.47071 1.33498 8.30051 0.952148V2.10065C6.99351 2.41388 5.85455 2.93592 4.88364 3.66679C3.95007 4.39765 3.48328 5.26773 3.48328 6.27702C3.48328 6.90347 3.65132 7.49512 3.98741 8.05197C4.36084 8.60882 5.12637 9.18307 6.284 9.77472L8.2445 10.7144L8.30051 11.3409L7.0682 13.8989C6.76945 14.6646 6.32134 15.0474 5.72385 15.0474ZM16.8707 15.0474C16.4973 15.0474 15.9931 14.9256 15.3583 14.682C13.9766 13.9163 12.931 13.0636 12.2215 12.1239C11.5493 11.1494 11.2133 10.0009 11.2133 8.67843C11.2133 7.70394 11.512 6.69465 12.1095 5.65056C12.707 4.60647 13.6219 3.66679 14.8542 2.83151C16.0865 1.96144 17.6176 1.33498 19.4474 0.952148V2.10065C18.1404 2.41388 17.0014 2.93592 16.0305 3.66679C15.0969 4.39765 14.6301 5.26773 14.6301 6.27702C14.6301 6.90347 14.7982 7.49512 15.1343 8.05197C15.5077 8.60882 16.2732 9.18307 17.4308 9.77472L19.3913 10.7144L19.4474 11.3409L18.215 13.8989C17.9163 14.6646 17.4682 15.0474 16.8707 15.0474Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- upload pic -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M21.7544 22.9464V16.3787C21.7544 15.4755 21.3956 14.6093 20.7569 13.9706C20.1183 13.3319 19.2521 12.9731 18.3489 12.9731C17.4457 12.9731 16.5795 13.3319 15.9408 13.9706C15.3022 14.6093 14.9434 15.4755 14.9434 16.3787V22.2167H18.3489V16.8652" stroke="currentColor" stroke-width="1.45951"/>
+                                                            <path d="M12.5134 19.7831H2.29688V2.26904H19.811V11.0261" stroke="currentColor" stroke-width="1.45951"/>
+                                                            <path d="M12.0254 7.6205C12.0254 8.26564 12.2817 8.88436 12.7379 9.34055C13.194 9.79673 13.8128 10.053 14.4579 10.053C15.103 10.053 15.7218 9.79673 16.1779 9.34055C16.6341 8.88436 16.8904 8.26564 16.8904 7.6205C16.8904 6.97536 16.6341 6.35664 16.1779 5.90045C15.7218 5.44427 15.103 5.18799 14.4579 5.18799C13.8128 5.18799 13.194 5.44427 12.7379 5.90045C12.2817 6.35664 12.0254 6.97536 12.0254 7.6205Z" stroke="currentColor" stroke-width="1.45951"/>
+                                                            <path d="M2.29688 11.0259H3.43432C6.95465 11.0259 10.2162 12.8726 12.0269 15.8909" stroke="currentColor" stroke-width="1.45951"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="btns-divider"></div>
+                                                <div class="btns-group">
+                                                    <!-- fullsreen -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                                                            <path d="M9.23831 1.68652L15.8203 1.68652L15.8203 8.26853" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M15.8203 1.68652L1.19364 16.3132" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M7.77539 16.3134L1.19339 16.3134L1.19339 9.73145" stroke="currentColor" stroke-width="1.56"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- code -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+                                                            <path d="M28.0338 15.0002L21.8671 21.1668L20.625 19.9247L25.5407 15.0002L20.625 10.0756L21.8671 8.8335L28.0338 15.0002Z" fill="currentColor"/>
+                                                            <path d="M1.60547 15.0002L7.77214 8.8335L9.01428 10.0756L4.09856 15.0002L9.01428 19.9247L7.77214 21.1668L1.60547 15.0002Z" fill="currentColor"/>
+                                                            <path d="M11.6641 23.3545L16.263 6.19114L17.9648 6.64715L13.3659 23.8105L11.6641 23.3545Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="btns-divider"></div>
+                                                <div class="btns-group">
+                                                    <!-- prev -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                                                            <path d="M1.4053 6.91797L13.134 6.91797C14.4897 6.93551 15.7839 7.4864 16.7363 8.45132C17.6888 9.41625 18.2228 10.7175 18.2227 12.0733C18.2225 13.4291 17.6883 14.7303 16.7357 15.6951C15.7831 16.6599 14.4888 17.2105 13.1331 17.2279L9.29004 17.2279" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M7.55078 13.0639L1.40438 6.91837L7.54993 0.771973" stroke="currentColor" stroke-width="1.56"/>
+                                                        </svg>
+                                                    </button>
+                                                    <!-- next -->
+                                                    <button type="button" class="btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                                                            <path d="M17.6132 6.91797L6.1168 6.91797C4.78795 6.93551 3.51937 7.4864 2.58579 8.45132C1.65221 9.41625 1.1288 10.7175 1.12891 12.0733C1.12902 13.4291 1.65264 14.7303 2.58637 15.6951C3.52011 16.6599 4.78878 17.2105 6.11763 17.2279L9.88462 17.2279" stroke="currentColor" stroke-width="1.56"/>
+                                                            <path d="M11.5898 13.0639L17.6145 6.91837L11.5907 0.771973" stroke="currentColor" stroke-width="1.56"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="position-relative">
+                                                <div class="text-editor-content">
+                                                    <div class="form-control bg-white textarea-editable" contenteditable="true" role="textbox" aria-placeholder="текст..."></div>
+                                                </div>
+                                                <button type="button" class="btn btn-primary btn-lg rounded-pill w-100 position-absolute bottom-0 start-50 translate-middle-x mb-4" style="max-width: 300px;">Сохранить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="h3 mb-3">Настройки главы</div>
+                                        <div>
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <div>
+                                                        <label class="h5 mb-0" for="publishImmediatelyAfterModeration-chapter-1">Опубликовать сразу после модерации</label>
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-switch-xl">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration-chapter-3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-muted mt-1">Необходимые комментарии о модерации</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <div>
+                                                        <label class="h5 mb-0" for="freeChapter-chapter-1">Бесплатная глава</label>
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-switch-xl">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="freeChapter-chapter-3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="h5">Дата публикации</div>
+                                                <div class="book-date-publication-input-wrapper" data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="__.__.____"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-outline btn-lg rounded-pill">Удалить главу</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

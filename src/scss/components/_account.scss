@@ -399,3 +399,67 @@
         }
     }
 }
+
+.chapters-nav {
+    .nav-item .item-link.active {
+        color: var(--cui-secondary);
+    }
+}
+
+.text-editor-btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10px;
+    padding: 6px 32px;
+    background-color: #fff;
+    @media screen and (min-width: 992px) {
+        justify-content: center;
+    }
+
+    .btns-group {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 6px;
+        vertical-align: middle;
+    }
+
+    .btns-divider {
+        display: block;
+        width: 2px;
+        height: 14px;
+        background-color: #C3846F;
+    }
+
+    .btn {
+        height: 35px;
+        min-width: 35px;
+        padding: 0 6px;
+        color: #6A6969;
+        border: none;
+        border-radius: 10px;
+        &:hover,
+        &:focus {
+            color: #1F3326;
+            background-color: #F6F6F6;
+        }
+    }
+}
+
+.textarea-editable {
+    min-height: 500px;
+    padding-bottom: 120px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.textarea-editable[aria-placeholder]:empty::before {
+    content: attr(aria-placeholder);
+    color: #adafad;
+}
+
+.book-date-publication-input-wrapper {
+    --cui-date-picker-bg: #fff;
+    --cui-date-picker-border-radius: var(--cui-border-radius);
+}

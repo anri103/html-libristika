@@ -41,4 +41,13 @@ window.onload = () => {
             button.classList.toggle('js-active');
         });
     });
+
+    // auto resize editor textarea
+    const autoResizeTextarea = document.querySelectorAll('.auto-resize');
+    autoResizeTextarea.forEach(textarea => {
+        textarea.addEventListener('input', () => {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+    });
 }
