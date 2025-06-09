@@ -17502,9 +17502,42 @@ label {
   }
 }
 .account-content-area {
+  position: relative;
   padding: 34px;
   border-radius: 10px;
   background-color: #fff;
+}
+@media screen and (max-width: 991px) {
+  .account-content-area {
+    padding: 24px 16px;
+  }
+}
+.account-content-area:has(.user-account-status) {
+  margin-top: 55px;
+}
+
+.user-account-status {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 100%;
+  width: auto;
+  height: 75px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 55px;
+  padding: 0 70px;
+  margin-bottom: -20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+@media screen and (max-width: 991px) {
+  .user-account-status {
+    left: 30px;
+    height: 65px;
+    line-height: 45px;
+    padding: 0 45px;
+  }
 }
 
 .account-content-widget {
@@ -17614,11 +17647,6 @@ label {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 991px) {
-  .account-content-area {
-    padding: 24px 16px;
-  }
-}
 .badge-publication-status {
   --cui-badge-padding-y: 0.45em;
   --cui-badge-padding-x: 1.25em;

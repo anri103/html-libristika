@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ЛК - Автор</title>
+
+    <!-- favicon -->
+    @@include('../components/head-favicon.html')
+    <!-- styles -->
+    @@include('../components/head-styles.html')
+</head>
+
+<body>
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <section class="section">
+            <div class="container">
+                <div class="account-cover">
+                    <picture>
+                        <img class="cover-img" src="img/user/account-cover-bg.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="account-area">
+                    <div class="row gy-4 justify-content-center">
+                        <div class="col-lg-3">
+                            <div class="account-info-area">
+                                <div class="account-avatar">
+                                    <div class="avatar-wrapper">
+                                        <img class="avatar-img" src="img/user/account-avatar-xl.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="account-age">
+                                    <div><span>зарегистрирован</span> 21.08.2007</div>
+                                </div>
+                                <div class="account-name">
+                                    <h1>Имя Фамилия</h1>
+                                    <span class="account-verify">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
+                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
+                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.00114"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="account-menu-wrapper">
+                                    <nav class="account-menu">
+                                        <div class="links-wrapper">
+                                            <a href="account-author.html" class="menu-link active">Профиль автора</a>
+                                            <a href="#" class="menu-link">Публикация книги</a>
+                                            <a href="#" class="menu-link">Мои книги</a>
+                                            <a href="#" class="menu-link">Персоны</a>
+                                            <a href="#" class="menu-link">Статистика</a>
+                                            <a href="#" class="menu-link">Уведомления</a>
+                                            <a href="#" class="menu-link">Продажи</a>
+                                            <a href="#" class="menu-link">Выплаты</a>
+                                            <a href="#" class="menu-link logout-link">Выход</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="account-content-area">
+                                <div class="user-account-status">
+                                    <span>Автор</span>
+                                </div>
+                                <div class="account-content-widget">
+                                    <h2 class="widget-title">Личные данные</h2>
+                                    <div class="account-form-wrapper">
+                                        <form class="form-account" action="#" method="post">
+                                            <div class="row gy-3 gy-lg-4">
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignupfname">Имя</label>
+                                                    <input id="formSignupfname" class="form-control" type="text"
+                                                        name="firstName" value="Сергей" disabled>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignuplname">Фамилия</label>
+                                                    <input id="formSignuplname" class="form-control" type="text"
+                                                        name="lastName" value="Александрович" disabled>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formSignupEmail">Email</label>
+                                                    <input id="formSignupEmail" class="form-control" type="email"
+                                                        name="email" value="info@mail.com" disabled>
+                                                    <div class="form-text">*почта для отправки чеков и документов</div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="d-flex flex-wrap gap-4 row-gap-2">
+                                                        <div class="form-check-wrapper">
+                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" disabled checked>
+                                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                                мужчина
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check-wrapper">
+                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" disabled>
+                                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                                женщина
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="exampleFormControlTextarea1">О себе</label>
+                                                    <textarea id="exampleFormControlTextarea1" class="form-control" rows="3" placeholder="Напишите что-нибудь о себе..."></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="buttons-wrapper">
+                                                        <button type="submit" class="btn btn-secondary btn-lg rounded-pill">Сохранить изменения</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="account-content-widget">
+                                    <h2 class="widget-title">Паспортные данные</h2>
+                                    <div class="account-form-wrapper">
+                                        <form class="form-account" action="#" method="post">
+                                            <div class="row gy-3 gy-lg-4">
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formPassportSeries">Серия и номер</label>
+                                                    <input type="text" class="form-control" id="formPassportSeries">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formPassportWhoIssued">Кем выдан</label>
+                                                    <input type="text" class="form-control" id="formPassportWhoIssued">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formPassportDate">Дата выдачи</label>
+                                                    <input type="text" class="form-control" id="formPassportDate">
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="buttons-wrapper">
+                                                        <button type="submit" class="btn btn-secondary btn-lg rounded-pill">Сохранить изменения</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+
+    <!-- scripts -->
+    @@include('../components/footer-scripts.html')
+</body>
+
+</html>
