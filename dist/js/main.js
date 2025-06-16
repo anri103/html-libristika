@@ -33,6 +33,25 @@ window.onload = () => {
             },
         });
     });
+    // recom
+    const swiperBookSeries = document.querySelectorAll('.swiperBookSeries');
+    swiperBookSeries.forEach(slider => {
+        new Swiper (slider, {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            freeMode: true,
+            loop: false,
+            navigation: {
+                nextEl: slider.querySelector('.swiper-button-next'),
+                prevEl: slider.querySelector('.swiper-button-prev'),
+            },
+            breakpoints: {
+                992: {
+                    spaceBetween: 24,
+                },
+            },
+        });
+    });
 
     // button add to whishlist
     const wishlistBtn = document.querySelectorAll('.btn-add-whishlist');
