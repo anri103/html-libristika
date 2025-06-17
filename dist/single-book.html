@@ -238,16 +238,16 @@
             <div class="container">
                 <!-- Навигация/Хлебные крошки -->
                 <div class="navigation-wrapper mb-4">
-                    <a href="account-upload.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span>Сохранить и выйти</span>
-                    </a>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+                        </ol>
+                    </nav>
                 </div>
                 <div class="row gy-4">
                     <div class="col-lg-4">
-                        <div class="sticky-top z-1" style="top: 30px;">
+                        <div class="product-sticky-preview">
                             <div class="product-cover-big mb-4">
                                 <picture>
                                     <source srcset="
@@ -266,27 +266,29 @@
                                     https://cdn.litres.ru/pub/c/cover_415/72061519.jpg,
                                     https://cdn.litres.ru/pub/c/cover_415/72061519.jpg 2x
                                     " media="(min-width: 700px)">
-                                    <img class="img-fluid w-100" src="img/product/product-cover-01.png" aria-hidden="true" loading="lazy" alt="Города гнева">
+                                    <img src="img/product/product-cover-01.png" aria-hidden="true" loading="lazy" alt="Города гнева">
                                 </picture>
                             </div>
                             <div class="text-muted mb-4">
                                 <span>344 страниц</span> / <span>16+</span>
                             </div>
                             <div class="d-flex flex-column gap-3">
-                                <button type="button" class="btn btn-outline btn-lg rounded-pill w-100">Читать фрагмент</button>
-                                <button type="button" class="btn btn-primary btn-lg rounded-pill w-100">Купить</button>
+                                <button type="button" class="btn btn-outline-shadow btn-lg rounded-pill fs-5 fw-medium w-100">Читать фрагмент</button>
+                                <button type="button" class="btn btn-primary btn-lg rounded-pill fs-5 fw-medium w-100">Купить</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-8">
                         <!-- Теги -->
                         <div class="mb-4">
-                            <span class="badge rounded-pill text-bg-light">новинка</span>
-                            <span class="badge rounded-pill text-bg-light">стикер</span>
+                            <div class="d-flex flex-wrap gap-3">
+                                <span class="product-label">новинка</span>
+                                <span class="product-label">стикер</span>
+                            </div>
                         </div>
-                        <!-- Отзывы -->
+                        <!-- Рейтинг -->
                         <div class="mb-3">
-                            <div class="d-flex gap-1 align-items-center">
+                            <div class="d-flex align-items-baseline gap-2">
                                 <div>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
@@ -314,31 +316,58 @@
                                         </svg>
                                     </span>
                                 </div>
-                                <a href="#">12 отзывов</a>
+                                <div>
+                                    <a href="#">12 отзывов</a>
+                                </div>
                             </div>
                         </div>
-                        <!-- Название -->
-                        <div>
-                            <div class="d-flex flex-wrap align-items-baseline gap-1">
-                                <h1 class="mb-0">Заголовок книги</h1><span class="text-muted">16+</span>
-                            </div>
-                        </div>
-                        <!-- Автор / Соавтор -->
+                        <!-- Название, Автор / Соавтор, Вишлист, Добавить в корзину -->
                         <div class="mb-4">
-                            <div>
-                                <a href="#">Имя Фамилия</a> / <span>Имя Фамилия</span>
+                            <div class="d-flex justify-content-between gap-3">
+                                <div>
+                                    <div class="d-flex flex-wrap align-items-baseline gap-1 mb-1">
+                                        <h1 class="mb-0">Заголовок книги</h1>
+                                        <span class="text-muted">16+</span>
+                                    </div>
+                                    <div class="fs-6">
+                                        <a href="#">Имя Фамилия</a> / <span>Имя Фамилия</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <button type="button" class="btn btn-product-main-action">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="29" viewBox="0 0 34 29" fill="none">
+                                                    <path d="M16.5796 27.3698L3.16508 13.9553C1.76726 12.5269 0.989306 10.6048 1.00011 8.60629C1.01092 6.60779 1.80961 4.69422 3.22279 3.28104C4.63596 1.86787 6.54953 1.06917 8.54804 1.05837C10.5465 1.04756 12.4686 1.82552 13.897 3.22333L16.5796 5.90592L19.2622 3.22333C20.3683 2.11698 21.7893 1.37951 23.3307 1.11188C24.8722 0.844245 26.4586 1.05953 27.8729 1.72826C29.2873 2.39698 30.4604 3.48648 31.2317 4.8476C32.003 6.20873 32.3348 7.77496 32.1816 9.33191" stroke="currentColor" stroke-width="1.71"/>
+                                                    <path d="M23.0474 14.2511L24.5058 15.7094L25.9625 14.2511C26.3454 13.8682 26.7998 13.5646 27.3 13.3574C27.8002 13.1502 28.3363 13.0436 28.8776 13.0436C29.419 13.0436 29.9551 13.1502 30.4553 13.3574C30.9555 13.5646 31.4099 13.8682 31.7927 14.2511C32.1756 14.6339 32.4792 15.0883 32.6864 15.5885C32.8936 16.0887 33.0002 16.6248 33.0002 17.1662C33.0002 17.7075 32.8936 18.2436 32.6864 18.7438C32.4792 19.244 32.1756 19.6984 31.7927 20.0813L24.5058 27.3698L17.2172 20.0813C16.8344 19.6984 16.5308 19.244 16.3236 18.7438C16.1164 18.2436 16.0098 17.7075 16.0098 17.1662C16.0098 16.6248 16.1164 16.0887 16.3236 15.5885C16.5308 15.0883 16.8344 14.6339 17.2172 14.2511C17.6001 13.8682 18.0545 13.5646 18.5547 13.3574C19.0549 13.1502 19.591 13.0436 20.1323 13.0436C20.6737 13.0436 21.2098 13.1502 21.71 13.3574C22.2102 13.5646 22.6646 13.8682 23.0474 14.2511Z" stroke="currentColor" stroke-width="1.71"/>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <button type="button" class="btn btn-product-main-action">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                                    <path d="M22.2001 17.0003H12.6001" stroke="currentColor" stroke-width="1.70667"/>
+                                                    <path d="M17.3999 12.2V21.8" stroke="currentColor" stroke-width="1.70667"/>
+                                                    <path d="M0 1H7.2V25H25.6L32 9H7.2" stroke="currentColor" stroke-width="1.70667"/>
+                                                    <path d="M7.2002 32.9998V31.7992H8.40088V32.9998H7.2002Z" stroke="currentColor" stroke-width="1.70667"/>
+                                                    <path d="M16.7998 32.9998V31.7992H18.0004V32.9998H16.7998Z" stroke="currentColor" stroke-width="1.70667"/>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Серия книг -->
                         <div class="mb-4">
                             <div>
-                                <span>2 книга из серии</span> <a href="#">«Название серии»</a>
+                                <span>2 книга из серии</span> <a href="#" class="fs-6 link-secondary">«Название серии»</a>
                             </div>
                         </div>
-                        <!-- Вид -->
+                        <!-- Тип товара -->
                         <div class="mb-4">
-                            <div>
-                                <a href="#" class="active">
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#" class="btn btn-product-type active">
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
                                             <path d="M11.25 10.2273H0V11.6879H11.25V10.2273ZM18 3.61718H0V5.20783H18V3.61718ZM0 8.40923H18V6.92226H0V8.40923ZM0 0.312103V1.74712H18V0.312103H0Z" fill="currentColor"/>
@@ -346,7 +375,7 @@
                                     </span>
                                     <span>текст</span>
                                 </a>
-                                <a href="#">
+                                <a href="#" class="btn btn-product-type">
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M13 17.2C14.5913 17.2 16.1174 16.5046 17.2426 15.2669C18.3679 14.0292 19 12.3504 19 10.6C19 8.84957 18.3679 7.17084 17.2426 5.9331C16.1174 4.69535 14.5913 4 13 4" stroke="currentColor" stroke-width="1.2"/>
@@ -366,19 +395,19 @@
                         </div>
                         <!-- Статус -->
                         <div class="mb-4">
-                            <h3>Статус книги</h3>
+                            <h4>Статус книги</h4>
                             <div>в процессе</div>
                         </div>
                         <!-- Жанры и теги -->
                         <div class="mb-4">
-                            <h3>Жанры и теги</h3>
+                            <h4>Жанры и теги</h4>
                             <a href="#">Жанр 1</a>, 
                             <a href="#">Жанр 2</a>, 
                             <a href="#">Тег</a>
                         </div>
                         <!-- Описание -->
                         <div class="mb-4">
-                            <h3>О книге</h3>
+                            <h4>О книге</h4>
                             <div>
                                 <div>
                                     <p>Захват виконта Волжского стал поворотным моментом в ходе начавшейся войны. Решаясь на этот шаг, Сергей Белов прекрасно понимал, что действует без приказа и исключительно на свой страх и риск. И вот теперь всё будет зависеть от результатов их совместного рейда в Каинову чащу...</p>
@@ -391,7 +420,7 @@
                                 <div class="d-flex flex-wrap align-items-baseline gap-2 mb-4">
                                     <h3 class="mb-0">Серия книг «Название серии»</h3>
                                     <div>
-                                        <a href="#">
+                                        <a href="#" class="link-secondary">
                                             Вся серия книг
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8" fill="none">
@@ -644,9 +673,9 @@
                         </div>
                         <!-- Отзывы -->
                         <div>
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex flex-wrap align-items-baseline gap-2">
-                                    <h3>Отзывы</h3>
+                            <div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+                                <div class="d-flex flex-wrap align-items-baseline gap-2 row-gap-1">
+                                    <h2 class="mb-0">Отзывы</h2>
                                     <span class="text-muted">12 отзывов</span>
                                 </div>
                                 <div>
@@ -666,9 +695,11 @@
                             <div class="reviews-list">
                                 <div class="review-item">
                                     <div class="review-body">
-                                        <div class="review-avatar"></div>
+                                        <div class="review-avatar">
+                                            <img src="img/single-book/commentary-avatar.png" alt="">
+                                        </div>
                                         <div class="review-info">
-                                            <div>
+                                            <div class="mb-2">
                                                 <span>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
                                                         <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
@@ -695,43 +726,39 @@
                                                     </svg>
                                                 </span>
                                             </div>
-                                            <div>
-                                                <div class="d-flex flex-wrap gap-2">
-                                                    <div class="h3">Имя Фамилия</div>
-                                                    <div class="text-muted">12.04.2025</div>
-                                                </div>
+                                            <div class="d-flex flex-wrap align-items-baseline gap-2 mb-3">
+                                                <div class="h5 mb-0">Имя Фамилия</div>
+                                                <div class="small text-muted">12.04.2025</div>
                                             </div>
-                                            <div>
+                                            <div class="mb-4">
                                                 <div>
                                                     <p>Захват виконта Волжского стал поворотным моментом в ходе начавшейся войны. Решаясь на этот шаг, Сергей Белов прекрасно понимал, что действует без приказа и исключительно на свой страх и риск. И вот теперь всё будет зависеть от результатов их совместного рейда в Каинову чащу.</p>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <a href="#">ответить</a>
-                                            </div>
-                                            <div>
-                                                <div class="review-emotions">
-                                                    <button type="button" class="emotion-btn">
-                                                        <svg class="emotion-btn__icon emotion-dislike" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                                            <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#A20808" stroke-width="2"/>
-                                                            <path d="M10.875 17.75C10.875 18.5788 11.2042 19.3737 11.7903 19.9597C12.3763 20.5458 13.1712 20.875 14 20.875C14.8288 20.875 15.6237 20.5458 16.2097 19.9597C16.7958 19.3737 17.125 18.5788 17.125 17.75C17.125 16.9212 16.7958 16.1263 16.2097 15.5403C15.6237 14.9542 14.8288 14.625 14 14.625C13.1712 14.625 12.3763 14.9542 11.7903 15.5403C11.2042 16.1263 10.875 16.9212 10.875 17.75Z" stroke="#A20808" stroke-width="2"/>
-                                                            <path d="M11.301 7.95001L7.32471 11.925" stroke="#A20808" stroke-width="2"/>
-                                                            <path d="M7.32373 7.95001L11.3 11.925" stroke="#A20808" stroke-width="2"/>
-                                                            <path d="M16.6987 7.95001L20.6762 11.9263" stroke="#A20808" stroke-width="2"/>
-                                                            <path d="M20.6747 7.95001L16.6997 11.925" stroke="#A20808" stroke-width="2"/>
-                                                        </svg>
-                                                        <span class="emotion-btn__count">2</span>
-                                                    </button>
-                                                    <button type="button" class="emotion-btn">
-                                                        <svg class="emotion-btn__icon emotion-like" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                                            <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#90DB90" stroke-width="2"/>
-                                                            <path d="M9.625 9V12.125" stroke="#90DB90" stroke-width="2"/>
-                                                            <path d="M18.375 9V12.125" stroke="#90DB90" stroke-width="2"/>
-                                                            <path d="M18.375 15.25C18.375 16.4103 17.9141 17.5231 17.0936 18.3436C16.2731 19.1641 15.1603 19.625 14 19.625C12.8397 19.625 11.7269 19.1641 10.9064 18.3436C10.0859 17.5231 9.625 16.4103 9.625 15.25" stroke="#90DB90" stroke-width="2"/>
-                                                        </svg>
-                                                        <span class="emotion-btn__count">11</span>
-                                                    </button>
+                                                <div>
+                                                    <a href="#" class="fs-6">ответить</a>
                                                 </div>
+                                            </div>
+                                            <div class="review-emotions">
+                                                <button type="button" class="btn emotion-btn">
+                                                    <svg class="emotion-btn__icon emotion-dislike" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                        <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#A20808" stroke-width="2"/>
+                                                        <path d="M10.875 17.75C10.875 18.5788 11.2042 19.3737 11.7903 19.9597C12.3763 20.5458 13.1712 20.875 14 20.875C14.8288 20.875 15.6237 20.5458 16.2097 19.9597C16.7958 19.3737 17.125 18.5788 17.125 17.75C17.125 16.9212 16.7958 16.1263 16.2097 15.5403C15.6237 14.9542 14.8288 14.625 14 14.625C13.1712 14.625 12.3763 14.9542 11.7903 15.5403C11.2042 16.1263 10.875 16.9212 10.875 17.75Z" stroke="#A20808" stroke-width="2"/>
+                                                        <path d="M11.301 7.95001L7.32471 11.925" stroke="#A20808" stroke-width="2"/>
+                                                        <path d="M7.32373 7.95001L11.3 11.925" stroke="#A20808" stroke-width="2"/>
+                                                        <path d="M16.6987 7.95001L20.6762 11.9263" stroke="#A20808" stroke-width="2"/>
+                                                        <path d="M20.6747 7.95001L16.6997 11.925" stroke="#A20808" stroke-width="2"/>
+                                                    </svg>
+                                                    <span class="emotion-btn__count">2</span>
+                                                </button>
+                                                <button type="button" class="btn emotion-btn">
+                                                    <svg class="emotion-btn__icon emotion-like" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                        <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#90DB90" stroke-width="2"/>
+                                                        <path d="M9.625 9V12.125" stroke="#90DB90" stroke-width="2"/>
+                                                        <path d="M18.375 9V12.125" stroke="#90DB90" stroke-width="2"/>
+                                                        <path d="M18.375 15.25C18.375 16.4103 17.9141 17.5231 17.0936 18.3436C16.2731 19.1641 15.1603 19.625 14 19.625C12.8397 19.625 11.7269 19.1641 10.9064 18.3436C10.0859 17.5231 9.625 16.4103 9.625 15.25" stroke="#90DB90" stroke-width="2"/>
+                                                    </svg>
+                                                    <span class="emotion-btn__count">11</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

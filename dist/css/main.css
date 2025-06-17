@@ -16534,6 +16534,25 @@ label {
   box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
 }
 
+.btn-outline-shadow {
+  --cui-btn-color: #566B61;
+  --cui-btn-bg: #fff;
+  --cui-btn-border-color: #fff;
+  --cui-btn-hover-color: #1F3326;
+  --cui-btn-hover-bg: #fff;
+  --cui-btn-hover-border-color: #fff;
+  --cui-btn-focus-shadow-rgb: 49, 132, 253;
+  --cui-btn-active-color: #1F3326;
+  --cui-btn-active-bg: #fff;
+  --cui-btn-active-border-color: #fff;
+  --cui-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --cui-btn-disabled-color: #1F3326;
+  --cui-btn-disabled-bg: #fff;
+  --cui-btn-disabled-border-color: #fff;
+  --cui-btn-disabled-opacity: 0.5;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+}
+
 /*------------------------------------------------------------------
 [ swiper ]*/
 .swiper-button-next,
@@ -17899,4 +17918,111 @@ label {
   --cui-alert-bg: #FBF4F3;
   --cui-alert-border-color: #FBF4F3;
   --cui-alert-link-color: var(--cui-danger-text-emphasis);
+}
+
+.product-sticky-preview {
+  position: sticky;
+  top: 30px;
+}
+@media screen and (min-width: 992px) {
+  .product-sticky-preview {
+    padding-right: 28px;
+  }
+}
+
+.product-cover-big img {
+  width: 100%;
+  height: auto;
+  box-shadow: 2px 4px 11px 0px rgba(0, 0, 0, 0.22), 9px 18px 20px 0px rgba(0, 0, 0, 0.19), 19px 40px 27px 0px rgba(0, 0, 0, 0.11), 34px 72px 32px 0px rgba(0, 0, 0, 0.03), 54px 112px 35px 0px rgba(0, 0, 0, 0);
+}
+
+.product-label {
+  padding: 4px 10px;
+  color: rgb(195, 132, 111);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(249, 249, 249);
+  box-shadow: 3px 3px 5.8px 0px rgba(109, 88, 68, 0.15);
+}
+
+.btn-product-type {
+  --cui-btn-color: #566B61;
+  --cui-btn-bg: transparent;
+  --cui-btn-border-color: transparent;
+  --cui-btn-hover-color: #1F3326;
+  --cui-btn-hover-bg: #FFFFFF;
+  --cui-btn-hover-border-color: #FFFFFF;
+  --cui-btn-focus-shadow-rgb: 208, 209, 212;
+  --cui-btn-active-color: #1F3326;
+  --cui-btn-active-bg: #FFFFFF;
+  --cui-btn-active-border-color: #ebebeb;
+  --cui-btn-active-shadow: inset 0 3px 5px rgba(8, 10, 12, 0.125);
+  --cui-btn-disabled-color: #1F3326;
+  --cui-btn-disabled-bg: #FFFFFF;
+  --cui-btn-disabled-border-color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-product-main-action {
+  --cui-btn-padding-y: 0;
+  --cui-btn-padding-x: 0;
+  --cui-btn-color: #566B61;
+  --cui-btn-bg: transparent;
+  --cui-btn-border-color: transparent;
+  --cui-btn-hover-color: #1F3326;
+  --cui-btn-hover-bg: transparent;
+  --cui-btn-hover-border-color: transparent;
+  --cui-btn-focus-shadow-rgb: 208, 209, 212;
+  --cui-btn-active-color: #1F3326;
+  --cui-btn-active-bg: transparent;
+  --cui-btn-active-border-color: transparent;
+  --cui-btn-active-shadow: inset 0 3px 5px rgba(8, 10, 12, 0.125);
+  --cui-btn-disabled-color: #1F3326;
+  --cui-btn-disabled-bg: transparent;
+  --cui-btn-disabled-border-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+}
+.btn-product-main-action svg {
+  max-width: 36px;
+  max-height: 36px;
+}
+
+.review-item .review-body {
+  display: flex;
+  gap: 14px;
+}
+.review-item .review-avatar {
+  flex: 0 0 auto;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.review-item .review-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: none;
+}
+.review-item .review-emotions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.review-item .emotion-btn {
+  display: inline-flex;
+  padding: 0;
+  align-items: center;
+  gap: 8px;
+  color: #1F3326;
 }
