@@ -17109,50 +17109,6 @@ label {
   }
 }
 /*------------------------------------------------------------------
-[ swiperBookSeries ]*/
-.swiperBookSeries .swiper-slide {
-  width: auto;
-}
-
-.item-series-book {
-  position: relative;
-  width: 110px;
-}
-.item-series-book .item-badge {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  display: block;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 32px;
-  background-color: #fff;
-  box-shadow: 0px 1px 2px 0px rgba(24, 52, 37, 0.1), 0px 4px 4px 0px rgba(24, 52, 37, 0.09), 0px 9px 6px 0px rgba(24, 52, 37, 0.05), 0px 17px 7px 0px rgba(24, 52, 37, 0.01), 0px 26px 7px 0px rgba(24, 52, 37, 0);
-}
-.item-series-book .item-img-wrapper .item-img {
-  width: 100%;
-  height: auto;
-  box-shadow: 1px 1px 2px 0px rgba(90, 54, 42, 0.22), 2px 3px 4px 0px rgba(90, 54, 42, 0.19), 5px 6px 5px 0px rgba(90, 54, 42, 0.11), 9px 11px 6px 0px rgba(90, 54, 42, 0.03), 14px 18px 6px 0px rgba(90, 54, 42, 0);
-}
-.item-series-book .item-body {
-  padding: 8px 0;
-}
-.item-series-book .item-title {
-  font-size: 14px;
-  font-weight: 400;
-}
-.item-series-book.active .item-badge {
-  color: var(--cui-secondary);
-}
-.item-series-book.active .item-title {
-  --cui-link-color-rgb: var(--cui-secondary-rgb);
-}
-
-/*------------------------------------------------------------------
 [ section__grid-tags ]*/
 .section__grid-tags {
   display: flex;
@@ -17524,7 +17480,7 @@ label {
 .account-name h1 {
   display: inline;
   vertical-align: top;
-  word-break: break-all;
+  word-break: break-word;
   margin-bottom: 0;
 }
 .account-name .account-verify {
@@ -17920,22 +17876,35 @@ label {
   --cui-alert-link-color: var(--cui-danger-text-emphasis);
 }
 
-.product-sticky-preview {
+/*------------------------------------------------------------------
+[ page single-book.html ]*/
+.section__product {
+  padding-bottom: 60px;
+}
+
+/*------------------------------------------------------------------
+[ product-preview-wrapper ]*/
+.product-preview-wrapper {
   position: sticky;
   top: 30px;
 }
 @media screen and (min-width: 992px) {
-  .product-sticky-preview {
+  .product-preview-wrapper {
     padding-right: 28px;
   }
 }
 
+.product-cover-big {
+  margin-bottom: 24px;
+}
 .product-cover-big img {
   width: 100%;
   height: auto;
   box-shadow: 2px 4px 11px 0px rgba(0, 0, 0, 0.22), 9px 18px 20px 0px rgba(0, 0, 0, 0.19), 19px 40px 27px 0px rgba(0, 0, 0, 0.11), 34px 72px 32px 0px rgba(0, 0, 0, 0.03), 54px 112px 35px 0px rgba(0, 0, 0, 0);
 }
 
+/*------------------------------------------------------------------
+[ product-content-wrapper ]*/
 .product-label {
   padding: 4px 10px;
   color: rgb(195, 132, 111);
@@ -17995,9 +17964,74 @@ label {
   max-height: 36px;
 }
 
+/*------------------------------------------------------------------
+[ product-series ]*/
+.product-series-book-area {
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+.product-series-book-area .swiperBookSeries {
+  margin-left: -24px;
+  margin-right: -24px;
+  padding: 24px;
+}
+
+/*------------------------------------------------------------------
+[ swiperBookSeries ]*/
+.swiperBookSeries .swiper-slide {
+  width: auto;
+}
+.swiperBookSeries .item-series-book {
+  position: relative;
+  width: 110px;
+}
+.swiperBookSeries .item-series-book .item-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(24, 52, 37, 0.1), 0px 4px 4px 0px rgba(24, 52, 37, 0.09), 0px 9px 6px 0px rgba(24, 52, 37, 0.05), 0px 17px 7px 0px rgba(24, 52, 37, 0.01), 0px 26px 7px 0px rgba(24, 52, 37, 0);
+}
+.swiperBookSeries .item-series-book .item-img-wrapper .item-img {
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 1px 2px 0px rgba(90, 54, 42, 0.22), 2px 3px 4px 0px rgba(90, 54, 42, 0.19), 5px 6px 5px 0px rgba(90, 54, 42, 0.11), 9px 11px 6px 0px rgba(90, 54, 42, 0.03), 14px 18px 6px 0px rgba(90, 54, 42, 0);
+}
+.swiperBookSeries .item-series-book .item-body {
+  padding: 8px 0;
+}
+.swiperBookSeries .item-series-book .item-title {
+  font-size: 14px;
+  font-weight: 400;
+}
+.swiperBookSeries .item-series-book.active .item-badge {
+  color: var(--cui-secondary);
+}
+.swiperBookSeries .item-series-book.active .item-title {
+  --cui-link-color-rgb: var(--cui-secondary-rgb);
+}
+
+/*------------------------------------------------------------------
+[ review ]*/
+.review-item {
+  position: relative;
+  margin-bottom: 16px;
+}
 .review-item .review-body {
   display: flex;
   gap: 14px;
+  padding: 4px 0;
 }
 .review-item .review-avatar {
   flex: 0 0 auto;
@@ -18014,15 +18048,33 @@ label {
   object-position: center;
   border: none;
 }
-.review-item .review-emotions {
+.review-item .review-info {
+  padding: 6px 0;
+}
+.review-item .review-info .review-text {
+  margin-bottom: 16px;
+}
+.review-item .review-info .review-text p:last-child {
+  margin-bottom: 0;
+}
+.review-item .review-info .review-emotions {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
-.review-item .emotion-btn {
+.review-item .review-info .emotion-btn {
   display: inline-flex;
-  padding: 0;
   align-items: center;
   gap: 8px;
+  padding: 0;
+  border: none;
+  outline: none;
   color: #1F3326;
+}
+.review-item .review-info .emotion-btn .emotion-btn__icon {
+  opacity: 1;
+  transition: 0.3s;
+}
+.review-item .review-info .emotion-btn:hover .emotion-btn__icon {
+  opacity: 0.5;
 }
