@@ -242,3 +242,23 @@
         }
     }
 }
+
+.reviews-form-wrapper {
+    position: relative;
+    padding-top: 24px;
+
+    .form-area {
+        position: relative;
+        overflow: hidden;
+        padding: 24px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    .form-review {
+        textarea.form-control {
+            min-height: 86px;
+            field-sizing: content;
+        }
+    }
+}

@@ -16976,6 +16976,13 @@ label {
   margin-bottom: 40px;
 }
 
+.section__navigation {
+  padding: 10px 0;
+}
+.section__navigation .breadcrumb {
+  --cui-breadcrumb-margin-bottom: 0;
+}
+
 .breadcrumb-item {
   font-size: 1rem;
   font-weight: 400;
@@ -18077,4 +18084,20 @@ label {
 }
 .review-item .review-info .emotion-btn:hover .emotion-btn__icon {
   opacity: 0.5;
+}
+
+.reviews-form-wrapper {
+  position: relative;
+  padding-top: 24px;
+}
+.reviews-form-wrapper .form-area {
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.reviews-form-wrapper .form-review textarea.form-control {
+  min-height: 86px;
+  field-sizing: content;
 }

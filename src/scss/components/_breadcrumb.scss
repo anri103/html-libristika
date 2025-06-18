@@ -5,6 +5,14 @@
     margin-bottom: 40px;
 }
 
+.section__navigation {
+    padding: 10px 0;
+    
+    .breadcrumb {
+        --cui-breadcrumb-margin-bottom: 0;
+    }
+}
+
 .breadcrumb-item {
     font-size: 1rem;
     font-weight: 400;
