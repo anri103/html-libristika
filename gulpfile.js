@@ -40,7 +40,7 @@ function clean() {
 
 // Компиляция SCSS в CSS и копирование CSS-файлов (включая Bootstrap и Swiper)
 function styles() {
-  return src(paths.styles.main)
+  return src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(dest(paths.styles.dest))
     .pipe(browserSync.stream());
