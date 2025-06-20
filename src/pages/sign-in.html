@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Авторизация</title>
-    
-    <!-- favicon -->
-    @@include('../components/head-favicon.html')
-    <!-- styles -->
-    @@include('../components/head-styles.html')
-</head>
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "Авторизация",
+})
 
 <body>
 
@@ -84,9 +78,6 @@
 
     <!-- footer -->
     @@include('../components/footer.html')
-
-    <!-- scripts -->
-    @@include('../components/footer-scripts.html')
 </body>
 
 </html>

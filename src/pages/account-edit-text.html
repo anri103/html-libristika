@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ЛК - Автор - Текстовый редактор глав</title>
-
-    <!-- favicon -->
-    @@include('../components/head-favicon.html')
-    <!-- styles -->
-    @@include('../components/head-styles.html')
-</head>
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "ЛК - Автор - Текстовый редактор глав",
+})
 
 <body>
 
@@ -38,7 +32,7 @@
                             <div class="text-muted">0 глав</div>
                         </div>
                         <div class="mb-4">
-                            <button type="button" class="btn btn-secondary btn-lg rounded-pill">Добавить главу</button>
+                            <button type="button" class="btn btn-secondary btn-lg btn-wide rounded-pill">Добавить главу</button>
                         </div>
                         <div class="chapters-nav" role="tablist" id="chaptersNav">
                             <div class="nav-item mb-4">
@@ -220,7 +214,7 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <button type="button" class="btn btn-outline btn-lg rounded-pill">Удалить главу</button>
+                                            <button type="button" class="btn btn-outline btn-lg btn-wide rounded-pill">Удалить главу</button>
                                         </div>
                                     </div>
                                 </div>
@@ -380,7 +374,7 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <button type="button" class="btn btn-outline btn-lg rounded-pill">Удалить главу</button>
+                                            <button type="button" class="btn btn-outline btn-lg btn-wide rounded-pill">Удалить главу</button>
                                         </div>
                                     </div>
                                 </div>
@@ -540,7 +534,7 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <button type="button" class="btn btn-outline btn-lg rounded-pill">Удалить главу</button>
+                                            <button type="button" class="btn btn-outline btn-lg btn-wide rounded-pill">Удалить главу</button>
                                         </div>
                                     </div>
                                 </div>
@@ -555,9 +549,6 @@
 
     <!-- footer -->
     @@include('../components/footer.html')
-
-    <!-- scripts -->
-    @@include('../components/footer-scripts.html')
 </body>
 
 </html>

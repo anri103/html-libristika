@@ -33,6 +33,8 @@
 @use 'components/card-collection';
 @use 'components/card-genre';
 @use 'components/card-author';
-@use 'components/account';
 @use 'components/alerts';
-@use 'components/single-book';
+
+// pages
+@use 'pages/account';
+@use 'pages/single-book';

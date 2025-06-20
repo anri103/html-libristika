@@ -92,6 +92,14 @@
         max-width: 36px;
         max-height: 36px;
     }
+
+    &.btn-add-whishlist.js-active {
+        svg {
+            path.icon-small-heart {
+                fill: currentColor;
+            }
+        }
+    }
 }
 
 /*------------------------------------------------------------------

@@ -16478,11 +16478,17 @@ label {
   box-shadow: none !important;
 }
 
-.btn-group-lg > .btn, .btn-lg {
+.btn-group-lg > .btn,
+.btn-lg {
   --cui-btn-padding-y: 0.75rem;
   --cui-btn-padding-x: 1.5rem;
   --cui-btn-font-size: 1.25rem;
   --cui-btn-border-radius: var(--cui-border-radius-lg);
+}
+
+.btn-wide {
+  width: 100%;
+  max-width: 250px;
 }
 
 .btn-icon {
@@ -17428,6 +17434,21 @@ label {
 }
 
 /*------------------------------------------------------------------
+[ alert ]*/
+.alert {
+  --cui-alert-border-radius: 10px;
+  font-size: 0.875rem;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+}
+
+.alert-danger {
+  --cui-alert-color: var(--cui-body-color);
+  --cui-alert-bg: #FBF4F3;
+  --cui-alert-border-color: #FBF4F3;
+  --cui-alert-link-color: var(--cui-danger-text-emphasis);
+}
+
+/*------------------------------------------------------------------
 [ account ]*/
 .account-cover {
   position: relative;
@@ -17572,10 +17593,6 @@ label {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.875rem;
-}
-.account-content-widget .btn {
-  width: 100%;
-  max-width: 300px;
 }
 
 .book-rating-options {
@@ -17783,6 +17800,7 @@ label {
   --cui-btn-disabled-bg: #1F3326;
   --cui-btn-disabled-border-color: #1F3326;
   --cui-btn-disabled-opacity: 0.5;
+  width: 100%;
   max-width: 180px;
   box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
 }
@@ -17864,21 +17882,6 @@ label {
 .book-date-publication-input-wrapper {
   --cui-date-picker-bg: #fff;
   --cui-date-picker-border-radius: var(--cui-border-radius);
-}
-
-/*------------------------------------------------------------------
-[ alert ]*/
-.alert {
-  --cui-alert-border-radius: 10px;
-  font-size: 0.875rem;
-  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
-}
-
-.alert-danger {
-  --cui-alert-color: var(--cui-body-color);
-  --cui-alert-bg: #FBF4F3;
-  --cui-alert-border-color: #FBF4F3;
-  --cui-alert-link-color: var(--cui-danger-text-emphasis);
 }
 
 /*------------------------------------------------------------------
@@ -17967,6 +17970,9 @@ label {
 .btn-product-main-action svg {
   max-width: 36px;
   max-height: 36px;
+}
+.btn-product-main-action.btn-add-whishlist.js-active svg path.icon-small-heart {
+  fill: currentColor;
 }
 
 /*------------------------------------------------------------------

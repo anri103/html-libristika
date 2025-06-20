@@ -13,11 +13,17 @@
     box-shadow: none !important;
 }
 
-.btn-group-lg > .btn, .btn-lg {
+.btn-group-lg > .btn,
+.btn-lg {
     --cui-btn-padding-y: 0.75rem;
     --cui-btn-padding-x: 1.5rem;
     --cui-btn-font-size: 1.25rem;
     --cui-btn-border-radius: var(--cui-border-radius-lg);
+}
+
+.btn-wide {
+    width: 100%;
+    max-width: 250px;
 }
 
 .btn-icon {

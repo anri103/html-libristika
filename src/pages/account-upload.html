@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ЛК - Автор - Публикация</title>
-
-    <!-- favicon -->
-    @@include('../components/head-favicon.html')
-    <!-- styles -->
-    @@include('../components/head-styles.html')
-</head>
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "ЛК - Автор - Публикация",
+})
 
 <body>
 
@@ -68,7 +62,7 @@
                         </div>
                         <div class="col-lg-7">
                             <div class="account-content-widget">
-                                <div class="d-flex flex-wrap align-items-center gap-4 row-gap-2 mb-2">
+                                <div class="d-flex flex-wrap align-items-baseline gap-4 row-gap-2 mb-2">
                                     <h2 class="widget-title mb-0">Мои книги</h2>
                                     <span class="text-muted">2 книги</span>
                                 </div>
@@ -85,8 +79,8 @@
                                     <!-- Загрузить книгу/фанфик -->
                                     <div class="tab-pane fade show active" id="nav-upload-book" role="tabpanel" aria-labelledby="nav-upload-book-tab" tabindex="0">
                                         <div class="d-flex flex-wrap gap-4 row-gap-2 mb-4">
-                                            <a href="account-upload-book.html" class="btn btn-primary btn-lg rounded-pill">Создать книгу</a>
-                                            <button type="submit" class="btn btn-secondary btn-lg rounded-pill">Выложить фанфик</button>
+                                            <a href="account-upload-book.html" class="btn btn-primary btn-lg btn-wide rounded-pill">Создать книгу</a>
+                                            <button type="submit" class="btn btn-secondary btn-lg btn-wide rounded-pill">Выложить фанфик</button>
                                         </div>
                                         <!-- sorting -->
                                         <div class="d-flex justify-content-between mb-4">
@@ -229,7 +223,7 @@
                                     <!-- Загрузить аудиокнигу -->
                                     <div class="tab-pane fade" id="nav-upload-audio" role="tabpanel" aria-labelledby="nav-upload-audio-tab" tabindex="0">
                                         <div class="d-flex flex-wrap gap-4 row-gap-2 mb-4">
-                                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Создать аудиокнигу</button>
+                                            <button type="submit" class="btn btn-primary btn-lg btn-wide rounded-pill">Создать аудиокнигу</button>
                                         </div>
                                         <!-- sorting -->
                                         <div class="d-flex justify-content-between mb-4">
@@ -316,7 +310,7 @@
                                         <div class="d-none d-lg-block">
                                             <p>Черновик – это описание формата загрузки книги.</p>
                                             <div class="d-flex flex-wrap gap-4 row-gap-2 mb-4">
-                                                <button type="submit" class="btn btn-primary btn-lg rounded-pill">Создать черновик</button>
+                                                <button type="submit" class="btn btn-primary btn-lg btn-wide rounded-pill">Создать черновик</button>
                                             </div>
                                         </div>
                                         <!-- message -->
@@ -491,9 +485,6 @@
 
     <!-- footer -->
     @@include('../components/footer.html')
-
-    <!-- scripts -->
-    @@include('../components/footer-scripts.html')
 </body>
 
 </html>
