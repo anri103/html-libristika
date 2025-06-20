@@ -8,7 +8,8 @@ const fileInclude = require('gulp-file-include');
 const paths = {
   styles: {
     src: 'src/scss/**/*.scss',
-    dest: 'dist/css/'
+    dest: 'dist/css/',
+    main: 'src/scss/main.scss'
   },
   scripts: {
     src: 'src/js/**/*.js',
@@ -39,7 +40,7 @@ function clean() {
 
 // Компиляция SCSS в CSS и копирование CSS-файлов (включая Bootstrap и Swiper)
 function styles() {
-  return src(paths.styles.src)
+  return src(paths.styles.main)
     .pipe(sass().on('error', sass.logError))
     .pipe(dest(paths.styles.dest))
     .pipe(browserSync.stream());
