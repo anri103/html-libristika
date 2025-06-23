@@ -17905,7 +17905,13 @@ label {
 .product-cover-big {
   margin-bottom: 24px;
 }
+@media screen and (max-width: 991px) {
+  .product-cover-big {
+    padding: 0 24px;
+  }
+}
 .product-cover-big img {
+  max-width: 100%;
   width: 100%;
   height: auto;
   box-shadow: 2px 4px 11px 0px rgba(0, 0, 0, 0.22), 9px 18px 20px 0px rgba(0, 0, 0, 0.19), 19px 40px 27px 0px rgba(0, 0, 0, 0.11), 34px 72px 32px 0px rgba(0, 0, 0, 0.03), 54px 112px 35px 0px rgba(0, 0, 0, 0);
@@ -18015,6 +18021,7 @@ label {
   box-shadow: 0px 1px 2px 0px rgba(24, 52, 37, 0.1), 0px 4px 4px 0px rgba(24, 52, 37, 0.09), 0px 9px 6px 0px rgba(24, 52, 37, 0.05), 0px 17px 7px 0px rgba(24, 52, 37, 0.01), 0px 26px 7px 0px rgba(24, 52, 37, 0);
 }
 .swiperBookSeries .item-series-book .item-img-wrapper .item-img {
+  max-width: 100%;
   width: 100%;
   height: auto;
   box-shadow: 1px 1px 2px 0px rgba(90, 54, 42, 0.22), 2px 3px 4px 0px rgba(90, 54, 42, 0.19), 5px 6px 5px 0px rgba(90, 54, 42, 0.11), 9px 11px 6px 0px rgba(90, 54, 42, 0.03), 14px 18px 6px 0px rgba(90, 54, 42, 0);
