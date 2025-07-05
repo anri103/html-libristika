@@ -38,7 +38,7 @@ function clean() {
   return del(['dist/**/*']);
 }
 
-// Компиляция SCSS в CSS и копирование CSS-файлов (включая Bootstrap и Swiper)
+// Компиляция SCSS в CSS и копирование CSS-файлов
 function styles() {
   return src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
@@ -46,12 +46,12 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-// Копирование JS-файлов (включая Bootstrap и Swiper)
+// Копирование JS-файлов
 function scripts() {
   return src([
-    'node_modules/@coreui/coreui-pro/dist/js/coreui.bundle.min.js', // CoreUI PRO
-    'node_modules/swiper/swiper-bundle.min.js', // Swiper
-    paths.scripts.src // Ваши JS-файлы
+    'node_modules/@coreui/coreui-pro/dist/js/coreui.bundle.min.js',
+    'node_modules/swiper/swiper-bundle.min.js',
+    paths.scripts.src
   ])
     .pipe(dest(paths.scripts.dest))
     .pipe(browserSync.stream());
