@@ -3,17 +3,25 @@ const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const fileInclude = require('gulp-file-include');
+const concat = require('gulp-concat');
 
-// Пути к исходным файлам и папке назначения
+// Пути
 const paths = {
   styles: {
     src: 'src/scss/**/*.scss',
     dest: 'dist/css/',
-    main: 'src/scss/main.scss'
+    libs: [
+      'node_modules/@coreui/coreui-pro/dist/css/coreui.min.css',
+      'node_modules/swiper/swiper-bundle.min.css'
+    ]
   },
   scripts: {
     src: 'src/js/**/*.js',
-    dest: 'dist/js/'
+    dest: 'dist/js/',
+    libs: [
+      'node_modules/@coreui/coreui-pro/dist/js/coreui.bundle.min.js',
+      'node_modules/swiper/swiper-bundle.min.js',
+    ]
   },
   images: {
     src: 'src/img/**/*',
@@ -33,12 +41,12 @@ const paths = {
   }
 };
 
-// Очистка папки dist
+// Очистка dist
 function clean() {
-  return del(['dist/**/*']);
+  return del(['dist']);
 }
 
-// Компиляция SCSS в CSS и копирование CSS-файлов
+// Конкатенация + SCSS -> CSS
 function styles() {
   return src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
@@ -46,7 +54,7 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-// Копирование JS-файлов
+// JS
 function scripts() {
   return src([
     'node_modules/@coreui/coreui-pro/dist/js/coreui.bundle.min.js',
@@ -57,7 +65,7 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
-// Копирование и обработка HTML-файлов с импортом компонентов
+// HTML
 function html() {
   return src(paths.pages.src)
     .pipe(fileInclude({
@@ -68,26 +76,26 @@ function html() {
     .pipe(browserSync.stream());
 }
 
-// Копирование шрифтов
+// Шрифты
 function fonts() {
   return src(paths.fonts.src, { encoding: false, allowEmpty: true })
     .pipe(dest(paths.fonts.dest))
     .pipe(browserSync.stream());
 }
 
-// Копирование изображений
+// Картинки
 function images() {
   return src(paths.images.src, { encoding: false, allowEmpty: true })
     .pipe(dest(paths.images.dest))
     .pipe(browserSync.stream());
 }
 
-// Запуск сервера и отслеживание изменений
+// Сервер + вотчер
 function serve() {
   browserSync.init({
-    server: {
-      baseDir: './dist'
-    }
+    server: { baseDir: './dist' },
+    notify: false,
+    open: false
   });
 
   watch(paths.styles.src, styles);
@@ -97,10 +105,7 @@ function serve() {
   watch([paths.pages.src, paths.components.src], html);
 }
 
-// Основные задачи
-
-// Сборка проекта
+// Экспорт задач
 exports.build = series(clean, parallel(styles, scripts, images, fonts, html));
 
-// Задача по умолчанию
 exports.default = series(clean, parallel(styles, scripts, images, fonts, html), serve);
