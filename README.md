@@ -28,13 +28,13 @@ npm i
 2. Запустить разработку:
 
 ```bash
-npm dev run
+npm run dev
 ```
 
 3. Сборка проекта:
 
 ```bash
-npm dev build
+npm run build
 ```
 
 ## Итоговая вёрстка
