@@ -95,8 +95,22 @@
   --swiper-theme-color: #C3846F;
 }
 
+/*------------------------------------------------------------------
+[ general ]*/
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main {
+  flex: 1;
 }
 
 /* Custom Scrollbar */
@@ -621,7 +635,6 @@ label {
   display: block;
   padding: 20px 0;
 }
-
 .header > .container {
   display: flex;
   align-items: center;
@@ -632,7 +645,6 @@ label {
 .header-logo {
   padding: 4px 0;
 }
-
 .header-logo img {
   max-width: 195px;
   width: 100%;
@@ -1395,6 +1407,136 @@ label {
   --cui-alert-link-color: var(--cui-danger-text-emphasis);
 }
 
+.reader-header {
+  position: relative;
+  background-color: #F6F6F6;
+}
+.reader-header__escape {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.reader-header__nav-main {
+  position: relative;
+}
+.reader-header__nav-main .links-wrapper {
+  display: flex;
+}
+.reader-header__nav-main .menu-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 70px;
+  padding: 2px 4px;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 12px;
+  line-height: 1;
+}
+.reader-header__nav-main .menu-link svg {
+  max-height: 32px;
+}
+@media screen and (max-width: 991px) {
+  .reader-header__escape .btn.btn-secondary {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reader-header__escape .escape-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+  }
+  .reader-header__escape .escape-link span {
+    display: none;
+  }
+  .reader-header__nav-main .menu-link {
+    min-width: 45px;
+  }
+  .reader-header__nav-main .menu-link svg {
+    max-height: 22px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .chapters-list-area .nav {
+    --cui-nav-link-padding-x: 1.5rem;
+  }
+}
+.chapters-list-area .nav .nav-link {
+  font-size: 1rem;
+}
+@media screen and (min-width: 1200px) {
+  .chapters-list-area .nav .nav-link {
+    font-size: 1.125rem;
+  }
+}
+.chapters-list-area .nav .nav-link.active {
+  color: var(--cui-nav-link-hover-color);
+}
+
+.range-secondary-color {
+  --cui-range-slider-track-in-range-bg: #EBDFD5;
+  --cui-range-slider-thumb-bg: #C3846F;
+}
+
+.reader-search__form {
+  position: relative;
+}
+.reader-search__form .btn[type=submit] {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  right: 0.25rem;
+}
+.reader-search__similar-queries .nav {
+  padding: 12px 0;
+}
+.reader-search__similar-queries .nav a b {
+  text-decoration: underline;
+}
+
+.reader-progress {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 0;
+  background-color: #F6F6F6;
+}
+@media screen and (min-width: 992px) {
+  .reader-progress {
+    padding: 24px 0;
+  }
+}
+.reader-progress__title {
+  margin-bottom: 14px;
+}
+.reader-progress__title .h4 {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 0;
+}
+.reader-progress__title .chapter-name {
+  display: inline-block;
+}
+.reader-progress__bar {
+  margin-bottom: 14px;
+}
+.reader-progress__bar .progress {
+  height: 4px;
+}
+.reader-progress__count {
+  font-size: 0.875em;
+}
+
 /*------------------------------------------------------------------
 [ account ]*/
 .account-cover {
@@ -2061,4 +2203,31 @@ label {
 .reviews-form-wrapper .form-review textarea.form-control {
   min-height: 86px;
   field-sizing: content;
+}
+
+.reader-main {
+  position: relative;
+  background-color: #fff;
+}
+.reader-main .readerArea {
+  position: relative;
+  height: 100%;
+}
+.reader-main .readerArea .btn-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  color: #6A6969;
+  cursor: pointer;
+}
+.reader-main .readerArea .btn-arrow.prev {
+  left: 1px;
+}
+.reader-main .readerArea .btn-arrow.next {
+  right: 1px;
 }

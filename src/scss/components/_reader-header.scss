@@ -1,0 +1,126 @@
+.reader-header {
+    position: relative;
+    background-color: #F6F6F6;
+
+    &__escape {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+    }
+
+    &__nav-main {
+        position: relative;
+
+        .links-wrapper {
+            display: flex;
+        }
+
+        .menu-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            min-width: 70px;
+            padding: 2px 4px;
+            white-space: nowrap;
+            text-decoration: none;
+            text-transform: lowercase;
+            font-size: 12px;
+            line-height: 1;
+
+            svg {
+                max-height: 32px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        &__escape {
+            .btn.btn-secondary {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        &__escape {
+            .escape-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background-color: #e5e5e5;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+
+        &__nav-main {
+            .menu-link {
+                min-width: 45px;
+
+                svg {
+                    max-height: 22px;
+                }
+            }
+        }
+    }
+}
+
+.chapters-list-area {
+    .nav {
+        @media screen and (min-width: 992px) {
+            --cui-nav-link-padding-x: 1.5rem;
+        }
+        .nav-link {
+            font-size: 1rem;
+            
+            @media screen and (min-width: 1200px) {
+                font-size: 1.125rem;
+            }
+
+            &.active {
+                color: var(--cui-nav-link-hover-color);
+            }
+        }
+
+    }
+}
+
+.range-secondary-color {
+    --cui-range-slider-track-in-range-bg: #EBDFD5;
+    --cui-range-slider-thumb-bg: #C3846F;
+}
+
+.reader-search {
+
+    &__form {
+        position: relative;
+    
+        .btn[type=submit] {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            right: 0.25rem;
+        }
+    }
+
+    &__similar-queries {
+        .nav {
+            padding: 12px 0;
+
+            a {
+                b {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}

@@ -6,24 +6,24 @@
   --cui-header-border: none;
   display: block;
   padding: 20px 0;
-}
 
-.header>.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  & > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* header-logo */
 
 .header-logo {
   padding: 4px 0;
-}
 
-.header-logo img {
-  max-width: 195px;
-  width: 100%;
-  height: auto;
+  img {
+    max-width: 195px;
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* header-catalog-btn */

@@ -1,0 +1,36 @@
+.reader-progress {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 16px 0;
+    background-color: #F6F6F6;
+
+    @media screen and (min-width: 992px) {
+        padding: 24px 0;
+    }
+
+    &__title {
+        margin-bottom: 14px;
+
+        .h4 {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 0;
+        }
+        .chapter-name {
+            display: inline-block;
+        }
+    }
+
+    &__bar {
+        margin-bottom: 14px;
+
+        .progress {
+            height: 4px;
+        }
+    }
+
+    &__count {
+        font-size: .875em;
+    }
+}

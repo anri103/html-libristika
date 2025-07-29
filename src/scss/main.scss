@@ -4,16 +4,17 @@
  * Version: 1.0.0
  */
 
-// base
-@use 'fonts';
-@use 'variables';
-@use 'typography';
-@use 'links';
-@use 'forms';
-@use 'buttons';
-@use 'swiper';
-@use 'sections';
-@use 'cards';
+// utils
+@use 'utils/fonts';
+@use 'utils/variables';
+@use 'utils/general';
+@use 'utils/typography';
+@use 'utils/links';
+@use 'utils/forms';
+@use 'utils/buttons';
+@use 'utils/swiper';
+@use 'utils/sections';
+@use 'utils/cards';
 
 // components
 @use 'components/header';
@@ -28,7 +29,10 @@
 @use 'components/card-genre';
 @use 'components/card-author';
 @use 'components/alerts';
+@use 'components/reader-header';
+@use 'components/reader-footer';
 
 // pages
 @use 'pages/account';
 @use 'pages/single-book';
+@use 'pages/reader';

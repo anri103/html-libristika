@@ -1,0 +1,30 @@
+.reader-main {
+    position: relative;
+    background-color: #fff;
+
+    .readerArea {
+        position: relative;
+        height: 100%;
+        
+        .btn-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: none;
+            border: none;
+            color: #6A6969;
+            cursor: pointer;
+
+            &.prev {
+                left: 1px;
+            }
+
+            &.next {
+                right: 1px;
+            }
+        }
+    }
+}

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Large portal for selling books with a personal account for readers and authors",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "keywords": [],
   "author": "",
