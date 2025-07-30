@@ -12,7 +12,7 @@
         </div>
         <nav class="reader-header__nav-main">
             <div class="links-wrapper">
-                <a href="#" class="menu-link">
+                <a href="#offcanvasReaderBookmarks" class="menu-link" data-coreui-toggle="offcanvas">
                     <svg xmlns="http://www.w3.org/2000/svg" width="29" height="36" viewBox="0 0 29 36" fill="none">
                         <path d="M22.0937 16.0664H6.90625M14.5 8.47266V23.6602" stroke="currentColor"
                             stroke-width="1.58" />
@@ -77,6 +77,102 @@
     </div>
 </header>
 
+<!-- offcanvasReaderBookmarks -->
+<div class="offcanvas bg-white offcanvas-end" tabindex="-1" id="offcanvasReaderBookmarks">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset" data-coreui-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" style="--cui-offcanvas-padding-x: 0;">
+        <div class="px-3 px-lg-4">
+            <div class="mb-4">
+                <div class="h3 mb-3">Найти</div>
+                <div class="reader-bookmarks">
+                    <form action="#" class="reader-bookmarks__form">
+                        <input type="text" class="form-control" name="" id="">
+                        <button type="submit" class="btn p-1 border-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M1 7.8C1 9.60347 1.71643 11.3331 2.99167 12.6083C4.26692 13.8836 5.99653 14.6 7.8 14.6C9.60347 14.6 11.3331 13.8836 12.6083 12.6083C13.8836 11.3331 14.6 9.60347 14.6 7.8C14.6 5.99653 13.8836 4.26692 12.6083 2.99167C11.3331 1.71643 9.60347 1 7.8 1C5.99653 1 4.26692 1.71643 2.99167 2.99167C1.71643 4.26692 1 5.99653 1 7.8Z" stroke="#566B61" stroke-width="1.82096"/>
+                                <path d="M16.9997 16.9992L12.1997 12.1992" stroke="#566B61" stroke-width="1.82096"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="reader-bookmarks__list">
+                        <!-- item -->
+                        <div class="item-bookmark">
+                            <div class="title">Заголовок, глава</div>
+                            <div class="description">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
+                                        <path d="M0 0V16.625L3.5 14.4375L7 17.5L10.5 14.4375L14 16.625V0H0Z" fill="#C3846F"></path>
+                                    </svg>
+                                </div>
+                                <div class="text">
+                                    <a href="#">Очень много пользовательских путешествий обрывается до пункта назначения из-за того, что из текста ошибки пользователь не понимает, какие дальнейшие действия ему следует предпринять. Особенно этим грешат продукты, созданные в формате Lean Startup, когда разработка ведется кратчайшим путем до осуществления первой продажи.</a>
+                                </div>
+                            </div>
+                            <div class="buttons-group">
+                                <button type="button" class="btn btn-gray-light">
+                                    <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M7.90723 3.31445H1V14.9062H12.5918V7.99902H13.5918V15.9062H0V2.31445H7.90723V3.31445ZM15.8145 6.51953H14.8145V1.80078L6.7793 9.83594L6.07227 9.12891L14.1074 1.09375H9.38867V0.09375H15.8145V6.51953Z" fill="currentColor"></path>
+                                    </svg>
+                                    <span>поделиться</span>
+                                </button>
+                                <button type="button" class="btn btn-gray-light">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                        <path d="M8.81348 9.66797H16.1468" stroke="currentColor"></path>
+                                        <path d="M10.147 9.66797V14.668H14.8136V9.66797" stroke="currentColor"></path>
+                                        <path d="M11.147 9.66667V9.33333C11.147 8.97971 11.2874 8.64057 11.5375 8.39052C11.7875 8.14048 12.1267 8 12.4803 8C12.8339 8 13.1731 8.14048 13.4231 8.39052C13.6732 8.64057 13.8136 8.97971 13.8136 9.33333V9.66667" stroke="currentColor"></path>
+                                        <path d="M14.147 6.66732V4.66732L10.8136 1.33398H2.14697V14.6673H8.14697" stroke="currentColor"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="item-bookmark">
+                            <div class="title">Заголовок, глава</div>
+                            <div class="description">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="13" viewBox="0 0 21 13" fill="none">
+                                        <path d="M12.8563 11.3309H0V13H12.8563V11.3309ZM20.57 3.77697H0V5.59473H20.57V3.77697ZM0 9.25322H20.57V7.55394H0V9.25322ZM0 0V1.6399H20.57V0H0Z" fill="#1F3326"></path>
+                                    </svg>
+                                </div>
+                                <div class="text">
+                                    <a href="#">Очень много пользовательских путешествий обрывается до пункта назначения из-за того, что из текста ошибки пользователь не понимает, какие дальнейшие действия ему следует предпринять. Особенно этим грешат продукты, созданные в формате Lean Startup, когда разработка ведется кратчайшим путем до осуществления первой продажи.</a>
+                                </div>
+                            </div>
+                            <div class="buttons-group">
+                                <button type="button" class="btn btn-gray-light">
+                                    <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M7.90723 3.31445H1V14.9062H12.5918V7.99902H13.5918V15.9062H0V2.31445H7.90723V3.31445ZM15.8145 6.51953H14.8145V1.80078L6.7793 9.83594L6.07227 9.12891L14.1074 1.09375H9.38867V0.09375H15.8145V6.51953Z" fill="currentColor"></path>
+                                    </svg>
+                                    <span>поделиться</span>
+                                </button>
+                                <button type="button" class="btn btn-gray-light">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                        <path d="M14.147 7.00065V4.66732L10.8136 1.33398H2.14697V14.6673H7.48031" stroke="currentColor"></path>
+                                        <path d="M15.147 10.3346L10.8136 14.668H9.14697V13.0013L13.4803 8.66797L15.147 10.3346Z" stroke="currentColor"></path>
+                                        <path d="M4.14697 12H7.48031" stroke="currentColor"></path>
+                                        <path d="M4.14697 8H7.48031" stroke="currentColor"></path>
+                                        <path d="M5.81348 8V12" stroke="currentColor"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" class="btn btn-gray-light">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                        <path d="M8.81348 9.66797H16.1468" stroke="currentColor"></path>
+                                        <path d="M10.147 9.66797V14.668H14.8136V9.66797" stroke="currentColor"></path>
+                                        <path d="M11.147 9.66667V9.33333C11.147 8.97971 11.2874 8.64057 11.5375 8.39052C11.7875 8.14048 12.1267 8 12.4803 8C12.8339 8 13.1731 8.14048 13.4231 8.39052C13.6732 8.64057 13.8136 8.97971 13.8136 9.33333V9.66667" stroke="currentColor"></path>
+                                        <path d="M14.147 6.66732V4.66732L10.8136 1.33398H2.14697V14.6673H8.14697" stroke="currentColor"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- offcanvasReaderChapters -->
 <div class="offcanvas bg-white offcanvas-start" tabindex="-1" id="offcanvasReaderChapters">
     <div class="offcanvas-header">
@@ -114,6 +210,41 @@
                     <a href="#" class="nav-link">Глава 2. С чего начать. Идея</a>
                 </li>
             </ul>
+        </div>
+    </div>
+</div>
+
+<!-- modalReaderSearch -->
+<div class="modal fade" id="modalReaderSearch" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="--cui-modal-width: 700px;">
+        <div class="modal-content bg-white">
+            <div class="modal-header">
+                <h3 class="modal-title">Поиск</h3>
+                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="reader-search">
+                    <form action="#" class="reader-search__form">
+                        <input type="text" class="form-control" placeholder="Поиск по сайту">
+                        <button type="submit" class="btn btn-primary p-1 border-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                <path d="M1 7.2485C1 8.90571 1.65832 10.495 2.83014 11.6669C4.00197 12.8387 5.5913 13.497 7.2485 13.497C8.90571 13.497 10.495 12.8387 11.6669 11.6669C12.8387 10.495 13.497 8.90571 13.497 7.2485C13.497 5.5913 12.8387 4.00197 11.6669 2.83014C10.495 1.65832 8.90571 1 7.2485 1C5.5913 1 4.00197 1.65832 2.83014 2.83014C1.65832 4.00197 1 5.5913 1 7.2485Z" stroke="#fff" stroke-width="1.71"/>
+                                <path d="M16.1007 16.0997L11.9346 11.9336" stroke="#fff" stroke-width="1.71"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="reader-search__similar-queries">
+                        <ul class="nav flex-column">
+                            <li>
+                                <a href="#" class="nav-link">Человекопонятные <b>ошиб</b>ки, поведение системы в ситуации сбоя (обработка исключительных ситуаций)</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">Очень много пользовательских путешествий обрывается до пункта назначения из-за того, что из текста <b>ошиб</b>ки пользователь не понимает, какие дальнейшие действия ему следует предпринять. Особенно этим грешат продукты, созданные в формате Lean Startup, когда разработка ведется кратчайшим путем до осуществления первой продажи.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -163,41 +294,6 @@
                         <div class="form-switch-xl">
                             <input class="form-check-input" type="checkbox" role="switch" id="readerSettingColControl">
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- modalReaderSearch -->
-<div class="modal fade" id="modalReaderSearch" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg" style="--cui-modal-width: 700px;">
-        <div class="modal-content bg-white">
-            <div class="modal-header">
-                <h3 class="modal-title">Поиск</h3>
-                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="reader-search">
-                    <form class="reader-search__form">
-                        <input type="text" class="form-control pe-5" placeholder="Поиск по сайту">
-                        <button type="submit" class="btn btn-primary p-1 border-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                                <path d="M1 7.2485C1 8.90571 1.65832 10.495 2.83014 11.6669C4.00197 12.8387 5.5913 13.497 7.2485 13.497C8.90571 13.497 10.495 12.8387 11.6669 11.6669C12.8387 10.495 13.497 8.90571 13.497 7.2485C13.497 5.5913 12.8387 4.00197 11.6669 2.83014C10.495 1.65832 8.90571 1 7.2485 1C5.5913 1 4.00197 1.65832 2.83014 2.83014C1.65832 4.00197 1 5.5913 1 7.2485Z" stroke="#fff" stroke-width="1.71"/>
-                                <path d="M16.1007 16.0997L11.9346 11.9336" stroke="#fff" stroke-width="1.71"/>
-                            </svg>
-                        </button>
-                    </form>
-                    <div class="reader-search__similar-queries">
-                        <ul class="nav flex-column">
-                            <li>
-                                <a href="#" class="nav-link">Человекопонятные <b>ошиб</b>ки, поведение системы в ситуации сбоя (обработка исключительных ситуаций)</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link">Очень много пользовательских путешествий обрывается до пункта назначения из-за того, что из текста <b>ошиб</b>ки пользователь не понимает, какие дальнейшие действия ему следует предпринять. Особенно этим грешат продукты, созданные в формате Lean Startup, когда разработка ведется кратчайшим путем до осуществления первой продажи.</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>

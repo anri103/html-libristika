@@ -1,30 +1,44 @@
+.reader-body {
+    height: 100vh;
+}
+
 .reader-main {
     position: relative;
+    overflow: hidden;
     background-color: #fff;
 
     .readerArea {
         position: relative;
+        overflow: hidden scroll;
         height: 100%;
-        
-        .btn-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background: none;
-            border: none;
-            color: #6A6969;
-            cursor: pointer;
 
-            &.prev {
-                left: 1px;
-            }
+        .view {
+            padding: 40px 20px;
+        }
+    }
 
-            &.next {
-                right: 1px;
-            }
+    .btn-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: none;
+        border: none;
+        color: #6A6969;
+        cursor: pointer;
+
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
+
+        &.prev {
+            left: 10px;
+        }
+
+        &.next {
+            right: 10px;
         }
     }
 }
