@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "Каталог",
+})
+
+<body>
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- section__catalog -->
+        <section class="section section__catalog">
+            <div class="container">
+
+                <!-- Title -->
+                <div class="section-heading">
+                    <h2 class="section-title">Новинки</h2>
+                    <span>34 789 книг</span>
+                </div>
+
+                <div class="row">
+
+                    <!-- catalog filters -->
+                    <div class="col-lg-3">
+                    </div>
+
+                    <!-- catalog grid -->
+                    <div class="col-lg-9">
+                        <div class="catalog-grid">
+                            <!-- card -->
+                            @@include('../components/card/book.html', {
+                                "badgeClass": "badge-exclusive",
+                                "badgeText": "Эксклюзив",
+                                "imgWebp": "img/card-book-cover/01.webp",
+                                "imgJpg": "img/card-book-cover/01.jpg",
+                                "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
+                                "title": "Девушка с татуировкой дракона",
+                                "author": "Стиг Ларссон",
+                                "ratingAverage": "4.8",
+                                "ratingTotal": "12",
+                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                "formatIconText": true,
+                                "formatIconAudio": true,
+                                "infoPrice": "бесплатно",
+                                "priceClass": "text-success"
+                            })
+                            <!-- card -->
+                            @@include('../components/card/book.html', {
+                                "badgeClass": "badge-bestseller",
+                                "badgeText": "Хит продаж",
+                                "imgWebp": "img/card-book-cover/02.webp",
+                                "imgJpg": "img/card-book-cover/02.jpg",
+                                "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
+                                "title": "Ведьмак в озвучке Всеволода Кузнецова",
+                                "author": "Анджей Сапковский",
+                                "ratingAverage": "4.8",
+                                "ratingTotal": "229",
+                                "infoFormat": "Аудио",
+                                "formatIconText": false,
+                                "formatIconAudio": true,
+                                "infoPrice": "499 ₽",
+                                "priceClass": "text-primary"
+                            })
+                            <!-- card -->
+                            @@include('../components/card/book.html', {
+                                "badgeClass": "badge-new",
+                                "badgeText": "Новинка",
+                                "imgWebp": "img/card-book-cover/03.webp",
+                                "imgJpg": "img/card-book-cover/03.jpg",
+                                "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
+                                "title": "Тайна мертвого ректора. Книга 2",
+                                "author": "Виктор Дашкевич",
+                                "ratingAverage": "4.7",
+                                "ratingTotal": "413",
+                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                "formatIconText": true,
+                                "formatIconAudio": true,
+                                "infoPrice": "499 ₽",
+                                "priceClass": "text-primary"
+                            })
+                            <!-- card -->
+                            @@include('../components/card/book.html', {
+                                "badgeClass": "",
+                                "badgeText": "",
+                                "imgWebp": "img/card-book-cover/04.webp",
+                                "imgJpg": "img/card-book-cover/04.jpg",
+                                "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
+                                "title": "Тайна мертвого ректора. Книга 1",
+                                "author": "Виктор Дашкевич",
+                                "ratingAverage": "4.7",
+                                "ratingTotal": "910",
+                                "infoFormat": "Аудио",
+                                "formatIconText": false,
+                                "formatIconAudio": true,
+                                "infoPrice": "499 ₽",
+                                "priceClass": "text-primary"
+                            })
+                            <!-- card -->
+                            @@include('../components/card/book.html', {
+                                "badgeClass": "badge-exclusive",
+                                "badgeText": "Эксклюзив",
+                                "imgWebp": "img/card-book-cover/05.webp",
+                                "imgJpg": "img/card-book-cover/05.jpg",
+                                "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
+                                "title": "Ведьмак: Сезон гроз. Дорога без возврата",
+                                "author": "Анджей Сапковский",
+                                "ratingAverage": "5",
+                                "ratingTotal": "1",
+                                "infoFormat": "Текстовая книга",
+                                "formatIconText": true,
+                                "formatIconAudio": false,
+                                "infoPrice": "1 700 ₽",
+                                "priceClass": "text-primary"
+                            })
+                            <!-- card -->
+                            @@include('../components/card/book.html', {
+                                "badgeClass": "badge-exclusive",
+                                "badgeText": "Эксклюзив",
+                                "imgWebp": "img/card-book-cover/06.webp",
+                                "imgJpg": "img/card-book-cover/06.jpg",
+                                "imgAlt": "АтакА. Anne Dar. Либристика.",
+                                "title": "АтакА",
+                                "author": "Anne Dar",
+                                "ratingAverage": "4.9",
+                                "ratingTotal": "92",
+                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                "formatIconText": true,
+                                "formatIconAudio": true,
+                                "infoPrice": "499 ₽",
+                                "priceClass": "text-primary"
+                            })
+                            <!-- card -->
+                            @@include('../components/card/book.html', {
+                                "badgeClass": "badge-exclusive",
+                                "badgeText": "Эксклюзив",
+                                "imgWebp": "img/card-book-cover/07.webp",
+                                "imgJpg": "img/card-book-cover/07.jpg",
+                                "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
+                                "title": "Дом лжи",
+                                "author": "Дэвид Эллис",
+                                "ratingAverage": "4.8",
+                                "ratingTotal": "2616",
+                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                "formatIconText": true,
+                                "formatIconAudio": true,
+                                "infoPrice": "499 ₽",
+                                "priceClass": "text-primary"
+                            })
+                            <!-- card -->
+                            @@include('../components/card/book.html', {
+                                "badgeClass": "badge-exclusive",
+                                "badgeText": "Эксклюзив",
+                                "imgWebp": "img/card-book-cover/08.webp",
+                                "imgJpg": "img/card-book-cover/08.jpg",
+                                "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
+                                "title": "Кукомоя",
+                                "author": "Полина Луговцова",
+                                "ratingAverage": "4.9",
+                                "ratingTotal": "2673",
+                                "infoFormat": "Аудио",
+                                "formatIconText": false,
+                                "formatIconAudio": true,
+                                "infoPrice": "499 ₽",
+                                "priceClass": "text-primary"
+                            })
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+</body>
+
+</html>
