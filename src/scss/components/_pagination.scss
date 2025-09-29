@@ -1,45 +1,73 @@
 /*------------------------------------------------------------------
 [ pagination ]*/
 
-.navigation-pagination {
-    margin-top: 60px;
-}
-
-.navigation-pagination ul {
+.pagination-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 24px;
-    margin-bottom: 0;
-    padding-left: 0;
+    align-items: center;
+    gap: 16px;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.navigation-pagination ul li .page-numbers {
-    display: inline-block;
-    padding: 2px 12px;
+.pagination-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
     border: 1px solid transparent;
-    border-radius: 4px;
-    font-size: 24px;
-    font-weight: 300;
-    text-decoration: none;
-    background-color: transparent;
-    transition: all 0.3s ease-in-out;
-}
-
-.navigation-pagination ul li .current {
-    color: #1F3326;
+    color: #474A51;
+    font-size: 18px;
     font-weight: 400;
-    border-color: transparent;
+    line-height: normal;
+    background-color: transparent;
+    text-decoration: none;
 }
 
-@media screen and (max-width: 991px) {
-    .navigation-pagination ul {
-        gap: 8px;
-    }
+.pagination-item:hover {
+    font-weight: 500;
+    border-color: #F0F0F0;
+    background-color: #F0F0F0;
+}
 
-    .navigation-pagination ul li .page-numbers {
-        padding: 2px 9px;
-        font-size: 16px;
-    }
+.pagination-item.active {
+    font-weight: 500;
+    color: #1A1A16;
+    border-color: #F0DED9;
+    background-color: #F0DED9;
+}
+
+.pagination-item.prev,
+.pagination-item.next {
+    width: auto;
+    height: auto;
+    font-weight: inherit;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.pagination-item.prev:hover,
+.pagination-item.next:hover {
+    color: var(--bs-primary);
+}
+
+.pagination-item.dots {
+    font-weight: inherit;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.pagination-item svg {
+    fill: transparent;
+    stroke: #212121;
+    width: 6px !important;
+    height: auto;
+}
+
+.pagination-item:hover svg {
+    stroke: var(--bs-primary);
 }

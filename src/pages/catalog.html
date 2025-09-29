@@ -21,18 +21,84 @@
 
                 <!-- Title -->
                 <div class="section-heading">
-                    <h2 class="section-title">Новинки</h2>
-                    <span>34 789 книг</span>
+                    <div class="d-flex flex-wrap align-items-baseline gap-2 row-gap-1">
+                        <h2 class="section-title">Новинки</h2>
+                        <span class="text-muted">34 789 книг</span>
+                    </div>
                 </div>
 
                 <div class="row">
 
                     <!-- catalog filters -->
                     <div class="col-lg-3">
+
                     </div>
 
                     <!-- catalog grid -->
                     <div class="col-lg-9">
+
+                        <!-- Теги -->
+                        <div class="catalog-tags">
+                            <div class="tags-list">
+                                <a href="#" class="tag-item">Самиздат</a>
+                                <a href="#" class="tag-item">Становление героя</a>
+                                <a href="#" class="tag-item">Приключенческое фэнтези</a>
+                                <a href="#" class="tag-item">Магические миры</a>
+                                <a href="#" class="tag-item">Самосовершенствование</a>
+                                <a href="#" class="tag-item">Романтическое фэнтези</a>
+                                <a href="#" class="tag-item">Любовные испытания</a>
+                            </div>
+                        </div>
+
+                        <!-- Сортировка -->
+                        <div class="catalog-sorting">
+                            <div class="d-flex align-items-center justify-content-between gap-4">
+                                <div class="d-flex align-items-center flex-wrap gap-4">
+                                    <div>
+                                        <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
+                                            По популярности
+                                            <span class="icon-arrow-down">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-select">
+                                            <li><a class="dropdown-item" href="#">Более популярные</a></li>
+                                            <li><a class="dropdown-item" href="#">Менее популярные</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
+                                            По новизне
+                                            <span class="icon-arrow-down">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-select">
+                                            <li><a class="dropdown-item" href="#">Более новые</a></li>
+                                            <li><a class="dropdown-item" href="#">Менее новые</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Кнопка вызова фильтров на мобилке -->
+                                <button type="button" class="btn catalog-filters-toggler">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M0 9.1817H5.3181" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.22725"/>
+                                        <path d="M12.6816 9.1817H17.9997" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.22725"/>
+                                        <path d="M7.36328 9.18169C7.36328 9.61567 7.53568 10.0319 7.84255 10.3388C8.14943 10.6456 8.56564 10.818 8.99962 10.818C9.4336 10.818 9.84981 10.6456 10.1567 10.3388C10.4636 10.0319 10.636 9.61567 10.636 9.18169C10.636 8.7477 10.4636 8.33149 10.1567 8.02462C9.84981 7.71775 9.4336 7.54535 8.99962 7.54535C8.56564 7.54535 8.14943 7.71775 7.84255 8.02462C7.53568 8.33149 7.36328 8.7477 7.36328 9.18169Z" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.22725"/>
+                                        <path d="M6.13623 2.63632H17.9997" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.22725"/>
+                                        <path d="M0.818359 2.63634C0.818359 3.07032 0.990759 3.48653 1.29763 3.7934C1.6045 4.10028 2.02071 4.27268 2.4547 4.27268C2.88868 4.27268 3.30489 4.10028 3.61176 3.7934C3.91864 3.48653 4.09104 3.07032 4.09104 2.63634C4.09104 2.20235 3.91864 1.78615 3.61176 1.47927C3.30489 1.1724 2.88868 1 2.4547 1C2.02071 1 1.6045 1.1724 1.29763 1.47927C0.990759 1.78615 0.818359 2.20235 0.818359 2.63634Z" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.22725"/>
+                                        <path d="M0 15.727H11.8635" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.22725"/>
+                                        <path d="M13.9092 15.727C13.9092 16.161 14.0816 16.5772 14.3885 16.8841C14.6953 17.1909 15.1115 17.3633 15.5455 17.3633C15.9795 17.3633 16.3957 17.1909 16.7026 16.8841C17.0095 16.5772 17.1819 16.161 17.1819 15.727C17.1819 15.293 17.0095 14.8768 16.7026 14.5699C16.3957 14.2631 15.9795 14.0907 15.5455 14.0907C15.1115 14.0907 14.6953 14.2631 14.3885 14.5699C14.0816 14.8768 13.9092 15.293 13.9092 15.727Z" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.22725"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Сетка каталога -->
                         <div class="catalog-grid">
                             <!-- card -->
                             @@include('../components/card/book.html', {
@@ -171,6 +237,56 @@
                                 "priceClass": "text-primary"
                             })
                         </div>
+
+                        <!-- Пагинация -->
+                        <div class="d-flex justify-content-center">
+                            <nav class="pagination-nav">
+                                <ul class="pagination-list">
+                                    <li>
+                                        <a href="#" class="pagination-item prev">
+                                            <span class="me-2">
+                                                <svg width="13" height="22">
+                                                    <use xlink:href="img/sprite.svg#menu-back"></use>
+                                                </svg>
+                                            </span>
+                                            Назад
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pagination-item active">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pagination-item">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pagination-item">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pagination-item">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pagination-item">5</a>
+                                    </li>
+                                    <li>
+                                        <span class="pagination-item dots">...</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pagination-item">10</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pagination-item next">
+                                            Дальше
+                                            <span class="ms-2">
+                                                <svg width="13" height="22">
+                                                    <use xlink:href="img/sprite.svg#menu-arrow"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
                     </div>
 
                 </div>

@@ -1,6 +1,41 @@
 /*------------------------------------------------------------------
 [ catalog ]*/
 
+// catalog-tags
+
+.catalog-tags {
+    margin-bottom: 24px;
+
+    .tag-item {
+        --cui-link-color-rgb: 31, 51, 38;
+        --cui-link-hover-color-rgb: 167, 127, 90;
+    }
+}
+
+// catalog-sorting
+
+.catalog-sorting {
+    margin-bottom: 24px;
+}
+
+.btn-dropdown-arrow .icon-arrow-down {
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.btn-dropdown-arrow.show .icon-arrow-down {
+    transform: rotate(180deg);
+}
+
+.catalog-filters-toggler {
+
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}
+
+// catalog-grid
+
 .catalog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
