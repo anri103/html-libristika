@@ -214,6 +214,19 @@
     <!-- main -->
     <main class="main">
 
+        <!-- section__navigation -->
+        <section class="section section__navigation">
+            <div class="container">
+                <!-- Навигация / Хлебные крошки -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
         <!-- section__catalog -->
         <section class="section section__catalog">
             <div class="container">
@@ -228,13 +241,202 @@
 
                 <div class="row">
 
-                    <!-- catalog filters -->
-                    <div class="col-lg-3">
+                    <div class="col-lg-2">
+
+                        <!-- Фильтры -->
+                        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasFilters">
+                            <div class="offcanvas-header">
+                                <div class="offcanvas-title h1 mb-0">Фильтры</div>
+                                <button type="button" class="btn-close" data-coreui-dismiss="offcanvas" data-coreui-target="#offcanvasFilters" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="catalog-filters">
+
+                                    <div class="catalog-filter-widget">
+                                        <div class="widget-title">Жанры</div>
+
+                                        <!-- Опциональная ссылка -->
+                                        <!-- Появляется только тогда, когда выбран какой-либо жанр -->
+                                         <div>
+                                             <a href="#">
+                                                 <span>
+                                                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" viewBox="0 0 6 9" fill="none">
+                                                         <path d="M5.31567 8.18414L1.10523 4.5L5.31567 0.815859" stroke="currentColor" stroke-width="1.05261" stroke-linecap="round" stroke-linejoin="round"/>
+                                                     </svg>
+                                                 </span>
+                                                 <span>Все книги</span>
+                                             </a>
+                                         </div>
+
+                                        <div class="filter-list">
+                                            <div class="filter-item">
+                                                <a href="#" class="active">Художественный</a>
+                                            </div>
+                                            <div class="filter-item">
+                                                <a href="#">Нонфикшен</a>
+                                            </div>
+                                            <div class="filter-item">
+                                                <a href="#">Жанр 3</a>
+                                            </div>
+                                            <div class="filter-item">
+                                                <a href="#">Жанр 4</a>
+                                            </div>
+                                            <div class="filter-item">
+                                                <a href="#">Жанр 5</a>
+                                            </div>
+                                            <div class="filter-item">
+                                                <a href="#">Жанр 6</a>
+                                            </div>
+                                            <div class="filter-item">
+                                                <a href="#">Жанр 7</a>
+                                            </div>
+                                            <div class="filter-item">
+                                                <a href="#">Жанр 8</a>
+                                            </div>
+                                            <div class="filter-item">
+                                                <a href="#">Жанр 9</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-filter-widget">
+                                        <div class="widget-title">Формат</div>
+                                        <div class="filter-list">
+                                            <div class="filter-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="checkbox-filter-format-text" value="">
+                                                    <label for="checkbox-filter-format-text" class="form-check-label">Текст</label>
+                                                </div>
+                                            </div>
+                                            <div class="filter-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="checkbox-filter-format-audio" value="">
+                                                    <label for="checkbox-filter-format-audio" class="form-check-label">Аудио</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-filter-widget">
+                                        <div class="widget-title">Статус</div>
+                                        <div class="filter-list">
+                                            <div class="filter-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="checkbox-filter-status-completed" value="">
+                                                    <label for="checkbox-filter-status-completed" class="form-check-label">Завершено</label>
+                                                </div>
+                                            </div>
+                                            <div class="filter-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="checkbox-filter-status-in-progress" value="">
+                                                    <label for="checkbox-filter-status-in-progress" class="form-check-label">В процессе</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-filter-widget">
+                                        <div class="widget-title">Статус цикла</div>
+                                        <div class="filter-list">
+                                            <div class="filter-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="checkbox-filter-cycle-out" value="">
+                                                    <label for="checkbox-filter-cycle-out" class="form-check-label">Вне цикла</label>
+                                                </div>
+                                            </div>
+                                            <div class="filter-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="checkbox-filter-cycle-completed" value="">
+                                                    <label for="checkbox-filter-cycle-completed" class="form-check-label">Цикл завершен</label>
+                                                </div>
+                                            </div>
+                                            <div class="filter-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="checkbox-filter-cycle-in-progress" value="">
+                                                    <label for="checkbox-filter-cycle-in-progress" class="form-check-label">Цикл не завершен</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-filter-widget">
+                                        <div class="widget-title">Язык</div>
+                                        <div class="filter-list">
+                                            <div class="filter-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="checkbox-filter-language-ru" value="">
+                                                    <label for="checkbox-filter-language-ru" class="form-check-label">Русский</label>
+                                                </div>
+                                            </div>
+                                            <div class="filter-item">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="checkbox-filter-language-en" value="">
+                                                    <label for="checkbox-filter-language-en" class="form-check-label">Английский</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-filter-widget">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <div>
+                                                <label class="h5 mb-0" for="checkbox-filter-for-adults">Категория 18+</label>
+                                            </div>
+                                            <div>
+                                                <div class="form-switch-xl">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="checkbox-filter-for-adults">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-filter-widget">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <div>
+                                                <label class="h5 mb-0" for="checkbox-filter-free">Бесплатно</label>
+                                            </div>
+                                            <div>
+                                                <div class="form-switch-xl">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="checkbox-filter-free">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-filter-widget">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <div>
+                                                <label class="h5 mb-0" for="checkbox-filter-exclusives">Эксклюзивы</label>
+                                            </div>
+                                            <div>
+                                                <div class="form-switch-xl">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="checkbox-filter-exclusives">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="catalog-filter-widget">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <div>
+                                                <label class="h5 mb-0" for="checkbox-filter-high-rating">Высокий рейтинг</label>
+                                            </div>
+                                            <div>
+                                                <div class="form-switch-xl">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="checkbox-filter-high-rating">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small text-muted mt-1">4 и 5 звезд</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
 
-                    <!-- catalog grid -->
-                    <div class="col-lg-9">
+                    <div class="col-lg-10">
 
                         <!-- Теги -->
                         <div class="catalog-tags">
@@ -282,8 +484,9 @@
                                         </ul>
                                     </div>
                                 </div>
+
                                 <!-- Кнопка вызова фильтров на мобилке -->
-                                <button type="button" class="btn catalog-filters-toggler">
+                                <button type="button" class="btn catalog-filters-toggler" data-coreui-toggle="offcanvas" data-coreui-target="#offcanvasFilters">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path d="M0 9.1817H5.3181" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.22725"/>
                                         <path d="M12.6816 9.1817H17.9997" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.22725"/>
@@ -294,6 +497,7 @@
                                         <path d="M13.9092 15.727C13.9092 16.161 14.0816 16.5772 14.3885 16.8841C14.6953 17.1909 15.1115 17.3633 15.5455 17.3633C15.9795 17.3633 16.3957 17.1909 16.7026 16.8841C17.0095 16.5772 17.1819 16.161 17.1819 15.727C17.1819 15.293 17.0095 14.8768 16.7026 14.5699C16.3957 14.2631 15.9795 14.0907 15.5455 14.0907C15.1115 14.0907 14.6953 14.2631 14.3885 14.5699C14.0816 14.8768 13.9092 15.293 13.9092 15.727Z" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.22725"/>
                                     </svg>
                                 </button>
+                                
                             </div>
                         </div>
 
