@@ -2,7 +2,7 @@
 [ general ]*/
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,6 +11,15 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
+
+    &.catalog-menu-active,
+    &.genres-menu-active {
+        overflow: hidden;
+
+        @media screen and (min-width: 992px) {
+            padding-right: 15px;
+        }
+    }
 }
 
 .main {
@@ -36,49 +45,49 @@ body {
 [ BASE STYLES ]*/
 
 .bg-img {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .inline-icon {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 .mb-2rem {
-  margin-bottom: 2rem !important;
+    margin-bottom: 2rem !important;
 }
 
 .g-2rem,
 .gy-2rem {
-  --cui-gutter-y: 2rem;
+    --cui-gutter-y: 2rem;
 }
 
 .p-16 {
-  padding: 16px;
+    padding: 16px;
 }
 
 @media (min-width: 992px) {
 
-  .g-lg-2rem,
-  .gy-lg-2rem {
-    --cui-gutter-y: 2rem;
-  }
+    .g-lg-2rem,
+    .gy-lg-2rem {
+        --cui-gutter-y: 2rem;
+    }
 
-  .p-lg-32 {
-    padding: 32px;
-  }
+    .p-lg-32 {
+        padding: 32px;
+    }
 }
 
 @media (min-width: 1600px) {
 
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    --container-xxxl: 1400px;
-    max-width: calc(var(--container-xxxl) + var(--cui-gutter-x));
-  }
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        --container-xxxl: 1400px;
+        max-width: calc(var(--container-xxxl) + var(--cui-gutter-x));
+    }
 }

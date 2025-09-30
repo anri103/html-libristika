@@ -29,169 +29,517 @@
     <!-- header -->
     <header class="header">
 
-    <div class="header-desktop">
-        <div class="main-row">
+    <div class="container">
+
+        <!-- header-logo -->
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="img/logo.svg" alt="Либристика">
+            </a>
+        </div>
+
+        <!-- header-catalog-btn -->
+        <div class="header-catalog-btn">
+            <button type="button" class="btn catalog-menu-toggler js-catalog-toggler">Каталог</button>
+        </div>
+
+        <!-- header-main-menu -->
+        <nav class="header-main-menu">
+            <div class="links-wrapper">
+                <a href="#" class="menu-link">Моя библиотека</a>
+                <a href="#" class="menu-link">Стать автором</a>
+            </div>
+        </nav>
+
+        <!-- header-user-menu -->
+        <nav class="header-user-menu">
+            <div class="links-wrapper">
+                <!-- icon-search -->
+                <a href="#" class="menu-link">
+                    <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.273 23.8006H1.56934V1.5H12.3055C13.2913 1.5 14.2368 1.89164 14.9339 2.58875C15.6311 3.28587 16.0227 4.23137 16.0227 5.21724V13.6596"
+                            stroke="currentColor" stroke-width="1.71" />
+                        <path
+                            d="M30.4763 16.1575V1.5H19.7402C19.252 1.5 18.7687 1.59615 18.3177 1.78296C17.8667 1.96977 17.4569 2.24358 17.1117 2.58875C16.7665 2.93393 16.4927 3.34372 16.3059 3.79471C16.1191 4.24571 16.0229 4.72909 16.0229 5.21724"
+                            stroke="currentColor" stroke-width="1.71" />
+                        <path
+                            d="M15.3757 22.5566C15.3757 24.2138 16.0341 25.8031 17.2059 26.975C18.3777 28.1468 19.967 28.8051 21.6242 28.8051C23.2814 28.8051 24.8708 28.1468 26.0426 26.975C27.2144 25.8031 27.8727 24.2138 27.8727 22.5566C27.8727 20.8994 27.2144 19.3101 26.0426 18.1382C24.8708 16.9664 23.2814 16.3081 21.6242 16.3081C19.967 16.3081 18.3777 16.9664 17.2059 18.1382C16.0341 19.3101 15.3757 20.8994 15.3757 22.5566Z"
+                            stroke="currentColor" stroke-width="1.71" />
+                        <path d="M30.4765 31.4088L26.3103 27.2426" stroke="currentColor" stroke-width="1.71" />
+                    </svg>
+                    <span>Найти</span>
+                </a>
+                <!-- icon-cart -->
+                <a href="#" class="menu-link">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 16H13" stroke="currentColor" stroke-width="1.60855" />
+                        <path d="M17 11V19.9998" stroke="currentColor" stroke-width="1.60855" />
+                        <path d="M1 1H7.75V23H25L31 8.33333H7.75" stroke="currentColor" stroke-width="1.60855" />
+                        <path d="M8 31V30H9V31H8Z" stroke="currentColor" stroke-width="1.60855" />
+                        <path d="M17 31V30H18V31H17Z" stroke="currentColor" stroke-width="1.60855" />
+                    </svg>
+                    <span>Корзина</span>
+                </a>
+                <!-- icon-auth -->
+                <a href="sign-in.html" class="menu-link">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.8157 25.5778H0.87793V21.4322C4.72597 19.2898 9.05851 18.1684 13.4627 18.175C15.7665 18.175 17.9992 18.4755 20.1253 19.0396"
+                            stroke="currentColor" stroke-width="1.57927" />
+                        <path
+                            d="M7.54053 7.44085C7.54053 9.1097 8.20348 10.7102 9.38353 11.8903C10.5636 13.0703 12.1641 13.7333 13.8329 13.7333C15.5018 13.7333 17.1023 13.0703 18.2823 11.8903C19.4624 10.7102 20.1253 9.1097 20.1253 7.44085C20.1253 5.772 19.4624 4.1715 18.2823 2.99144C17.1023 1.81139 15.5018 1.14844 13.8329 1.14844C12.1641 1.14844 10.5636 1.81139 9.38353 2.99144C8.20348 4.1715 7.54053 5.772 7.54053 7.44085Z"
+                            stroke="currentColor" stroke-width="1.57927" />
+                        <path d="M30.4894 25.5778H17.1643" stroke="currentColor" stroke-width="1.57927" />
+                        <path d="M24.5669 19.6555L30.4892 25.5778L24.5669 31.5001" stroke="currentColor"
+                            stroke-width="1.57927" />
+                    </svg>
+                    <span>Войти</span>
+                </a>
+                <!-- icon-whishlist -->
+                <a href="#" class="menu-link">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.6043 28.4093L2.97888 15.7839C1.66329 14.4395 0.931097 12.6305 0.941267 10.7496C0.951436 8.86862 1.70315 7.06761 3.0332 5.73756C4.36324 4.40752 6.16425 3.6558 8.0452 3.64563C9.92614 3.63546 11.7352 4.36766 13.0795 5.68325L15.6043 8.20804L18.1291 5.68325C19.1702 4.64197 20.5076 3.94788 21.9583 3.69599C23.4091 3.4441 24.9022 3.64672 26.2333 4.27612C27.5645 4.90551 28.6686 5.93091 29.3945 7.21197C30.1204 8.49303 30.4327 9.96713 30.2886 11.4325"
+                            stroke="currentColor" stroke-width="1.60941" />
+                        <path
+                            d="M20.6916 16.0623L22.0641 17.4348L23.4352 16.0623C23.7955 15.702 24.2232 15.4162 24.694 15.2212C25.1647 15.0262 25.6693 14.9258 26.1788 14.9258C26.6883 14.9258 27.1929 15.0262 27.6636 15.2212C28.1344 15.4162 28.5621 15.702 28.9224 16.0623C29.2827 16.4226 29.5685 16.8503 29.7635 17.3211C29.9585 17.7918 30.0589 18.2964 30.0589 18.8059C30.0589 19.3155 29.9585 19.82 29.7635 20.2908C29.5685 20.7615 29.2827 21.1892 28.9224 21.5495L22.0641 28.4093L15.2043 21.5495C14.844 21.1892 14.5582 20.7615 14.3632 20.2908C14.1682 19.82 14.0679 19.3155 14.0679 18.8059C14.0679 18.2964 14.1682 17.7918 14.3632 17.3211C14.5582 16.8503 14.844 16.4226 15.2043 16.0623C15.5646 15.702 15.9924 15.4162 16.4631 15.2212C16.9339 15.0262 17.4384 14.9258 17.9479 14.9258C18.4575 14.9258 18.962 15.0262 19.4328 15.2212C19.9035 15.4162 20.3313 15.702 20.6916 16.0623Z"
+                            stroke="currentColor" stroke-width="1.60941" />
+                    </svg>
+                    <span>Отложенное</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- header-user-mobile-menu -->
+        <nav class="header-user-mobile-menu">
+            <div class="links-wrapper">
+                <!-- icon-auth -->
+                <a href="sign-in.html" class="menu-link">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.8157 25.5778H0.87793V21.4322C4.72597 19.2898 9.05851 18.1684 13.4627 18.175C15.7665 18.175 17.9992 18.4755 20.1253 19.0396"
+                            stroke="currentColor" stroke-width="1.57927" />
+                        <path
+                            d="M7.54053 7.44085C7.54053 9.1097 8.20348 10.7102 9.38353 11.8903C10.5636 13.0703 12.1641 13.7333 13.8329 13.7333C15.5018 13.7333 17.1023 13.0703 18.2823 11.8903C19.4624 10.7102 20.1253 9.1097 20.1253 7.44085C20.1253 5.772 19.4624 4.1715 18.2823 2.99144C17.1023 1.81139 15.5018 1.14844 13.8329 1.14844C12.1641 1.14844 10.5636 1.81139 9.38353 2.99144C8.20348 4.1715 7.54053 5.772 7.54053 7.44085Z"
+                            stroke="currentColor" stroke-width="1.57927" />
+                        <path d="M30.4894 25.5778H17.1643" stroke="currentColor" stroke-width="1.57927" />
+                        <path d="M24.5669 19.6555L30.4892 25.5778L24.5669 31.5001" stroke="currentColor"
+                            stroke-width="1.57927" />
+                    </svg>
+                    <span>Войти</span>
+                </a>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Catalog menu -->
+    <div class="catalog-menu-area collapse" id="collapseCatalogMenu">
+        <div class="catalog-menu-wrapper">
             <div class="container">
-        
-                <!-- header-logo -->
-                <div class="header-logo">
-                    <a href="index.html">
-                        <img src="img/logo.svg" alt="Либристика">
-                    </a>
+                <div class="catalog-menu-body">
+                    <div class="row gy-4">
+                        <div class="col-lg-3">
+                            <div class="h2">Книги</div>
+                            <div class="d-flex flex-column align-items-start gap-4">
+                                <a class="btn btn-gray-light" href="catalog.html">
+                                    <svg width="20" height="21" class="me-1">
+                                        <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                    </svg>
+                                    <span>Новинки</span>
+                                </a>
+                                <a class="btn btn-gray-light" href="catalog.html">
+                                    <svg width="20" height="21" class="me-1">
+                                        <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                    </svg>
+                                    <span>Бесплатные</span>
+                                </a>
+                                <a class="btn btn-gray-light" href="catalog.html">
+                                    <svg width="20" height="21" class="me-1">
+                                        <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                    </svg>
+                                    <span>Рекомендуемые</span>
+                                </a>
+                            </div>
+                            <div class="mt-4">
+                                <a href="catalog.html" class="align-middle">
+                                    <span>Все книги</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                                        <path d="M1 1L7 6L1 11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="h2">Жанры</div>
+                            <div class="row row-cols-1 row-cols-lg-2 gy-4">
+                                <div class="col">
+                                    <div class="catalog-genre-title h3">
+                                        <a href="#">Художественная литература</a>
+                                    </div>
+                                    <ul class="catalog-genre-menu">
+                                        <li>
+                                            <a href="#">Современная проза</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Историческая и военная литература</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контркультура</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Поэзия и драматургия</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Зарубежная литература</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <div class="catalog-genre-title h3">
+                                        <a href="#">Нон-фикшн</a>
+                                    </div>
+                                    <ul class="catalog-genre-menu">
+                                        <li>
+                                            <a href="#">Менеджмент</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Финансовый менеджмент</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Маркетинг, PR, реклама</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Психология</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Научно-популярная литература</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-center text-lg-start">
+                                <button type="button" class="btn btn-outline btn-lg rounded-pill" onclick="toggleCollapses('collapseCatalogMenu', 'collapseGenresMenu')">полный список жанров</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        
-                <!-- header-catalog-btn -->
-                <div class="header-catalog-btn">
-                    <button type="button" class="btn btn-catalog-toggler collapsed" data-coreui-toggle="collapse" data-coreui-target="#collapseCatalogMenu" aria-expanded="false">Каталог</button>
-                </div>
-        
-                <!-- header-main-menu -->
-                <nav class="header-main-menu">
-                    <div class="links-wrapper">
-                        <a href="#" class="menu-link">Моя библиотека</a>
-                        <a href="#" class="menu-link">Стать автором</a>
-                    </div>
-                </nav>
-        
-                <!-- header-user-menu -->
-                <nav class="header-user-menu">
-                    <div class="links-wrapper">
-                        <!-- icon-search -->
-                        <a href="#" class="menu-link">
-                            <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M11.273 23.8006H1.56934V1.5H12.3055C13.2913 1.5 14.2368 1.89164 14.9339 2.58875C15.6311 3.28587 16.0227 4.23137 16.0227 5.21724V13.6596"
-                                    stroke="currentColor" stroke-width="1.71" />
-                                <path
-                                    d="M30.4763 16.1575V1.5H19.7402C19.252 1.5 18.7687 1.59615 18.3177 1.78296C17.8667 1.96977 17.4569 2.24358 17.1117 2.58875C16.7665 2.93393 16.4927 3.34372 16.3059 3.79471C16.1191 4.24571 16.0229 4.72909 16.0229 5.21724"
-                                    stroke="currentColor" stroke-width="1.71" />
-                                <path
-                                    d="M15.3757 22.5566C15.3757 24.2138 16.0341 25.8031 17.2059 26.975C18.3777 28.1468 19.967 28.8051 21.6242 28.8051C23.2814 28.8051 24.8708 28.1468 26.0426 26.975C27.2144 25.8031 27.8727 24.2138 27.8727 22.5566C27.8727 20.8994 27.2144 19.3101 26.0426 18.1382C24.8708 16.9664 23.2814 16.3081 21.6242 16.3081C19.967 16.3081 18.3777 16.9664 17.2059 18.1382C16.0341 19.3101 15.3757 20.8994 15.3757 22.5566Z"
-                                    stroke="currentColor" stroke-width="1.71" />
-                                <path d="M30.4765 31.4088L26.3103 27.2426" stroke="currentColor" stroke-width="1.71" />
-                            </svg>
-                            <span>Найти</span>
-                        </a>
-                        <!-- icon-cart -->
-                        <a href="#" class="menu-link">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 16H13" stroke="currentColor" stroke-width="1.60855" />
-                                <path d="M17 11V19.9998" stroke="currentColor" stroke-width="1.60855" />
-                                <path d="M1 1H7.75V23H25L31 8.33333H7.75" stroke="currentColor" stroke-width="1.60855" />
-                                <path d="M8 31V30H9V31H8Z" stroke="currentColor" stroke-width="1.60855" />
-                                <path d="M17 31V30H18V31H17Z" stroke="currentColor" stroke-width="1.60855" />
-                            </svg>
-                            <span>Корзина</span>
-                        </a>
-                        <!-- icon-auth -->
-                        <a href="sign-in.html" class="menu-link">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.8157 25.5778H0.87793V21.4322C4.72597 19.2898 9.05851 18.1684 13.4627 18.175C15.7665 18.175 17.9992 18.4755 20.1253 19.0396"
-                                    stroke="currentColor" stroke-width="1.57927" />
-                                <path
-                                    d="M7.54053 7.44085C7.54053 9.1097 8.20348 10.7102 9.38353 11.8903C10.5636 13.0703 12.1641 13.7333 13.8329 13.7333C15.5018 13.7333 17.1023 13.0703 18.2823 11.8903C19.4624 10.7102 20.1253 9.1097 20.1253 7.44085C20.1253 5.772 19.4624 4.1715 18.2823 2.99144C17.1023 1.81139 15.5018 1.14844 13.8329 1.14844C12.1641 1.14844 10.5636 1.81139 9.38353 2.99144C8.20348 4.1715 7.54053 5.772 7.54053 7.44085Z"
-                                    stroke="currentColor" stroke-width="1.57927" />
-                                <path d="M30.4894 25.5778H17.1643" stroke="currentColor" stroke-width="1.57927" />
-                                <path d="M24.5669 19.6555L30.4892 25.5778L24.5669 31.5001" stroke="currentColor"
-                                    stroke-width="1.57927" />
-                            </svg>
-                            <span>Войти</span>
-                        </a>
-                        <!-- icon-whishlist -->
-                        <a href="#" class="menu-link">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15.6043 28.4093L2.97888 15.7839C1.66329 14.4395 0.931097 12.6305 0.941267 10.7496C0.951436 8.86862 1.70315 7.06761 3.0332 5.73756C4.36324 4.40752 6.16425 3.6558 8.0452 3.64563C9.92614 3.63546 11.7352 4.36766 13.0795 5.68325L15.6043 8.20804L18.1291 5.68325C19.1702 4.64197 20.5076 3.94788 21.9583 3.69599C23.4091 3.4441 24.9022 3.64672 26.2333 4.27612C27.5645 4.90551 28.6686 5.93091 29.3945 7.21197C30.1204 8.49303 30.4327 9.96713 30.2886 11.4325"
-                                    stroke="currentColor" stroke-width="1.60941" />
-                                <path
-                                    d="M20.6916 16.0623L22.0641 17.4348L23.4352 16.0623C23.7955 15.702 24.2232 15.4162 24.694 15.2212C25.1647 15.0262 25.6693 14.9258 26.1788 14.9258C26.6883 14.9258 27.1929 15.0262 27.6636 15.2212C28.1344 15.4162 28.5621 15.702 28.9224 16.0623C29.2827 16.4226 29.5685 16.8503 29.7635 17.3211C29.9585 17.7918 30.0589 18.2964 30.0589 18.8059C30.0589 19.3155 29.9585 19.82 29.7635 20.2908C29.5685 20.7615 29.2827 21.1892 28.9224 21.5495L22.0641 28.4093L15.2043 21.5495C14.844 21.1892 14.5582 20.7615 14.3632 20.2908C14.1682 19.82 14.0679 19.3155 14.0679 18.8059C14.0679 18.2964 14.1682 17.7918 14.3632 17.3211C14.5582 16.8503 14.844 16.4226 15.2043 16.0623C15.5646 15.702 15.9924 15.4162 16.4631 15.2212C16.9339 15.0262 17.4384 14.9258 17.9479 14.9258C18.4575 14.9258 18.962 15.0262 19.4328 15.2212C19.9035 15.4162 20.3313 15.702 20.6916 16.0623Z"
-                                    stroke="currentColor" stroke-width="1.60941" />
-                            </svg>
-                            <span>Отложенное</span>
-                        </a>
-                    </div>
-                </nav>
-        
-                <!-- header-user-mobile-menu -->
-                <nav class="header-user-mobile-menu">
-                    <div class="links-wrapper">
-                        <!-- icon-auth -->
-                        <a href="sign-in.html" class="menu-link">
-                            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.8157 25.5778H0.87793V21.4322C4.72597 19.2898 9.05851 18.1684 13.4627 18.175C15.7665 18.175 17.9992 18.4755 20.1253 19.0396"
-                                    stroke="currentColor" stroke-width="1.57927" />
-                                <path
-                                    d="M7.54053 7.44085C7.54053 9.1097 8.20348 10.7102 9.38353 11.8903C10.5636 13.0703 12.1641 13.7333 13.8329 13.7333C15.5018 13.7333 17.1023 13.0703 18.2823 11.8903C19.4624 10.7102 20.1253 9.1097 20.1253 7.44085C20.1253 5.772 19.4624 4.1715 18.2823 2.99144C17.1023 1.81139 15.5018 1.14844 13.8329 1.14844C12.1641 1.14844 10.5636 1.81139 9.38353 2.99144C8.20348 4.1715 7.54053 5.772 7.54053 7.44085Z"
-                                    stroke="currentColor" stroke-width="1.57927" />
-                                <path d="M30.4894 25.5778H17.1643" stroke="currentColor" stroke-width="1.57927" />
-                                <path d="M24.5669 19.6555L30.4892 25.5778L24.5669 31.5001" stroke="currentColor"
-                                    stroke-width="1.57927" />
-                            </svg>
-                            <span>Войти</span>
-                        </a>
-                    </div>
-                </nav>
-        
             </div>
         </div>
-    
-        <!-- Catalog menu -->
-        <div class="collapse" id="collapseCatalogMenu">
-            <div class="catalog-menu-wrapper">
-                <div class="container">
-                    <div class="bg-white p-4">
-                        <div class="h1">Каталог</div>
-                        <div class="row gy-4">
-                            <div class="col-lg-3">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Active</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Disabled</a>
-                                    </li>
-                                </ul>
+    </div>
+
+    <!-- Genres menu -->
+    <div class="genres-menu-area collapse" id="collapseGenresMenu">
+        <div class="genres-menu-wrapper">
+            <div class="container">
+                <div class="genres-menu-body">
+                    <div class="mb-4">
+                        <button type="button" class="btn btn-text p-0 border-0" onclick="toggleCollapses('collapseGenresMenu', 'collapseCatalogMenu')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" viewBox="0 0 6 9" fill="none">
+                                <path d="M5.31567 8.18414L1.10523 4.5L5.31567 0.815859" stroke="currentColor" stroke-width="1.05261" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <span>Назад</span>
+                        </button>
+                    </div>
+                    <div class="row row-cols-1 row-cols-lg-4 gy-4">
+                        <div class="col">
+                            <div class="catalog-genre-title h3">
+                                <a href="#">Нон-фикшн</a>
                             </div>
-                            <div class="col-lg-3">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Active</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Disabled</a>
-                                    </li>
-                                </ul>
+                            <ul class="catalog-genre-menu">
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Финансовый менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="catalog-genre-title h3">
+                                <a href="#">Нон-фикшн</a>
                             </div>
-                            <div class="col-lg-3">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Active</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Disabled</a>
-                                    </li>
-                                </ul>
+                            <ul class="catalog-genre-menu">
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Финансовый менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="catalog-genre-title h3">
+                                <a href="#">Нон-фикшн</a>
                             </div>
+                            <ul class="catalog-genre-menu">
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Финансовый менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="catalog-genre-title h3">
+                                <a href="#">Нон-фикшн</a>
+                            </div>
+                            <ul class="catalog-genre-menu">
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Финансовый менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="catalog-genre-title h3">
+                                <a href="#">Нон-фикшн</a>
+                            </div>
+                            <ul class="catalog-genre-menu">
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Финансовый менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="catalog-genre-title h3">
+                                <a href="#">Нон-фикшн</a>
+                            </div>
+                            <ul class="catalog-genre-menu">
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Финансовый менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="catalog-genre-title h3">
+                                <a href="#">Нон-фикшн</a>
+                            </div>
+                            <ul class="catalog-genre-menu">
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Финансовый менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="catalog-genre-title h3">
+                                <a href="#">Нон-фикшн</a>
+                            </div>
+                            <ul class="catalog-genre-menu">
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Финансовый менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="catalog-genre-title h3">
+                                <a href="#">Нон-фикшн</a>
+                            </div>
+                            <ul class="catalog-genre-menu">
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Финансовый менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="catalog-genre-title h3">
+                                <a href="#">Нон-фикшн</a>
+                            </div>
+                            <ul class="catalog-genre-menu">
+                                <li>
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Финансовый менеджмент</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                                <li>
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li>
+                                    <a href="#">Научно-популярная литература</a>
+                                </li>
+                                <li>
+                                    <a href="#">Маркетинг, PR, реклама</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -545,8 +893,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-check-wrapper">
-                                                    <!-- Событие "onchange" только для демонстрации валидации, НЕ ВКЛЮЧАТЬ В ИТОГОВЫЙ ПРОЕКТ! -->
-                                                    <input class="form-check-input" type="checkbox" id="agreeForAll" checked onchange="validateForm(this)">
+                                                    <input class="form-check-input" type="checkbox" id="agreeForAll" checked>
                                                     <label class="form-check-label" for="agreeForAll">Я подтверждаю, что ознакомился с <a href="#" class="text-decoration-underline">Правилами публикации</a></label>
                                                 </div>
                                             </div>

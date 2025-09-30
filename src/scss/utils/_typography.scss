@@ -13,132 +13,133 @@ h6,
 .h4,
 .h5,
 .h6 {
-  margin-bottom: 0.75rem;
-  font-family: var(--theme-ff-title);
-  font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-family: var(--theme-ff-title);
+    font-weight: 500;
 }
 
 h1,
 .h1 {
-  font-size: 1.625rem;
+    font-size: 1.625rem;
 }
 
 h2,
 .h2 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 h3,
 .h3 {
-  font-size: 1.375rem;
+    font-size: 1.375rem;
 }
 
 h4,
 .h4 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 h5,
 .h5 {
-  font-size: 1.125rem;
+    font-size: 1.125rem;
 }
 
 h6,
 .h6 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 @media screen and (min-width: 1200px) {
-  h1,
-  .h1 {
-    font-size: 2rem;
-  }
 
-  h2,
-  .h2 {
-    font-size: 1.75rem;
-  }
+    h1,
+    .h1 {
+        font-size: 2rem;
+    }
 
-  h3,
-  .h3 {
-    font-size: 1.5rem;
-  }
+    h2,
+    .h2 {
+        font-size: 1.75rem;
+    }
 
-  h4,
-  .h4 {
-    font-size: 1.375rem;
-  }
+    h3,
+    .h3 {
+        font-size: 1.5rem;
+    }
 
-  h5,
-  .h5 {
-    font-size: 1.125rem;
-  }
+    h4,
+    .h4 {
+        font-size: 1.375rem;
+    }
 
-  h6,
-  .h6 {
-    font-size: 1.125rem;
-  }
+    h5,
+    .h5 {
+        font-size: 1.125rem;
+    }
+
+    h6,
+    .h6 {
+        font-size: 1.125rem;
+    }
 }
 
 .fs-1 {
-  font-size: 1.625rem !important;
+    font-size: 1.625rem !important;
 }
 
 .fs-2 {
-  font-size: 1.5rem !important;
+    font-size: 1.5rem !important;
 }
 
 .fs-3 {
-  font-size: 1.375rem !important;
+    font-size: 1.375rem !important;
 }
 
 .fs-4 {
-  font-size: 1rem !important;
+    font-size: 1rem !important;
 }
 
 .fs-5 {
-  font-size: 1.125rem !important;
+    font-size: 1.125rem !important;
 }
 
 .fs-6 {
-  font-size: 1rem !important;
+    font-size: 1rem !important;
 }
 
 @media screen and (min-width: 1200px) {
-  .fs-1 {
-    font-size: 2rem !important;
-  }
+    .fs-1 {
+        font-size: 2rem !important;
+    }
 
-  .fs-2 {
-    font-size: 1.75rem !important;
-  }
+    .fs-2 {
+        font-size: 1.75rem !important;
+    }
 
-  .fs-3 {
-    font-size: 1.5rem !important;
-  }
+    .fs-3 {
+        font-size: 1.5rem !important;
+    }
 
-  .fs-4 {
-    font-size: 1.375rem !important;
-  }
+    .fs-4 {
+        font-size: 1.375rem !important;
+    }
 
-  .fs-5 {
-    font-size: 1.125rem !important;
-  }
+    .fs-5 {
+        font-size: 1.125rem !important;
+    }
 
-  .fs-6 {
-    font-size: 1.125rem !important;
-  }
+    .fs-6 {
+        font-size: 1.125rem !important;
+    }
 }
 
 .fs-small {
-  font-size: 0.875rem;
+    font-size: 0.875rem;
 }
 
 .fs-xs-small {
-  font-size: 0.75rem;
+    font-size: 0.75rem;
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }

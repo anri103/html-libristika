@@ -1,4 +1,79 @@
+// genres menu
+function toggleCollapses(hideId, showId) {
+    const hideElement = document.getElementById(hideId);
+    const showElement = document.getElementById(showId);
+    
+    if (!hideElement || !showElement) return;
+    
+    const hideCollapse = coreui.Collapse.getInstance(hideElement) || new coreui.Collapse(hideElement, { toggle: false });
+    const showCollapse = coreui.Collapse.getInstance(showElement) || new coreui.Collapse(showElement, { toggle: false });
+    
+    hideCollapse.hide();
+    showCollapse.show();
+}
+
 window.onload = () => {
+
+    // Получаем элементы меню
+    const catalogMenu = document.getElementById('collapseCatalogMenu');
+    const genresMenu = document.getElementById('collapseGenresMenu');
+    const catalogTogglers = document.querySelectorAll('.js-catalog-toggler');
+
+    // Обработчик для всех кнопок "Каталог"
+    catalogTogglers.forEach(catalogToggler => {
+        catalogToggler.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const isCatalogOpen = catalogMenu.classList.contains('show');
+            const isGenresOpen = genresMenu.classList.contains('show');
+            
+            if (isGenresOpen) {
+                // Закрываем genresMenu, не открываем catalogMenu
+                const genresCollapse = coreui.Collapse.getInstance(genresMenu) || new coreui.Collapse(genresMenu, { toggle: false });
+                genresCollapse.hide();
+            } else {
+                // Стандартное переключение catalogMenu
+                const catalogCollapse = coreui.Collapse.getInstance(catalogMenu) || new coreui.Collapse(catalogMenu, { toggle: false });
+                if (isCatalogOpen) {
+                    catalogCollapse.hide();
+                } else {
+                    catalogCollapse.show();
+                }
+            }
+        });
+    });
+
+    // Обработчики событий для отслеживания состояния меню
+    if (catalogMenu) {
+        catalogMenu.addEventListener('show.coreui.collapse', function() {
+            document.body.classList.add('catalog-menu-active');
+            document.body.classList.remove('genres-menu-active');
+        });
+        
+        catalogMenu.addEventListener('hide.coreui.collapse', function() {
+            document.body.classList.remove('catalog-menu-active');
+        });
+    }
+
+    if (genresMenu) {
+        genresMenu.addEventListener('show.coreui.collapse', function() {
+            document.body.classList.add('genres-menu-active');
+            document.body.classList.remove('catalog-menu-active');
+        });
+        
+        genresMenu.addEventListener('hide.coreui.collapse', function() {
+            document.body.classList.remove('genres-menu-active');
+        });
+    }
+
+    // Инициализация начального состояния
+    if (catalogMenu && catalogMenu.classList.contains('show')) {
+        document.body.classList.add('catalog-menu-active');
+    }
+    if (genresMenu && genresMenu.classList.contains('show')) {
+        document.body.classList.add('genres-menu-active');
+    }
+
     // hero slider
     const swiperHero = document.querySelector('.swiperHero');
     if (swiperHero) {
@@ -14,6 +89,7 @@ window.onload = () => {
             },
         });
     }
+
     // slider with cards
     const swiperCards = document.querySelectorAll('.swiperCards');
     swiperCards.forEach(slider => {
@@ -33,10 +109,11 @@ window.onload = () => {
             },
         });
     });
+
     // recom
     const swiperBookSeries = document.querySelectorAll('.swiperBookSeries');
     swiperBookSeries.forEach(slider => {
-        new Swiper (slider, {
+        new Swiper(slider, {
             slidesPerView: 'auto',
             spaceBetween: 20,
             freeMode: true,
@@ -79,5 +156,11 @@ window.onload = () => {
             value: 0
         };
         new coreui.Rating(rating, optionsCustomIcons1);
+    });
+
+    // Инициализация всех collapse элементов
+    const collapseElements = document.querySelectorAll('.collapse');
+    collapseElements.forEach(element => {
+        new coreui.Collapse(element, { toggle: false });
     });
 }
