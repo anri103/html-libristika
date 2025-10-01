@@ -218,6 +218,113 @@
     }
 }
 
+.modal-main-search {
+    --cui-modal-width: 750px;
+    --cui-modal-bg: var(--cui-white);
+    --cui-modal-border-color: transparent;
+    --cui-modal-header-border-color: transparent;
+    --cui-modal-footer-border-color: transparent;
+
+    .modal-header {
+        padding-bottom: 0;
+    }
+
+    @media screen and (min-width: 992px) {
+        .modal-header,
+        .modal-body {
+            padding-left: 34px;
+            padding-right: 34px;
+        }
+        .modal-header {
+            padding-top: 24px;
+        }
+        .modal-body {
+            padding-bottom: 24px;
+        }
+    }
+}
+
+.main-search {
+
+    &__form {
+        position: relative;
+
+        .form-control {
+            --cui-border-radius: 4px;
+            --cui-border-color: var(--cui-body-bg);
+            min-height: 44px;
+            padding-right: 3rem;
+        }
+
+        .btn[type=submit] {
+            --cui-btn-border-radius: 2px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            right: 6px;
+        }
+    }
+
+    &__results {
+        --cui-link-hover-color-rgb: 31, 51, 38;
+        --cui-link-color-rgb: 106, 105, 105;
+        padding: 8px 0;
+
+        .search-group {
+            padding: 12px 0;
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+        }
+
+        .search-item {
+            position: relative;
+            display: block;
+
+            &__body {
+                display: flex;
+            }
+
+            &__media {
+                flex: 0 0 auto;
+                width: 75px;
+                max-width: 100%;
+                margin-right: 14px;
+
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &__meta {
+                flex: 1 0 0;
+                width: 100%;
+                max-width: 100%;
+
+                .item-author {
+                    font-size: .875em;
+                }
+
+                .item-price {
+                    font-weight: 500;
+                    margin-top: 16px;
+                }
+
+                // .small {
+                //     color: #6A6969;
+                // }
+            }
+        }
+    }
+}
+
 /*------------------------------------------------------------------
   [ offcanvasMobileMenu ]*/
 

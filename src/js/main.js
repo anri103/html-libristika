@@ -157,10 +157,4 @@ window.onload = () => {
         };
         new coreui.Rating(rating, optionsCustomIcons1);
     });
-
-    // Инициализация всех collapse элементов
-    const collapseElements = document.querySelectorAll('.collapse');
-    collapseElements.forEach(element => {
-        new coreui.Collapse(element, { toggle: false });
-    });
 }

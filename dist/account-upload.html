@@ -55,7 +55,7 @@
         <nav class="header-user-menu">
             <div class="links-wrapper">
                 <!-- icon-search -->
-                <a href="#" class="menu-link">
+                <a href="#modalMainSearch" class="menu-link" data-coreui-toggle="modal">
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M11.273 23.8006H1.56934V1.5H12.3055C13.2913 1.5 14.2368 1.89164 14.9339 2.58875C15.6311 3.28587 16.0227 4.23137 16.0227 5.21724V13.6596"
@@ -71,7 +71,7 @@
                     <span>Найти</span>
                 </a>
                 <!-- icon-cart -->
-                <a href="#" class="menu-link">
+                <a href="cart.html" class="menu-link">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22 16H13" stroke="currentColor" stroke-width="1.60855" />
                         <path d="M17 11V19.9998" stroke="currentColor" stroke-width="1.60855" />
@@ -547,7 +547,79 @@
         </div>
     </div>
 
+    
 </header>
+
+<!-- modalMainSearch -->
+<div class="modal fade modal-main-search" id="modalMainSearch" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Поиск</h2>
+                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="main-search">
+                    <form action="#" class="main-search__form">
+                        <input type="text" class="form-control" placeholder="Книги, жанры, авторы...">
+                        <button type="submit" class="btn btn-primary p-1 border-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                <path d="M1 7.2485C1 8.90571 1.65832 10.495 2.83014 11.6669C4.00197 12.8387 5.5913 13.497 7.2485 13.497C8.90571 13.497 10.495 12.8387 11.6669 11.6669C12.8387 10.495 13.497 8.90571 13.497 7.2485C13.497 5.5913 12.8387 4.00197 11.6669 2.83014C10.495 1.65832 8.90571 1 7.2485 1C5.5913 1 4.00197 1.65832 2.83014 2.83014C1.65832 4.00197 1 5.5913 1 7.2485Z" stroke="#fff" stroke-width="1.71"/>
+                                <path d="M16.1007 16.0997L11.9346 11.9336" stroke="#fff" stroke-width="1.71"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="main-search__results">
+                        <div class="search-group">
+                            <div class="search-group__title h3">Книги</div>
+                            <div class="search-group__list">
+                                <a href="#" class="search-item">
+                                    <div class="search-item__body">
+                                        <div class="search-item__media">
+                                            <img src="img/card-book-cover/03.jpg">
+                                        </div>
+                                        <div class="search-item__meta">
+                                            <div class="item-title h5">Тайна мертвого ректора. Книга 2</div>
+                                            <div class="item-author">Виктор Дашкевич</div>
+                                            <div class="item-price">900 ₽</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="search-item">
+                                    <div class="search-item__body">
+                                        <div class="search-item__media">
+                                            <img src="img/card-book-cover/05.jpg">
+                                        </div>
+                                        <div class="search-item__meta">
+                                            <div class="item-title h5">Ведьмак: Сезон гроз. Дорога без возврата</div>
+                                            <div class="item-author">Анджей Сапковский</div>
+                                            <div class="item-price">1 700 ₽</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="search-group">
+                            <div class="search-group__title h3">Жанры</div>
+                            <div class="search-group__list">
+                                <a href="#" class="search-item">Название. Автор</a>
+                                <a href="#" class="search-item">Название. Автор</a>
+                                <a href="#" class="search-item">Название. Автор</a>
+                            </div>
+                        </div>
+                        <div class="search-group">
+                            <div class="search-group__title h3">Авторы</div>
+                            <div class="search-group__list">
+                                <a href="#" class="search-item">Виктор Полунин</a>
+                                <a href="#" class="search-item">Виктор Полунин</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Fixed menu on mobile -->
 <div class="fixed-bottom-mobile-bar">
@@ -581,7 +653,7 @@
                 <span>Корзина</span>
             </a>
             <!-- icon-search -->
-            <a href="#" class="menu-link">
+            <a href="#modalMainSearch" class="menu-link" data-coreui-toggle="modal">
                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M9.29529 16.9564H2.74829V1.91035H9.9919C10.6571 1.91035 11.295 2.17459 11.7653 2.64493C12.2357 3.11527 12.4999 3.7532 12.4999 4.41836V10.1144"
@@ -663,6 +735,7 @@
                                     <nav class="account-menu">
                                         <div class="links-wrapper">
                                             <a href="account-author.html" class="menu-link">Профиль автора</a>
+                                            <a href="account-upload-book.html" class="menu-link">Публикация книги</a>
                                             <a href="account-upload-book.html" class="menu-link active">Мои книги</a>
                                             <a href="#" class="menu-link">Персоны</a>
                                             <a href="#" class="menu-link">Статистика</a>

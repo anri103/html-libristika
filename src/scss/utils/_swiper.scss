@@ -54,6 +54,16 @@
     width: auto;
 }
 
+.section__slider-items .swiperCards {
+
+    @media screen and (max-width: 575.98px) {
+        margin-right: calc(-.5 * var(--cui-gutter-x));
+        margin-left: calc(-.5 * var(--cui-gutter-x));
+        padding-right: calc(var(--cui-gutter-x) * .5);
+        padding-left: calc(var(--cui-gutter-x) * .5);
+    }
+}
+
 /* swiperGenresItems */
 
 .swiperGenresItems .swiper-button-next,

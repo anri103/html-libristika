@@ -594,6 +594,15 @@ label {
   width: auto;
 }
 
+@media screen and (max-width: 575.98px) {
+  .section__slider-items .swiperCards {
+    margin-right: calc(-0.5 * var(--cui-gutter-x));
+    margin-left: calc(-0.5 * var(--cui-gutter-x));
+    padding-right: calc(var(--cui-gutter-x) * 0.5);
+    padding-left: calc(var(--cui-gutter-x) * 0.5);
+  }
+}
+
 /* swiperGenresItems */
 .swiperGenresItems .swiper-button-next,
 .swiperGenresItems .swiper-button-prev {
@@ -849,6 +858,92 @@ label {
   text-transform: lowercase;
   font-size: 12px;
   line-height: 1;
+}
+
+.modal-main-search {
+  --cui-modal-width: 750px;
+  --cui-modal-bg: var(--cui-white);
+  --cui-modal-border-color: transparent;
+  --cui-modal-header-border-color: transparent;
+  --cui-modal-footer-border-color: transparent;
+}
+.modal-main-search .modal-header {
+  padding-bottom: 0;
+}
+@media screen and (min-width: 992px) {
+  .modal-main-search .modal-header,
+  .modal-main-search .modal-body {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+  .modal-main-search .modal-header {
+    padding-top: 24px;
+  }
+  .modal-main-search .modal-body {
+    padding-bottom: 24px;
+  }
+}
+
+.main-search__form {
+  position: relative;
+}
+.main-search__form .form-control {
+  --cui-border-radius: 4px;
+  --cui-border-color: var(--cui-body-bg);
+  min-height: 44px;
+  padding-right: 3rem;
+}
+.main-search__form .btn[type=submit] {
+  --cui-btn-border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  right: 6px;
+}
+.main-search__results {
+  --cui-link-hover-color-rgb: 31, 51, 38;
+  --cui-link-color-rgb: 106, 105, 105;
+  padding: 8px 0;
+}
+.main-search__results .search-group {
+  padding: 12px 0;
+}
+.main-search__results .search-group__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.main-search__results .search-item {
+  position: relative;
+  display: block;
+}
+.main-search__results .search-item__body {
+  display: flex;
+}
+.main-search__results .search-item__media {
+  flex: 0 0 auto;
+  width: 75px;
+  max-width: 100%;
+  margin-right: 14px;
+}
+.main-search__results .search-item__media img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.main-search__results .search-item__meta {
+  flex: 1 0 0;
+  width: 100%;
+  max-width: 100%;
+}
+.main-search__results .search-item__meta .item-author {
+  font-size: 0.875em;
+}
+.main-search__results .search-item__meta .item-price {
+  font-weight: 500;
+  margin-top: 16px;
 }
 
 /*------------------------------------------------------------------
