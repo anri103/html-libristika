@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "ЛК - Верификация",
+})
+
+<body>
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- section__navigation -->
+        <section class="section section__navigation">
+            <div class="container">
+                <!-- Навигация / Хлебные крошки -->
+                <a href="account-user.html">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <span>Назад</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="account-area">
+                    <div class="row gy-4 justify-content-center">
+
+                        <!-- account-content-area -->
+                        <div class="col-lg-7">
+                            <div class="account-content-area">
+                                <h1>Верификация</h1>
+                                <div class="account-content-widget">
+                                    <div class="account-form-wrapper">
+                                        <form class="form-account" action="account-author.html">
+                                            <div class="row gy-2rem">
+                                                <div class="col-12">
+                                                    <h2 class="widget-title">Личные данные</h2>
+                                                    <div class="row gy-3 gy-lg-4">
+                                                        <div class="col-12">
+                                                            <label class="form-label" for="formSignupFname">Имя</label>
+                                                            <input type="text" class="form-control" id="formSignupFname" value="Сергей" disabled readonly>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label" for="formSignupLname">Фамилия</label>
+                                                            <input type="text" class="form-control" id="formSignupLname" value="Александрович" disabled readonly>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label" for="formSignupEmail">Email</label>
+                                                            <input type="email" class="form-control" id="formSignupEmail" value="info@mail.com" disabled readonly>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="d-flex flex-wrap gap-3 row-gap-2">
+                                                                <input type="radio" class="btn-check" name="user-sex" id="radioUserSexMale" autocomplete="off">
+                                                                <label class="btn btn-outline-primary" for="radioUserSexMale">
+                                                                    <span class="small">мужчина</span>
+                                                                </label>
+
+                                                                <input type="radio" class="btn-check" name="user-sex" id="radioUserSexFemale" autocomplete="off">
+                                                                <label class="btn btn-outline-primary" for="radioUserSexFemale">
+                                                                    <span class="small">женщина</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label" for="formBirthDate">Дата рождения</label>
+                                                            <div data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="чч.мм.гггг"></div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label" for="formCitizenship">Гражданство</label>
+                                                            <input type="text" class="form-control" id="formCitizenship">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <h2 class="widget-title">Паспортные данные</h2>
+                                                    <div class="row gy-3 gy-lg-4">
+                                                        <div class="col-12">
+                                                            <label class="form-label" for="formPassportSeries">Серия и номер</label>
+                                                            <input type="text" class="form-control" id="formPassportSeries">
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label" for="formPassportWhoIssued">Кем выдан</label>
+                                                            <input type="text" class="form-control" id="formPassportWhoIssued">
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label" for="formPassportDate">Дата выдачи</label>
+                                                            <div data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="чч.мм.гггг"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <h2 class="widget-title">Фотографии документов</h2>
+                                                    <p class="widget-subtitle">Мы не храним фотографии документов.<br /> Они удаляются сразу после проверки профиля</p>
+                                                    <div class="row gy-3 gy-lg-4">
+                                                        <div class="col-12">
+                                                            <div class="row gy-4">
+                                                                <div class="col-md-6">
+                                                                    <div class="d-flex flex-column h-100 bg-light rounded p-4">
+                                                                        <div style="flex: 1 1 auto;">
+                                                                            <p class="h5">Загрузите фото с документом</p>
+                                                                            <div class="text-muted small">
+                                                                                <p>На фото должны быть видны ваше лицо, серия и номер документа</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mb-4">
+                                                                            <img class="img-fluid w-100" src="img/user/ver-foto-01.jpg" alt="">
+                                                                        </div>
+                                                                        <div>
+                                                                            <button type="button" class="btn btn-secondary rounded-pill w-100">Загрузить фото</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="d-flex flex-column h-100 bg-light rounded p-4">
+                                                                        <div style="flex: 1 1 auto;">
+                                                                            <p class="h5">Загрузите фото/скан документа</p>
+                                                                            <div class="text-muted small">
+                                                                                <p>На изображении должны быть видны серия, номер, дата и место выдачи</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mb-4">
+                                                                            <img class="img-fluid w-100" src="img/user/ver-foto-02.jpg" alt="">
+                                                                        </div>
+                                                                        <div>
+                                                                            <button type="button" class="btn btn-secondary rounded-pill w-100">Загрузить фото</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="form-check-wrapper">
+                                                                <input type="checkbox" class="form-check-input" id="checkboxAgreement">
+                                                                <label class="form-check-label" for="checkboxAgreement">Я ознакомился с <a href="#">Политикой сервиса</a> в отношении использования персональных данных и согласен на передачу персональных данных для прохождения процедуры идентификации согласно <a href="#">правилам</a> использования сервисом</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="buttons-wrapper">
+                                                        <button type="submit" class="btn btn-primary btn-lg rounded-pill">Подать заявку</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+</body>
+
+</html>

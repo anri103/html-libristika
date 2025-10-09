@@ -325,9 +325,20 @@ label {
   border: none;
 }
 
+.form-control:focus {
+  border-color: var(--cui-border-color);
+  box-shadow: none !important;
+}
+
 .form-control:focus ~ .form-label,
 .form-select:focus ~ .form-label {
   color: #566B61;
+}
+
+.date-picker {
+  --cui-date-picker-border-radius: var(--cui-border-radius);
+  --cui-date-picker-focus-border-color: var(--cui-border-color);
+  --cui-date-picker-focus-box-shadow: none;
 }
 
 .form-check-wrapper {
@@ -337,6 +348,10 @@ label {
 }
 
 .form-check-input {
+  --cui-form-check-bg: #EBDFD5;
+  --cui-border-color: #EBDFD5;
+  --cui-form-check-input-checked-bg-color: #C3846F;
+  --cui-form-check-input-checked-border-color: #C3846F;
   width: 1.125em;
   height: 1.125em;
   margin-top: initial;
@@ -345,12 +360,15 @@ label {
   border-color: var(--cui-border-color);
   box-shadow: none !important;
 }
-.form-check-input:checked {
-  background-color: #C3846F;
-  border-color: #C3846F;
+.form-check-input:checked[type=radio] {
+  --cui-form-check-input-checked-bg-color: #EBDFD5;
+  --cui-form-check-input-checked-border-color: #EBDFD5;
+  --cui-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='rgba%28195, 132, 111, 0.87%29'/%3e%3c/svg%3e");
 }
 
 .form-switch-xl .form-check-input {
+  --cui-form-check-bg: var(--cui-body-bg);
+  --cui-border-color: #dee2e6;
   --cui-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
   width: 3em;
   height: 1.75em;
@@ -542,6 +560,22 @@ label {
   --cui-btn-disabled-opacity: 0.5;
 }
 
+.btn-outline-primary {
+  --cui-btn-color: #566B61;
+  --cui-btn-border-color: #566B61;
+  --cui-btn-hover-color: #fff;
+  --cui-btn-hover-bg: #1F3326;
+  --cui-btn-hover-border-color: #1F3326;
+  --cui-btn-focus-shadow-rgb: 88, 86, 214;
+  --cui-btn-active-color: #fff;
+  --cui-btn-active-bg: #1F3326;
+  --cui-btn-active-border-color: #1F3326;
+  --cui-btn-active-shadow: inset 0 3px 5px rgba(8, 10, 12, 0.125);
+  --cui-btn-disabled-color: #1F3326;
+  --cui-btn-disabled-bg: transparent;
+  --cui-btn-disabled-border-color: #1F3326;
+}
+
 /*------------------------------------------------------------------
 [ swiper ]*/
 .swiper-button-next,
@@ -692,19 +726,32 @@ label {
   }
 }
 .header .catalog-menu-body {
+  position: relative;
   height: 100%;
   overflow-y: auto;
+  scrollbar-color: #8c8c8c #f6f6f6;
+  scrollbar-width: thin;
   padding: 24px;
   border-radius: 8px;
   background-color: #fff;
 }
 @media screen and (min-width: 992px) {
   .header .catalog-menu-body {
-    max-width: 1150px;
+    max-width: 90%;
     min-height: 400px;
     max-height: 500px;
     box-shadow: 0 10px 20px 1px rgba(85, 84, 84, 0.075);
   }
+}
+.header .catalog-menu-body::-webkit-scrollbar {
+  width: 5px;
+}
+.header .catalog-menu-body::-webkit-scrollbar-thumb {
+  background-color: #8c8c8c;
+  border-radius: 3px;
+}
+.header .catalog-menu-body::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
 }
 .header .catalog-genre-menu {
   list-style: none;
@@ -734,9 +781,21 @@ label {
 .header .genres-menu-body {
   height: 100%;
   overflow-y: auto;
+  scrollbar-color: #8c8c8c #f6f6f6;
+  scrollbar-width: thin;
   padding: 24px;
   border-radius: 8px;
   background-color: #fff;
+}
+.header .genres-menu-body::-webkit-scrollbar {
+  width: 5px;
+}
+.header .genres-menu-body::-webkit-scrollbar-thumb {
+  background-color: #8c8c8c;
+  border-radius: 3px;
+}
+.header .genres-menu-body::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
 }
 
 /* header-logo */
@@ -1846,19 +1905,6 @@ label {
   object-position: center;
 }
 
-.account-area {
-  padding: 40px 0;
-}
-
-.account-info-area {
-  margin-top: -120px;
-}
-@media screen and (max-width: 991px) {
-  .account-info-area {
-    margin-top: -90px;
-  }
-}
-
 .account-avatar {
   margin-bottom: 24px;
 }
@@ -1870,33 +1916,75 @@ label {
 
 .avatar-wrapper {
   position: relative;
-  overflow: hidden;
   width: 170px;
   height: 170px;
-  border: 5px solid #fff;
-  border-radius: 50%;
 }
 @media screen and (max-width: 991px) {
   .avatar-wrapper {
     width: 100px;
     height: 100px;
+    margin: 0 auto;
+  }
+}
+.avatar-wrapper .avatar-preview {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+@media screen and (max-width: 991px) {
+  .avatar-wrapper .avatar-preview {
     border: 3px solid #fff;
   }
 }
-.avatar-wrapper .avatar-img {
+.avatar-wrapper .avatar-preview .avatar-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+.avatar-wrapper .avatar-edit {
+  position: absolute;
+  top: 0;
+  right: 10%;
+}
+.avatar-wrapper .avatar-edit input {
+  display: none;
+}
+.avatar-wrapper .avatar-edit .btn-change_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .account-age {
   color: #9B9B9B;
   margin-bottom: 14px;
 }
+@media screen and (max-width: 991px) {
+  .account-age {
+    text-align: center;
+    margin-bottom: 2px;
+  }
+}
 
 .account-name {
   margin-bottom: 14px;
+}
+@media screen and (max-width: 991px) {
+  .account-name {
+    text-align: center;
+    margin-bottom: 24px;
+  }
 }
 .account-name h1 {
   display: inline;
@@ -1910,11 +1998,35 @@ label {
 
 .account-menu {
   position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
 }
 .account-menu .links-wrapper {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+@media screen and (max-width: 991px) {
+  .account-menu .links-wrapper {
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-color: #8c8c8c #f6f6f6;
+    scrollbar-width: thin;
+    margin: 0;
+    padding-bottom: 12px;
+  }
+}
+.account-menu .links-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+.account-menu .links-wrapper::-webkit-scrollbar-thumb {
+  background-color: #8c8c8c;
+  border-radius: 3px;
+}
+.account-menu .links-wrapper::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
 }
 .account-menu .menu-link {
   position: relative;
@@ -1939,35 +2051,18 @@ label {
     padding: 24px 16px;
   }
 }
-.account-content-area:has(.user-account-status) {
-  margin-top: 55px;
-}
 
 .user-account-status {
-  position: absolute;
-  top: auto;
-  left: 0;
-  bottom: 100%;
-  width: auto;
-  height: 75px;
+  display: inline-block;
   font-size: 18px;
   font-weight: 500;
-  line-height: 55px;
-  padding: 0 70px;
+  padding: 10px 40px 30px;
   margin-bottom: -20px;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   background-color: #fff;
 }
-@media screen and (max-width: 991px) {
-  .user-account-status {
-    left: 30px;
-    height: 65px;
-    line-height: 45px;
-    padding: 0 45px;
-  }
-}
 
-.account-content-widget {
+.account-content-widget:not(:last-of-type) {
   margin-bottom: 34px;
 }
 .account-content-widget .widget-title {
@@ -1975,6 +2070,10 @@ label {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.875rem;
+}
+.account-content-widget .widget-subtitle {
+  color: #6A6969;
+  margin-top: -0.75rem;
 }
 
 .book-rating-options {
@@ -2209,7 +2308,7 @@ label {
   flex-wrap: wrap;
   align-items: center;
   border-radius: 10px;
-  padding: 6px 32px;
+  padding: 6px 16px;
   background-color: #fff;
 }
 @media screen and (min-width: 992px) {

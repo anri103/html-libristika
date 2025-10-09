@@ -9,9 +9,23 @@ label {
     border: none;
 }
 
+.form-control {
+
+    &:focus {
+        border-color: var(--cui-border-color);
+        box-shadow: none !important;
+    }
+}
+
 .form-control:focus~.form-label,
 .form-select:focus~.form-label {
     color: #566B61;
+}
+
+.date-picker {
+    --cui-date-picker-border-radius: var(--cui-border-radius);
+    --cui-date-picker-focus-border-color: var(--cui-border-color);
+    --cui-date-picker-focus-box-shadow: none;
 }
 
 .form-check-wrapper {
@@ -21,6 +35,10 @@ label {
 }
 
 .form-check-input {
+    --cui-form-check-bg: #EBDFD5;
+    --cui-border-color: #EBDFD5;
+    --cui-form-check-input-checked-bg-color: #C3846F;
+    --cui-form-check-input-checked-border-color: #C3846F;
     width: 1.125em;
     height: 1.125em;
     margin-top: initial;
@@ -31,12 +49,18 @@ label {
     }
 
     &:checked {
-        background-color: #C3846F;
-        border-color: #C3846F;
+
+        &[type=radio] {
+            --cui-form-check-input-checked-bg-color: #EBDFD5;
+            --cui-form-check-input-checked-border-color: #EBDFD5;
+            --cui-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='rgba%28195, 132, 111, 0.87%29'/%3e%3c/svg%3e");
+        }
     }
 }
 
 .form-switch-xl .form-check-input {
+    --cui-form-check-bg: var(--cui-body-bg);
+    --cui-border-color: #dee2e6;
     --cui-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
     width: 3em;
     height: 1.75em;

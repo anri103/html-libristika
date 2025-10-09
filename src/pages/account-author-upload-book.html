@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "ЛК - Автор - Публикация книги",
+})
+
+<body>
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- section__navigation -->
+        <section class="section section__navigation">
+            <div class="container">
+                <!-- Навигация / Хлебные крошки -->
+                <a href="account-author-upload.html">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <span>Сохранить и выйти</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="account-area">
+                    <div class="row gy-4 justify-content-center">
+                        <div class="col-lg-7">
+                            <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
+                                <div class="badge badge-publication-status item-unpublished">неопубликовано</div>
+                            </div>
+                            
+                            <div class="account-content-area">
+                                <div class="account-content-widget">
+                                    <div class="account-form-wrapper">
+                                        <form class="form-account" action="#">
+                                            <div class="row gy-2rem">
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookName">Название</label>
+                                                    <input id="bookName" class="form-control" type="text" name="book-name">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookFile">Файл книги</label>
+                                                    <input id="bookFile" class="form-control" type="file" name="book-file">
+                                                    <div class="form-text text-primary">Информация о том как правильно подготовить файл к загрузке на сервис</div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookAuthor">Автор</label>
+                                                    <input id="bookAuthor" placeholder="Сергей Александрович" class="form-control" type="email" name="book-author" disabled>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookSubAuthor">Соавтор</label>
+                                                    <input id="bookSubAuthor" class="form-control" type="text" name="book-subauthor">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookSeries">Серия книг</label>
+                                                    <select id="bookSeries" class="form-select" name="book-series">
+                                                        <option selected>выберите из списка</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookAnnotation">Аннотация</label>
+                                                    <textarea id="bookAnnotation" class="form-control" rows="3"></textarea>
+                                                    <div class="form-text">Не менее 50 символов</div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookGenres">Жанры</label>
+                                                    <select
+                                                    id="bookGenres"
+                                                    class="form-multi-select"
+                                                    name="book-genres"
+                                                    multiple data-coreui-search="global"
+                                                    data-coreui-placeholder="Поиск..."
+                                                    data-coreui-select-all="false">
+                                                        <option value="0">Фантастика</option>
+                                                        <option value="1">Любовный роман</option>
+                                                        <option value="2">Фентези</option>
+                                                        <option value="3">Попаданцы</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookTags">Теги</label>
+                                                    <select
+                                                    id="bookTags"
+                                                    class="form-multi-select"
+                                                    name="book-tags"
+                                                    multiple data-coreui-search="global"
+                                                    data-coreui-placeholder="Поиск..."
+                                                    data-coreui-select-all="false">
+                                                        <option value="0">Тег 1</option>
+                                                        <option value="1">Тег 2</option>
+                                                        <option value="2">Тег 3</option>
+                                                        <option value="3">Тег номер 4</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="d-flex align-items-center justify-content-between gap-2">
+                                                        <div>
+                                                            <label class="widget-title mb-2" for="bookForAdults">Категория 18+</label>
+                                                            <div class="text-muted">В тексте книги есть нецензурная лексика</div>
+                                                        </div>
+                                                        <div class="form-switch-xl">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="bookForAdults">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookAgeRating">Возрастной рейтинг</label>
+                                                    <div class="book-rating-options" role="tablist">
+                                                        <div class="rating-option" role="presentation">
+                                                            <input type="radio" name="radioAgeRating" id="bookAgeRating-0" value="0" checked>
+                                                            <label
+                                                            class="rating-label active"
+                                                            for="bookAgeRating-0"
+                                                            data-coreui-toggle="tab"
+                                                            data-coreui-target="#ratingDesc-0"
+                                                            role="tab"
+                                                            aria-controls="ratingDesc-0"
+                                                            aria-selected="true">0+</label>
+                                                        </div>
+                                                        <div class="rating-option" role="presentation">
+                                                            <input type="radio" name="radioAgeRating" id="bookAgeRating-6" value="6">
+                                                            <label
+                                                            class="rating-label"
+                                                            for="bookAgeRating-6"
+                                                            data-coreui-toggle="tab"
+                                                            data-coreui-target="#ratingDesc-6"
+                                                            role="tab"
+                                                            aria-controls="ratingDesc-6"
+                                                            aria-selected="false">6+</label>
+                                                        </div>
+                                                        <div class="rating-option" role="presentation">
+                                                            <input type="radio" name="radioAgeRating" id="bookAgeRating-12" value="12">
+                                                            <label
+                                                            class="rating-label"
+                                                            for="bookAgeRating-12"
+                                                            data-coreui-toggle="tab"
+                                                            data-coreui-target="#ratingDesc-12"
+                                                            role="tab"
+                                                            aria-controls="ratingDesc-12"
+                                                            aria-selected="false">12+</label>
+                                                        </div>
+                                                        <div class="rating-option" role="presentation">
+                                                            <input type="radio" name="radioAgeRating" id="bookAgeRating-16" value="16">
+                                                            <label
+                                                            class="rating-label"
+                                                            for="bookAgeRating-16"
+                                                            data-coreui-toggle="tab"
+                                                            data-coreui-target="#ratingDesc-16"
+                                                            role="tab"
+                                                            aria-controls="ratingDesc-16"
+                                                            aria-selected="false">16+</label>
+                                                        </div>
+                                                        <div class="rating-option" role="presentation">
+                                                            <input type="radio" name="radioAgeRating" id="bookAgeRating-18" value="18">
+                                                            <label
+                                                            class="rating-label"
+                                                            for="bookAgeRating-18"
+                                                            data-coreui-toggle="tab"
+                                                            data-coreui-target="#ratingDesc-18"
+                                                            role="tab"
+                                                            aria-controls="ratingDesc-18"
+                                                            aria-selected="false">18+</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-content book-rating-descriptions" id="ratingTabContent">
+                                                        <div class="rating-description tab-pane fade active show" id="ratingDesc-0" role="tabpanel">
+                                                            <p>Контент, который можно показывать любой аудитории без ограничений. Нет сцен насилия, нецензурной лексики или материалов, которые могут напугать детей.</p>
+                                                        </div>
+                                                        <div class="rating-description tab-pane fade" id="ratingDesc-6" role="tabpanel">
+                                                            <p>Могут присутствовать редкие ненатуралистические сцены насилия, не содержащие детализации. Нет грубой лексики, но могут быть отдельные бранные слова.</p>
+                                                        </div>
+                                                        <div class="rating-description tab-pane fade" id="ratingDesc-12" role="tabpanel">
+                                                            <p>Может содержать умеренное насилие без детализации, намёки на сексуальные отношения, редкое использование ненормативной лексики.</p>
+                                                        </div>
+                                                        <div class="rating-description tab-pane fade" id="ratingDesc-16" role="tabpanel">
+                                                            <p>Может содержать сцены насилия (без натуралистичных деталей), употребление алкоголя и табака, более частую ненормативную лексику, откровенные сцены без демонстрации.</p>
+                                                        </div>
+                                                        <div class="rating-description tab-pane fade" id="ratingDesc-18" role="tabpanel">
+                                                            <p>Может содержать сцены жестокого насилия, употребление наркотиков, откровенные сексуальные сцены, частую ненормативную лексику и другие материалы, не предназначенные для детей.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="widget-title">Упоминание нетрадиционных сексуальных установок</div>
+                                                    <div class="form-check-wrapper">
+                                                        <input class="form-check-input" type="checkbox" id="bookAgitationForPidors">
+                                                        <label class="form-check-label" for="bookAgitationForPidors">Я подтверждаю, что в произведении не содержится <a href="#" class="text-decoration-underline">пропаганда ЛГБТ</a></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookCover">Обложка</label>
+                                                    <input id="bookCover" class="form-control" type="file" name="book-cover">
+                                                    <div class="form-text text-primary">JPG или PNG, не менее 500x625 px.<br> Размер файла до 20 MB.</div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookPrice">Цена за книгу</label>
+                                                    <select id="bookPrice" class="form-select" name="book-series">
+                                                        <option selected>выберите из списка</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="widget-title">Оплата за публикацию</div>
+                                                    <div class="row gy-3">
+                                                        <div class="col-lg-4">
+                                                            <div class="radio-payment-method h-100">
+                                                                <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-1" value="1">
+                                                                <label class="card card-payment-method payment-method-label h-100" for="bookPaymentMethod-1">
+                                                                    <div class="card-body">
+                                                                        <div class="card-title">Эксклюзивная</div>
+                                                                        <div class="card-subtitle"><b>35%</b> роялти с каждой продажи</div>
+                                                                        <div class="card-content">
+                                                                            <p><span class="text-primary fs-5 fw-medium">58,04 руб</span> доход с каждой продажи</p>
+                                                                            <ul>
+                                                                                <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                                <li>Вы можете размещать книгу только на нашей платформе</li>
+                                                                                <li>После публикации доступна запись аудиокниги</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-footer">
+                                                                        <div class="btn btn-secondary rounded-pill">Выбрать</div>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="radio-payment-method h-100">
+                                                                <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-2" value="2">
+                                                                <label class="card card-payment-method payment-method-label h-100" for="bookPaymentMethod-2">
+                                                                    <div class="card-body">
+                                                                        <div class="card-title">Базовая</div>
+                                                                        <div class="card-subtitle"><b>25%</b> роялти с каждой продажи</div>
+                                                                        <div class="card-content">
+                                                                            <p><span class="text-primary fs-5 fw-medium">41,45 руб</span> доход с каждой продажи</p>
+                                                                            <ul>
+                                                                                <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                                <li>Вы можете размещать книгу на других площадках</li>
+                                                                                <li>После публикации доступна запись аудиокниги</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-footer">
+                                                                        <div class="btn btn-secondary rounded-pill">Выбрать</div>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="radio-payment-method h-100">
+                                                                <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-3" value="3">
+                                                                <label class="card card-payment-method payment-method-label h-100" for="bookPaymentMethod-3">
+                                                                    <div class="card-body">
+                                                                        <div class="card-title">Бесплатная</div>
+                                                                        <div class="card-subtitle">Распространяется <b>бесплатно</b></div>
+                                                                        <div class="card-content">
+                                                                            <p><span class="text-primary fs-5 fw-medium">0 руб</span> доход с каждой продажи</p>
+                                                                            <ul>
+                                                                                <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                                <li>Вы можете размещать книгу на других площадках</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-footer">
+                                                                        <div class="btn btn-secondary rounded-pill">Выбрать</div>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-check-wrapper">
+                                                        <input class="form-check-input" type="checkbox" id="agreeForAll" checked>
+                                                        <label class="form-check-label" for="agreeForAll">Я подтверждаю, что ознакомился с <a href="#" class="text-decoration-underline">Правилами публикации</a></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="buttons-wrapper">
+                                                        <button type="submit" class="btn btn-primary btn-lg rounded-pill">Опубликовать</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+</body>
+
+</html>

@@ -20,19 +20,19 @@
     }
 }
 
-.account-area {
-    padding: 40px 0;
-}
+// .account-area {
+//     padding: 40px 0;
+// }
 
 // account-info-area
 
-.account-info-area {
-    margin-top: -120px;
+// .account-info-area {
+//     margin-top: -120px;
 
-    @media screen and (max-width: 991px) {
-        margin-top: -90px;
-    }
-}
+//     @media screen and (max-width: 991px) {
+//         margin-top: -90px;
+//     }
+// }
 
 .account-avatar {
     margin-bottom: 24px;
@@ -44,33 +44,76 @@
 
 .avatar-wrapper {
     position: relative;
-    overflow: hidden;
     width: 170px;
     height: 170px;
-    border: 5px solid #fff;
-    border-radius: 50%;
 
     @media screen and (max-width: 991px) {
         width: 100px;
         height: 100px;
-        border: 3px solid #fff;
+        margin: 0 auto;
     }
-
-    .avatar-img {
+    
+    .avatar-preview {
+        position: relative;
+        overflow: hidden;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        object-position: center;
+        border: 5px solid #fff;
+        border-radius: 50%;
+    
+        @media screen and (max-width: 991px) {
+            border: 3px solid #fff;
+        }
+        
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .avatar-edit {
+        position: absolute;
+        top: 0;
+        right: 10%;
+
+        input {
+            display: none;
+        }
+
+        .btn-change_img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #fff;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
     }
 }
 
 .account-age {
     color: #9B9B9B;
     margin-bottom: 14px;
+
+    @media screen and (max-width: 991px) {
+        text-align: center;
+        margin-bottom: 2px;
+    }
 }
 
 .account-name {
     margin-bottom: 14px;
+    
+    @media screen and (max-width: 991px) {
+        text-align: center;
+        margin-bottom: 24px;
+    }
 
     h1 {
         display: inline;
@@ -86,11 +129,37 @@
 
 .account-menu {
     position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
 
     .links-wrapper {
         display: flex;
         flex-direction: column;
         gap: 14px;
+
+        @media screen and (max-width: 991px) {
+            flex-direction: row;
+            align-items: center;
+            white-space: nowrap;
+            overflow-x: auto;
+            scrollbar-color: #8c8c8c #f6f6f6;
+            scrollbar-width: thin;
+            margin: 0;
+            padding-bottom: 12px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #8c8c8c;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: #f6f6f6;
+        }
     }
 
     .menu-link {
@@ -119,43 +188,34 @@
     @media screen and (max-width: 991px) {
         padding: 24px 16px;
     }
-
-    &:has(.user-account-status) {
-        margin-top: 55px;
-    }
 }
 
 .user-account-status {
-    position: absolute;
-    top: auto;
-    left: 0;
-    bottom: 100%;
-    width: auto;
-    height: 75px;
+    display: inline-block;
     font-size: 18px;
     font-weight: 500;
-    line-height: 55px;
-    padding: 0 70px;
+    padding: 10px 40px 30px;
     margin-bottom: -20px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     background-color: #fff;
-
-    @media screen and (max-width: 991px) {
-        left: 30px;
-        height: 65px;
-        line-height: 45px;
-        padding: 0 45px;
-    }
 }
 
 .account-content-widget {
-    margin-bottom: 34px;
+
+    &:not(:last-of-type) {
+        margin-bottom: 34px;
+    }
 
     .widget-title {
         font-family: var(--theme-ff-title);
         font-size: 1.5rem;
         font-weight: 500;
         margin-bottom: 0.875rem;
+    }
+
+    .widget-subtitle {
+        color: #6A6969;
+        margin-top: -0.75rem;
     }
 }
 
@@ -424,7 +484,7 @@
     flex-wrap: wrap;
     align-items: center;
     border-radius: 10px;
-    padding: 6px 32px;
+    padding: 6px 16px;
     background-color: #fff;
 
     @media screen and (min-width: 992px) {
