@@ -4,7 +4,7 @@
 @@include('../components/head.html', {
     "description": "",
     "keywords": "",
-    "title": "ЛК - Автор",
+    "title": "ЛК - Читатель после верификации",
 })
 
 <body>
@@ -22,7 +22,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Личный кабинет автора</li>
+                        <li class="breadcrumb-item active" aria-current="page">Личный кабинет читателя</li>
                     </ol>
                 </nav>
             </div>
@@ -56,25 +56,17 @@
                                 </div>
                                 <div class="account-name">
                                     <h1>Константин Длиннаяфамилия</h1>
-                                    <span class="account-verify">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
-                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
-                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.00114"/>
-                                        </svg>
-                                    </span>
                                 </div>
                                 <div class="account-menu-wrapper">
                                     <nav class="account-menu">
                                         <div class="links-wrapper">
-                                            <a href="account-author.html" class="menu-link active">Профиль автора</a>
-                                            <a href="account-author-upload-book.html" class="menu-link">Публикация книги</a>
-                                            <a href="account-author-upload.html" class="menu-link">Мои книги</a>
-                                            <a href="#" class="menu-link">Персоны</a>
-                                            <a href="#" class="menu-link">Статистика</a>
+                                            <a href="account-user-after-verification.html" class="menu-link active">Мой профиль</a>
+                                            <a href="#" class="menu-link">Предпочтения </a>
+                                            <a href="#" class="menu-link">Приватность</a>
                                             <a href="#" class="menu-link">Уведомления</a>
-                                            <a href="#" class="menu-link">Продажи</a>
-                                            <a href="#" class="menu-link">Выплаты</a>
+                                            <a href="#" class="menu-link">Подписка</a>
+                                            <a href="#" class="menu-link">Способ оплаты</a>
+                                            <a href="#" class="menu-link">История покупок</a>
                                             <a href="sign-in.html" class="menu-link logout-link">Выход</a>
                                         </div>
                                     </nav>
@@ -85,7 +77,7 @@
                         <!-- account-content-area -->
                         <div class="col-lg-7">
                             <div class="user-account-status">
-                                <a href="account-user-after-verification.html">Читатель</a>
+                                <a href="account-author.html">Автор</a>
                             </div>
                             <div class="account-content-area">
                                 <div class="account-content-widget">
@@ -96,18 +88,17 @@
                                                 <div class="col-12">
                                                     <label class="form-label" for="formSignupfname">Имя</label>
                                                     <input id="formSignupfname" class="form-control" type="text"
-                                                        name="firstName" value="Сергей" disabled>
+                                                        name="firstName" value="Константин">
                                                 </div>
                                                 <div class="col-12">
                                                     <label class="form-label" for="formSignuplname">Фамилия</label>
                                                     <input id="formSignuplname" class="form-control" type="text"
-                                                        name="lastName" value="Александрович" disabled>
+                                                        name="lastName" value="Фамилия">
                                                 </div>
                                                 <div class="col-12">
                                                     <label class="form-label" for="formSignupEmail">Email</label>
                                                     <input id="formSignupEmail" class="form-control" type="email"
-                                                        name="email" value="info@mail.com" disabled>
-                                                    <div class="form-text">*почта для отправки чеков и документов</div>
+                                                        name="email" value="iamkonstantin@mail.ru">
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-flex flex-wrap gap-3 row-gap-2">
@@ -123,6 +114,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
+                                                    <label class="form-label" for="formBirth">Дата рождения</label>
+                                                    <div data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="чч.мм.гггг"></div>
+                                                </div>
+                                                <div class="col-12">
                                                     <label class="form-label" for="exampleFormControlTextarea1">О себе</label>
                                                     <textarea id="exampleFormControlTextarea1" class="form-control" rows="3" placeholder="Напишите что-нибудь о себе..."></textarea>
                                                 </div>
@@ -136,21 +131,36 @@
                                     </div>
                                 </div>
                                 <div class="account-content-widget">
-                                    <h2 class="widget-title">Паспортные данные</h2>
+                                    <h2 class="widget-title">Изменить пароль</h2>
                                     <div class="account-form-wrapper">
                                         <form class="form-account" action="#">
                                             <div class="row gy-3 gy-lg-4">
                                                 <div class="col-12">
-                                                    <label class="form-label" for="formPassportSeries">Серия и номер</label>
-                                                    <input type="text" class="form-control" id="formPassportSeries">
+                                                    <label class="form-label" for="formSignupOldPassword">Старый пароль</label>
+                                                    <div class="form-password">
+                                                        <input type="password" id="formSignupOldPassword" class="form-control">
+                                                        <button type="button" class="form-password-action" data-coreui-toggle="password">
+                                                            <span class="form-password-action-icon"></span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                                 <div class="col-12">
-                                                    <label class="form-label" for="formPassportWhoIssued">Кем выдан</label>
-                                                    <input type="text" class="form-control" id="formPassportWhoIssued">
+                                                    <label class="form-label" for="formSignupNewPassword">Новый пароль</label>
+                                                    <div class="form-password">
+                                                        <input type="password" id="formSignupNewPassword" class="form-control" name="password">
+                                                        <button type="button" class="form-password-action" data-coreui-toggle="password">
+                                                            <span class="form-password-action-icon"></span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                                 <div class="col-12">
-                                                    <label class="form-label" for="formPassportDate">Дата выдачи</label>
-                                                    <div data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="чч.мм.гггг"></div>
+                                                    <label class="form-label" for="formSignupCheckPassword">Подтверждение пароля</label>
+                                                    <div class="form-password">
+                                                        <input type="password" id="formSignupCheckPassword" class="form-control" name="password">
+                                                        <button type="button" class="form-password-action" data-coreui-toggle="password">
+                                                            <span class="form-password-action-icon"></span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="buttons-wrapper">
