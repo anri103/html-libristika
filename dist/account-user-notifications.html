@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- title -->
-    <title>ЛК - Читатель</title>
+    <title>ЛК - Читатель - Уведомления</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 </head>
@@ -747,11 +747,11 @@
                                 <div class="account-menu-wrapper">
                                     <nav class="account-menu">
                                         <div class="links-wrapper">
-                                            <a href="account-user.html" class="menu-link active">Мой профиль</a>
+                                            <a href="account-user.html" class="menu-link">Мой профиль</a>
                                             <a href="account-author-verification.html" class="menu-link">Стать автором</a>
                                             <a href="#" class="menu-link">Предпочтения </a>
                                             <a href="#" class="menu-link">Приватность</a>
-                                            <a href="account-user-notifications.html" class="menu-link">Уведомления</a>
+                                            <a href="account-user-notifications.html" class="menu-link active">Уведомления</a>
                                             <a href="#" class="menu-link">Подписка</a>
                                             <a href="#" class="menu-link">Способ оплаты</a>
                                             <a href="account-user-purchase-history.html" class="menu-link">История покупок</a>
@@ -764,98 +764,8 @@
 
                         <!-- account-content-area -->
                         <div class="col-lg-7">
-                            <div class="account-content-area">
-                                <div class="account-content-widget">
-                                    <h2 class="widget-title">Личные данные</h2>
-                                    <div class="account-form-wrapper">
-                                        <form class="form-account" action="#">
-                                            <div class="row gy-3 gy-lg-4">
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupfname">Имя</label>
-                                                    <input id="formSignupfname" class="form-control" type="text"
-                                                        name="firstName" value="Константин">
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignuplname">Фамилия</label>
-                                                    <input id="formSignuplname" class="form-control" type="text"
-                                                        name="lastName" value="Фамилия">
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupEmail">Email</label>
-                                                    <input id="formSignupEmail" class="form-control" type="email"
-                                                        name="email" value="iamkonstantin@mail.ru">
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="d-flex flex-wrap gap-3 row-gap-2">
-                                                        <input type="radio" class="btn-check" name="user-sex" id="radioUserSexMale" autocomplete="off">
-                                                        <label class="btn btn-outline-primary" for="radioUserSexMale">
-                                                            <span class="small">мужчина</span>
-                                                        </label>
-
-                                                        <input type="radio" class="btn-check" name="user-sex" id="radioUserSexFemale" autocomplete="off">
-                                                        <label class="btn btn-outline-primary" for="radioUserSexFemale">
-                                                            <span class="small">женщина</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formBirth">Дата рождения</label>
-                                                    <div data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="чч.мм.гггг"></div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="exampleFormControlTextarea1">О себе</label>
-                                                    <textarea id="exampleFormControlTextarea1" class="form-control" rows="3" placeholder="Напишите что-нибудь о себе..."></textarea>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="buttons-wrapper">
-                                                        <button type="submit" class="btn btn-secondary btn-lg rounded-pill">Сохранить изменения</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="account-content-widget">
-                                    <h2 class="widget-title">Изменить пароль</h2>
-                                    <div class="account-form-wrapper">
-                                        <form class="form-account" action="#">
-                                            <div class="row gy-3 gy-lg-4">
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupOldPassword">Старый пароль</label>
-                                                    <div class="form-password">
-                                                        <input type="password" id="formSignupOldPassword" class="form-control">
-                                                        <button type="button" class="form-password-action" data-coreui-toggle="password">
-                                                            <span class="form-password-action-icon"></span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupNewPassword">Новый пароль</label>
-                                                    <div class="form-password">
-                                                        <input type="password" id="formSignupNewPassword" class="form-control" name="password">
-                                                        <button type="button" class="form-password-action" data-coreui-toggle="password">
-                                                            <span class="form-password-action-icon"></span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupCheckPassword">Подтверждение пароля</label>
-                                                    <div class="form-password">
-                                                        <input type="password" id="formSignupCheckPassword" class="form-control" name="password">
-                                                        <button type="button" class="form-password-action" data-coreui-toggle="password">
-                                                            <span class="form-password-action-icon"></span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="buttons-wrapper">
-                                                        <button type="submit" class="btn btn-secondary btn-lg rounded-pill">Сохранить изменения</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                            <div class="account-content-widget">
+                                test
                             </div>
                         </div>
 

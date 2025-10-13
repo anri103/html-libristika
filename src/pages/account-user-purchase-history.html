@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "ЛК - Читатель - История покупок",
+})
+
+<body>
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- section__navigation -->
+        <section class="section section__navigation">
+            <div class="container">
+                <!-- Навигация / Хлебные крошки -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Личный кабинет читателя</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="account-area">
+                    <div class="row gy-4 justify-content-center">
+
+                        <!-- account-info-area -->
+                        <div class="col-lg-3">
+                            <div class="account-info-area">
+                                <div class="account-avatar">
+                                    <div class="avatar-wrapper">
+                                        <div class="avatar-preview">
+                                            <img class="avatar-img" src="img/user/account-avatar-xl.jpg" alt="">
+                                        </div>
+                                        <div class="avatar-edit">
+                                            <input type="file" accept=".png, .jpg, .jpeg" id="imageUpload">
+                                            <label for="imageUpload" class="btn-change_img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M14.2647 15.9377L12.5473 14.2346C11.758 13.4519 11.3633 13.0605 10.9089 12.9137C10.5092 12.7845 10.079 12.7845 9.67922 12.9137C9.22485 13.0605 8.83017 13.4519 8.04082 14.2346L4.04193 18.2622M14.2647 15.9377L14.606 15.5991C15.412 14.7999 15.8149 14.4003 16.2773 14.2545C16.6839 14.1262 17.1208 14.1312 17.5244 14.2688C17.9832 14.4253 18.3769 14.834 19.1642 15.6515L20 16.5001M14.2647 15.9377L18.22 19.9628M18.22 19.9628C17.8703 20 17.4213 20 16.8 20H7.2C6.07989 20 5.51984 20 5.09202 19.782C4.7157 19.5903 4.40973 19.2843 4.21799 18.908C4.12583 18.7271 4.07264 18.5226 4.04193 18.2622M18.22 19.9628C18.5007 19.9329 18.7175 19.8791 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V13M11 4H7.2C6.07989 4 5.51984 4 5.09202 4.21799C4.7157 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.0799 4 7.2V16.8C4 17.4466 4 17.9066 4.04193 18.2622M18 9V6M18 6V3M18 6H21M18 6H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-age">
+                                    <div><span>зарегистрирован</span> 21.08.2007</div>
+                                </div>
+                                <div class="account-name">
+                                    <h1>Константин Длиннаяфамилия</h1>
+                                </div>
+                                <div class="account-menu-wrapper">
+                                    <nav class="account-menu">
+                                        <div class="links-wrapper">
+                                            <a href="account-user.html" class="menu-link">Мой профиль</a>
+                                            <a href="account-author-verification.html" class="menu-link">Стать автором</a>
+                                            <a href="#" class="menu-link">Предпочтения </a>
+                                            <a href="#" class="menu-link">Приватность</a>
+                                            <a href="account-user-notifications.html" class="menu-link">Уведомления</a>
+                                            <a href="#" class="menu-link">Подписка</a>
+                                            <a href="#" class="menu-link">Способ оплаты</a>
+                                            <a href="account-user-purchase-history.html" class="menu-link active">История покупок</a>
+                                            <a href="sign-in.html" class="menu-link logout-link">Выход</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- account-content-area -->
+                        <div class="col-lg-7">
+                            <div class="account-content-widget">
+                                <div class="purchase-history-grid">
+    <div class="grid-header">
+        <div class="grid-cell">№ Заказа</div>
+        <div class="grid-cell">Время</div>
+        <div class="grid-cell">Наименование</div>
+        <div class="grid-cell">Сумма</div>
+    </div>
+    
+    <div class="grid-row">
+        <div class="grid-cell" data-label="№ Заказа">333444</div>
+        <div class="grid-cell" data-label="Время">22.08.2025</div>
+        <div class="grid-cell" data-label="Наименование">Поиски утраченного завтра</div>
+        <div class="grid-cell" data-label="Сумма">132.50 ₽</div>
+    </div>
+    
+    <div class="grid-row">
+        <div class="grid-cell" data-label="№ Заказа">333444</div>
+        <div class="grid-cell" data-label="Время">22.08.2025</div>
+        <div class="grid-cell" data-label="Наименование">Ведьмак в озвучке Всеволода Кузнецова</div>
+        <div class="grid-cell" data-label="Сумма">499 ₽</div>
+    </div>
+    
+    <div class="grid-row">
+        <div class="grid-cell" data-label="№ Заказа">333444</div>
+        <div class="grid-cell" data-label="Время">22.08.2025</div>
+        <div class="grid-cell" data-label="Наименование">АтакА</div>
+        <div class="grid-cell" data-label="Сумма">1499 ₽</div>
+    </div>
+</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+</body>
+
+</html>
