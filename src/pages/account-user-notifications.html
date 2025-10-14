@@ -22,7 +22,8 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Личный кабинет читателя</li>
+                        <li class="breadcrumb-item"><a href="account-user.html">Личный кабинет читателя</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Уведомления</li>
                     </ol>
                 </nav>
             </div>
@@ -78,7 +79,184 @@
                         <!-- account-content-area -->
                         <div class="col-lg-7">
                             <div class="account-content-widget">
-                                test
+                                <h2 class="widget-title">Уведомления</h2>
+
+                                <div class="account-notifications">
+                                    <!-- Этот блок показывать когда нет уведомлений -->
+                                    <div class="account-notifications__empty">
+                                        <div class="mb-3">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="67" height="74" viewBox="0 0 67 74"><g stroke="#D8D8D8" stroke-width="4" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M55.223 25.066C55.223 12.258 46.48 2 33.539 2 20.6 2 11.856 12.258 11.856 25.066v26.627C11.856 57.385 7.75 62 2 62h63c-5.751 0-9.777-4.615-9.777-10.307V25.066zM25 63c0 4.97 3.806 9 8.5 9s8.5-4.03 8.5-9"/></g></svg>
+                                            </span>
+                                        </div>
+                                        <h3 class="fs-4 text-muted">Нет уведомлений</h3>
+                                        <p class="text-muted mb-0">На этой странице будут собраны все уведомления</p>
+                                    </div>
+                                    <div class="account-notifications__sorting">
+                                        <div class="d-flex align-items-center justify-content-between gap-4">
+                                            <div class="d-flex align-items-center flex-wrap gap-2 gap-lg-4 row-gap-1">
+                                                <div>
+                                                    <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
+                                                        По новизне
+                                                        <span class="icon-arrow-down">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                                <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-select">
+                                                        <li><a class="dropdown-item" href="#">Более новые</a></li>
+                                                        <li><a class="dropdown-item" href="#">Менее новые</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="account-notifications__list">
+
+                                        <div class="notification-item type-payment">
+                                            <div class="notification-item__type">
+                                                <span class="badge rounded-pill text-bg-success">Финансы</span>
+                                            </div>
+                                            <div class="notification-item__title">Платеж <span class="text-secondary">599 ₽</span> прошел успешно</div>
+                                            <div class="notification-item__date">23.06.2025, 18:45</div>
+                                            <div class="notification-item__text">
+                                                Текст  со сроком подписки и другой инф которую нужно отобрать
+                                            </div>
+                                            <div class="notification-item__action">
+                                                <a href="#">Скачать чек</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="notification-item type-info">
+                                            <div class="notification-item__type">
+                                                <span class="badge rounded-pill text-bg-success">Информация</span>
+                                            </div>
+                                            <div class="notification-item__title">Заголовок</div>
+                                            <div class="notification-item__date">23.06.2025, 18:45</div>
+                                            <div class="notification-item__text">
+                                                Текст  со сроком подписки и другой инф которую нужно отобрать
+                                            </div>
+                                        </div>
+
+                                        <div class="notification-item type-book-read">
+                                            <div class="notification-item__type">
+                                                <span class="badge rounded-pill text-bg-info">Текст про книгу</span>
+                                            </div>
+                                            <div class="notification-item__content">
+                                                <div class="notification-item__image">
+                                                    <picture>
+                                                        <source srcset="img/card-book-cover/03.webp" type="image/webp">
+                                                        <img src="img/card-book-cover/03.jpg">
+                                                    </picture>
+                                                </div>
+                                                <div>
+                                                    <div class="notification-item__title">Заголовок</div>
+                                                    <div class="notification-item__date">23.06.2025, 18:45</div>
+                                                    <div class="notification-item__text">
+                                                        Используйте реферальную ссылку, чтобы делиться скидкой и зарабатывать процент с продаж.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="notification-item__action">
+                                                <a href="#">Читать</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="notification-item type-book-rating">
+                                            <div class="notification-item__type">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                            <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                            <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                            <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                            <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                            <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="small text-muted">
+                                                        оцените книгу
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="notification-item__content">
+                                                <div class="notification-item__image">
+                                                    <picture>
+                                                        <source srcset="img/card-book-cover/03.webp" type="image/webp">
+                                                        <img src="img/card-book-cover/03.jpg">
+                                                    </picture>
+                                                </div>
+                                                <div>
+                                                    <div class="notification-item__title">Заголовок</div>
+                                                    <div class="notification-item__date">23.06.2025, 18:45</div>
+                                                    <div class="notification-item__text">
+                                                        Используйте реферальную ссылку, чтобы делиться скидкой и зарабатывать процент с продаж.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="notification-item__action">
+                                                <a href="#">Оценить</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="notification-item type-commentary">
+                                            <div class="notification-item__type">
+                                                <span class="badge rounded-pill text-bg-success">Комментарии</span>
+                                            </div>
+                                            <div class="notification-item__content">
+                                                <div class="notification-item__image">
+                                                    <picture>
+                                                        <img src="img/single-book/commentary-avatar.png">
+                                                    </picture>
+                                                </div>
+                                                <div>
+                                                    <div class="notification-item__title">Заголовок про оставленные комментарий</div>
+                                                    <div class="notification-item__date">23.06.2025, 18:45</div>
+                                                    <div class="notification-item__text">
+                                                        Используйте реферальную ссылку, чтобы делиться скидкой и зарабатывать процент с продаж.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="notification-item__action">
+                                                <a href="#">Ответить</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="notification-item type-alert">
+                                            <div class="alert alert-danger">
+                                                <div class="d-flex">
+                                                    <svg class="flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                                        <path fill="currentColor" d="M1 21L12 2L23 21H1ZM3.6 19.5H20.4L12 5L3.6 19.5ZM12.1045 18.075C12.3181 18.075 12.4958 18.0026 12.6375 17.858C12.7792 17.7135 12.85 17.5343 12.85 17.3205C12.85 17.1068 12.7777 16.9292 12.633 16.7875C12.4885 16.6459 12.3094 16.575 12.0955 16.575C11.8819 16.575 11.7042 16.6473 11.5625 16.792C11.4208 16.9365 11.35 17.1157 11.35 17.3295C11.35 17.5431 11.4223 17.7208 11.567 17.8625C11.7115 18.0041 11.8906 18.075 12.1045 18.075ZM11.35 15.3H12.85V9.7H11.35V15.3Z"></path>
+                                                    </svg>
+                                                    <div class="mt-1">Информация о том требующая внимания пользователя сроки, предупреждение и тд</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="notification-item type-alert">
+                                            <div class="alert alert-success">
+                                                <div class="d-flex">
+                                                    <svg class="flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
+                                                        <path fill="currentColor" d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"/>
+                                                        <polygon fill="currentColor" points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"/>
+                                                    </svg>
+                                                    <div class="mt-1">Важные комментарии уведомлении о чем либо вторая строка</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 

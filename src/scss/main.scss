@@ -15,6 +15,8 @@
 @use 'utils/swiper';
 @use 'utils/sections';
 @use 'utils/cards';
+@use 'utils/alerts';
+@use 'utils/badge';
 
 // components
 @use 'components/header';
@@ -28,7 +30,6 @@
 @use 'components/card-collection';
 @use 'components/card-genre';
 @use 'components/card-author';
-@use 'components/alerts';
 @use 'components/reader-header';
 @use 'components/reader-footer';
 

@@ -5,6 +5,10 @@
     --cui-alert-border-radius: 10px;
     font-size: 0.875rem;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+
+    svg {
+        color: var(--cui-alert-svg-color);
+    }
 }
 
 .alert-danger {
@@ -12,4 +16,13 @@
     --cui-alert-bg: #FBF4F3;
     --cui-alert-border-color: #FBF4F3;
     --cui-alert-link-color: var(--cui-danger-text-emphasis);
+    --cui-alert-svg-color: #B4664C;
+}
+
+.alert-success {
+    --cui-alert-color: var(--cui-body-color);
+    --cui-alert-bg: #F1F7F0;
+    --cui-alert-border-color: #F1F7F0;
+    --cui-alert-link-color: var(--cui-success-text-emphasis);
+    --cui-alert-svg-color: #35932A;
 }

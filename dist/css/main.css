@@ -52,20 +52,20 @@
 :root {
   --theme-ff-main: "Muller", sans-serif;
   --theme-ff-title: "Spectral", serif;
-  --cui-primary: #566B61;
-  --cui-secondary: #B4664C;
-  --cui-success: #1AB86D;
-  --cui-info: #0dcaf0;
+  --cui-primary: #566b61;
+  --cui-secondary: #b4664c;
+  --cui-success: #f1f7f0;
+  --cui-info: #e2e9ee;
   --cui-warning: #ffc107;
-  --cui-danger: #dc3545;
+  --cui-danger: #fbf4f3;
   --cui-light: #f8f9fa;
   --cui-dark: #212529;
   --cui-primary-rgb: 86, 107, 97;
   --cui-secondary-rgb: 180, 102, 76;
-  --cui-success-rgb: 26, 184, 109;
-  --cui-info-rgb: 13, 202, 240;
+  --cui-success-rgb: 241, 247, 240;
+  --cui-info-rgb: 226, 233, 238;
   --cui-warning-rgb: 255, 193, 7;
-  --cui-danger-rgb: 220, 53, 69;
+  --cui-danger-rgb: 251, 244, 243;
   --cui-light-rgb: 248, 249, 250;
   --cui-dark-rgb: 33, 37, 41;
   --cui-secondary-color: rgba(155, 155, 155, 0.875);
@@ -697,6 +697,48 @@ label {
 }
 
 /*------------------------------------------------------------------
+[ alert ]*/
+.alert {
+  --cui-alert-border-radius: 10px;
+  font-size: 0.875rem;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+}
+.alert svg {
+  color: var(--cui-alert-svg-color);
+}
+
+.alert-danger {
+  --cui-alert-color: var(--cui-body-color);
+  --cui-alert-bg: #FBF4F3;
+  --cui-alert-border-color: #FBF4F3;
+  --cui-alert-link-color: var(--cui-danger-text-emphasis);
+  --cui-alert-svg-color: #B4664C;
+}
+
+.alert-success {
+  --cui-alert-color: var(--cui-body-color);
+  --cui-alert-bg: #F1F7F0;
+  --cui-alert-border-color: #F1F7F0;
+  --cui-alert-link-color: var(--cui-success-text-emphasis);
+  --cui-alert-svg-color: #35932A;
+}
+
+/*------------------------------------------------------------------
+[ badge ]*/
+.badge {
+  --cui-badge-font-size: 0.875em;
+  --cui-badge-font-weight: 400;
+}
+
+.text-bg-success {
+  color: #1F3326 !important;
+}
+
+.text-bg-info {
+  color: #1F3326 !important;
+}
+
+/*------------------------------------------------------------------
 [ header ]*/
 .header {
   --cui-header-bg: var(--cui-body-bg);
@@ -1134,6 +1176,11 @@ label {
 .footer .footer-bottom-bar {
   margin-top: 2rem;
 }
+@media (max-width: 991px) {
+  .footer {
+    padding: 30px 0 75px;
+  }
+}
 
 .footer-widget {
   position: relative;
@@ -1181,11 +1228,6 @@ label {
   opacity: 0.6;
 }
 
-@media screen and (max-width: 991px) {
-  .footer {
-    padding: 30px 0;
-  }
-}
 /*------------------------------------------------------------------
 [ breadcrumb ]*/
 .section-breadcrumb {
@@ -1685,21 +1727,6 @@ label {
   color: #9B9B9B;
   font-size: 14px;
   font-weight: 400;
-}
-
-/*------------------------------------------------------------------
-[ alert ]*/
-.alert {
-  --cui-alert-border-radius: 10px;
-  font-size: 0.875rem;
-  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
-}
-
-.alert-danger {
-  --cui-alert-color: var(--cui-body-color);
-  --cui-alert-bg: #FBF4F3;
-  --cui-alert-border-color: #FBF4F3;
-  --cui-alert-link-color: var(--cui-danger-text-emphasis);
 }
 
 .reader-header {
@@ -2389,12 +2416,30 @@ label {
 @media (max-width: 767px) {
   .purchase-history-grid {
     grid-template-columns: 1fr;
-    gap: 8px;
-    background-color: transparent;
+    gap: 24px;
     border: none;
+    background-color: transparent;
   }
   .purchase-history-grid .grid-header {
     display: none;
+  }
+  .purchase-history-grid .grid-cell {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid #D9D9D9;
+    background-color: #fff;
+  }
+  .purchase-history-grid .grid-cell:last-child {
+    border-bottom: none;
+  }
+  .purchase-history-grid .grid-cell::before {
+    content: attr(data-label);
+    color: #1F3326;
+    font-family: var(--theme-ff-title);
+    font-size: 18px;
+    font-weight: 500;
   }
   .purchase-history-grid .grid-row {
     display: grid;
@@ -2402,25 +2447,8 @@ label {
     gap: 4px;
     padding: 16px;
     border: 1px solid #D9D9D9;
-    border-radius: 8px;
-    margin-bottom: 8px;
-  }
-  .purchase-history-grid .grid-row .grid-cell {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding: 8px 0;
-    border-bottom: 1px solid #D9D9D9;
-  }
-  .purchase-history-grid .grid-row .grid-cell:last-child {
-    border-bottom: none;
-  }
-  .purchase-history-grid .grid-row .grid-cell::before {
-    content: attr(data-label);
-    color: #1F3326;
-    font-family: var(--theme-ff-title);
-    font-size: 18px;
-    font-weight: 500;
+    border-radius: 10px;
+    background-color: #fff;
   }
 }
 @media (min-width: 768px) {
@@ -2430,6 +2458,77 @@ label {
   .purchase-history-grid .grid-cell:nth-child(4) {
     text-align: right;
   }
+}
+
+.account-notifications__empty {
+  margin: 100px 0;
+  text-align: center;
+}
+.account-notifications__sorting {
+  margin-bottom: 24px;
+}
+.account-notifications__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.account-notifications .notification-item {
+  padding: 24px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.account-notifications .notification-item__type {
+  margin-bottom: 8px;
+}
+.account-notifications .notification-item__type .badge {
+  --cui-badge-padding-x: 42px;
+  --cui-badge-padding-y: 6px;
+  --cui-badge-font-size: 14px;
+  text-transform: lowercase;
+}
+.account-notifications .notification-item__title {
+  color: #1F3326;
+  font-family: var(--theme-ff-title);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.account-notifications .notification-item__date {
+  color: #9B9B9B;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.account-notifications .notification-item__text {
+  color: #6A6969;
+  font-size: 16px;
+}
+.account-notifications .notification-item__content {
+  display: grid;
+  grid-template-columns: 46px auto;
+  gap: 14px;
+}
+.account-notifications .notification-item__image {
+  margin-top: 6px;
+}
+.account-notifications .notification-item__image img {
+  max-width: 100%;
+  height: auto;
+}
+.account-notifications .notification-item__action {
+  --cui-link-color-rgb: var(--cui-secondary-rgb);
+  --cui-link-hover-color-rgb: var(--cui-primary-rgb);
+  font-size: 18px;
+  text-transform: lowercase;
+  margin-top: 14px;
+}
+.account-notifications .notification-item:has(.alert) {
+  padding: 0;
+  background-color: transparent;
+}
+.account-notifications .notification-item .alert {
+  --cui-alert-padding-x: 24px;
+  --cui-alert-padding-y: 24px;
+  --cui-alert-margin-bottom: 0;
 }
 
 /*------------------------------------------------------------------
