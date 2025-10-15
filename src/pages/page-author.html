@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "ЛК - Автор",
+})
+
+<body>
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- section__navigation -->
+        <section class="section section__navigation">
+            <div class="container">
+                <!-- Навигация / Хлебные крошки -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Страница автора</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- section__about-author -->
+        <section class="section section__about-author">
+            <div class="container">
+                <div class="row gy-3">
+
+                    <div class="col-lg-auto">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-preview">
+                                <img class="avatar-img" src="img/user/account-avatar-xl.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg">
+                        <div class="account-age">
+                            <div><span>зарегистрирован</span> 21.08.2007</div>
+                        </div>
+                        <div class="account-name">
+                            <h1>Константин Длиннаяфамилия</h1>
+                            <span class="account-verify">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
+                                    <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
+                                    <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.00114"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-baseline justify-content-center justify-content-lg-start gap-2 row-gap-1 mb-3">
+                            <span>жанры</span>
+                            <span class="fs-5 text-secondary">Фантастика, Фентези</span>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-baseline justify-content-center justify-content-lg-start gap-2 row-gap-1 mb-3">
+                            <span>подписчики</span>
+                            <span class="fs-5 text-secondary">2,1 к</span>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 row-gap-0 mt-4 mb-4">
+                            <a href="#" class="btn btn-primary btn-lg rounded-pill">
+                                <span>подписаться на автора</span>
+                            </a>
+                            <a href="#" class="btn btn-text btn-lg rounded-pill">
+                                <span class="fs-6">сообщить о нарушении</span>
+                                <span> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8" fill="none">
+                                        <path xmlns="http://www.w3.org/2000/svg" d="M1 0.5L5 4L1 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div>
+
+            <div class="container">
+                <nav class="mb-0">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button type="button" class="nav-link active" data-coreui-toggle="tab" data-coreui-target="#nav-author-books" role="tab" aria-controls="nav-author-books" aria-selected="true">Книги</button>
+                        <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-about-author" role="tab" aria-controls="nav-about-author" aria-selected="false">Об авторе</button>
+                        <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-reviews-about-author" role="tab" aria-controls="nav-reviews-about-author" aria-selected="false">Отзывы об авторе</button>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="tab-content">
+
+                <!-- Книги -->
+                <div class="tab-pane fade show active" id="nav-author-books" role="tabpanel" tabindex="0">
+
+                    <!-- section__slider-items -->
+                    <section class="section section__slider-items">
+                        <div class="container">
+                            <!-- Title -->
+                            <div class="section-heading d-flex flex-wrap align-items-baseline gap-3 row-gap-1">
+                                <h2 class="section-title">Популярные книги автора</h2>
+                                <span class="text-muted">16 книг</span>
+                            </div>
+                            <!-- Content -->
+                            <div class="section-body">
+                                <div class="swiper swiperCards swiperBestsellerItems">
+                                    <div class="swiper-wrapper">
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/01.webp",
+                                                "imgJpg": "img/card-book-cover/01.jpg",
+                                                "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
+                                                "title": "Девушка с татуировкой дракона",
+                                                "author": "Стиг Ларссон",
+                                                "ratingAverage": "4.8",
+                                                "ratingTotal": "12",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "бесплатно",
+                                                "priceClass": "text-success"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-new",
+                                                "badgeText": "Новинка",
+                                                "imgWebp": "img/card-book-cover/03.webp",
+                                                "imgJpg": "img/card-book-cover/03.jpg",
+                                                "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
+                                                "title": "Тайна мертвого ректора. Книга 2",
+                                                "author": "Виктор Дашкевич",
+                                                "ratingAverage": "4.7",
+                                                "ratingTotal": "413",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/05.webp",
+                                                "imgJpg": "img/card-book-cover/05.jpg",
+                                                "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
+                                                "title": "Ведьмак: Сезон гроз. Дорога без возврата",
+                                                "author": "Анджей Сапковский",
+                                                "ratingAverage": "5",
+                                                "ratingTotal": "1",
+                                                "infoFormat": "Текстовая книга",
+                                                "formatIconText": true,
+                                                "formatIconAudio": false,
+                                                "infoPrice": "1 700 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/07.webp",
+                                                "imgJpg": "img/card-book-cover/07.jpg",
+                                                "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
+                                                "title": "Дом лжи",
+                                                "author": "Дэвид Эллис",
+                                                "ratingAverage": "4.8",
+                                                "ratingTotal": "2616",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/08.webp",
+                                                "imgJpg": "img/card-book-cover/08.jpg",
+                                                "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
+                                                "title": "Кукомоя",
+                                                "author": "Полина Луговцова",
+                                                "ratingAverage": "4.9",
+                                                "ratingTotal": "2673",
+                                                "infoFormat": "Аудио",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/01.webp",
+                                                "imgJpg": "img/card-book-cover/01.jpg",
+                                                "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
+                                                "title": "Девушка с татуировкой дракона",
+                                                "author": "Стиг Ларссон",
+                                                "ratingAverage": "4.8",
+                                                "ratingTotal": "12",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "бесплатно",
+                                                "priceClass": "text-success"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-new",
+                                                "badgeText": "Новинка",
+                                                "imgWebp": "img/card-book-cover/03.webp",
+                                                "imgJpg": "img/card-book-cover/03.jpg",
+                                                "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
+                                                "title": "Тайна мертвого ректора. Книга 2",
+                                                "author": "Виктор Дашкевич",
+                                                "ratingAverage": "4.7",
+                                                "ratingTotal": "413",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/05.webp",
+                                                "imgJpg": "img/card-book-cover/05.jpg",
+                                                "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
+                                                "title": "Ведьмак: Сезон гроз. Дорога без возврата",
+                                                "author": "Анджей Сапковский",
+                                                "ratingAverage": "5",
+                                                "ratingTotal": "1",
+                                                "infoFormat": "Текстовая книга",
+                                                "formatIconText": true,
+                                                "formatIconAudio": false,
+                                                "infoPrice": "1 700 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/07.webp",
+                                                "imgJpg": "img/card-book-cover/07.jpg",
+                                                "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
+                                                "title": "Дом лжи",
+                                                "author": "Дэвид Эллис",
+                                                "ratingAverage": "4.8",
+                                                "ratingTotal": "2616",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/08.webp",
+                                                "imgJpg": "img/card-book-cover/08.jpg",
+                                                "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
+                                                "title": "Кукомоя",
+                                                "author": "Полина Луговцова",
+                                                "ratingAverage": "4.9",
+                                                "ratingTotal": "2673",
+                                                "infoFormat": "Аудио",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            
+                    <!-- section__slider-items -->
+                    <section class="section section__slider-items">
+                        <div class="container">
+                            <!-- Title -->
+                            <div class="section-heading d-flex flex-wrap align-items-baseline gap-3 row-gap-1">
+                                <h2 class="section-title">Популярные аудиокниги автора</h2>
+                                <span class="text-muted">4 книги</span>
+                            </div>
+                            <!-- Content -->
+                            <div class="section-body">
+                                <div class="swiper swiperCards swiperBestsellerAudioItems">
+                                    <div class="swiper-wrapper">
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-bestseller",
+                                                "badgeText": "Хит продаж",
+                                                "imgWebp": "img/card-book-cover/02.webp",
+                                                "imgJpg": "img/card-book-cover/02.jpg",
+                                                "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
+                                                "title": "Ведьмак в озвучке Всеволода Кузнецова",
+                                                "author": "Анджей Сапковский",
+                                                "ratingAverage": "4.8",
+                                                "ratingTotal": "229",
+                                                "infoFormat": "Аудио",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "",
+                                                "badgeText": "",
+                                                "imgWebp": "img/card-book-cover/04.webp",
+                                                "imgJpg": "img/card-book-cover/04.jpg",
+                                                "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
+                                                "title": "Тайна мертвого ректора. Книга 1",
+                                                "author": "Виктор Дашкевич",
+                                                "ratingAverage": "4.7",
+                                                "ratingTotal": "910",
+                                                "infoFormat": "Аудио",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/06.webp",
+                                                "imgJpg": "img/card-book-cover/06.jpg",
+                                                "imgAlt": "АтакА. Anne Dar. Либристика.",
+                                                "title": "АтакА",
+                                                "author": "Anne Dar",
+                                                "ratingAverage": "4.9",
+                                                "ratingTotal": "92",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-bestseller",
+                                                "badgeText": "Хит продаж",
+                                                "imgWebp": "img/card-book-cover/02.webp",
+                                                "imgJpg": "img/card-book-cover/02.jpg",
+                                                "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
+                                                "title": "Ведьмак в озвучке Всеволода Кузнецова",
+                                                "author": "Анджей Сапковский",
+                                                "ratingAverage": "4.8",
+                                                "ratingTotal": "229",
+                                                "infoFormat": "Аудио",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "",
+                                                "badgeText": "",
+                                                "imgWebp": "img/card-book-cover/04.webp",
+                                                "imgJpg": "img/card-book-cover/04.jpg",
+                                                "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
+                                                "title": "Тайна мертвого ректора. Книга 1",
+                                                "author": "Виктор Дашкевич",
+                                                "ratingAverage": "4.7",
+                                                "ratingTotal": "910",
+                                                "infoFormat": "Аудио",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                        <!-- slide -->
+                                        <div class="swiper-slide">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/06.webp",
+                                                "imgJpg": "img/card-book-cover/06.jpg",
+                                                "imgAlt": "АтакА. Anne Dar. Либристика.",
+                                                "title": "АтакА",
+                                                "author": "Anne Dar",
+                                                "ratingAverage": "4.9",
+                                                "ratingTotal": "92",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- section__author-books-list -->
+                    <section class="section section__author-books-list">
+                        <div class="container">
+                            <!-- Title -->
+                            <div class="section-heading d-flex flex-wrap align-items-baseline gap-3 row-gap-1">
+                                <h2 class="section-title">Все книги автора</h2>
+                                <span class="text-muted">124 книги</span>
+                            </div>
+                            <!-- Content -->
+                            <div class="section-body">
+                                <!-- Сортировка 1 -->
+                                <div class="mb-3">
+                                    <div class="d-flex flex-wrap gap-3 row-gap-2">
+                                        <input type="radio" class="btn-check" name="author-type-of-book" id="radioAuthorTypeOfBookText" autocomplete="off">
+                                        <label class="btn btn-light-shadow" for="radioAuthorTypeOfBookText">
+                                            <span class="small">Текстовые</span>
+                                        </label>
+    
+                                        <input type="radio" class="btn-check" name="author-type-of-book" id="radioAuthorTypeOfBookAudio" autocomplete="off">
+                                        <label class="btn btn-light-shadow" for="radioAuthorTypeOfBookAudio">
+                                            <span class="small">Аудио</span>
+                                        </label>
+    
+                                        <input type="radio" class="btn-check" name="author-type-of-book" id="radioAuthorTypeOfBookCycle" autocomplete="off">
+                                        <label class="btn btn-light-shadow" for="radioAuthorTypeOfBookCycle">
+                                            <span class="small">Циклы</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Сортировка 2 -->
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center justify-content-between gap-4">
+                                        <div class="d-flex align-items-center flex-wrap gap-2 gap-lg-4 row-gap-1">
+                                            <div>
+                                                <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
+                                                    По популярности
+                                                    <span class="icon-arrow-down">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                            <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-select">
+                                                    <li><a class="dropdown-item" href="#">Более популярные</a></li>
+                                                    <li><a class="dropdown-item" href="#">Менее популярные</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
+                                                    По новизне
+                                                    <span class="icon-arrow-down">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                            <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-select">
+                                                    <li><a class="dropdown-item" href="#">Более новые</a></li>
+                                                    <li><a class="dropdown-item" href="#">Менее новые</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Сетка каталога -->
+                                <div class="catalog-grid">
+                                    <!-- card -->
+                                    @@include('../components/card/book.html', {
+                                        "badgeClass": "badge-exclusive",
+                                        "badgeText": "Эксклюзив",
+                                        "imgWebp": "img/card-book-cover/01.webp",
+                                        "imgJpg": "img/card-book-cover/01.jpg",
+                                        "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
+                                        "title": "Девушка с татуировкой дракона",
+                                        "author": "Стиг Ларссон",
+                                        "ratingAverage": "4.8",
+                                        "ratingTotal": "12",
+                                        "infoFormat": "Текстовая книга с аудиоверсией",
+                                        "formatIconText": true,
+                                        "formatIconAudio": true,
+                                        "infoPrice": "бесплатно",
+                                        "priceClass": "text-success"
+                                    })
+                                    <!-- card -->
+                                    @@include('../components/card/book.html', {
+                                        "badgeClass": "badge-bestseller",
+                                        "badgeText": "Хит продаж",
+                                        "imgWebp": "img/card-book-cover/02.webp",
+                                        "imgJpg": "img/card-book-cover/02.jpg",
+                                        "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
+                                        "title": "Ведьмак в озвучке Всеволода Кузнецова",
+                                        "author": "Анджей Сапковский",
+                                        "ratingAverage": "4.8",
+                                        "ratingTotal": "229",
+                                        "infoFormat": "Аудио",
+                                        "formatIconText": false,
+                                        "formatIconAudio": true,
+                                        "infoPrice": "499 ₽",
+                                        "priceClass": "text-primary"
+                                    })
+                                    <!-- card -->
+                                    @@include('../components/card/book.html', {
+                                        "badgeClass": "badge-new",
+                                        "badgeText": "Новинка",
+                                        "imgWebp": "img/card-book-cover/03.webp",
+                                        "imgJpg": "img/card-book-cover/03.jpg",
+                                        "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
+                                        "title": "Тайна мертвого ректора. Книга 2",
+                                        "author": "Виктор Дашкевич",
+                                        "ratingAverage": "4.7",
+                                        "ratingTotal": "413",
+                                        "infoFormat": "Текстовая книга с аудиоверсией",
+                                        "formatIconText": true,
+                                        "formatIconAudio": true,
+                                        "infoPrice": "499 ₽",
+                                        "priceClass": "text-primary"
+                                    })
+                                    <!-- card -->
+                                    @@include('../components/card/book.html', {
+                                        "badgeClass": "",
+                                        "badgeText": "",
+                                        "imgWebp": "img/card-book-cover/04.webp",
+                                        "imgJpg": "img/card-book-cover/04.jpg",
+                                        "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
+                                        "title": "Тайна мертвого ректора. Книга 1",
+                                        "author": "Виктор Дашкевич",
+                                        "ratingAverage": "4.7",
+                                        "ratingTotal": "910",
+                                        "infoFormat": "Аудио",
+                                        "formatIconText": false,
+                                        "formatIconAudio": true,
+                                        "infoPrice": "499 ₽",
+                                        "priceClass": "text-primary"
+                                    })
+                                    <!-- card -->
+                                    @@include('../components/card/book.html', {
+                                        "badgeClass": "badge-exclusive",
+                                        "badgeText": "Эксклюзив",
+                                        "imgWebp": "img/card-book-cover/05.webp",
+                                        "imgJpg": "img/card-book-cover/05.jpg",
+                                        "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
+                                        "title": "Ведьмак: Сезон гроз. Дорога без возврата",
+                                        "author": "Анджей Сапковский",
+                                        "ratingAverage": "5",
+                                        "ratingTotal": "1",
+                                        "infoFormat": "Текстовая книга",
+                                        "formatIconText": true,
+                                        "formatIconAudio": false,
+                                        "infoPrice": "1 700 ₽",
+                                        "priceClass": "text-primary"
+                                    })
+                                    <!-- card -->
+                                    @@include('../components/card/book.html', {
+                                        "badgeClass": "badge-exclusive",
+                                        "badgeText": "Эксклюзив",
+                                        "imgWebp": "img/card-book-cover/06.webp",
+                                        "imgJpg": "img/card-book-cover/06.jpg",
+                                        "imgAlt": "АтакА. Anne Dar. Либристика.",
+                                        "title": "АтакА",
+                                        "author": "Anne Dar",
+                                        "ratingAverage": "4.9",
+                                        "ratingTotal": "92",
+                                        "infoFormat": "Текстовая книга с аудиоверсией",
+                                        "formatIconText": true,
+                                        "formatIconAudio": true,
+                                        "infoPrice": "499 ₽",
+                                        "priceClass": "text-primary"
+                                    })
+                                    <!-- card -->
+                                    @@include('../components/card/book.html', {
+                                        "badgeClass": "badge-exclusive",
+                                        "badgeText": "Эксклюзив",
+                                        "imgWebp": "img/card-book-cover/07.webp",
+                                        "imgJpg": "img/card-book-cover/07.jpg",
+                                        "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
+                                        "title": "Дом лжи",
+                                        "author": "Дэвид Эллис",
+                                        "ratingAverage": "4.8",
+                                        "ratingTotal": "2616",
+                                        "infoFormat": "Текстовая книга с аудиоверсией",
+                                        "formatIconText": true,
+                                        "formatIconAudio": true,
+                                        "infoPrice": "499 ₽",
+                                        "priceClass": "text-primary"
+                                    })
+                                    <!-- card -->
+                                    @@include('../components/card/book.html', {
+                                        "badgeClass": "badge-exclusive",
+                                        "badgeText": "Эксклюзив",
+                                        "imgWebp": "img/card-book-cover/08.webp",
+                                        "imgJpg": "img/card-book-cover/08.jpg",
+                                        "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
+                                        "title": "Кукомоя",
+                                        "author": "Полина Луговцова",
+                                        "ratingAverage": "4.9",
+                                        "ratingTotal": "2673",
+                                        "infoFormat": "Аудио",
+                                        "formatIconText": false,
+                                        "formatIconAudio": true,
+                                        "infoPrice": "499 ₽",
+                                        "priceClass": "text-primary"
+                                    })
+                                </div>
+                                <!-- Пагинация -->
+                                <div class="d-flex justify-content-center">
+                                    <nav class="pagination-nav">
+                                        <ul class="pagination-list">
+                                            <li>
+                                                <a href="#" class="pagination-item prev">
+                                                    <span class="me-2">
+                                                        <svg width="13" height="22">
+                                                            <use xlink:href="img/sprite.svg#menu-back"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Назад
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="pagination-item active">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="pagination-item">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="pagination-item">3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="pagination-item">4</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="pagination-item">5</a>
+                                            </li>
+                                            <li>
+                                                <span class="pagination-item dots">...</span>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="pagination-item">10</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="pagination-item next">
+                                                    Дальше
+                                                    <span class="ms-2">
+                                                        <svg width="13" height="22">
+                                                            <use xlink:href="img/sprite.svg#menu-arrow"></use>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Об авторе -->
+                <div class="tab-pane fade" id="nav-about-author" role="tabpanel" tabindex="0">
+                    <section class="section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h2>Об авторе</h2>
+                                    <div>
+                                        <p>Михаил Ланцов – российский писатель, автор фантастики, исторических романов, приключений.</p>
+                                        <h2>Интерес к наукам</h2>
+                                        <p>Михаил Алексеевич Ланцов родился в 1984 году в Москве. Будучи школьником, мальчик проявил способности к математике, увлекся историей, был участником олимпиад, пробовал писать компьютерные программы. После школы он изучал филологию, французский и латинский языки, а также самостоятельно выучил старославянский.</p>
+                                        <p>Увлечение историей помогает писателю при создании литературных произведений. Обширные знания и опыт военно-исторической реконструкции позволяют наполнять романы достоверными данными, которые очень ценят читатели. Свободное время автор посвящает спорту, рыбалке, а также поиску новых интересных исторических фактов.</p>
+                                        <h2>Применение богатого опыта на практике</h2>
+                                        <p>Сейчас на счету писателя десятки книг, многие из которых объединены в отдельные серии:</p>
+                                        <ul>
+                                            <li>«Лжедмитрий»;</li>
+                                            <li>«В вихре времен»;</li>
+                                            <li>«Десантник на престоле»;</li>
+                                            <li>«Маршал» и множество других.</li>
+                                        </ul>
+                                        <p>Герои Михаила Ланцова не только путешествуют во времени, но еще и отстаивают свои убеждения или право на жизнь. Его сюжеты оригинальны и динамичны. Автор создает фэнтези-романы и книги по альтернативной истории. Ему нравится описывать развитие той или иной ситуации, если бы не произошло какое-нибудь случайное и, на первый взгляд, малозначимое событие.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Отзывы об авторе -->
+                <div class="tab-pane fade" id="nav-reviews-about-author" role="tabpanel" tabindex="0">
+                    <section class="section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div id="reviews">
+                                        <div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+                                            <div class="d-flex flex-wrap align-items-baseline gap-2 row-gap-1">
+                                                <h2 class="mb-0">Отзывы</h2>
+                                                <span class="text-muted">12 отзывов</span>
+                                            </div>
+                                            <div>
+                                                <a href="#review-form" class="d-inline-flex align-items-center gap-2">
+                                                    <span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                            <path d="M24 14V1.5H1.5V25.25L6.5 22.125H14" stroke="currentColor" stroke-width="1.71"/>
+                                                            <path d="M6.5 8.375H19" stroke="currentColor" stroke-width="1.71"/>
+                                                            <path d="M6.5 14H15.25" stroke="currentColor" stroke-width="1.71"/>
+                                                            <path d="M27.75 22.125H16.5M22.125 16.5V27.75" stroke="currentColor" stroke-width="1.71"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span>оставить озыв</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- Список отзывов -->
+                                        <div class="reviews-list-wrapper">
+                                            <!-- item -->
+                                            <div>
+                                                <div class="review-item">
+                                                    <div class="review-body">
+                                                        <div class="review-avatar">
+                                                            <img src="img/single-book/commentary-avatar.png" alt="">
+                                                        </div>
+                                                        <div class="review-info">
+                                                            <div class="mb-2">
+                                                                <div class="d-flex align-items-baseline gap-2">
+                                                                    <div>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span class="small text-muted">4/5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex flex-wrap align-items-baseline gap-2 mb-3">
+                                                                <div class="h5 mb-0">Имя Фамилия</div>
+                                                                <div class="small text-muted">12.04.2025</div>
+                                                            </div>
+                                                            <div class="mb-4">
+                                                                <div class="review-text">
+                                                                    <p>Захват виконта Волжского стал поворотным моментом в ходе начавшейся войны. Решаясь на этот шаг, Сергей Белов прекрасно понимал, что действует без приказа и исключительно на свой страх и риск. И вот теперь всё будет зависеть от результатов их совместного рейда в Каинову чащу.</p>
+                                                                </div>
+                                                                <div>
+                                                                    <a href="#" class="fs-6">ответить</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-emotions">
+                                                                <button type="button" class="btn emotion-btn">
+                                                                    <svg class="emotion-btn__icon emotion-dislike" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                        <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M10.875 17.75C10.875 18.5788 11.2042 19.3737 11.7903 19.9597C12.3763 20.5458 13.1712 20.875 14 20.875C14.8288 20.875 15.6237 20.5458 16.2097 19.9597C16.7958 19.3737 17.125 18.5788 17.125 17.75C17.125 16.9212 16.7958 16.1263 16.2097 15.5403C15.6237 14.9542 14.8288 14.625 14 14.625C13.1712 14.625 12.3763 14.9542 11.7903 15.5403C11.2042 16.1263 10.875 16.9212 10.875 17.75Z" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M11.301 7.95001L7.32471 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M7.32373 7.95001L11.3 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M16.6987 7.95001L20.6762 11.9263" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M20.6747 7.95001L16.6997 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                    </svg>
+                                                                    <span class="emotion-btn__count">2</span>
+                                                                </button>
+                                                                <button type="button" class="btn emotion-btn">
+                                                                    <svg class="emotion-btn__icon emotion-like" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                        <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#90DB90" stroke-width="2"/>
+                                                                        <path d="M9.625 9V12.125" stroke="#90DB90" stroke-width="2"/>
+                                                                        <path d="M18.375 9V12.125" stroke="#90DB90" stroke-width="2"/>
+                                                                        <path d="M18.375 15.25C18.375 16.4103 17.9141 17.5231 17.0936 18.3436C16.2731 19.1641 15.1603 19.625 14 19.625C12.8397 19.625 11.7269 19.1641 10.9064 18.3436C10.0859 17.5231 9.625 16.4103 9.625 15.25" stroke="#90DB90" stroke-width="2"/>
+                                                                    </svg>
+                                                                    <span class="emotion-btn__count">11</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- item -->
+                                            <div class="has-thread">
+                                                <div class="review-item">
+                                                    <div class="review-body">
+                                                        <div class="review-avatar">
+                                                            <img src="img/single-book/commentary-avatar.png" alt="">
+                                                        </div>
+                                                        <div class="review-info">
+                                                            <div class="mb-2">
+                                                                <div class="d-flex align-items-baseline gap-2">
+                                                                    <div>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span class="small text-muted">4/5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex flex-wrap align-items-baseline gap-2 mb-3">
+                                                                <div class="h5 mb-0">Имя Фамилия</div>
+                                                                <div class="small text-muted">12.04.2025</div>
+                                                            </div>
+                                                            <div class="mb-4">
+                                                                <div class="review-text">
+                                                                    <p>Книга интересная , сюжет захватывающий , каждый день ожидаю новую главу и расстраиваюсь , когда ее нет. Автору спасибо за новый мир и героев -это книга одна из тех , которую хочется долго читать . Если подготовка к войне настолько интересна, то сама война будет бомба) </p>
+                                                                    <p>Хочется знать, какая тактика у макронов на ближайшее время и пусть уже Эйсон разберется с сектой )</p>
+                                                                </div>
+                                                                <div>
+                                                                    <a href="#" class="fs-6">ответить</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-emotions">
+                                                                <button type="button" class="btn emotion-btn">
+                                                                    <svg class="emotion-btn__icon emotion-dislike" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                        <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M10.875 17.75C10.875 18.5788 11.2042 19.3737 11.7903 19.9597C12.3763 20.5458 13.1712 20.875 14 20.875C14.8288 20.875 15.6237 20.5458 16.2097 19.9597C16.7958 19.3737 17.125 18.5788 17.125 17.75C17.125 16.9212 16.7958 16.1263 16.2097 15.5403C15.6237 14.9542 14.8288 14.625 14 14.625C13.1712 14.625 12.3763 14.9542 11.7903 15.5403C11.2042 16.1263 10.875 16.9212 10.875 17.75Z" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M11.301 7.95001L7.32471 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M7.32373 7.95001L11.3 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M16.6987 7.95001L20.6762 11.9263" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M20.6747 7.95001L16.6997 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                    </svg>
+                                                                    <span class="emotion-btn__count">2</span>
+                                                                </button>
+                                                                <button type="button" class="btn emotion-btn">
+                                                                    <svg class="emotion-btn__icon emotion-like" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                        <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#90DB90" stroke-width="2"/>
+                                                                        <path d="M9.625 9V12.125" stroke="#90DB90" stroke-width="2"/>
+                                                                        <path d="M18.375 9V12.125" stroke="#90DB90" stroke-width="2"/>
+                                                                        <path d="M18.375 15.25C18.375 16.4103 17.9141 17.5231 17.0936 18.3436C16.2731 19.1641 15.1603 19.625 14 19.625C12.8397 19.625 11.7269 19.1641 10.9064 18.3436C10.0859 17.5231 9.625 16.4103 9.625 15.25" stroke="#90DB90" stroke-width="2"/>
+                                                                    </svg>
+                                                                    <span class="emotion-btn__count">11</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="reviews-thread-wrapper">
+                                                    <!-- item -->
+                                                    <div class="review-item">
+                                                        <div class="review-body">
+                                                            <div class="review-avatar">
+                                                                <img src="img/single-book/commentary-avatar.png" alt="">
+                                                            </div>
+                                                            <div class="review-info">
+                                                                <div class="mb-2">
+                                                                    <div class="d-flex align-items-baseline gap-2">
+                                                                        <div>
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                    <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                    <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                    <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                    <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                    <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="small text-muted">4/5</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex flex-wrap align-items-baseline gap-2 mb-3">
+                                                                    <div class="h5 mb-0">Имя Фамилия</div>
+                                                                    <div class="small text-muted">12.04.2025</div>
+                                                                </div>
+                                                                <div class="mb-4">
+                                                                    <div class="review-text">
+                                                                        <p>автором пишется разом несколько книг ( где то соавтором) . Появился опыт как растянуть сюжет :) теперь подробно расписывается  у героя ,как туда, как сюда, что подумал, что придумал, кому сказать, а кому нет , в общем описание подробное каждого дня с утра до вечера :)  книга на 260-270 страниц, еще пара десятков книг  и народ окончательно забыв с чего все началось, забьет и сольется, автор в пару глав все свернет :)</p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="#" class="fs-6">ответить</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="review-emotions">
+                                                                    <button type="button" class="btn emotion-btn">
+                                                                        <svg class="emotion-btn__icon emotion-dislike" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                            <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#A20808" stroke-width="2"/>
+                                                                            <path d="M10.875 17.75C10.875 18.5788 11.2042 19.3737 11.7903 19.9597C12.3763 20.5458 13.1712 20.875 14 20.875C14.8288 20.875 15.6237 20.5458 16.2097 19.9597C16.7958 19.3737 17.125 18.5788 17.125 17.75C17.125 16.9212 16.7958 16.1263 16.2097 15.5403C15.6237 14.9542 14.8288 14.625 14 14.625C13.1712 14.625 12.3763 14.9542 11.7903 15.5403C11.2042 16.1263 10.875 16.9212 10.875 17.75Z" stroke="#A20808" stroke-width="2"/>
+                                                                            <path d="M11.301 7.95001L7.32471 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                            <path d="M7.32373 7.95001L11.3 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                            <path d="M16.6987 7.95001L20.6762 11.9263" stroke="#A20808" stroke-width="2"/>
+                                                                            <path d="M20.6747 7.95001L16.6997 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                        </svg>
+                                                                        <span class="emotion-btn__count">2</span>
+                                                                    </button>
+                                                                    <button type="button" class="btn emotion-btn">
+                                                                        <svg class="emotion-btn__icon emotion-like" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                            <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#90DB90" stroke-width="2"/>
+                                                                            <path d="M9.625 9V12.125" stroke="#90DB90" stroke-width="2"/>
+                                                                            <path d="M18.375 9V12.125" stroke="#90DB90" stroke-width="2"/>
+                                                                            <path d="M18.375 15.25C18.375 16.4103 17.9141 17.5231 17.0936 18.3436C16.2731 19.1641 15.1603 19.625 14 19.625C12.8397 19.625 11.7269 19.1641 10.9064 18.3436C10.0859 17.5231 9.625 16.4103 9.625 15.25" stroke="#90DB90" stroke-width="2"/>
+                                                                        </svg>
+                                                                        <span class="emotion-btn__count">11</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- item -->
+                                            <div>
+                                                <div class="review-item">
+                                                    <div class="review-body">
+                                                        <div class="review-avatar">
+                                                            <img src="img/single-book/commentary-avatar.png" alt="">
+                                                        </div>
+                                                        <div class="review-info">
+                                                            <div class="mb-2">
+                                                                <div class="d-flex align-items-baseline gap-2">
+                                                                    <div>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span class="small text-muted">4/5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex flex-wrap align-items-baseline gap-2 mb-3">
+                                                                <div class="h5 mb-0">Имя Фамилия</div>
+                                                                <div class="small text-muted">12.04.2025</div>
+                                                            </div>
+                                                            <div class="mb-4">
+                                                                <div class="review-text">
+                                                                    <p>автором пишется разом несколько книг ( где то соавтором) . Появился опыт как растянуть сюжет :) теперь подробно расписывается  у героя ,как туда, как сюда, что подумал, что придумал, кому сказать, а кому нет , в общем описание подробное каждого дня с утра до вечера :)  книга на 260-270 страниц, еще пара десятков книг  и народ окончательно забыв с чего все началось, забьет и сольется, автор в пару глав все свернет :)</p>
+                                                                </div>
+                                                                <div>
+                                                                    <a href="#" class="fs-6">ответить</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-emotions">
+                                                                <button type="button" class="btn emotion-btn">
+                                                                    <svg class="emotion-btn__icon emotion-dislike" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                        <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M10.875 17.75C10.875 18.5788 11.2042 19.3737 11.7903 19.9597C12.3763 20.5458 13.1712 20.875 14 20.875C14.8288 20.875 15.6237 20.5458 16.2097 19.9597C16.7958 19.3737 17.125 18.5788 17.125 17.75C17.125 16.9212 16.7958 16.1263 16.2097 15.5403C15.6237 14.9542 14.8288 14.625 14 14.625C13.1712 14.625 12.3763 14.9542 11.7903 15.5403C11.2042 16.1263 10.875 16.9212 10.875 17.75Z" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M11.301 7.95001L7.32471 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M7.32373 7.95001L11.3 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M16.6987 7.95001L20.6762 11.9263" stroke="#A20808" stroke-width="2"/>
+                                                                        <path d="M20.6747 7.95001L16.6997 11.925" stroke="#A20808" stroke-width="2"/>
+                                                                    </svg>
+                                                                    <span class="emotion-btn__count">2</span>
+                                                                </button>
+                                                                <button type="button" class="btn emotion-btn">
+                                                                    <svg class="emotion-btn__icon emotion-like" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                        <path d="M1.5 14C1.5 17.3152 2.81696 20.4946 5.16117 22.8388C7.50537 25.183 10.6848 26.5 14 26.5C17.3152 26.5 20.4946 25.183 22.8388 22.8388C25.183 20.4946 26.5 17.3152 26.5 14C26.5 10.6848 25.183 7.50537 22.8388 5.16117C20.4946 2.81696 17.3152 1.5 14 1.5C10.6848 1.5 7.50537 2.81696 5.16117 5.16117C2.81696 7.50537 1.5 10.6848 1.5 14Z" stroke="#90DB90" stroke-width="2"/>
+                                                                        <path d="M9.625 9V12.125" stroke="#90DB90" stroke-width="2"/>
+                                                                        <path d="M18.375 9V12.125" stroke="#90DB90" stroke-width="2"/>
+                                                                        <path d="M18.375 15.25C18.375 16.4103 17.9141 17.5231 17.0936 18.3436C16.2731 19.1641 15.1603 19.625 14 19.625C12.8397 19.625 11.7269 19.1641 10.9064 18.3436C10.0859 17.5231 9.625 16.4103 9.625 15.25" stroke="#90DB90" stroke-width="2"/>
+                                                                    </svg>
+                                                                    <span class="emotion-btn__count">11</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Написать Отзыв -->
+                                        <div class="reviews-form-wrapper" id="review-form">
+                                            <div class="form-area">
+                                                <h3 class="mb-4">Оставьте отзыв</h3>
+                                                <form action="#" class="form-review">
+                                                    <div class="d-flex align-items-center flex-wrap gap-2 row-gap-1 mb-4">
+                                                        <span>Ваша оценка</span>
+                                                        <div>
+                                                            <div class="coreui-rating"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <textarea class="form-control" name="the-review" minlength="120" id="textareaReview" placeholder="Что думаете об авторе?"></textarea>
+                                                        <div class="form-text">Минимум 120 символов</div>
+                                                    </div>
+                                                    <div>
+                                                        <button type="submit" class="btn btn-secondary btn-lg btn-wide rounded-pill fs-5 fw-medium">Опубликовать</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+</body>
+
+</html>
