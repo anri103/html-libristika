@@ -756,18 +756,26 @@
                                                 <h2 class="mb-0">Отзывы</h2>
                                                 <span class="text-muted">12 отзывов</span>
                                             </div>
-                                            <div>
-                                                <a href="#review-form" class="d-inline-flex align-items-center gap-2">
-                                                    <span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                                            <path d="M24 14V1.5H1.5V25.25L6.5 22.125H14" stroke="currentColor" stroke-width="1.71"/>
-                                                            <path d="M6.5 8.375H19" stroke="currentColor" stroke-width="1.71"/>
-                                                            <path d="M6.5 14H15.25" stroke="currentColor" stroke-width="1.71"/>
-                                                            <path d="M27.75 22.125H16.5M22.125 16.5V27.75" stroke="currentColor" stroke-width="1.71"/>
-                                                        </svg>
-                                                    </span>
-                                                    <span>оставить озыв</span>
-                                                </a>
+                                        </div>
+                                        <!-- Написать Отзыв -->
+                                        <div class="reviews-form-wrapper p-0 mb-4" id="review-form">
+                                            <div class="form-area">
+                                                <h3 class="mb-4">Оставьте отзыв</h3>
+                                                <form action="#" class="form-review">
+                                                    <div class="d-flex align-items-center flex-wrap gap-2 row-gap-1 mb-4">
+                                                        <span>Ваша оценка</span>
+                                                        <div>
+                                                            <div class="coreui-rating"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <textarea class="form-control" name="the-review" minlength="120" id="textareaReview" placeholder="Что думаете об авторе?"></textarea>
+                                                        <div class="form-text">Минимум 120 символов</div>
+                                                    </div>
+                                                    <div>
+                                                        <button type="submit" class="btn btn-secondary btn-lg btn-wide rounded-pill fs-5 fw-medium">Опубликовать</button>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                         <!-- Список отзывов -->
@@ -1094,26 +1102,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Написать Отзыв -->
-                                        <div class="reviews-form-wrapper" id="review-form">
-                                            <div class="form-area">
-                                                <h3 class="mb-4">Оставьте отзыв</h3>
-                                                <form action="#" class="form-review">
-                                                    <div class="d-flex align-items-center flex-wrap gap-2 row-gap-1 mb-4">
-                                                        <span>Ваша оценка</span>
-                                                        <div>
-                                                            <div class="coreui-rating"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-4">
-                                                        <textarea class="form-control" name="the-review" minlength="120" id="textareaReview" placeholder="Что думаете об авторе?"></textarea>
-                                                        <div class="form-text">Минимум 120 символов</div>
-                                                    </div>
-                                                    <div>
-                                                        <button type="submit" class="btn btn-secondary btn-lg btn-wide rounded-pill fs-5 fw-medium">Опубликовать</button>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button type="button" class="btn btn-secondary btn-lg rounded-pill">Показать еще</button>
                                         </div>
                                     </div>
                                 </div>
