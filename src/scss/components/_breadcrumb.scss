@@ -10,12 +10,18 @@
     
     .breadcrumb {
         --cui-breadcrumb-margin-bottom: 0;
+        display: block;
     }
 }
 
 .breadcrumb-item {
+    display: inline;
     font-size: 1rem;
     font-weight: 400;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: inherit;
 }
 
 .breadcrumb-item.active {

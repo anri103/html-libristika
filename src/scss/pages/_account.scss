@@ -643,6 +643,8 @@
     }
 
     .notification-item {
+        --cui-success-rgb: 241, 247, 240;
+        --cui-info-rgb: 226, 233, 238;
         padding: 24px;
         border-radius: 10px;
         background-color: #fff;

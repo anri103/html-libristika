@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Theme: Libristika
  * Author: Andrew G
@@ -54,7 +55,7 @@
   --theme-ff-title: "Spectral", serif;
   --cui-primary: #566b61;
   --cui-secondary: #b4664c;
-  --cui-success: #f1f7f0;
+  --cui-success: #1ab86d;
   --cui-info: #e2e9ee;
   --cui-warning: #ffc107;
   --cui-danger: #fbf4f3;
@@ -62,7 +63,7 @@
   --cui-dark: #212529;
   --cui-primary-rgb: 86, 107, 97;
   --cui-secondary-rgb: 180, 102, 76;
-  --cui-success-rgb: 241, 247, 240;
+  --cui-success-rgb: 26, 184, 109;
   --cui-info-rgb: 226, 233, 238;
   --cui-warning-rgb: 255, 193, 7;
   --cui-danger-rgb: 251, 244, 243;
@@ -1040,48 +1041,168 @@ label {
   height: 32px;
   right: 6px;
 }
+.main-search__static {
+  padding: 8px 0;
+}
+.main-search__static .search-group {
+  padding: 12px 0;
+}
+.main-search__static .search-group .horizontal-list {
+  display: block;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+}
+.main-search__static .search-group .horizontal-list li {
+  display: inline;
+}
+.main-search__static .search-group .horizontal-list li:not(:first-of-type) {
+  padding-left: 4px;
+}
+.main-search__static .search-group .horizontal-list li::before {
+  content: "•";
+  padding-right: 8px;
+  color: #6A6969;
+}
+.main-search__static .search-group .search-tag-item {
+  --cui-btn-color: #1F3326;
+  --cui-btn-border-color: #D9D9D9;
+  --cui-btn-hover-color: #080a0c;
+  --cui-btn-hover-bg: #f3f4f7;
+  --cui-btn-hover-border-color: #f3f4f7;
+  --cui-btn-focus-shadow-rgb: 243, 244, 247;
+  --cui-btn-active-color: #080a0c;
+  --cui-btn-active-bg: #D9D9D9;
+  --cui-btn-active-border-color: #D9D9D9;
+  --cui-btn-active-shadow: inset 0 3px 5px rgba(8, 10, 12, 0.125);
+  --cui-btn-disabled-color: #D9D9D9;
+  --cui-btn-disabled-bg: transparent;
+  --cui-btn-disabled-border-color: #D9D9D9;
+  --cui-gradient: none;
+}
 .main-search__results {
   --cui-link-hover-color-rgb: 31, 51, 38;
   --cui-link-color-rgb: 106, 105, 105;
-  padding: 8px 0;
+  padding: 10px 0;
+}
+.main-search__results .tab-navigation {
+  margin: 10px 0;
+}
+.main-search__results .tab-navigation .nav {
+  gap: 8px;
+}
+.main-search__results .tab-navigation .nav-pills {
+  --cui-nav-pills-link-active-color: rgba(255, 255, 255, 0.97);
+  --cui-nav-pills-link-active-bg: #1F3326;
+}
+.main-search__results .tab-navigation .nav-pills .nav-link {
+  border: 1px solid #D9D9D9;
+}
+.main-search__results .tab-navigation .nav-pills .nav-link.active {
+  border-color: #1F3326;
 }
 .main-search__results .search-group {
-  padding: 12px 0;
+  padding: 10px 0;
 }
 .main-search__results .search-group__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 14px;
+}
+.main-search__results .search-group__list .search-item {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #D9D9D9;
 }
 .main-search__results .search-item {
   position: relative;
-  display: block;
-}
-.main-search__results .search-item__body {
-  display: flex;
-}
-.main-search__results .search-item__media {
-  flex: 0 0 auto;
-  width: 75px;
-  max-width: 100%;
-  margin-right: 14px;
+  display: grid;
+  grid-template-columns: 78px auto max-content;
+  gap: 12px;
 }
 .main-search__results .search-item__media img {
   max-width: 100%;
   width: 100%;
   height: auto;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08), 5px 74px 29px 0px rgba(0, 0, 0, 0.01), 3px 41px 25px 0px rgba(0, 0, 0, 0.04), 1px 18px 18px 0px rgba(0, 0, 0, 0.07), 8px 115px 32px 0px rgba(0, 0, 0, 0);
 }
-.main-search__results .search-item__meta {
-  flex: 1 0 0;
-  width: 100%;
-  max-width: 100%;
+.main-search__results .search-item__meta .item-title {
+  --cui-link-color-rgb: 31, 51, 38;
+  --cui-link-hover-color-rgb: 86, 107, 97;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: var(--theme-ff-title);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 .main-search__results .search-item__meta .item-author {
-  font-size: 0.875em;
+  color: #566B61;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
 }
-.main-search__results .search-item__meta .item-price {
+.main-search__results .search-item__meta .item-rating {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.main-search__results .search-item__meta .item-rating__average {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
   font-weight: 500;
-  margin-top: 16px;
+}
+.main-search__results .search-item__meta .item-rating__total {
+  color: #9B9B9B;
+}
+.main-search__results .search-item__meta .item-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+.main-search__results .search-item__meta .item-info__format {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.main-search__results .search-item__meta .item-info__price {
+  color: #566B61;
+  font-size: 16px;
+}
+.main-search__results .search-item__meta .item-info__badge {
+  --cui-light-rgb: 249, 249, 249;
+  --cui-secondary-rgb: 195, 132, 111;
+}
+.main-search__results .search-item__meta .item-info__badge .badge {
+  --cui-badge-font-size: 12px;
+  --cui-badge-font-weight: 500;
+}
+.main-search__results .search-item__meta .item-info__badge .badge.text-bg-light {
+  color: #566B61 !important;
+}
+.main-search__results .search-item.series .search-item__media img {
+  box-shadow: none;
+}
+.main-search__results .search-item.author .search-item__media img {
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: none;
+}
+@media (max-width: 767px) {
+  .main-search__results .search-item {
+    grid-template-columns: 62px auto max-content;
+    gap: 8px;
+  }
 }
 
 /*------------------------------------------------------------------
@@ -1276,11 +1397,17 @@ label {
 }
 .section__navigation .breadcrumb {
   --cui-breadcrumb-margin-bottom: 0;
+  display: block;
 }
 
 .breadcrumb-item {
+  display: inline;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: inherit;
 }
 
 .breadcrumb-item.active {
@@ -2510,6 +2637,8 @@ label {
   gap: 16px;
 }
 .account-notifications .notification-item {
+  --cui-success-rgb: 241, 247, 240;
+  --cui-info-rgb: 226, 233, 238;
   padding: 24px;
   border-radius: 10px;
   background-color: #fff;
