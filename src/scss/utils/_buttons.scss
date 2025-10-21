@@ -183,3 +183,14 @@
     --cui-btn-box-shadow: none;
     --cui-btn-focus-shadow-rgb: 113.05, 111.35, 220.15;
 }
+
+.btn-w-100 {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    
+    .btn-w-lg-auto {
+        width: auto;
+    }
+}
