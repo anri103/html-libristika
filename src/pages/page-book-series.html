@@ -4,7 +4,7 @@
 @@include('../components/head.html', {
     "description": "",
     "keywords": "",
-    "title": "Публичная страница автора",
+    "title": "Публичная страница серии книг",
 })
 
 <body>
@@ -22,62 +22,82 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Страница автора</li>
+                        <li class="breadcrumb-item active" aria-current="page">Страница серии книг</li>
                     </ol>
                 </nav>
             </div>
         </section>
 
-        <!-- section__about-author -->
-        <section class="section section__about-author">
+        <section class="section">
             <div class="container">
-                <div class="row gy-3">
-
-                    <div class="col-lg-auto">
-                        <div class="avatar-wrapper">
-                            <div class="avatar-preview">
-                                <img class="avatar-img" src="img/user/account-avatar-xl.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg">
-                        <div class="account-age">
-                            <div><span>зарегистрирован</span> 21.08.2007</div>
-                        </div>
-                        <div class="account-name">
-                            <h1>Константин Длиннаяфамилия</h1>
-                            <span class="account-verify">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
-                                    <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
-                                    <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.00114"/>
+                <!-- Рейтинг -->
+                <div class="mb-3">
+                    <div class="d-flex align-items-baseline gap-2">
+                        <div>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                                    <path d="M5.0202 0.685834C5.12544 0.359515 5.58712 0.359515 5.69236 0.685834L6.69689 3.80063C6.74403 3.94677 6.88019 4.0457 7.03375 4.04536L10.3065 4.03821C10.6494 4.03746 10.792 4.47655 10.5142 4.67747L7.86229 6.59537C7.73787 6.68535 7.68586 6.84543 7.73363 6.99136L8.75177 10.1017C8.85843 10.4276 8.48493 10.699 8.20798 10.4968L5.56446 8.56735C5.44043 8.47683 5.27212 8.47683 5.14809 8.56735L2.50458 10.4968C2.22763 10.699 1.85412 10.4276 1.96078 10.1017L2.97893 6.99136C3.0267 6.84543 2.97468 6.68535 2.85026 6.59537L0.198336 4.67747C-0.0794905 4.47655 0.0631773 4.03746 0.406045 4.03821L3.67881 4.04536C3.83236 4.0457 3.96853 3.94677 4.01566 3.80063L5.0202 0.685834Z" fill="#C3846F"/>
+                                </svg>
+                            </span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                                    <path d="M5.0202 0.685834C5.12544 0.359515 5.58712 0.359515 5.69236 0.685834L6.69689 3.80063C6.74403 3.94677 6.88019 4.0457 7.03375 4.04536L10.3065 4.03821C10.6494 4.03746 10.792 4.47655 10.5142 4.67747L7.86229 6.59537C7.73787 6.68535 7.68586 6.84543 7.73363 6.99136L8.75177 10.1017C8.85843 10.4276 8.48493 10.699 8.20798 10.4968L5.56446 8.56735C5.44043 8.47683 5.27212 8.47683 5.14809 8.56735L2.50458 10.4968C2.22763 10.699 1.85412 10.4276 1.96078 10.1017L2.97893 6.99136C3.0267 6.84543 2.97468 6.68535 2.85026 6.59537L0.198336 4.67747C-0.0794905 4.47655 0.0631773 4.03746 0.406045 4.03821L3.67881 4.04536C3.83236 4.0457 3.96853 3.94677 4.01566 3.80063L5.0202 0.685834Z" fill="#C3846F"/>
+                                </svg>
+                            </span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                                    <path d="M5.0202 0.685834C5.12544 0.359515 5.58712 0.359515 5.69236 0.685834L6.69689 3.80063C6.74403 3.94677 6.88019 4.0457 7.03375 4.04536L10.3065 4.03821C10.6494 4.03746 10.792 4.47655 10.5142 4.67747L7.86229 6.59537C7.73787 6.68535 7.68586 6.84543 7.73363 6.99136L8.75177 10.1017C8.85843 10.4276 8.48493 10.699 8.20798 10.4968L5.56446 8.56735C5.44043 8.47683 5.27212 8.47683 5.14809 8.56735L2.50458 10.4968C2.22763 10.699 1.85412 10.4276 1.96078 10.1017L2.97893 6.99136C3.0267 6.84543 2.97468 6.68535 2.85026 6.59537L0.198336 4.67747C-0.0794905 4.47655 0.0631773 4.03746 0.406045 4.03821L3.67881 4.04536C3.83236 4.0457 3.96853 3.94677 4.01566 3.80063L5.0202 0.685834Z" fill="#C3846F"/>
+                                </svg>
+                            </span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                                    <path d="M5.0202 0.685834C5.12544 0.359515 5.58712 0.359515 5.69236 0.685834L6.69689 3.80063C6.74403 3.94677 6.88019 4.0457 7.03375 4.04536L10.3065 4.03821C10.6494 4.03746 10.792 4.47655 10.5142 4.67747L7.86229 6.59537C7.73787 6.68535 7.68586 6.84543 7.73363 6.99136L8.75177 10.1017C8.85843 10.4276 8.48493 10.699 8.20798 10.4968L5.56446 8.56735C5.44043 8.47683 5.27212 8.47683 5.14809 8.56735L2.50458 10.4968C2.22763 10.699 1.85412 10.4276 1.96078 10.1017L2.97893 6.99136C3.0267 6.84543 2.97468 6.68535 2.85026 6.59537L0.198336 4.67747C-0.0794905 4.47655 0.0631773 4.03746 0.406045 4.03821L3.67881 4.04536C3.83236 4.0457 3.96853 3.94677 4.01566 3.80063L5.0202 0.685834Z" fill="#C3846F"/>
+                                </svg>
+                            </span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+                                    <path d="M5.87029 0.685712C5.97553 0.359393 6.43722 0.359393 6.54246 0.685712L7.54699 3.8005C7.59412 3.94664 7.73029 4.04558 7.88385 4.04524L11.1566 4.03809C11.4995 4.03734 11.6421 4.47643 11.3643 4.67735L8.71239 6.59525C8.58797 6.68523 8.53596 6.84531 8.58372 6.99124L9.60187 10.1016C9.70853 10.4275 9.33502 10.6988 9.05808 10.4967L6.41456 8.56723C6.29053 8.4767 6.12222 8.4767 5.99819 8.56723L3.35467 10.4967C3.07773 10.6988 2.70422 10.4275 2.81088 10.1016L3.82902 6.99124C3.87679 6.84531 3.82478 6.68523 3.70036 6.59525L1.04843 4.67735C0.770607 4.47643 0.913275 4.03734 1.25614 4.03809L4.52891 4.04524C4.68246 4.04558 4.81863 3.94664 4.86576 3.8005L5.87029 0.685712Z" fill="#D6D6D4"/>
                                 </svg>
                             </span>
                         </div>
-                        <div class="d-flex flex-wrap align-items-baseline justify-content-center justify-content-lg-start gap-2 row-gap-1 mb-3">
-                            <span>жанры</span>
-                            <span class="fs-5 text-secondary">Фантастика, Фентези</span>
-                        </div>
-                        <div class="d-flex flex-wrap align-items-baseline justify-content-center justify-content-lg-start gap-2 row-gap-1 mb-3">
-                            <span>подписчики</span>
-                            <span class="fs-5 text-secondary">2,1 к</span>
-                        </div>
-                        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 row-gap-0 mt-4 mb-4">
-                            <a href="#" class="btn btn-primary btn-lg rounded-pill">
-                                <span>подписаться на автора</span>
-                            </a>
-                            <a href="#" class="btn btn-text btn-lg rounded-pill">
-                                <span class="fs-6">сообщить о нарушении</span>
-                                <span> 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8" fill="none">
-                                        <path xmlns="http://www.w3.org/2000/svg" d="M1 0.5L5 4L1 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-                            </a>
+                        <div>
+                            <a href="#reviews">12 отзывов</a>
                         </div>
                     </div>
-
+                </div>
+                <!-- Название серии книг -->
+                <div class="d-flex flex-wrap align-items-baseline gap-2 mb-3">
+                    <h1 class="mb-0">Серия «Название серии книг»</h1>
+                    <span class="text-muted">16+</span>
+                </div>
+                <!-- Автор -->
+                <div class="mb-3">
+                    <span>автор</span> <a href="#" class="fs-6 link-secondary">Имя Фамилия</a>
+                </div>
+                <!-- Краткое описание -->
+                <div class="mb-3">
+                    <div style="max-width: 575px;">
+                        <div class="collapse-text">
+                            <p>Захват виконта Волжского стал поворотным моментом в ходе начавшейся войны. Решаясь на этот шаг, Сергей Белов прекрасно понимал, что действует без приказа и исключительно на свой страх и риск. И вот теперь всё будет зависеть от результатов их совместного рейда в Каинову чащу...</p>
+                        </div>
+                        <!-- <button type="button" class="btn btn-text px-0">
+                            <span>читать</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+                                    <path xmlns="http://www.w3.org/2000/svg" d="M8 1L4.5 5L1 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button> -->
+                    </div>
+                </div>
+                <!-- Кнопки -->
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 row-gap-0 mt-4 mb-4">
+                    <a href="#" class="btn btn-primary btn-lg rounded-pill">
+                        <span class="fs-6">купить все книги за 3 499 ₽</span>
+                    </a>
+                    <a href="#" class="btn btn-light-shadow btn-lg rounded-pill">
+                        <span class="fs-6">купить все аудиокниги за 4 499 ₽</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -87,9 +107,9 @@
             <div class="container">
                 <nav class="mb-0">
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <button type="button" class="nav-link active" data-coreui-toggle="tab" data-coreui-target="#nav-author-books" role="tab" aria-controls="nav-author-books" aria-selected="true">Книги</button>
-                        <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-about-author" role="tab" aria-controls="nav-about-author" aria-selected="false">Об авторе</button>
-                        <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-reviews-about-author" role="tab" aria-controls="nav-reviews-about-author" aria-selected="false">Отзывы об авторе</button>
+                        <button type="button" class="nav-link active" data-coreui-toggle="tab" data-coreui-target="#nav-author-books" role="tab" aria-controls="nav-author-books" aria-selected="true">Книги серии</button>
+                        <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-about-author" role="tab" aria-controls="nav-about-author" aria-selected="false">Описание серии</button>
+                        <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-reviews-about-author" role="tab" aria-controls="nav-reviews-about-author" aria-selected="false">Отзывы о серии книг</button>
                     </div>
                 </nav>
             </div>
@@ -99,374 +119,9 @@
                 <!-- Книги -->
                 <div class="tab-pane fade show active" id="nav-author-books" role="tabpanel" tabindex="0">
 
-                    <!-- section__slider-items -->
-                    <section class="section section__slider-items">
-                        <div class="container">
-                            <!-- Title -->
-                            <div class="section-heading d-flex flex-wrap align-items-baseline gap-3 row-gap-1">
-                                <h2 class="section-title">Популярные книги автора</h2>
-                                <span class="text-muted">16 книг</span>
-                            </div>
-                            <!-- Content -->
-                            <div class="section-body">
-                                <div class="swiper swiperCards swiperBestsellerItems">
-                                    <div class="swiper-wrapper">
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-exclusive",
-                                                "badgeText": "Эксклюзив",
-                                                "imgWebp": "img/card-book-cover/01.webp",
-                                                "imgJpg": "img/card-book-cover/01.jpg",
-                                                "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
-                                                "title": "Девушка с татуировкой дракона",
-                                                "author": "Стиг Ларссон",
-                                                "ratingAverage": "4.8",
-                                                "ratingTotal": "12",
-                                                "infoFormat": "Текстовая книга с аудиоверсией",
-                                                "formatIconText": true,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "бесплатно",
-                                                "priceClass": "text-success"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-new",
-                                                "badgeText": "Новинка",
-                                                "imgWebp": "img/card-book-cover/03.webp",
-                                                "imgJpg": "img/card-book-cover/03.jpg",
-                                                "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
-                                                "title": "Тайна мертвого ректора. Книга 2",
-                                                "author": "Виктор Дашкевич",
-                                                "ratingAverage": "4.7",
-                                                "ratingTotal": "413",
-                                                "infoFormat": "Текстовая книга с аудиоверсией",
-                                                "formatIconText": true,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-exclusive",
-                                                "badgeText": "Эксклюзив",
-                                                "imgWebp": "img/card-book-cover/05.webp",
-                                                "imgJpg": "img/card-book-cover/05.jpg",
-                                                "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
-                                                "title": "Ведьмак: Сезон гроз. Дорога без возврата",
-                                                "author": "Анджей Сапковский",
-                                                "ratingAverage": "5",
-                                                "ratingTotal": "1",
-                                                "infoFormat": "Текстовая книга",
-                                                "formatIconText": true,
-                                                "formatIconAudio": false,
-                                                "infoPrice": "1 700 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-exclusive",
-                                                "badgeText": "Эксклюзив",
-                                                "imgWebp": "img/card-book-cover/07.webp",
-                                                "imgJpg": "img/card-book-cover/07.jpg",
-                                                "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
-                                                "title": "Дом лжи",
-                                                "author": "Дэвид Эллис",
-                                                "ratingAverage": "4.8",
-                                                "ratingTotal": "2616",
-                                                "infoFormat": "Текстовая книга с аудиоверсией",
-                                                "formatIconText": true,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-exclusive",
-                                                "badgeText": "Эксклюзив",
-                                                "imgWebp": "img/card-book-cover/08.webp",
-                                                "imgJpg": "img/card-book-cover/08.jpg",
-                                                "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
-                                                "title": "Кукомоя",
-                                                "author": "Полина Луговцова",
-                                                "ratingAverage": "4.9",
-                                                "ratingTotal": "2673",
-                                                "infoFormat": "Аудио",
-                                                "formatIconText": false,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-exclusive",
-                                                "badgeText": "Эксклюзив",
-                                                "imgWebp": "img/card-book-cover/01.webp",
-                                                "imgJpg": "img/card-book-cover/01.jpg",
-                                                "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
-                                                "title": "Девушка с татуировкой дракона",
-                                                "author": "Стиг Ларссон",
-                                                "ratingAverage": "4.8",
-                                                "ratingTotal": "12",
-                                                "infoFormat": "Текстовая книга с аудиоверсией",
-                                                "formatIconText": true,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "бесплатно",
-                                                "priceClass": "text-success"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-new",
-                                                "badgeText": "Новинка",
-                                                "imgWebp": "img/card-book-cover/03.webp",
-                                                "imgJpg": "img/card-book-cover/03.jpg",
-                                                "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
-                                                "title": "Тайна мертвого ректора. Книга 2",
-                                                "author": "Виктор Дашкевич",
-                                                "ratingAverage": "4.7",
-                                                "ratingTotal": "413",
-                                                "infoFormat": "Текстовая книга с аудиоверсией",
-                                                "formatIconText": true,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-exclusive",
-                                                "badgeText": "Эксклюзив",
-                                                "imgWebp": "img/card-book-cover/05.webp",
-                                                "imgJpg": "img/card-book-cover/05.jpg",
-                                                "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
-                                                "title": "Ведьмак: Сезон гроз. Дорога без возврата",
-                                                "author": "Анджей Сапковский",
-                                                "ratingAverage": "5",
-                                                "ratingTotal": "1",
-                                                "infoFormat": "Текстовая книга",
-                                                "formatIconText": true,
-                                                "formatIconAudio": false,
-                                                "infoPrice": "1 700 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-exclusive",
-                                                "badgeText": "Эксклюзив",
-                                                "imgWebp": "img/card-book-cover/07.webp",
-                                                "imgJpg": "img/card-book-cover/07.jpg",
-                                                "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
-                                                "title": "Дом лжи",
-                                                "author": "Дэвид Эллис",
-                                                "ratingAverage": "4.8",
-                                                "ratingTotal": "2616",
-                                                "infoFormat": "Текстовая книга с аудиоверсией",
-                                                "formatIconText": true,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-exclusive",
-                                                "badgeText": "Эксклюзив",
-                                                "imgWebp": "img/card-book-cover/08.webp",
-                                                "imgJpg": "img/card-book-cover/08.jpg",
-                                                "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
-                                                "title": "Кукомоя",
-                                                "author": "Полина Луговцова",
-                                                "ratingAverage": "4.9",
-                                                "ratingTotal": "2673",
-                                                "infoFormat": "Аудио",
-                                                "formatIconText": false,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-            
-                    <!-- section__slider-items -->
-                    <section class="section section__slider-items">
-                        <div class="container">
-                            <!-- Title -->
-                            <div class="section-heading d-flex flex-wrap align-items-baseline gap-3 row-gap-1">
-                                <h2 class="section-title">Популярные аудиокниги автора</h2>
-                                <span class="text-muted">4 книги</span>
-                            </div>
-                            <!-- Content -->
-                            <div class="section-body">
-                                <div class="swiper swiperCards swiperBestsellerAudioItems">
-                                    <div class="swiper-wrapper">
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-bestseller",
-                                                "badgeText": "Хит продаж",
-                                                "imgWebp": "img/card-book-cover/02.webp",
-                                                "imgJpg": "img/card-book-cover/02.jpg",
-                                                "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
-                                                "title": "Ведьмак в озвучке Всеволода Кузнецова",
-                                                "author": "Анджей Сапковский",
-                                                "ratingAverage": "4.8",
-                                                "ratingTotal": "229",
-                                                "infoFormat": "Аудио",
-                                                "formatIconText": false,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "",
-                                                "badgeText": "",
-                                                "imgWebp": "img/card-book-cover/04.webp",
-                                                "imgJpg": "img/card-book-cover/04.jpg",
-                                                "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
-                                                "title": "Тайна мертвого ректора. Книга 1",
-                                                "author": "Виктор Дашкевич",
-                                                "ratingAverage": "4.7",
-                                                "ratingTotal": "910",
-                                                "infoFormat": "Аудио",
-                                                "formatIconText": false,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-exclusive",
-                                                "badgeText": "Эксклюзив",
-                                                "imgWebp": "img/card-book-cover/06.webp",
-                                                "imgJpg": "img/card-book-cover/06.jpg",
-                                                "imgAlt": "АтакА. Anne Dar. Либристика.",
-                                                "title": "АтакА",
-                                                "author": "Anne Dar",
-                                                "ratingAverage": "4.9",
-                                                "ratingTotal": "92",
-                                                "infoFormat": "Текстовая книга с аудиоверсией",
-                                                "formatIconText": true,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-bestseller",
-                                                "badgeText": "Хит продаж",
-                                                "imgWebp": "img/card-book-cover/02.webp",
-                                                "imgJpg": "img/card-book-cover/02.jpg",
-                                                "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
-                                                "title": "Ведьмак в озвучке Всеволода Кузнецова",
-                                                "author": "Анджей Сапковский",
-                                                "ratingAverage": "4.8",
-                                                "ratingTotal": "229",
-                                                "infoFormat": "Аудио",
-                                                "formatIconText": false,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "",
-                                                "badgeText": "",
-                                                "imgWebp": "img/card-book-cover/04.webp",
-                                                "imgJpg": "img/card-book-cover/04.jpg",
-                                                "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
-                                                "title": "Тайна мертвого ректора. Книга 1",
-                                                "author": "Виктор Дашкевич",
-                                                "ratingAverage": "4.7",
-                                                "ratingTotal": "910",
-                                                "infoFormat": "Аудио",
-                                                "formatIconText": false,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                        <!-- slide -->
-                                        <div class="swiper-slide">
-                                            <!-- card -->
-                                            @@include('../components/card/book.html', {
-                                                "badgeClass": "badge-exclusive",
-                                                "badgeText": "Эксклюзив",
-                                                "imgWebp": "img/card-book-cover/06.webp",
-                                                "imgJpg": "img/card-book-cover/06.jpg",
-                                                "imgAlt": "АтакА. Anne Dar. Либристика.",
-                                                "title": "АтакА",
-                                                "author": "Anne Dar",
-                                                "ratingAverage": "4.9",
-                                                "ratingTotal": "92",
-                                                "infoFormat": "Текстовая книга с аудиоверсией",
-                                                "formatIconText": true,
-                                                "formatIconAudio": true,
-                                                "infoPrice": "499 ₽",
-                                                "priceClass": "text-primary"
-                                            })
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
                     <!-- section__author-books-list -->
                     <section class="section section__author-books-list">
                         <div class="container">
-                            <!-- Title -->
-                            <div class="section-heading d-flex flex-wrap align-items-baseline gap-3 row-gap-1">
-                                <h2 class="section-title">Все книги автора</h2>
-                                <span class="text-muted">124 книги</span>
-                            </div>
                             <!-- Content -->
                             <div class="section-body">
                                 <!-- Сортировка 1 -->
@@ -480,11 +135,6 @@
                                         <input type="radio" class="btn-check" name="author-type-of-book" id="radioAuthorTypeOfBookAudio" autocomplete="off">
                                         <label class="btn btn-light-shadow" for="radioAuthorTypeOfBookAudio">
                                             <span class="small">Аудио</span>
-                                        </label>
-    
-                                        <input type="radio" class="btn-check" name="author-type-of-book" id="radioAuthorTypeOfBookCycle" autocomplete="off">
-                                        <label class="btn btn-light-shadow" for="radioAuthorTypeOfBookCycle">
-                                            <span class="small">Циклы</span>
                                         </label>
                                     </div>
                                 </div>
@@ -716,13 +366,13 @@
 
                 </div>
 
-                <!-- Об авторе -->
+                <!-- Описание серии -->
                 <div class="tab-pane fade" id="nav-about-author" role="tabpanel" tabindex="0">
                     <section class="section">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <h2>Об авторе</h2>
+                                    <h2>О серии книг «Название серии книг»</h2>
                                     <div>
                                         <p>Михаил Ланцов – российский писатель, автор фантастики, исторических романов, приключений.</p>
                                         <h2>Интерес к наукам</h2>
@@ -1116,6 +766,375 @@
 
         </div>
 
+        <!-- section__slider-items -->
+        <section class="section section__slider-items">
+            <div class="container">
+                <!-- Title -->
+                <div class="section-heading">
+                    <h2 class="section-title">С этим читают</h2>
+                    <a href="#" class="heading-link">
+                        <span>ещё</span>
+                        <svg class="inline-icon icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8" fill="none">
+                            <path d="M1 0.5L5 4L1 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- Content -->
+                <div class="section-body">
+                    <div class="swiper swiperCards swiperNewItems">
+                        <div class="swiper-wrapper">
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-exclusive",
+                                    "badgeText": "Эксклюзив",
+                                    "imgWebp": "img/card-book-cover/01.webp",
+                                    "imgJpg": "img/card-book-cover/01.jpg",
+                                    "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
+                                    "title": "Девушка с татуировкой дракона",
+                                    "author": "Стиг Ларссон",
+                                    "ratingAverage": "4.8",
+                                    "ratingTotal": "12",
+                                    "infoFormat": "Текстовая книга с аудиоверсией",
+                                    "formatIconText": true,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "бесплатно",
+                                    "priceClass": "text-success"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-bestseller",
+                                    "badgeText": "Хит продаж",
+                                    "imgWebp": "img/card-book-cover/02.webp",
+                                    "imgJpg": "img/card-book-cover/02.jpg",
+                                    "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
+                                    "title": "Ведьмак в озвучке Всеволода Кузнецова",
+                                    "author": "Анджей Сапковский",
+                                    "ratingAverage": "4.8",
+                                    "ratingTotal": "229",
+                                    "infoFormat": "Аудио",
+                                    "formatIconText": false,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-new",
+                                    "badgeText": "Новинка",
+                                    "imgWebp": "img/card-book-cover/03.webp",
+                                    "imgJpg": "img/card-book-cover/03.jpg",
+                                    "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
+                                    "title": "Тайна мертвого ректора. Книга 2",
+                                    "author": "Виктор Дашкевич",
+                                    "ratingAverage": "4.7",
+                                    "ratingTotal": "413",
+                                    "infoFormat": "Текстовая книга с аудиоверсией",
+                                    "formatIconText": true,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "",
+                                    "badgeText": "",
+                                    "imgWebp": "img/card-book-cover/04.webp",
+                                    "imgJpg": "img/card-book-cover/04.jpg",
+                                    "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
+                                    "title": "Тайна мертвого ректора. Книга 1",
+                                    "author": "Виктор Дашкевич",
+                                    "ratingAverage": "4.7",
+                                    "ratingTotal": "910",
+                                    "infoFormat": "Аудио",
+                                    "formatIconText": false,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-exclusive",
+                                    "badgeText": "Эксклюзив",
+                                    "imgWebp": "img/card-book-cover/05.webp",
+                                    "imgJpg": "img/card-book-cover/05.jpg",
+                                    "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
+                                    "title": "Ведьмак: Сезон гроз. Дорога без возврата",
+                                    "author": "Анджей Сапковский",
+                                    "ratingAverage": "5",
+                                    "ratingTotal": "1",
+                                    "infoFormat": "Текстовая книга",
+                                    "formatIconText": true,
+                                    "formatIconAudio": false,
+                                    "infoPrice": "1 700 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-exclusive",
+                                    "badgeText": "Эксклюзив",
+                                    "imgWebp": "img/card-book-cover/06.webp",
+                                    "imgJpg": "img/card-book-cover/06.jpg",
+                                    "imgAlt": "АтакА. Anne Dar. Либристика.",
+                                    "title": "АтакА",
+                                    "author": "Anne Dar",
+                                    "ratingAverage": "4.9",
+                                    "ratingTotal": "92",
+                                    "infoFormat": "Текстовая книга с аудиоверсией",
+                                    "formatIconText": true,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-exclusive",
+                                    "badgeText": "Эксклюзив",
+                                    "imgWebp": "img/card-book-cover/07.webp",
+                                    "imgJpg": "img/card-book-cover/07.jpg",
+                                    "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
+                                    "title": "Дом лжи",
+                                    "author": "Дэвид Эллис",
+                                    "ratingAverage": "4.8",
+                                    "ratingTotal": "2616",
+                                    "infoFormat": "Текстовая книга с аудиоверсией",
+                                    "formatIconText": true,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-exclusive",
+                                    "badgeText": "Эксклюзив",
+                                    "imgWebp": "img/card-book-cover/08.webp",
+                                    "imgJpg": "img/card-book-cover/08.jpg",
+                                    "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
+                                    "title": "Кукомоя",
+                                    "author": "Полина Луговцова",
+                                    "ratingAverage": "4.9",
+                                    "ratingTotal": "2673",
+                                    "infoFormat": "Аудио",
+                                    "formatIconText": false,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section__slider-items -->
+        <section class="section section__slider-items">
+            <div class="container">
+                <!-- Title -->
+                <div class="section-heading">
+                    <h2 class="section-title">Другие книги автора</h2>
+                    <a href="#" class="heading-link">
+                        <span>ещё</span>
+                        <svg class="inline-icon icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8" fill="none">
+                            <path d="M1 0.5L5 4L1 7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- Content -->
+                <div class="section-body">
+                    <div class="swiper swiperCards swiperNewItems">
+                        <div class="swiper-wrapper">
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-exclusive",
+                                    "badgeText": "Эксклюзив",
+                                    "imgWebp": "img/card-book-cover/01.webp",
+                                    "imgJpg": "img/card-book-cover/01.jpg",
+                                    "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
+                                    "title": "Девушка с татуировкой дракона",
+                                    "author": "Стиг Ларссон",
+                                    "ratingAverage": "4.8",
+                                    "ratingTotal": "12",
+                                    "infoFormat": "Текстовая книга с аудиоверсией",
+                                    "formatIconText": true,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "бесплатно",
+                                    "priceClass": "text-success"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-bestseller",
+                                    "badgeText": "Хит продаж",
+                                    "imgWebp": "img/card-book-cover/02.webp",
+                                    "imgJpg": "img/card-book-cover/02.jpg",
+                                    "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
+                                    "title": "Ведьмак в озвучке Всеволода Кузнецова",
+                                    "author": "Анджей Сапковский",
+                                    "ratingAverage": "4.8",
+                                    "ratingTotal": "229",
+                                    "infoFormat": "Аудио",
+                                    "formatIconText": false,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-new",
+                                    "badgeText": "Новинка",
+                                    "imgWebp": "img/card-book-cover/03.webp",
+                                    "imgJpg": "img/card-book-cover/03.jpg",
+                                    "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
+                                    "title": "Тайна мертвого ректора. Книга 2",
+                                    "author": "Виктор Дашкевич",
+                                    "ratingAverage": "4.7",
+                                    "ratingTotal": "413",
+                                    "infoFormat": "Текстовая книга с аудиоверсией",
+                                    "formatIconText": true,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "",
+                                    "badgeText": "",
+                                    "imgWebp": "img/card-book-cover/04.webp",
+                                    "imgJpg": "img/card-book-cover/04.jpg",
+                                    "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
+                                    "title": "Тайна мертвого ректора. Книга 1",
+                                    "author": "Виктор Дашкевич",
+                                    "ratingAverage": "4.7",
+                                    "ratingTotal": "910",
+                                    "infoFormat": "Аудио",
+                                    "formatIconText": false,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-exclusive",
+                                    "badgeText": "Эксклюзив",
+                                    "imgWebp": "img/card-book-cover/05.webp",
+                                    "imgJpg": "img/card-book-cover/05.jpg",
+                                    "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
+                                    "title": "Ведьмак: Сезон гроз. Дорога без возврата",
+                                    "author": "Анджей Сапковский",
+                                    "ratingAverage": "5",
+                                    "ratingTotal": "1",
+                                    "infoFormat": "Текстовая книга",
+                                    "formatIconText": true,
+                                    "formatIconAudio": false,
+                                    "infoPrice": "1 700 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-exclusive",
+                                    "badgeText": "Эксклюзив",
+                                    "imgWebp": "img/card-book-cover/06.webp",
+                                    "imgJpg": "img/card-book-cover/06.jpg",
+                                    "imgAlt": "АтакА. Anne Dar. Либристика.",
+                                    "title": "АтакА",
+                                    "author": "Anne Dar",
+                                    "ratingAverage": "4.9",
+                                    "ratingTotal": "92",
+                                    "infoFormat": "Текстовая книга с аудиоверсией",
+                                    "formatIconText": true,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-exclusive",
+                                    "badgeText": "Эксклюзив",
+                                    "imgWebp": "img/card-book-cover/07.webp",
+                                    "imgJpg": "img/card-book-cover/07.jpg",
+                                    "imgAlt": "Дом лжи. Дэвид Эллис. Либристика.",
+                                    "title": "Дом лжи",
+                                    "author": "Дэвид Эллис",
+                                    "ratingAverage": "4.8",
+                                    "ratingTotal": "2616",
+                                    "infoFormat": "Текстовая книга с аудиоверсией",
+                                    "formatIconText": true,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <!-- card -->
+                                @@include('../components/card/book.html', {
+                                    "badgeClass": "badge-exclusive",
+                                    "badgeText": "Эксклюзив",
+                                    "imgWebp": "img/card-book-cover/08.webp",
+                                    "imgJpg": "img/card-book-cover/08.jpg",
+                                    "imgAlt": "Кукомоя. Полина Луговцова. Либристика.",
+                                    "title": "Кукомоя",
+                                    "author": "Полина Луговцова",
+                                    "ratingAverage": "4.9",
+                                    "ratingTotal": "2673",
+                                    "infoFormat": "Аудио",
+                                    "formatIconText": false,
+                                    "formatIconAudio": true,
+                                    "infoPrice": "499 ₽",
+                                    "priceClass": "text-primary"
+                                })
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
