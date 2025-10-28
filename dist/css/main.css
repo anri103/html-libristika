@@ -1848,7 +1848,7 @@ label {
   --cui-card-cap-padding-x: 0px;
   --cui-card-bg: #fff;
   --card-cover-height: 120px;
-  width: 250px;
+  width: 320px;
 }
 .card__author .card-img-cover {
   width: 100%;
@@ -1858,15 +1858,14 @@ label {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.card__author .card-body {
-  margin-top: -60px;
-}
 .card__author .card-img-avatar {
   margin-bottom: 14px;
 }
 .card__author .avatar-wrapper {
   width: 75px;
   height: 75px;
+  margin-left: 0;
+  margin-right: auto;
 }
 .card__author .avatar-wrapper img {
   width: 100%;
