@@ -1,6 +1,14 @@
 /*------------------------------------------------------------------
 [ typography ]*/
 
+.ff-main {
+    font-family: var(--theme-ff-main);
+}
+
+.ff-title {
+    font-family: var(--theme-ff-title);
+}
+
 h1,
 h2,
 h3,
@@ -97,6 +105,10 @@ h6,
     font-size: 1rem !important;
 }
 
+.fs-20 {
+    font-size: 1.25rem !important;
+}
+
 .fs-5 {
     font-size: 1.125rem !important;
 }
@@ -142,4 +154,9 @@ h6,
 p {
     margin-top: 0;
     margin-bottom: 1rem;
+}
+
+.text-gray {
+    --cui-text-opacity: 1;
+    color: rgba(106, 105, 105, var(--cui-text-opacity)) !important;
 }
