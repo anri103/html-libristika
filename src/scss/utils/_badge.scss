@@ -13,3 +13,8 @@
 .text-bg-info {
     color: #1F3326 !important;
 }
+
+.badge-wide {
+    --cui-badge-padding-x: 42px;
+    --cui-badge-padding-y: 6px;
+}

@@ -476,13 +476,12 @@ label {
 .btn-lg {
   --cui-btn-padding-y: 0.75rem;
   --cui-btn-padding-x: 1.5rem;
-  --cui-btn-font-size: 1.25rem;
+  --cui-btn-font-size: 1.125rem;
   --cui-btn-border-radius: var(--cui-border-radius-lg);
 }
 
 .btn-wide {
-  width: 100%;
-  max-width: 250px;
+  --cui-btn-padding-x: 3rem;
 }
 
 .btn-icon {
@@ -815,6 +814,11 @@ label {
   color: #1F3326 !important;
 }
 
+.badge-wide {
+  --cui-badge-padding-x: 42px;
+  --cui-badge-padding-y: 6px;
+}
+
 /*------------------------------------------------------------------
 [ header ]*/
 .header {
@@ -826,7 +830,7 @@ label {
   padding: 0;
   z-index: 999;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .header {
     height: 100px;
   }
@@ -836,7 +840,7 @@ label {
   top: 100%;
   width: 100%;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1199px) {
   .header .catalog-menu-wrapper {
     display: flex;
     height: calc(100vh - 70px);
@@ -854,7 +858,7 @@ label {
   border-radius: 8px;
   background-color: #fff;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .header .catalog-menu-body {
     max-width: 90%;
     min-height: 400px;
@@ -891,7 +895,7 @@ label {
   padding: 0 0 65px;
   background-color: var(--cui-body-bg);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .header .genres-menu-wrapper {
     height: calc(100vh - 100px);
     padding: 0 0 42px;
@@ -926,7 +930,7 @@ label {
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1199px) {
   .header-logo img {
     max-width: 165px;
   }
@@ -936,7 +940,7 @@ label {
 .header-catalog-btn {
   margin-left: 42px;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1199px) {
   .header-catalog-btn {
     display: none;
   }
@@ -968,7 +972,7 @@ label {
 .header-main-menu {
   flex-grow: 1;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1199px) {
   .header-main-menu {
     display: none;
   }
@@ -990,7 +994,7 @@ label {
 .header-user-menu {
   position: relative;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1199px) {
   .header-user-menu {
     display: none;
   }
@@ -1016,7 +1020,7 @@ label {
 .header-user-mobile-menu {
   position: relative;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .header-user-mobile-menu {
     display: none;
   }
@@ -1355,7 +1359,7 @@ label {
   line-height: 1;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .fixed-bottom-mobile-bar {
     display: none;
   }

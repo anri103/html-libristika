@@ -10,7 +10,7 @@
     padding: 0;
     z-index: 999;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
         height: 100px;
     }
 
@@ -28,7 +28,7 @@
         // padding: 0 0 42px;
         // background-color: var(--cui-body-bg);
 
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: 1199px) {
             display: flex;
             height: calc(100vh - 70px);
             padding: 0 0 65px;
@@ -46,7 +46,7 @@
         border-radius: 8px;
         background-color: #fff;
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 1200px) {
             max-width: 90%;
             min-height: 400px;
             max-height: 500px;
@@ -91,7 +91,7 @@
         padding: 0 0 65px;
         background-color: var(--cui-body-bg);
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 1200px) {
             height: calc(100vh - 100px);
             padding: 0 0 42px;
         }
@@ -131,7 +131,7 @@
         width: 100%;
         height: auto;
 
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: 1199px) {
             max-width: 165px;
         }
     }
@@ -142,7 +142,7 @@
 .header-catalog-btn {
     margin-left: 42px;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 1199px) {
         display: none;
     }
 }
@@ -174,7 +174,7 @@
 .header-main-menu {
     flex-grow: 1;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 1199px) {
         display: none;
     }
 
@@ -198,7 +198,7 @@
 .header-user-menu {
     position: relative;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 1199px) {
         display: none;
     }
 
@@ -226,7 +226,7 @@
 .header-user-mobile-menu {
     position: relative;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
         display: none;
     }
 

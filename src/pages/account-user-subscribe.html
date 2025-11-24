@@ -4,7 +4,7 @@
 @@include('../components/head.html', {
     "description": "",
     "keywords": "",
-    "title": "ЛК - Читатель - История покупок",
+    "title": "ЛК - Читатель - Подписка",
 })
 
 <body>
@@ -23,7 +23,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
                         <li class="breadcrumb-item"><a href="account-user.html">Личный кабинет читателя</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">История покупок</li>
+                        <li class="breadcrumb-item active" aria-current="page">Подписка</li>
                     </ol>
                 </nav>
             </div>
@@ -66,9 +66,9 @@
                                             <a href="#" class="menu-link">Предпочтения </a>
                                             <a href="#" class="menu-link">Приватность</a>
                                             <a href="account-user-notifications.html" class="menu-link">Уведомления</a>
-                                            <a href="account-user-subscribe.html" class="menu-link">Подписка</a>
+                                            <a href="account-user-subscribe.html" class="menu-link active">Подписка</a>
                                             <a href="#" class="menu-link">Способ оплаты</a>
-                                            <a href="account-user-purchase-history.html" class="menu-link active">История покупок</a>
+                                            <a href="account-user-purchase-history.html" class="menu-link">История покупок</a>
                                             <a href="sign-in.html" class="menu-link logout-link">Выход</a>
                                         </div>
                                     </nav>
@@ -78,37 +78,25 @@
 
                         <!-- account-content-area -->
                         <div class="col-lg-7">
-                            <div class="account-content-widget">
-                                <h2 class="widget-title">История покупок</h2>
-                                <div class="purchase-history-grid">
-                                    <div class="grid-header">
-                                        <div class="grid-cell">№ Заказа</div>
-                                        <div class="grid-cell">Время</div>
-                                        <div class="grid-cell">Наименование</div>
-                                        <div class="grid-cell">Сумма</div>
+                            <div class="account-content-area">
+
+                                <div class="account-content-widget">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <h2 class="h2 mb-0">Подписка</h2>
+                                        <span class="badge badge-wide rounded-pill text-bg-primary">активна</span>
                                     </div>
-                                    
-                                    <div class="grid-row">
-                                        <div class="grid-cell" data-label="№ Заказа">333444</div>
-                                        <div class="grid-cell" data-label="Время">22.08.2025</div>
-                                        <div class="grid-cell" data-label="Наименование">Поиски утраченного завтра</div>
-                                        <div class="grid-cell" data-label="Сумма">132.50 ₽</div>
+                                    <div class="text-gray mb-4">
+                                        <div>С 16 октября по 16 ноября 2025</div>
+                                        <hr>
+                                        <div>Чтобы сохранить доступ к сервису, оплатите следующий период на 500₽</div>
+                                        <div>до 00:00 17 ноября 2025</div>
                                     </div>
-                                    
-                                    <div class="grid-row">
-                                        <div class="grid-cell" data-label="№ Заказа">333444</div>
-                                        <div class="grid-cell" data-label="Время">22.08.2025</div>
-                                        <div class="grid-cell" data-label="Наименование">Ведьмак в озвучке Всеволода Кузнецова</div>
-                                        <div class="grid-cell" data-label="Сумма">499 ₽</div>
-                                    </div>
-                                    
-                                    <div class="grid-row">
-                                        <div class="grid-cell" data-label="№ Заказа">333444</div>
-                                        <div class="grid-cell" data-label="Время">22.08.2025</div>
-                                        <div class="grid-cell" data-label="Наименование">АтакА</div>
-                                        <div class="grid-cell" data-label="Сумма">1499 ₽</div>
+                                    <div class="d-flex flex-column gap-2 flex-lg-row">
+                                        <button type="button" class="btn btn-primary btn-lg btn-wide rounded-pill">Оплатить период</button>
+                                        <button type="button" class="btn btn-text rounded-pill">Поменять тариф</button>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
