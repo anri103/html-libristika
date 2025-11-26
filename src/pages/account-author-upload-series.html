@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "ЛК - Автор - Публикация серии",
+})
+
+<body>
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- section__navigation -->
+        <section class="section section__navigation">
+            <div class="container">
+                <!-- Навигация / Хлебные крошки -->
+                <a href="account-author-upload.html">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <span>Сохранить и выйти</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="account-area">
+                    <div class="row gy-4 justify-content-center">
+                        <div class="col-lg-7">
+                            
+                            <div class="account-content-area">
+                                <div class="account-content-widget">
+                                    <div class="account-form-wrapper">
+                                        <form class="form-account" action="#">
+                                            <div class="row gy-2rem">
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookName">Название серии</label>
+                                                    <input id="bookName" class="form-control" type="text" name="book-name">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookAnnotation">Аннотация</label>
+                                                    <textarea id="bookAnnotation" class="form-control" rows="3"></textarea>
+                                                    <div class="form-text d-flex justify-content-between">
+                                                        <div>необходими ввести 50 символов</div>
+                                                        <div>0/200</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="widget-title" for="bookAuthorDescr">Описание автора</label>
+                                                    <textarea id="bookAuthorDescr" class="form-control" rows="3"></textarea>
+                                                    <div class="form-text d-flex justify-content-between">
+                                                        <div>необходими ввести 50 символов</div>
+                                                        <div>0/200</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="widget-title">Все книги серии</div>
+                                                    <label class="btn btn-secondary btn-lg btn-wide rounded-pill" for="bookAllSeries">добавить книги</label>
+                                                    <input type="file" id="bookAllSeries" class="d-none" accept=".epub, .fb2, .pdf">
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="widget-title">Обложка серии</div>
+                                                    <div class="d-flex gap-3 gap-lg-4">
+                                                        <div>
+                                                            <label class="btn btn-secondary btn-lg btn-wide rounded-pill" for="bookCover">загрузить файл</label>
+                                                            <input type="file" id="bookCover" class="d-none" accept=".png, .jpg, .jpeg">
+                                                        </div>
+                                                        <div class="d-flex gap-1">
+                                                            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                                <path d="M18 6L9.49693 16L4 9.53535" stroke="#566B61" style="stroke:#566B61;stroke:color(display-p3 0.3373 0.4196 0.3804);stroke-opacity:1;" stroke-width="1.70667"/>
+                                                            </svg>
+                                                            <div class="form-text text-primary">JPG или PNG, не менее 500x625 px.<br> Размер файла до 20 MB.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-check-wrapper">
+                                                        <input class="form-check-input" type="checkbox" id="agreeForAll" checked>
+                                                        <label class="form-check-label" for="agreeForAll">Я подтверждаю, что ознакомился с <a href="#" class="text-decoration-underline">Правилами публикации</a></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="buttons-wrapper text-center">
+                                                        <button type="submit" class="btn btn-primary btn-lg btn-wide rounded-pill">Опубликовать</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+</body>
+
+</html>

@@ -69,7 +69,7 @@
                                         <div class="links-wrapper">
                                             <a href="account-author.html" class="menu-link">Профиль автора</a>
                                             <a href="account-author-upload-book.html" class="menu-link">Публикация книги</a>
-                                            <a href="account-author-upload-book.html" class="menu-link active">Мои книги</a>
+                                            <a href="account-author-upload.html" class="menu-link active">Мои книги</a>
                                             <a href="#" class="menu-link">Персоны</a>
                                             <a href="#" class="menu-link">Статистика</a>
                                             <a href="#" class="menu-link">Уведомления</a>
@@ -95,6 +95,7 @@
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <button type="button" class="nav-link active" data-coreui-toggle="tab" data-coreui-target="#nav-upload-book" role="tab" aria-controls="nav-upload-book" aria-selected="true">Электронные книги</button>
                                         <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-upload-audio" role="tab" aria-controls="nav-upload-audio" aria-selected="false">Аудиокниги</button>
+                                        <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-upload-series" role="tab" aria-controls="nav-upload-series" aria-selected="false">Серии</button>
                                         <button type="button" class="nav-link" data-coreui-toggle="tab" data-coreui-target="#nav-upload-draft" role="tab" aria-controls="nav-upload-draft" aria-selected="false">Черновики</button>
                                     </div>
                                 </nav>
@@ -323,6 +324,46 @@
                                                             <li><a class="dropdown-item" href="#">Пункт 2</a></li>
                                                             <li><a class="dropdown-item text-danger" href="#">Удалить</a></li>
                                                         </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Загрузить серию книг -->
+                                    <div class="tab-pane fade" id="nav-upload-series" role="tabpanel" aria-labelledby="nav-upload-series-tab" tabindex="0">
+                                        <div class="d-flex flex-wrap gap-4 row-gap-2 mb-4">
+                                            <a href="account-author-upload-series.html" class="btn btn-primary btn-lg btn-wide rounded-pill">Создать серию</a>
+                                        </div>
+                                        <!-- items-list -->
+                                        <div class="my-items-list">
+                                            <!-- item 01 -->
+                                            <div class="item-my-book">
+                                                <div class="item-body">
+                                                    <!-- item-img-wrapper -->
+                                                    <div class="item-img-wrapper">
+                                                        <a href="#">
+                                                            <picture>
+                                                                <source srcset="img/card-book-cover/card-series-cover.webp" type="image/webp">
+                                                                <img class="item-img" src="img/card-book-cover/card-series-cover.png" alt="Пелевин и несвобода. Поэтика, политика, метафизика">
+                                                            </picture>
+                                                        </a>
+                                                    </div>
+                                                    <!-- item-content -->
+                                                    <div class="item-content">
+                                                        <div class="item-title">
+                                                            <a href="#">Пелевин и несвобода. Поэтика, политика, метафизика</a>
+                                                        </div>
+                                                        <div class="item-info-table">
+                                                            <div>
+                                                                <div class="mb-14px">
+                                                                    <a href="#">Софья Хаги, Линкольн Чарльз, Фредерик Бегбедер</a>
+                                                                </div>
+                                                                <div class="badge rounded-pill small text-primary bg-white">14 книг</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-action-button-wrapper">
+                                                            <a href="#" class="btn btn-white rounded-pill">редактировать</a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

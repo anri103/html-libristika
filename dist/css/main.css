@@ -2524,7 +2524,7 @@ label {
   max-width: 100%;
   width: 100%;
   height: auto;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08), 1px 18px 18px 0px rgba(0, 0, 0, 0.07), 3px 41px 25px 0px rgba(0, 0, 0, 0.04), 5px 74px 29px 0px rgba(0, 0, 0, 0.01), 8px 115px 32px 0px rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 20px 10px rgba(86, 93, 101, 0.4));
 }
 .item-my-book .item-content {
   flex-grow: 1;
