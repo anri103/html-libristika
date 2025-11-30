@@ -1,0 +1,49 @@
+/*------------------------------------------------------------------
+[ scrollable ]*/
+
+.scrollable-container {
+    --scrollable-gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.scrollable-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var(--scrollable-gap);
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-color: #8c8c8c #f6f6f6;
+    scrollbar-width: thin;
+    padding-bottom: 12px;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #8c8c8c;
+        border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f6f6f6;
+    }
+}
+
+.scrollable-item {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+@media (min-width: 992px) {
+    .scrollable-wrapper {
+        flex-wrap: wrap;
+        white-space: normal;
+        padding-bottom: 0;
+    }
+}

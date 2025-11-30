@@ -63,12 +63,11 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="widget-title">Все книги серии</div>
-                                                    <label class="btn btn-secondary btn-lg btn-wide rounded-pill" for="bookAllSeries">добавить книги</label>
-                                                    <input type="file" id="bookAllSeries" class="d-none" accept=".epub, .fb2, .pdf">
+                                                    <button type="button" class="btn btn-secondary btn-lg btn-wide rounded-pill" data-coreui-target="#modalAddBooksToSeries" data-coreui-toggle="modal">добавить книги</button>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="widget-title">Обложка серии</div>
-                                                    <div class="d-flex gap-3 gap-lg-4">
+                                                    <div class="d-flex flex-column flex-lg-row gap-3 gap-lg-4">
                                                         <div>
                                                             <label class="btn btn-secondary btn-lg btn-wide rounded-pill" for="bookCover">загрузить файл</label>
                                                             <input type="file" id="bookCover" class="d-none" accept=".png, .jpg, .jpeg">
@@ -81,7 +80,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                                 <div class="col-12">
                                                     <div class="form-check-wrapper">
                                                         <input class="form-check-input" type="checkbox" id="agreeForAll" checked>
@@ -105,6 +103,65 @@
         </section>
 
     </main>
+
+    <!-- modalAddBooksToSeries -->
+    <div class="modal fade modal-add-books-to-series" id="modalAddBooksToSeries" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog" style="--cui-modal-width: 600px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Добавить книги в серию</h2>
+                </div>
+                <div class="modal-body">
+                    <form action="#" class="d-flex flex-column gap-4">
+                        <div>
+                            <select id="bookSeries" class="form-select" name="book-series">
+                                <option selected="">Название опубликованной книги прошедшей модерацию</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div style="display: block;">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="books-list d-flex flex-column gap-3">
+                                    <!-- item -->
+                                    <div class="d-flex align-items-center gap-1">
+                                        <div class="h3 fw-medium text-max-lines-1 mb-0">Книга которую выбрали</div>
+                                        <button type="button" class="btn border-0 p-0">
+                                            <svg width="16" height="16">
+                                                <use xlink:href="img/sprite.svg#icon-cross"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <!-- item -->
+                                    <div class="d-flex align-items-center gap-1">
+                                        <div class="h3 fw-medium text-max-lines-1 mb-0">Книга которую выбрали, с очень длинным названием</div>
+                                        <button type="button" class="btn border-0 p-0">
+                                            <svg width="16" height="16">
+                                                <use xlink:href="img/sprite.svg#icon-cross"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <!-- item -->
+                                    <div class="d-flex align-items-center gap-1">
+                                        <div class="h3 fw-medium text-max-lines-1 mb-0">Книга которую выбрали</div>
+                                        <button type="button" class="btn border-0 p-0">
+                                            <svg width="16" height="16">
+                                                <use xlink:href="img/sprite.svg#icon-cross"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-wide w-100 w-lg-auto rounded-pill">Добавить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- footer -->
     @@include('../components/footer.html')

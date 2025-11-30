@@ -1,0 +1,15 @@
+/*------------------------------------------------------------------
+[ modals ]*/
+
+.modal-add-books-to-series {
+    --cui-modal-bg: var(--cui-white);
+    --cui-modal-border-color: transparent;
+    --cui-modal-header-border-color: transparent;
+    --cui-modal-footer-border-color: transparent;
+    --cui-modal-header-padding: 24px 24px;
+    --cui-modal-padding: 24px;
+
+    .modal-header {
+        padding-bottom: 0;
+    }
+}

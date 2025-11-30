@@ -160,3 +160,11 @@ p {
     --cui-text-opacity: 1;
     color: rgba(106, 105, 105, var(--cui-text-opacity)) !important;
 }
+
+.text-max-lines-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-all;
+}

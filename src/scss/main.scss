@@ -33,6 +33,8 @@
 @use 'components/reader-header';
 @use 'components/reader-footer';
 @use 'components/accordion';
+@use 'components/scrollable';
+@use 'components/modals';
 
 // pages
 @use 'pages/account';

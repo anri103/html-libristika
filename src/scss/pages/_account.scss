@@ -625,7 +625,6 @@
     }
 }
 
-
 .account-notifications {
     
     &__empty {
@@ -713,5 +712,18 @@
             --cui-alert-padding-y: 24px;
             --cui-alert-margin-bottom: 0;
         }
+    }
+}
+
+.nav-author-works {
+    --cui-nav-link-padding-x: 0;
+    --cui-nav-link-padding-y: 0;
+    --scrollable-gap: 1.25rem;
+    --cui-nav-link-color: #9B9B9B;
+    --cui-nav-link-hover-color: var(--cui-link-hover-color);
+    --cui-nav-tabs-link-active-color: var(--cui-link-hover-color);
+
+    .nav-link.active {
+        color: var(--cui-nav-tabs-link-active-color);
     }
 }
