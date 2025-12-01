@@ -727,3 +727,20 @@
         color: var(--cui-nav-tabs-link-active-color);
     }
 }
+
+.item-series-upload {
+    display: flex;
+    gap: 0.5rem;
+    min-height: 89px;
+
+    .item-body {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .item-media {
+        flex-shrink: 0;
+        -webkit-margin-end: .25rem;
+        margin-inline-end: .25rem;
+    }
+}

@@ -360,6 +360,11 @@ a {
   text-decoration: none;
 }
 
+.link-light-gray {
+  --cui-link-color-rgb: 174, 174, 172;
+  --cui-link-hover-color-rgb: var(--cui-link-color-rgb);
+}
+
 /*------------------------------------------------------------------
 [ forms ]*/
 input,
@@ -2895,6 +2900,21 @@ label {
 }
 .nav-author-works .nav-link.active {
   color: var(--cui-nav-tabs-link-active-color);
+}
+
+.item-series-upload {
+  display: flex;
+  gap: 0.5rem;
+  min-height: 89px;
+}
+.item-series-upload .item-body {
+  flex: 1 1 auto;
+  width: 100%;
+}
+.item-series-upload .item-media {
+  flex-shrink: 0;
+  -webkit-margin-end: 0.25rem;
+  margin-inline-end: 0.25rem;
 }
 
 /*------------------------------------------------------------------

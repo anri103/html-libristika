@@ -4,3 +4,8 @@
 a {
     text-decoration: none;
 }
+
+.link-light-gray {
+    --cui-link-color-rgb: 174, 174, 172;
+    --cui-link-hover-color-rgb: var(--cui-link-color-rgb);
+}
