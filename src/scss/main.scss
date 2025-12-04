@@ -17,6 +17,8 @@
 @use 'utils/cards';
 @use 'utils/alerts';
 @use 'utils/badge';
+@use 'utils/tooltips';
+@use 'utils/popovers';
 
 // components
 @use 'components/header';

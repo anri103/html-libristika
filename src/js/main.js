@@ -1,3 +1,11 @@
+// activate tooltip
+const tooltipTriggerList = document.querySelectorAll('[data-coreui-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new coreui.Tooltip(tooltipTriggerEl))
+
+// activate popover
+const popoverTriggerList = document.querySelectorAll('[data-coreui-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new coreui.Popover(popoverTriggerEl))
+
 // genres menu
 function toggleCollapses(hideId, showId) {
     const hideElement = document.getElementById(hideId);

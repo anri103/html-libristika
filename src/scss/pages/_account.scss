@@ -744,3 +744,28 @@
         margin-inline-end: .25rem;
     }
 }
+
+.item-list-person {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid var(--cui-border-color);
+    padding-bottom: 1.5rem;
+
+    .item-media {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .item-body {
+        flex: 1 1 auto;
+    }
+
+    @media (min-width: 992px) {
+        .item-media {
+            width: 120px;
+            height: 120px;
+        }
+    }
+}

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- title -->
-    <title>ЛК - Автор</title>
+    <title>ЛК - Автор - Персоны</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 </head>
@@ -1388,7 +1388,8 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Личный кабинет автора</li>
+                        <li class="breadcrumb-item"><a href="account-author.html">Личный кабинет автора</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Персоны</li>
                     </ol>
                 </nav>
             </div>
@@ -1433,10 +1434,10 @@
                                 <div class="account-menu-wrapper">
                                     <nav class="account-menu">
                                         <div class="links-wrapper">
-                                            <a href="account-author.html" class="menu-link active">Профиль автора</a>
+                                            <a href="account-author.html" class="menu-link">Профиль автора</a>
                                             <a href="account-author-upload-book.html" class="menu-link">Публикация книги</a>
                                             <a href="account-author-upload.html" class="menu-link">Мои книги</a>
-                                            <a href="account-author-persons.html" class="menu-link">Персоны</a>
+                                            <a href="account-author-persons.html" class="menu-link active">Персоны</a>
                                             <a href="#" class="menu-link">Статистика</a>
                                             <a href="#" class="menu-link">Уведомления</a>
                                             <a href="#" class="menu-link">Продажи</a>
@@ -1450,85 +1451,92 @@
 
                         <!-- content -->
                         <div class="col-lg-7">
-                            <!-- status -->
-                            <div class="user-account-status">
-                                <a href="account-user-after-verification.html">Читатель</a>
-                            </div>
-                            <!-- account-content-area -->
-                            <div class="account-content-area">
-                                <!-- account-content-widget -->
-                                <div class="account-content-widget">
-                                    <h2 class="widget-title">Личные данные</h2>
-                                    <div class="account-form-wrapper">
-                                        <form class="form-account" action="#">
-                                            <div class="row gy-3 gy-lg-4">
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupfname">Имя</label>
-                                                    <input id="formSignupfname" class="form-control" type="text"
-                                                        name="firstName" value="Сергей" disabled>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignuplname">Фамилия</label>
-                                                    <input id="formSignuplname" class="form-control" type="text"
-                                                        name="lastName" value="Александрович" disabled>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formSignupEmail">Email</label>
-                                                    <input id="formSignupEmail" class="form-control" type="email"
-                                                        name="email" value="info@mail.com" disabled>
-                                                    <div class="form-text">*почта для отправки чеков и документов</div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="d-flex flex-wrap gap-3 row-gap-2">
-                                                        <input type="radio" class="btn-check" name="user-sex" id="radioUserSexMale" autocomplete="off">
-                                                        <label class="btn btn-outline-primary" for="radioUserSexMale">
-                                                            <span class="small">мужчина</span>
-                                                        </label>
-
-                                                        <input type="radio" class="btn-check" name="user-sex" id="radioUserSexFemale" autocomplete="off">
-                                                        <label class="btn btn-outline-primary" for="radioUserSexFemale">
-                                                            <span class="small">женщина</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="exampleFormControlTextarea1">О себе</label>
-                                                    <textarea id="exampleFormControlTextarea1" class="form-control" rows="3" placeholder="Напишите что-нибудь о себе..."></textarea>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="buttons-wrapper">
-                                                        <button type="submit" class="btn btn-secondary btn-lg btn-wide rounded-pill">Сохранить изменения</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
+                            <!-- account-content-widget -->
+                            <div class="account-content-widget">
+                                <div class="d-flex flex-wrap align-items-baseline gap-2 row-gap-2 mb-3">
+                                    <h2 class="widget-title mb-0">Мои персоны</h2>
+                                    <span class="text-muted" style="display: none;">4 персоны</span>
+                                </div>
+                                <!-- empty -->
+                                <div style="display: none;">
+                                    <hr class="my-4 max-w-300">
+                                    <div class="h3 mb-3">У вас пока нет персон</div>
+                                    <div>
+                                        <a href="#" class="btn btn-primary btn-lg btn-wide rounded-pill">создать персону</a>
+                                    </div>
+                                    <div class="mt-4 mt-lg-5">
+                                        <img class="img-fluid" src="img/user/author-persons-empty.png" alt="...">
                                     </div>
                                 </div>
-                                <!-- account-content-widget -->
-                                <div class="account-content-widget">
-                                    <h2 class="widget-title">Паспортные данные</h2>
-                                    <div class="account-form-wrapper">
-                                        <form class="form-account" action="#">
-                                            <div class="row gy-3 gy-lg-4">
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formPassportSeries">Серия и номер</label>
-                                                    <input type="text" class="form-control" id="formPassportSeries">
+                                <!-- persons -->
+                                <div class="max-w-720" style="display: block;">
+                                    <div class="mb-4">
+                                        <a href="#" class="btn btn-primary btn-lg btn-wide rounded-pill">создать персону</a>
+                                    </div>
+                                    <!-- list -->
+                                    <div class="d-flex flex-column gap-4">
+                                        <!-- item -->
+                                        <div class="item-list-person">
+                                            <!-- item-media -->
+                                            <div class="item-media">
+                                                <img class="object-fit-cover w-100 h-100" src="img/user/list-item-person-avatar.png" alt="...">
+                                            </div>
+                                            <!-- item-body -->
+                                            <div class="item-body">
+                                                <div class="mb-2">
+                                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                                        <span class="h3 mb-0">Имя Фамилия Персоны</span>
+                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="10" height="15" viewBox="0 0 10 15" fill="none">
+                                                            <path d="M1.4834 0.375035C1.13835 0.108155 0.641975 0.171628 0.375 0.516637C0.10812 0.861689 0.171594 1.35806 0.516602 1.62504L8.10938 7.50003L0.516604 13.375C0.171594 13.642 0.108121 14.1384 0.375002 14.4834C0.641978 14.8284 1.13835 14.8919 1.4834 14.625L9.18555 8.66507L9.18457 8.6641C9.35477 8.53543 9.50546 8.37203 9.61426 8.17484C9.69837 8.02228 9.75519 7.85466 9.77832 7.67874L9.79004 7.50003L9.77832 7.32132C9.75518 7.14539 9.69838 6.97778 9.61426 6.82523L9.52246 6.67972C9.42684 6.54574 9.3113 6.43071 9.18457 6.33499L9.18555 6.33499L1.4834 0.375035Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </a>
                                                 </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formPassportWhoIssued">Кем выдан</label>
-                                                    <input type="text" class="form-control" id="formPassportWhoIssued">
+                                                <div class="text-muted fs-small text-max-lines-3 max-w-560">Это романтический автор снесет вам бошку своими книгами, если вы не могли ходить - вы встанете после прочтения этой книги</div>
+                                                <div class="mt-2">
+                                                    <div class="badge rounded-pill small text-primary bg-white">14 книг</div>
                                                 </div>
-                                                <div class="col-12">
-                                                    <label class="form-label" for="formPassportDate">Дата выдачи</label>
-                                                    <div data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="чч.мм.гггг"></div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="buttons-wrapper">
-                                                        <button type="submit" class="btn btn-secondary btn-lg btn-wide rounded-pill">Сохранить изменения</button>
-                                                    </div>
+                                                <div class="d-flex align-items-center justify-content-between mt-2 mt-lg-3">
+                                                    <a href="#" class="btn btn-white-shadow rounded-pill px-4">редактировать</a>
+                                                    <a href="#">удалить</a>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
+                                        <!-- item -->
+                                        <div class="item-list-person">
+                                            <!-- item-media -->
+                                            <div class="item-media">
+                                                <img class="object-fit-cover w-100 h-100" src="img/user/list-item-person-avatar.png" alt="...">
+                                            </div>
+                                            <!-- item-body -->
+                                            <div class="item-body">
+                                                <div class="mb-2">
+                                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                                        <span class="h3 mb-0">Имя Фамилия Персоны</span>
+                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="10" height="15" viewBox="0 0 10 15" fill="none">
+                                                            <path d="M1.4834 0.375035C1.13835 0.108155 0.641975 0.171628 0.375 0.516637C0.10812 0.861689 0.171594 1.35806 0.516602 1.62504L8.10938 7.50003L0.516604 13.375C0.171594 13.642 0.108121 14.1384 0.375002 14.4834C0.641978 14.8284 1.13835 14.8919 1.4834 14.625L9.18555 8.66507L9.18457 8.6641C9.35477 8.53543 9.50546 8.37203 9.61426 8.17484C9.69837 8.02228 9.75519 7.85466 9.77832 7.67874L9.79004 7.50003L9.77832 7.32132C9.75518 7.14539 9.69838 6.97778 9.61426 6.82523L9.52246 6.67972C9.42684 6.54574 9.3113 6.43071 9.18457 6.33499L9.18555 6.33499L1.4834 0.375035Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <div class="text-muted fs-small text-max-lines-3 max-w-560">Это романтический автор снесет вам бошку своими книгами, если вы не могли ходить - вы встанете после прочтения этой книги</div>
+                                                <div class="mt-2">
+                                                    <div class="badge rounded-pill small text-primary bg-white">14 книг</div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between mt-2 mt-lg-3">
+                                                    <a href="#" class="btn btn-white-shadow rounded-pill px-4">редактировать</a>
+                                                    <span
+                                                        class="d-inline-block"
+                                                        tabindex="0"
+                                                        data-coreui-toggle="popover"
+                                                        data-coreui-trigger="focus"
+                                                        data-coreui-placement="bottom"
+                                                        data-coreui-custom-class="theme-popover-light"
+                                                        data-coreui-html="true"
+                                                        data-coreui-content="Нельзя удалить персону, когда под&nbsp;её&nbsp;именем опубликованы книги.<br>Обратитесь за&nbsp;поддержкой на&nbsp;почту: <a href='mailto:info@mail.ru'>info@mail.ru</a>">
+                                                        <button type="button" class="btn btn-text border-0 p-0" disabled>удалить</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

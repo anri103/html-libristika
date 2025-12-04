@@ -26,6 +26,11 @@ body {
     flex: 1;
 }
 
+hr {
+    color: var(--cui-border-color);
+    opacity: 1;
+}
+
 /* Custom Scrollbar */
 
 /* ::-webkit-scrollbar {
@@ -77,6 +82,18 @@ body {
 
 .w-100 {
     width: 100% !important;
+}
+
+.max-w-300 {
+    max-width: 300px;
+}
+
+.max-w-560 {
+    max-width: 560px;
+}
+
+.max-w-720 {
+    max-width: 720px;
 }
 
 @media (min-width: 992px) {

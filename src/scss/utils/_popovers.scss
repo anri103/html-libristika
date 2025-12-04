@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------
+[ popovers ]*/
+
+.theme-popover-light {
+    --cui-popover-max-width: 320px;
+    --cui-popover-body-padding-x: 0.75rem;
+    --cui-popover-body-padding-y: 0.75rem;
+    --cui-popover-body-color: #6A6969;
+    --cui-popover-bg: var(--cui-white);
+    --cui-popover-border-color: transparent;
+    --cui-link-color-rgb: 151, 71, 255;
+    --cui-link-hover-color-rgb: 31, 51, 38;
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.04);
+
+    .popover-body {
+        text-align: start;
+    }
+}
