@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "ЛК - Автор - Создание персоны",
+})
+
+<body>
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- section__navigation -->
+        <section class="section section__navigation">
+            <div class="container">
+                <!-- Навигация / Хлебные крошки -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="account-author.html">Личный кабинет автора</a></li>
+                        <li class="breadcrumb-item"><a href="account-author-persons.html">Персоны</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Создание персоны</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="account-area">
+                    <div class="row gy-4 justify-content-center">
+
+                        <!-- sidebar -->
+                        <div class="col-lg-3">
+                            <div class="account-info-area">
+                                <div class="account-avatar">
+                                    <div class="avatar-wrapper">
+                                        <div class="avatar-preview">
+                                            <img class="avatar-img" src="img/user/account-avatar-xl.jpg" alt="">
+                                        </div>
+                                        <div class="avatar-edit">
+                                            <input type="file" accept=".png, .jpg, .jpeg" id="imageUpload">
+                                            <label for="imageUpload" class="btn-change_img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M14.2647 15.9377L12.5473 14.2346C11.758 13.4519 11.3633 13.0605 10.9089 12.9137C10.5092 12.7845 10.079 12.7845 9.67922 12.9137C9.22485 13.0605 8.83017 13.4519 8.04082 14.2346L4.04193 18.2622M14.2647 15.9377L14.606 15.5991C15.412 14.7999 15.8149 14.4003 16.2773 14.2545C16.6839 14.1262 17.1208 14.1312 17.5244 14.2688C17.9832 14.4253 18.3769 14.834 19.1642 15.6515L20 16.5001M14.2647 15.9377L18.22 19.9628M18.22 19.9628C17.8703 20 17.4213 20 16.8 20H7.2C6.07989 20 5.51984 20 5.09202 19.782C4.7157 19.5903 4.40973 19.2843 4.21799 18.908C4.12583 18.7271 4.07264 18.5226 4.04193 18.2622M18.22 19.9628C18.5007 19.9329 18.7175 19.8791 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V13M11 4H7.2C6.07989 4 5.51984 4 5.09202 4.21799C4.7157 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.0799 4 7.2V16.8C4 17.4466 4 17.9066 4.04193 18.2622M18 9V6M18 6V3M18 6H21M18 6H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-age">
+                                    <div><span>зарегистрирован</span> 21.08.2007</div>
+                                </div>
+                                <div class="account-name">
+                                    <h1>Константин Длиннаяфамилия</h1>
+                                    <span class="account-verify">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
+                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
+                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.00114"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="account-menu-wrapper">
+                                    <nav class="account-menu">
+                                        <div class="links-wrapper">
+                                            <a href="account-author.html" class="menu-link">Профиль автора</a>
+                                            <a href="account-author-upload-book.html" class="menu-link">Публикация книги</a>
+                                            <a href="account-author-upload.html" class="menu-link">Мои книги</a>
+                                            <a href="account-author-persons.html" class="menu-link active">Персоны</a>
+                                            <a href="#" class="menu-link">Статистика</a>
+                                            <a href="#" class="menu-link">Уведомления</a>
+                                            <a href="#" class="menu-link">Продажи</a>
+                                            <a href="#" class="menu-link">Выплаты</a>
+                                            <a href="sign-in.html" class="menu-link logout-link">Выход</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- content -->
+                        <div class="col-lg-7">
+                            <!-- status -->
+                            <div class="user-account-status">
+                                <span>Персона</span>
+                            </div>
+                            <!-- account-content-area -->
+                            <div class="account-content-area">
+                                <!-- account-content-widget -->
+                                <div class="account-content-widget">
+                                    <h2 class="widget-title">Данные персоны</h2>
+                                    <!-- form -->
+                                    <div class="account-form-wrapper">
+                                        <form class="form-account" action="#">
+                                            <div class="row gy-3 gy-lg-4">
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formPersonFirstname">Имя*</label>
+                                                    <input id="formPersonFirstname" class="form-control" type="text" name="firstName">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formPersonLastname">Фамилия*</label>
+                                                    <input id="formPersonLastname" class="form-control" type="text" name="lastName">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formPersonLastname2">Отчество</label>
+                                                    <input id="formPersonLastname2" class="form-control" type="text" name="lastName2">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label" for="formPersonDescription">Описание автора</label>
+                                                    <textarea id="formPersonDescription" class="form-control" rows="3"></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <h2 class="widget-title">Аватар автора</h2>
+                                                    <!-- custom download -->
+                                                    <div>
+                                                        <!-- before download -->
+                                                        <div style="display: none; display: block;">
+                                                            <div class="d-flex flex-column flex-lg-row gap-3 gap-lg-4">
+                                                                <div>
+                                                                    <label class="btn btn-secondary btn-lg btn-wide rounded-pill" for="personDownloadAvatar">загрузить файл</label>
+                                                                    <input type="file" id="personDownloadAvatar" class="d-none" accept=".png, .jpg, .jpeg">
+                                                                </div>
+                                                                <div class="d-flex gap-1">
+                                                                    <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                                        <path d="M18 6L9.49693 16L4 9.53535" stroke="#566B61" stroke-width="1.70667"></path>
+                                                                    </svg>
+                                                                    <div class="form-text text-primary">JPG или PNG, не менее 500x500 px.<br> Размер файла до 2 MB.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- after download -->
+                                                        <div style="display: block; display: none;">
+                                                            <div class="row gy-4">
+                                                                <!-- media -->
+                                                                <div class="col-lg-4">
+                                                                    <div class="mb-3">
+                                                                        <img class="img-fluid" src="img/user/after-download-avatar.png" alt="...">
+                                                                    </div>
+                                                                    <div class="h5 text-secondary mb-1">Название_изображения.png</div>
+                                                                    <div class="text-gray fs-small">678 мб, 23.08.2025</div>
+                                                                </div>
+                                                                <!-- content -->
+                                                                <div class="col-lg-8">
+                                                                    <div class="mb-3 mb-lg-4">
+                                                                        <label class="btn btn-secondary rounded-pill px-4" for="personRedownloadAvatar">выбрать другой файл</label>
+                                                                        <input type="file" id="personRedownloadAvatar" class="d-none" accept=".png, .jpg, .jpeg">
+                                                                    </div>
+                                                                    <div class="mb-3 mb-lg-4">
+                                                                        <div class="d-flex gap-1">
+                                                                            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                                                <path d="M18 6L9.49693 16L4 9.53535" stroke="#566B61" stroke-width="1.70667"></path>
+                                                                            </svg>
+                                                                            <div class="form-text text-primary">JPG или PNG, не менее 500x500 px.<br> Размер файла до 2 MB.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-check-wrapper">
+                                                                        <input class="form-check-input" type="checkbox" id="agreeForAll2">
+                                                                        <label class="form-check-label" for="agreeForAll2">Я подтверждаю наличие прав на использование изображения и несу юридическую ответственность за его использование.</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="buttons-wrapper border-top pt-2rem">
+                                                        <div class="d-flex flex-wrap gap-4 row-gap-3">
+                                                            <button type="submit" class="btn btn-primary btn-lg btn-wide rounded-pill w-100 w-lg-auto">сохранить изменения</button>
+                                                            <button type="button" class="btn btn-secondary btn-lg btn-wide rounded-pill w-100 w-lg-auto">отменить</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+</body>
+
+</html>

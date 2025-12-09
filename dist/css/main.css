@@ -162,6 +162,10 @@ hr {
   margin-bottom: 2rem !important;
 }
 
+.pt-2rem {
+  padding-top: 2rem !important;
+}
+
 .g-2rem,
 .gy-2rem {
   --cui-gutter-y: 2rem;
