@@ -1,6 +1,8 @@
 /*------------------------------------------------------------------
 [ scrollable ]*/
 
+/* scrollable */
+
 .scrollable-container {
     --scrollable-gap: 0.5rem;
     position: relative;
@@ -45,5 +47,37 @@
         flex-wrap: wrap;
         white-space: normal;
         padding-bottom: 0;
+    }
+}
+
+/* scroll */
+
+.custom-vertical-scrollbar-secondary {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #C3846F #F7F7F7;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        // background: #F7F7F7;
+        margin: 2px 0;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+        width: 2px;
+        margin: 0 2px;
+        background: #F7F7F7;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        width: 6px;
+        border: 1px solid #C3846F;
+        border-radius: 10px;
+        min-height: 40px;
+        background: #C3846F;
     }
 }

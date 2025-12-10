@@ -88,8 +88,24 @@ hr {
     width: 100% !important;
 }
 
+.w-60px {
+    width: 60px;
+}
+
+.h-60px {
+    height: 60px;
+}
+
+.max-w-250 {
+    max-width: 250px;
+}
+
 .max-w-300 {
     max-width: 300px;
+}
+
+.max-w-400 {
+    max-width: 400px;
 }
 
 .max-w-560 {
@@ -98,6 +114,10 @@ hr {
 
 .max-w-720 {
     max-width: 720px;
+}
+
+.max-h-360 {
+    max-height: 360px;
 }
 
 @media (min-width: 992px) {
@@ -118,6 +138,10 @@ hr {
 
     .w-lg-auto {
         width: auto !important;
+    }
+
+    .max-h-lg-380 {
+        max-height: 380px;
     }
 }
 

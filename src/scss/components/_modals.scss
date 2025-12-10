@@ -1,6 +1,8 @@
 /*------------------------------------------------------------------
 [ modals ]*/
 
+/* modal-add-books-to-series */
+
 .modal-add-books-to-series {
     --cui-modal-bg: var(--cui-white);
     --cui-modal-border-color: transparent;
@@ -11,5 +13,50 @@
 
     .modal-header {
         padding-bottom: 0;
+    }
+}
+
+/* modal-add-person */
+
+.modal-add-person {
+    --cui-modal-bg: var(--cui-white);
+    --cui-modal-border-color: transparent;
+    --cui-modal-header-border-color: transparent;
+    --cui-modal-footer-border-color: transparent;
+    --cui-modal-header-padding: 20px 20px;
+    --cui-modal-padding: 20px;
+
+    .modal-header {
+        padding-bottom: 0 !important;
+    }
+
+    .modal-footer {
+        justify-content: space-between;
+        padding-top: 0 !important;
+    }
+
+    @media (min-width: 992px) {
+        --cui-modal-header-padding: 24px 24px;
+        --cui-modal-padding: 24px;
+    }
+}
+
+/* modal-create-person */
+
+.modal-create-person {
+    --cui-modal-bg: var(--cui-white);
+    --cui-modal-border-color: transparent;
+    --cui-modal-header-border-color: transparent;
+    --cui-modal-footer-border-color: transparent;
+    --cui-modal-header-padding: 16px 16px;
+    --cui-modal-padding: 16px;
+
+    .modal-header {
+        padding-bottom: 0 !important;
+    }
+
+    @media (min-width: 992px) {
+        --cui-modal-header-padding: 34px 34px;
+        --cui-modal-padding: 34px;
     }
 }

@@ -1412,25 +1412,90 @@
                                 <!-- account-content-widget -->
                                 <div class="account-content-widget">
                                     <div class="account-form-wrapper">
+                                        <!-- form -->
                                         <form class="form-account" action="#">
                                             <div class="row gy-2rem">
+                                                <!-- Название -->
                                                 <div class="col-12">
                                                     <label class="widget-title" for="bookName">Название</label>
                                                     <input id="bookName" class="form-control" type="text" name="book-name">
                                                 </div>
+                                                <!-- Файл книги -->
                                                 <div class="col-12">
-                                                    <label class="widget-title" for="bookFile">Файл книги</label>
-                                                    <input id="bookFile" class="form-control" type="file" name="book-file">
-                                                    <div class="form-text text-primary">Информация о том как правильно подготовить файл к загрузке на сервис</div>
+                                                    <div class="widget-title" for="bookFile">Файл книги</div>
+                                                    <!-- before download -->
+                                                    <div>
+                                                        <label class="btn btn-secondary btn-lg btn-wide rounded-pill" for="bookMainFile">загрузить файл</label>
+                                                        <input type="file" id="bookMainFile" class="d-none" accept=".fb2">
+                                                    </div>
+                                                    <!-- after download -->
+                                                    <div style="display: none;">
+                                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 rounded p-3 bg-light">
+                                                            <div class="flex-fill d-flex align-items-center gap-3">
+                                                                <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="31" height="49" viewBox="0 0 31 49" fill="none">
+                                                                    <path d="M0 48V36H8.32107V37.8H1.97711V41.3143H7.82249V43.1314H1.97711V48H0Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M10.3758 48V36H15.4647C17.9748 36 19.5909 36.9943 19.5909 39.0343C19.5909 40.4914 18.7141 41.3657 17.6997 41.6743C18.8 41.9829 20.0723 42.8057 20.0723 44.6743C20.0723 47.4 17.4075 48 15.4991 48H10.3758ZM12.3357 46.2857H15.3272C16.6682 46.2857 18.0951 46.1314 18.0951 44.4686C18.0951 42.8743 16.7026 42.6343 15.6023 42.6343H12.3357V46.2857ZM12.3529 40.9886H15.5679C16.7026 40.9886 17.6138 40.5086 17.6138 39.3429C17.6138 38.1429 16.737 37.6971 15.2928 37.6971H12.3529V40.9886Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M21.507 47.1086C21.507 44.2629 23.6217 43.1829 25.3925 42.1371C26.7507 41.3486 27.9369 40.7486 27.9369 39.4286C27.9369 38.4171 27.0601 37.8857 25.616 37.8857C24.4297 37.8857 23.1403 38.2971 21.9196 39.1886V37.3029C23.1059 36.48 24.4469 36.12 25.7879 36.12C28.1604 36.12 29.914 37.2171 29.914 39.3943C29.914 41.3829 28.2636 42.5314 26.6647 43.4743C25.1518 44.3657 23.742 45.0857 23.7076 46.2514L30 46.2343V48H21.507V47.1086Z" fill="#B4664C" style="fill:#B4664C;fill:color(display-p3 0.7059 0.4000 0.2980);fill-opacity:1;"/>
+                                                                    <path d="M2 33V2H22.2222L30 9.75V33M20.6667 2V11.3H30" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="2.31826"/>
+                                                                </svg>
+                                                                <div class="d-flex flex-column mt-1">
+                                                                    <div class="d-flex h5 lh-1 text-secondary mb-1 max-w-250">
+                                                                        <span class="text-max-lines-1">Убийства на выставке собак. Детективное агентство «Благотворительный магазин»</span>
+                                                                        <span class="flex-shrink-0">.fb2</span>
+                                                                    </div>
+                                                                    <div class="small text-muted">678 мб, 23.08.2025</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 row-gap-2">
+                                                                <a href="#">предпросмотр</a>
+                                                                <div>
+                                                                    <label class="btn btn-secondary rounded-pill px-4" for="bookMainFile2">выбрать другой файл</label>
+                                                                    <input type="file" id="bookMainFile2" class="d-none" accept=".fb2">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- info -->
+                                                    <div class="d-flex gap-1 mt-3 max-w-400">
+                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                            <path d="M18 6L9.49693 16L4 9.53535" stroke="#566B61" stroke-width="1.70667"></path>
+                                                        </svg>
+                                                        <div class="form-text text-primary" style="max-width: 520px;">Информация о&nbsp;том&nbsp;как&nbsp;правильно подготовить файл к&nbsp;загрузке на&nbsp;сервис</div>
+                                                    </div>
                                                 </div>
+                                                <!-- Персона -->
                                                 <div class="col-12">
-                                                    <label class="widget-title" for="bookAuthor">Автор</label>
-                                                    <input id="bookAuthor" placeholder="Сергей Александрович" class="form-control" type="email" name="book-author" disabled>
+                                                    <div class="widget-title">Персона</div>
+                                                    <!-- before add person -->
+                                                    <div>
+                                                        <p class="small">Вы можете создать персону автора (псевдоним), от чьего имени сможете опубликовать книгу</p>
+                                                        <button type="button" class="btn btn-secondary btn-lg btn-wide rounded-pill" data-coreui-target="#modalAddPerson" data-coreui-toggle="modal">выбрать персону</button>
+                                                    </div>
+                                                    <!-- after add person -->
+                                                    <div style="display: none;">
+                                                        <div class="d-flex align-items-xl-center gap-3 rounded p-3 bg-light">
+                                                            <div class="flex-fill d-flex flex-wrap align-items-center justify-content-between gap-3">
+                                                                <div class="d-flex align-items-center gap-3">
+                                                                    <div class="flex-shrink-0 position-relative overflow-hidden w-60px h-60px rounded-circle">
+                                                                        <img class="object-fit-cover w-100 h-100" src="img/user/list-item-person-avatar.png" alt="...">
+                                                                    </div>
+                                                                    <div class="fs-5 text-max-lines-1">Сергей Сергеевич Сергеев</div>
+                                                                </div>
+                                                                <div class="w-100 w-lg-auto">
+                                                                    <button type="button" class="btn btn-secondary rounded-pill px-4 w-100 w-lg-auto" data-coreui-target="#modalAddPerson" data-coreui-toggle="modal">сменить персону</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-shrink-0">
+                                                                <button type="button" class="btn border-0 p-0">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                                        <path d="M17.5 17.5L2.5 2.5M2.5 17.5L17.5 2.5" stroke="#9B9B9B" stroke-width="2.10522" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-12">
-                                                    <label class="widget-title" for="bookSubAuthor">Соавтор</label>
-                                                    <input id="bookSubAuthor" class="form-control" type="text" name="book-subauthor">
-                                                </div>
+                                                <!-- Серия книг -->
                                                 <div class="col-12">
                                                     <label class="widget-title" for="bookSeries">Серия книг</label>
                                                     <select id="bookSeries" class="form-select" name="book-series">
@@ -1440,11 +1505,16 @@
                                                         <option value="3">Three</option>
                                                     </select>
                                                 </div>
+                                                <!-- Аннотация -->
                                                 <div class="col-12">
                                                     <label class="widget-title" for="bookAnnotation">Аннотация</label>
                                                     <textarea id="bookAnnotation" class="form-control" rows="3"></textarea>
-                                                    <div class="form-text">Не менее 50 символов</div>
+                                                    <div class="form-text d-flex justify-content-between">
+                                                        <div>необходими ввести 50 символов</div>
+                                                        <div>0/200</div>
+                                                    </div>
                                                 </div>
+                                                <!-- Жанры -->
                                                 <div class="col-12">
                                                     <label class="widget-title" for="bookGenres">Жанры</label>
                                                     <select
@@ -1475,6 +1545,7 @@
                                                         <option value="3">Тег номер 4</option>
                                                     </select>
                                                 </div>
+                                                <!-- Категория 18+ (тумблер) -->
                                                 <div class="col-12">
                                                     <div class="d-flex align-items-center justify-content-between gap-2">
                                                         <div>
@@ -1486,6 +1557,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- Возрастной рейтинг -->
                                                 <div class="col-12">
                                                     <label class="widget-title" for="bookAgeRating">Возрастной рейтинг</label>
                                                     <div class="book-rating-options" role="tablist">
@@ -1563,6 +1635,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- Упоминание нетрадиционных сексуальных установок (чекбокс) -->
                                                 <div class="col-12">
                                                     <div class="widget-title">Упоминание нетрадиционных сексуальных установок</div>
                                                     <div class="form-check-wrapper">
@@ -1570,11 +1643,58 @@
                                                         <label class="form-check-label" for="bookAgitationForPidors">Я подтверждаю, что в произведении не содержится <a href="#" class="text-decoration-underline">пропаганда ЛГБТ</a></label>
                                                     </div>
                                                 </div>
+                                                <!-- Обложка -->
                                                 <div class="col-12">
-                                                    <label class="widget-title" for="bookCover">Обложка</label>
-                                                    <input id="bookCover" class="form-control" type="file" name="book-cover">
-                                                    <div class="form-text text-primary">JPG или PNG, не менее 500x625 px.<br> Размер файла до 20 MB.</div>
+                                                    <div class="widget-title">Обложка</div>
+                                                    <!-- before download -->
+                                                    <div>
+                                                        <div class="d-flex flex-column flex-lg-row gap-3 gap-lg-4">
+                                                            <div>
+                                                                <label class="btn btn-secondary btn-lg btn-wide rounded-pill" for="bookCover1">загрузить файл</label>
+                                                                <input type="file" id="bookCover1" class="d-none" accept=".png, .jpg, .jpeg">
+                                                            </div>
+                                                            <div class="d-flex gap-1">
+                                                                <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                                    <path d="M18 6L9.49693 16L4 9.53535" stroke="#566B61" stroke-width="1.70667"></path>
+                                                                </svg>
+                                                                <div class="form-text text-primary">JPG или PNG, не менее 500x625 px.<br> Размер файла до 20 MB.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- after download -->
+                                                    <div style="display: none;">
+                                                        <div class="row gy-4">
+                                                            <!-- media -->
+                                                            <div class="col-lg-4">
+                                                                <div class="mb-3">
+                                                                    <img class="img-fluid" src="img/user/after-download-img.png" alt="...">
+                                                                </div>
+                                                                <div class="h5 text-secondary mb-1">Название_изображения.png</div>
+                                                                <div class="text-gray fs-small">678 мб, 23.08.2025</div>
+                                                            </div>
+                                                            <!-- content -->
+                                                            <div class="col-lg-8">
+                                                                <div class="mb-3 mb-lg-4">
+                                                                    <label class="btn btn-secondary rounded-pill px-4" for="bookCover2">выбрать другой файл</label>
+                                                                    <input type="file" id="bookCover2" class="d-none" accept=".png, .jpg, .jpeg">
+                                                                </div>
+                                                                <div class="mb-3 mb-lg-4">
+                                                                    <div class="d-flex gap-1">
+                                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                                            <path d="M18 6L9.49693 16L4 9.53535" stroke="#566B61" stroke-width="1.70667"></path>
+                                                                        </svg>
+                                                                        <div class="form-text text-primary">JPG или PNG, не менее 500x625 px.<br> Размер файла до 20 MB.</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-check-wrapper">
+                                                                    <input class="form-check-input" type="checkbox" id="agreeForAll2">
+                                                                    <label class="form-check-label" for="agreeForAll2">Я подтверждаю наличие прав на использование изображения и несу юридическую ответственность за его использование.</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                                <!-- Цена за книгу -->
                                                 <div class="col-12">
                                                     <label class="widget-title" for="bookPrice">Цена за книгу</label>
                                                     <select id="bookPrice" class="form-select" name="book-series">
@@ -1584,85 +1704,100 @@
                                                         <option value="3">Three</option>
                                                     </select>
                                                 </div>
+                                                <!-- Оплата за публикацию -->
                                                 <div class="col-12">
                                                     <div class="widget-title">Оплата за публикацию</div>
                                                     <div class="row gy-3">
-                                                        <div class="col-lg-4">
+                                                        <div class="col-12">
                                                             <div class="radio-payment-method h-100">
                                                                 <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-1" value="1">
                                                                 <label class="card card-payment-method payment-method-label h-100" for="bookPaymentMethod-1">
                                                                     <div class="card-body">
-                                                                        <div class="card-title">Эксклюзивная</div>
-                                                                        <div class="card-subtitle"><b>35%</b> роялти с каждой продажи</div>
-                                                                        <div class="card-content">
-                                                                            <p><span class="text-primary fs-5 fw-medium">58,04 руб</span> доход с каждой продажи</p>
-                                                                            <ul>
-                                                                                <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
-                                                                                <li>Вы можете размещать книгу только на нашей платформе</li>
-                                                                                <li>После публикации доступна запись аудиокниги</li>
-                                                                            </ul>
+                                                                        <div class="d-flex flex-wrap align-items-center gap-3">
+                                                                            <div class="flex-fill">
+                                                                                <div class="card-title">Эксклюзивная</div>
+                                                                                <div class="card-subtitle"><b>35%</b> роялти с каждой продажи</div>
+                                                                                <div class="card-content">
+                                                                                    <p><span class="text-primary fs-5 fw-medium">58,04 руб</span> доход с каждой продажи</p>
+                                                                                    <ul>
+                                                                                        <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                                        <li>Вы можете размещать книгу только на нашей платформе</li>
+                                                                                        <li>После публикации доступна запись аудиокниги</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="w-100 w-lg-auto">
+                                                                                <div class="btn btn-secondary btn-lg btn-wide rounded-pill w-100 w-lg-auto">выбрать</div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="card-footer">
-                                                                        <div class="btn btn-secondary rounded-pill">Выбрать</div>
                                                                     </div>
                                                                 </label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-4">
+                                                        <div class="col-12">
                                                             <div class="radio-payment-method h-100">
                                                                 <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-2" value="2">
                                                                 <label class="card card-payment-method payment-method-label h-100" for="bookPaymentMethod-2">
                                                                     <div class="card-body">
-                                                                        <div class="card-title">Базовая</div>
-                                                                        <div class="card-subtitle"><b>25%</b> роялти с каждой продажи</div>
-                                                                        <div class="card-content">
-                                                                            <p><span class="text-primary fs-5 fw-medium">41,45 руб</span> доход с каждой продажи</p>
-                                                                            <ul>
-                                                                                <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
-                                                                                <li>Вы можете размещать книгу на других площадках</li>
-                                                                                <li>После публикации доступна запись аудиокниги</li>
-                                                                            </ul>
+                                                                        <div class="d-flex flex-wrap align-items-center gap-3">
+                                                                            <div class="flex-fill">
+                                                                                <div class="card-title">Базовая</div>
+                                                                                <div class="card-subtitle"><b>25%</b> роялти с каждой продажи</div>
+                                                                                <div class="card-content">
+                                                                                    <p><span class="text-primary fs-5 fw-medium">41,45 руб</span> доход с каждой продажи</p>
+                                                                                    <ul>
+                                                                                        <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                                        <li>Вы можете размещать книгу на других площадках</li>
+                                                                                        <li>После публикации доступна запись аудиокниги</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="w-100 w-lg-auto">
+                                                                                <div class="btn btn-secondary btn-lg btn-wide rounded-pill w-100 w-lg-auto">выбрать</div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="card-footer">
-                                                                        <div class="btn btn-secondary rounded-pill">Выбрать</div>
                                                                     </div>
                                                                 </label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-4">
+                                                        <div class="col-12">
                                                             <div class="radio-payment-method h-100">
                                                                 <input type="radio" name="bookPaymentMethod" id="bookPaymentMethod-3" value="3">
                                                                 <label class="card card-payment-method payment-method-label h-100" for="bookPaymentMethod-3">
                                                                     <div class="card-body">
-                                                                        <div class="card-title">Бесплатная</div>
-                                                                        <div class="card-subtitle">Распространяется <b>бесплатно</b></div>
-                                                                        <div class="card-content">
-                                                                            <p><span class="text-primary fs-5 fw-medium">0 руб</span> доход с каждой продажи</p>
-                                                                            <ul>
-                                                                                <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
-                                                                                <li>Вы можете размещать книгу на других площадках</li>
-                                                                            </ul>
+                                                                        <div class="d-flex flex-wrap align-items-center gap-3">
+                                                                            <div class="flex-fill">
+                                                                                <div class="card-title">Бесплатная</div>
+                                                                                <div class="card-subtitle">Распространяется <b>бесплатно</b></div>
+                                                                                <div class="card-content">
+                                                                                    <p><span class="text-primary fs-5 fw-medium">0 руб</span> доход с каждой продажи</p>
+                                                                                    <ul>
+                                                                                        <li>Опубликуем на своей платформе и у <a href="#">партнеров</a></li>
+                                                                                        <li>Вы можете размещать книгу на других площадках</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="w-100 w-lg-auto">
+                                                                                <div class="btn btn-secondary btn-lg btn-wide rounded-pill w-100 w-lg-auto">выбрать</div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="card-footer">
-                                                                        <div class="btn btn-secondary rounded-pill">Выбрать</div>
                                                                     </div>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- Я ознакомился (чекбокс) -->
                                                 <div class="col-12">
-                                                    <div class="form-check-wrapper">
+                                                    <div class="form-check-wrapper mt-5">
                                                         <input class="form-check-input" type="checkbox" id="agreeForAll" checked>
                                                         <label class="form-check-label" for="agreeForAll">Я подтверждаю, что ознакомился с <a href="#" class="text-decoration-underline">Правилами публикации</a></label>
                                                     </div>
                                                 </div>
+                                                <!-- Опубликовать -->
                                                 <div class="col-12">
-                                                    <div class="buttons-wrapper">
-                                                        <button type="submit" class="btn btn-primary btn-lg btn-wide rounded-pill">Опубликовать</button>
+                                                    <div class="buttons-wrapper text-center">
+                                                        <button type="submit" class="btn btn-primary btn-lg btn-wide rounded-pill w-100 w-lg-auto">Опубликовать</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1678,6 +1813,164 @@
         </section>
 
     </main>
+
+    <!-- modalAddPerson -->
+    <div class="modal fade modal-add-person" id="modalAddPerson" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog" style="--cui-modal-width: 750px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Выбрать персону</h2>
+                    <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Выберите персону из ранее созданных или создайте новую</p>
+                    <!-- list -->
+                    <div class="position-relative overflow-hidden rounded border">
+                        <div class="position-relative overflow-y-auto d-flex flex-column gap-2 p-2 max-h-360 max-h-lg-380 custom-vertical-scrollbar-secondary">
+                            <!-- item -->
+                            <div class="position-relative d-flex flex-wrap align-items-center gap-3 rounded p-3 bg-light">
+                                <div class="flex-fill h4 mb-0 w-100 w-lg-auto">Сергей Сергеевич Сергеев</div>
+                                <div class="order-lg-first flex-shrink-0 position-relative overflow-hidden w-60px h-60px rounded-circle">
+                                    <img class="object-fit-cover w-100 h-100" src="img/user/list-item-person-avatar.png" alt="...">
+                                </div>
+                                <div class="ms-auto">
+                                    <button type="button" class="btn btn-white-shadow btn-lg rounded-pill">выбрать</button>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="position-relative d-flex flex-wrap align-items-center gap-3 rounded p-3 bg-light">
+                                <div class="flex-fill h4 mb-0 w-100 w-lg-auto">Сергей Сергеевич Сергеев</div>
+                                <div class="order-lg-first flex-shrink-0 position-relative overflow-hidden w-60px h-60px rounded-circle">
+                                    <img class="object-fit-cover w-100 h-100" src="img/user/list-item-person-avatar.png" alt="...">
+                                </div>
+                                <div class="ms-auto">
+                                    <button type="button" class="btn btn-white-shadow btn-lg rounded-pill">выбрать</button>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="position-relative d-flex flex-wrap align-items-center gap-3 rounded p-3 bg-light">
+                                <div class="flex-fill h4 mb-0 w-100 w-lg-auto">Сергей Сергеевич Сергеев</div>
+                                <div class="order-lg-first flex-shrink-0 position-relative overflow-hidden w-60px h-60px rounded-circle">
+                                    <img class="object-fit-cover w-100 h-100" src="img/user/list-item-person-avatar.png" alt="...">
+                                </div>
+                                <div class="ms-auto">
+                                    <button type="button" class="btn btn-white-shadow btn-lg rounded-pill">выбрать</button>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <div class="position-relative d-flex flex-wrap align-items-center gap-3 rounded p-3 bg-light">
+                                <div class="flex-fill h4 mb-0 w-100 w-lg-auto">Сергей Сергеевич Сергеев</div>
+                                <div class="order-lg-first flex-shrink-0 position-relative overflow-hidden w-60px h-60px rounded-circle">
+                                    <img class="object-fit-cover w-100 h-100" src="img/user/list-item-person-avatar.png" alt="...">
+                                </div>
+                                <div class="ms-auto">
+                                    <button type="button" class="btn btn-white-shadow btn-lg rounded-pill">выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-lg btn-wide rounded-pill w-100 w-lg-auto m-0" data-coreui-target="#modalCreatePerson" data-coreui-toggle="modal">создать персону</button>
+                    <button type="button" class="btn btn-text btn-lg w-100 w-lg-auto m-0" data-coreui-dismiss="modal" aria-label="Close">отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modalCreatePerson -->
+    <div class="modal fade modal-create-person" id="modalCreatePerson" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog" style="--cui-modal-width: 750px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Данные персоны</h2>
+                    <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- form -->
+                    <div class="account-form-wrapper">
+                        <form class="form-account" action="#">
+                            <div class="row gy-3 gy-lg-4">
+                                <div class="col-12">
+                                    <label class="form-label" for="formPersonFirstname">Имя*</label>
+                                    <input id="formPersonFirstname" class="form-control" type="text" name="firstName">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="formPersonLastname">Фамилия*</label>
+                                    <input id="formPersonLastname" class="form-control" type="text" name="lastName">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="formPersonDescription">Описание автора</label>
+                                    <textarea id="formPersonDescription" class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <h2 class="widget-title">Аватар автора</h2>
+                                    <!-- custom download -->
+                                    <div>
+                                        <!-- before download -->
+                                        <div>
+                                            <div class="d-flex flex-column flex-lg-row gap-3 gap-lg-4">
+                                                <div>
+                                                    <label class="btn btn-secondary btn-lg btn-wide rounded-pill" for="personDownloadAvatar">загрузить файл</label>
+                                                    <input type="file" id="personDownloadAvatar" class="d-none" accept=".png, .jpg, .jpeg">
+                                                </div>
+                                                <div class="d-flex gap-1">
+                                                    <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                        <path d="M18 6L9.49693 16L4 9.53535" stroke="#566B61" stroke-width="1.70667"></path>
+                                                    </svg>
+                                                    <div class="form-text text-primary">JPG или PNG, не менее 500x500 px.<br> Размер файла до 2 MB.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- after download -->
+                                        <div style="display: none;">
+                                            <div class="row gy-4">
+                                                <!-- media -->
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <img class="img-fluid" src="img/user/after-download-avatar.png" alt="...">
+                                                    </div>
+                                                    <div class="h5 text-secondary mb-1">Название_изображения.png</div>
+                                                    <div class="text-gray fs-small">678 мб, 23.08.2025</div>
+                                                </div>
+                                                <!-- content -->
+                                                <div class="col-lg-8">
+                                                    <div class="mb-3 mb-lg-4">
+                                                        <label class="btn btn-secondary rounded-pill px-4" for="personRedownloadAvatar">выбрать другой файл</label>
+                                                        <input type="file" id="personRedownloadAvatar" class="d-none" accept=".png, .jpg, .jpeg">
+                                                    </div>
+                                                    <div class="mb-3 mb-lg-4">
+                                                        <div class="d-flex gap-1">
+                                                            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                                <path d="M18 6L9.49693 16L4 9.53535" stroke="#566B61" stroke-width="1.70667"></path>
+                                                            </svg>
+                                                            <div class="form-text text-primary">JPG или PNG, не менее 500x500 px.<br> Размер файла до 2 MB.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check-wrapper">
+                                                        <input class="form-check-input" type="checkbox" id="modalCreatePersonAgreeForAll2">
+                                                        <label class="form-check-label" for="modalCreatePersonAgreeForAll2">Я подтверждаю наличие прав на использование изображения и несу юридическую ответственность за его использование.</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="buttons-wrapper border-top pt-2rem">
+                                        <div class="d-flex flex-wrap gap-4 row-gap-3">
+                                            <button type="submit" class="btn btn-primary btn-lg btn-wide rounded-pill w-100 w-lg-auto">сохранить изменения</button>
+                                            <button type="button" class="btn btn-secondary btn-lg btn-wide rounded-pill w-100 w-lg-auto" data-coreui-dismiss="modal" aria-label="Close">отменить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- footer -->
     <footer class="footer">

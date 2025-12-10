@@ -167,6 +167,7 @@ p {
     -webkit-box-orient: vertical;
     overflow: hidden;
     word-break: break-all;
+    min-width: 0;
 }
 
 .text-max-lines-3 {
