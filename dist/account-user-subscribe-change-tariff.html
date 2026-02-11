@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- title -->
-    <title>ЛК - Читатель - Подписка</title>
+    <title>Поменять тариф</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 </head>
@@ -1385,116 +1385,156 @@
         <section class="section section__navigation">
             <div class="container">
                 <!-- Навигация / Хлебные крошки -->
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                        <li class="breadcrumb-item"><a href="account-user.html">Личный кабинет читателя</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Подписка</li>
-                    </ol>
-                </nav>
+                <a href="account-user-subscribe.html">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10 12L5.33333 7.33333L10 2.66667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <span>Назад</span>
+                </a>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
-                <div class="account-area">
-                    <div class="row gy-4 justify-content-center">
+                
+                <div class="h1 mb-4">Поменять тариф</div>
 
-                        <!-- account-info-area -->
-                        <div class="col-lg-3">
-                            <div class="account-info-area">
-                                <div class="account-avatar">
-                                    <div class="avatar-wrapper">
-                                        <div class="avatar-preview">
-                                            <img class="avatar-img" src="img/user/account-avatar-xl.jpg" alt="">
-                                        </div>
-                                        <div class="avatar-edit">
-                                            <input type="file" accept=".png, .jpg, .jpeg" id="imageUpload">
-                                            <label for="imageUpload" class="btn-change_img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none">
-                                                    <path d="M14.2647 15.9377L12.5473 14.2346C11.758 13.4519 11.3633 13.0605 10.9089 12.9137C10.5092 12.7845 10.079 12.7845 9.67922 12.9137C9.22485 13.0605 8.83017 13.4519 8.04082 14.2346L4.04193 18.2622M14.2647 15.9377L14.606 15.5991C15.412 14.7999 15.8149 14.4003 16.2773 14.2545C16.6839 14.1262 17.1208 14.1312 17.5244 14.2688C17.9832 14.4253 18.3769 14.834 19.1642 15.6515L20 16.5001M14.2647 15.9377L18.22 19.9628M18.22 19.9628C17.8703 20 17.4213 20 16.8 20H7.2C6.07989 20 5.51984 20 5.09202 19.782C4.7157 19.5903 4.40973 19.2843 4.21799 18.908C4.12583 18.7271 4.07264 18.5226 4.04193 18.2622M18.22 19.9628C18.5007 19.9329 18.7175 19.8791 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V13M11 4H7.2C6.07989 4 5.51984 4 5.09202 4.21799C4.7157 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.0799 4 7.2V16.8C4 17.4466 4 17.9066 4.04193 18.2622M18 9V6M18 6V3M18 6H21M18 6H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </label>
-                                        </div>
+                <div class="d-flex flex-column gap-4">
+                    <!-- item -->
+                    <div class="bg-white p-3 p-lg-4 px-lg-30px">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="h3 mb-3">Подписка&nbsp;на&nbsp;1&nbsp;месяц</div>
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12L10 17L20 7" stroke="#1F3326" stroke-width="1.33333" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>Более 121&nbsp;600 книг и&nbsp;черновиков — читайте без&nbsp;ограничений</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12L10 17L20 7" stroke="#1F3326" stroke-width="1.33333" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>Доступ к&nbsp;завершённым книгам в&nbsp;пределах лимита подписки</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12L10 17L20 7" stroke="#1F3326" stroke-width="1.33333" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>Читайте черновики — новые главы появляются сразу после публикации</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12L10 17L20 7" stroke="#1F3326" stroke-width="1.33333" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>Экономия: десятки книг по&nbsp;цене одной</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12L10 17L20 7" stroke="#1F3326" stroke-width="1.33333" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>Чтение без&nbsp;рекламы и&nbsp;лимитов</div>
                                     </div>
                                 </div>
-                                <div class="account-age">
-                                    <div><span>зарегистрирован</span> 21.08.2007</div>
-                                </div>
-                                <div class="account-name">
-                                    <h1>Константин Длиннаяфамилия</h1>
-                                </div>
-                                <div class="account-menu-wrapper">
-                                    <nav class="account-menu">
-                                        <div class="links-wrapper">
-                                            <a href="account-user.html" class="menu-link">Мой профиль</a>
-                                            <a href="account-author-verification.html" class="menu-link">Стать автором</a>
-                                            <a href="#" class="menu-link">Предпочтения </a>
-                                            <a href="#" class="menu-link">Приватность</a>
-                                            <a href="account-user-notifications.html" class="menu-link">Уведомления</a>
-                                            <a href="account-user-subscribe.html" class="menu-link active">Подписка</a>
-                                            <a href="#" class="menu-link">Способ оплаты</a>
-                                            <a href="account-user-purchase-history.html" class="menu-link">История покупок</a>
-                                            <a href="sign-in.html" class="menu-link logout-link">Выход</a>
-                                        </div>
-                                    </nav>
+                            </div>
+                            <div class="col-lg-3">
+                                <!-- divider -->
+                                <div class="my-4 d-lg-none" style="height: 1px; background-color: #D9D9D9;"></div>
+                                <div class="d-flex h-100">
+                                    <!-- divider -->
+                                    <div class="h-100 d-none d-lg-block" style="width: 1px; margin-right: 40px; background-color: #D9D9D9;"></div>
+                                    <!-- content -->
+                                    <div class="d-flex flex-column gap-3 h-100">
+                                        <div class="h3 mb-0">Отправим вам чек</div>
+                                        <form action="#" class="d-flex flex-column gap-3">
+                                            <div>
+                                                <input type="email" class="form-control" placeholder="Введите ваш Email">
+                                            </div>
+                                            <div class="h1 mb-0">500&nbsp;₽/Месяц</div>
+                                            <div>
+                                                <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100">Выбрать</button>
+                                            </div>
+                                        </form>
+                                        <div class="small text-gray">Далее 500₽ в месяц</div>
+                                        <div class="small text-gray">Ещё&nbsp;дополнительная инфа тут&nbsp;в&nbsp;две&nbsp;строчки или&nbsp;более</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- account-content-area -->
-                        <div class="col-lg-7">
-                            <div class="account-content-area">
-
-                                <div class="account-content-widget">
-                                    <div class="d-flex align-items-center gap-3 mb-3">
-                                        <h2 class="h2 mb-0">Подписка</h2>
-                                        <span class="badge badge-wide rounded-pill text-bg-primary">активна</span>
+                    </div>
+                    <!-- item -->
+                    <div class="bg-white p-3 p-lg-4 px-lg-30px">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="h3 mb-3">Подписка&nbsp;на&nbsp;1&nbsp;месяц (Максимум)</div>
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12L10 17L20 7" stroke="#1F3326" stroke-width="1.33333" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>Более 121&nbsp;600 книг и&nbsp;черновиков — читайте без&nbsp;ограничений</div>
                                     </div>
-                                    <div class="text-gray mb-4">
-                                        <div>С 16 октября по 16 ноября 2025</div>
-                                        <hr>
-                                        <div>Чтобы сохранить доступ к сервису, оплатите следующий период на 500₽</div>
-                                        <div>до 00:00 17 ноября 2025</div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12L10 17L20 7" stroke="#1F3326" stroke-width="1.33333" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>Доступ к&nbsp;завершённым книгам в&nbsp;пределах лимита подписки</div>
                                     </div>
-                                    <div class="d-flex flex-column gap-2 flex-lg-row justify-content-between">
-                                        <div class="d-flex flex-column gap-2 flex-lg-row">
-                                            <button type="button" class="btn btn-primary btn-lg btn-wide rounded-pill">Оплатить период</button>
-                                            <a href="account-user-subscribe-change-tariff.html" class="btn btn-secondary btn-lg btn-wide rounded-pill">Поменять тариф</a>
-                                        </div>
-                                        <button type="button" class="btn btn-text btn-lg fs-16px rounded-pill" data-coreui-target="#modalSubscribeCancel" data-coreui-toggle="modal">Отменить подписку</button>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12L10 17L20 7" stroke="#1F3326" stroke-width="1.33333" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>Читайте черновики — новые главы появляются сразу после публикации</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12L10 17L20 7" stroke="#1F3326" stroke-width="1.33333" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>Экономия: десятки книг по&nbsp;цене одной</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12L10 17L20 7" stroke="#1F3326" stroke-width="1.33333" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>Чтение без&nbsp;рекламы и&nbsp;лимитов</div>
                                     </div>
                                 </div>
-
+                            </div>
+                            <div class="col-lg-3">
+                                <!-- divider -->
+                                <div class="my-4 d-lg-none" style="height: 1px; background-color: #D9D9D9;"></div>
+                                <div class="d-flex h-100">
+                                    <!-- divider -->
+                                    <div class="h-100 d-none d-lg-block" style="width: 1px; margin-right: 40px; background-color: #D9D9D9;"></div>
+                                    <!-- content -->
+                                    <div class="d-flex flex-column gap-3 h-100">
+                                        <div class="h3 mb-0">Отправим вам чек</div>
+                                        <form action="#" class="d-flex flex-column gap-3">
+                                            <div>
+                                                <input type="email" class="form-control" placeholder="Введите ваш Email">
+                                            </div>
+                                            <div class="h1 mb-0">800&nbsp;₽/Месяц</div>
+                                            <div>
+                                                <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100">Выбрать</button>
+                                            </div>
+                                        </form>
+                                        <div class="small text-gray">Далее 500₽ в месяц</div>
+                                        <div class="small text-gray">Ещё&nbsp;дополнительная инфа тут&nbsp;в&nbsp;две&nbsp;строчки или&nbsp;более</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
+
+
             </div>
         </section>
 
     </main>
-
-    <!-- modalSubscribeCancel -->
-    <div class="modal fade modal-subscribe-cancel" id="modalSubscribeCancel" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="--cui-modal-width: 500px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Вы действительно хотите отменить подписку?</h2>
-                    <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>После&nbsp;отмены у&nbsp;вас&nbsp;будет доступ к&nbsp;подписке до&nbsp;конца оплаченного периода. Подписка больше не&nbsp;будет автоматически продлеваться</p>
-                    <div class="d-flex flex-column gap-2 my-4 my-lg-5">
-                        <button type="button" class="btn btn-primary btn-lg btn-wide rounded-pill">оставить подписку</button>
-                        <button type="button" class="btn btn-secondary btn-lg btn-wide rounded-pill">подтвердить отмену</button>
-                    </div>
-                    <p class="text-need-help">Нужна помощь? <a href="#">Напишите в&nbsp;поддержку</a>&nbsp;— мы&nbsp;поможем с&nbsp;вопросами по&nbsp;возврату и&nbsp;доступу</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- footer -->
     <footer class="footer">

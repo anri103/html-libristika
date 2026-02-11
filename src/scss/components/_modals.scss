@@ -60,3 +60,38 @@
         --cui-modal-padding: 34px;
     }
 }
+
+/* modal-subscribe-cancel */
+
+.modal-subscribe-cancel {
+    --cui-modal-color: #6A6969;
+    --cui-heading-color: #1F3326;
+    --cui-modal-bg: var(--cui-white);
+    --cui-modal-border-color: transparent;
+    --cui-modal-header-border-color: transparent;
+    --cui-modal-footer-border-color: transparent;
+    --cui-modal-header-padding: 20px 20px;
+    --cui-modal-padding: 20px;
+
+    .modal-header {
+        align-items: flex-start;
+        padding-bottom: 0;
+    }
+
+    .text-need-help {
+        --cui-link-color-rgb: 151, 71, 255;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    @media (min-width: 992px) {
+        --cui-modal-header-padding: 30px 30px;
+        --cui-modal-padding: 30px;
+
+        .modal-body {
+            font-size: 18px;
+        }
+    }
+}

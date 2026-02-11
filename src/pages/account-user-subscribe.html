@@ -91,9 +91,12 @@
                                         <div>Чтобы сохранить доступ к сервису, оплатите следующий период на 500₽</div>
                                         <div>до 00:00 17 ноября 2025</div>
                                     </div>
-                                    <div class="d-flex flex-column gap-2 flex-lg-row">
-                                        <button type="button" class="btn btn-primary btn-lg btn-wide rounded-pill">Оплатить период</button>
-                                        <button type="button" class="btn btn-text rounded-pill">Поменять тариф</button>
+                                    <div class="d-flex flex-column gap-2 flex-lg-row justify-content-between">
+                                        <div class="d-flex flex-column gap-2 flex-lg-row">
+                                            <button type="button" class="btn btn-primary btn-lg btn-wide rounded-pill">Оплатить период</button>
+                                            <a href="account-user-subscribe-change-tariff.html" class="btn btn-secondary btn-lg btn-wide rounded-pill">Поменять тариф</a>
+                                        </div>
+                                        <button type="button" class="btn btn-text btn-lg fs-16px rounded-pill" data-coreui-target="#modalSubscribeCancel" data-coreui-toggle="modal">Отменить подписку</button>
                                     </div>
                                 </div>
 
@@ -106,6 +109,26 @@
         </section>
 
     </main>
+
+    <!-- modalSubscribeCancel -->
+    <div class="modal fade modal-subscribe-cancel" id="modalSubscribeCancel" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="--cui-modal-width: 500px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Вы действительно хотите отменить подписку?</h2>
+                    <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>После&nbsp;отмены у&nbsp;вас&nbsp;будет доступ к&nbsp;подписке до&nbsp;конца оплаченного периода. Подписка больше не&nbsp;будет автоматически продлеваться</p>
+                    <div class="d-flex flex-column gap-2 my-4 my-lg-5">
+                        <button type="button" class="btn btn-primary btn-lg btn-wide rounded-pill">оставить подписку</button>
+                        <button type="button" class="btn btn-secondary btn-lg btn-wide rounded-pill">подтвердить отмену</button>
+                    </div>
+                    <p class="text-need-help">Нужна помощь? <a href="#">Напишите в&nbsp;поддержку</a>&nbsp;— мы&nbsp;поможем с&nbsp;вопросами по&nbsp;возврату и&nbsp;доступу</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- footer -->
     @@include('../components/footer.html')
