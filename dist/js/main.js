@@ -10,12 +10,12 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new coreui.P
 function toggleCollapses(hideId, showId) {
     const hideElement = document.getElementById(hideId);
     const showElement = document.getElementById(showId);
-    
+
     if (!hideElement || !showElement) return;
-    
+
     const hideCollapse = coreui.Collapse.getInstance(hideElement) || new coreui.Collapse(hideElement, { toggle: false });
     const showCollapse = coreui.Collapse.getInstance(showElement) || new coreui.Collapse(showElement, { toggle: false });
-    
+
     hideCollapse.hide();
     showCollapse.show();
 }
@@ -29,12 +29,12 @@ window.onload = () => {
 
     // Обработчик для всех кнопок "Каталог"
     catalogTogglers.forEach(catalogToggler => {
-        catalogToggler.addEventListener('click', function(e) {
+        catalogToggler.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const isCatalogOpen = catalogMenu.classList.contains('show');
             const isGenresOpen = genresMenu.classList.contains('show');
-            
+
             if (isGenresOpen) {
                 // Закрываем genresMenu, не открываем catalogMenu
                 const genresCollapse = coreui.Collapse.getInstance(genresMenu) || new coreui.Collapse(genresMenu, { toggle: false });
@@ -53,23 +53,23 @@ window.onload = () => {
 
     // Обработчики событий для отслеживания состояния меню
     if (catalogMenu) {
-        catalogMenu.addEventListener('show.coreui.collapse', function() {
+        catalogMenu.addEventListener('show.coreui.collapse', function () {
             document.body.classList.add('catalog-menu-active');
             document.body.classList.remove('genres-menu-active');
         });
-        
-        catalogMenu.addEventListener('hide.coreui.collapse', function() {
+
+        catalogMenu.addEventListener('hide.coreui.collapse', function () {
             document.body.classList.remove('catalog-menu-active');
         });
     }
 
     if (genresMenu) {
-        genresMenu.addEventListener('show.coreui.collapse', function() {
+        genresMenu.addEventListener('show.coreui.collapse', function () {
             document.body.classList.add('genres-menu-active');
             document.body.classList.remove('catalog-menu-active');
         });
-        
-        genresMenu.addEventListener('hide.coreui.collapse', function() {
+
+        genresMenu.addEventListener('hide.coreui.collapse', function () {
             document.body.classList.remove('genres-menu-active');
         });
     }
@@ -165,4 +165,33 @@ window.onload = () => {
         };
         new coreui.Rating(rating, optionsCustomIcons1);
     });
+
 }
+
+// Дата при публикации книги
+document.addEventListener('change', (e) => {
+  const switchEl = e.target.closest('[data-disable-publication-date]');
+  if (!switchEl) return;
+
+  const tab = switchEl.closest('.publication-tab');
+  if (!tab) return;
+
+  const dateWrapper = tab.querySelector('[data-coreui-toggle="date-picker"]');
+  if (!dateWrapper) return;
+
+  const input = dateWrapper.querySelector('input');
+  if (!input) return;
+
+  if (switchEl.checked) {
+    // очищаем дату
+    input.value = '';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    input.dispatchEvent(new Event('change', { bubbles: true }));
+
+    // блокируем поле
+    input.disabled = true;
+  } else {
+    // разблокируем поле
+    input.disabled = false;
+  }
+});

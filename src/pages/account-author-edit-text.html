@@ -50,14 +50,13 @@
                                         <a href="#tab-chapter-1" class="item-link active" data-coreui-toggle="tab" role="tab" aria-selected="true">Глава 1. Название</a>
                                     </div>
                                     <div class="fs-small text-muted">Опубликовано 21.03.2025</div>
-                                    <div class="text-success mt-2">бесплатно</div>
+                                    <div class="text-success mt-2">Ознакомительная глава</div>
                                 </div>
                                 <div class="nav-item mb-4">
                                     <div class="h6 mb-1">
                                         <a href="#tab-chapter-2" class="item-link" data-coreui-toggle="tab" role="tab" aria-selected="false">Глава 2. Название</a>
                                     </div>
                                     <div class="fs-small text-muted">Опубликовать 17.03.2025</div>
-                                    <div class="text-success mt-2">бесплатно</div>
                                 </div>
                                 <div class="nav-item mb-4">
                                     <div class="h6 mb-1">
@@ -71,7 +70,7 @@
                         <!-- content -->
                         <div class="col-lg-9">
                             <div class="tab-content">
-                                <div class="tab-pane fade show active" id="tab-chapter-1" role="tabpanel" tabindex="0">
+                                <div class="publication-tab tab-pane fade show active" id="tab-chapter-1" role="tabpanel" tabindex="0">
                                     <div class="row gy-4">
                                         <div class="col-lg-8">
                                             <div class="text-editor-area">
@@ -202,13 +201,13 @@
                                                         </div>
                                                         <div>
                                                             <div class="form-switch-xl">
-                                                                <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration-chapter-1">
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration-chapter-1" data-disable-publication-date>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="text-muted mt-1">Необходимые комментарии о модерации</div>
                                                 </div>
-                                                <div class="mb-3">
+                                                <!-- <div class="mb-3">
                                                     <div class="d-flex align-items-center justify-content-between gap-2">
                                                         <div>
                                                             <label class="h5 mb-0" for="freeChapter-chapter-1">Бесплатная глава</label>
@@ -219,7 +218,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="mb-3">
                                                     <div class="h5">Дата публикации</div>
                                                     <div class="book-date-publication-input-wrapper" data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="__.__.____"></div>
@@ -231,7 +230,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="tab-chapter-2" role="tabpanel" tabindex="0">
+                                <div class="publication-tab tab-pane fade" id="tab-chapter-2" role="tabpanel" tabindex="0">
                                     <div class="row gy-4">
                                         <div class="col-lg-8">
                                             <div class="text-editor-area">
@@ -358,20 +357,20 @@
                                                 <div class="mb-3">
                                                     <div class="d-flex align-items-center justify-content-between gap-2">
                                                         <div>
-                                                            <label class="h5 mb-0" for="publishImmediatelyAfterModeration-chapter-1">Опубликовать сразу после модерации</label>
+                                                            <label class="h5 mb-0" for="publishImmediatelyAfterModeration-chapter-2">Опубликовать сразу после модерации</label>
                                                         </div>
                                                         <div>
                                                             <div class="form-switch-xl">
-                                                                <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration-chapter-2">
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration-chapter-2" data-disable-publication-date>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="text-muted mt-1">Необходимые комментарии о модерации</div>
                                                 </div>
-                                                <div class="mb-3">
+                                                <!-- <div class="mb-3">
                                                     <div class="d-flex align-items-center justify-content-between gap-2">
                                                         <div>
-                                                            <label class="h5 mb-0" for="freeChapter-chapter-1">Бесплатная глава</label>
+                                                            <label class="h5 mb-0" for="freeChapter-chapter-2">Бесплатная глава</label>
                                                         </div>
                                                         <div>
                                                             <div class="form-switch-xl">
@@ -379,7 +378,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="mb-3">
                                                     <div class="h5">Дата публикации</div>
                                                     <div class="book-date-publication-input-wrapper" data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="__.__.____"></div>
@@ -391,7 +390,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="tab-chapter-3" role="tabpanel" tabindex="0">
+                                <div class="publication-tab tab-pane fade" id="tab-chapter-3" role="tabpanel" tabindex="0">
                                     <div class="row gy-4">
                                         <div class="col-lg-8">
                                             <div class="text-editor-area">
@@ -518,20 +517,20 @@
                                                 <div class="mb-3">
                                                     <div class="d-flex align-items-center justify-content-between gap-2">
                                                         <div>
-                                                            <label class="h5 mb-0" for="publishImmediatelyAfterModeration-chapter-1">Опубликовать сразу после модерации</label>
+                                                            <label class="h5 mb-0" for="publishImmediatelyAfterModeration-chapter-3">Опубликовать сразу после модерации</label>
                                                         </div>
                                                         <div>
                                                             <div class="form-switch-xl">
-                                                                <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration-chapter-3">
+                                                                <input class="form-check-input" type="checkbox" role="switch" id="publishImmediatelyAfterModeration-chapter-3" data-disable-publication-date>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="text-muted mt-1">Необходимые комментарии о модерации</div>
                                                 </div>
-                                                <div class="mb-3">
+                                                <!-- <div class="mb-3">
                                                     <div class="d-flex align-items-center justify-content-between gap-2">
                                                         <div>
-                                                            <label class="h5 mb-0" for="freeChapter-chapter-1">Бесплатная глава</label>
+                                                            <label class="h5 mb-0" for="freeChapter-chapter-3">Бесплатная глава</label>
                                                         </div>
                                                         <div>
                                                             <div class="form-switch-xl">
@@ -539,7 +538,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="mb-3">
                                                     <div class="h5">Дата публикации</div>
                                                     <div class="book-date-publication-input-wrapper" data-coreui-locale="ru-RU" data-coreui-toggle="date-picker" data-coreui-placeholder="__.__.____"></div>

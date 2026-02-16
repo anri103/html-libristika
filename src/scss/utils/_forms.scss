@@ -124,3 +124,11 @@ label {
         padding: 30px 20px;
     }
 }
+
+/*------------------------------------------------------------------
+[ publication ]*/
+
+.date-picker:has(input:disabled) {
+    pointer-events: none;
+    opacity: 0.5;
+}
