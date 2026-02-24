@@ -1499,111 +1499,208 @@
                                         <!-- Список -->
                                         <div class="account-notifications__list gap-4">
     
-                                            <div class="notification-item rounded-0 border-bottom p-0 pb-4 type-book-read">
-                                                <div class="notification-item__type">
-                                                    <span class="badge rounded-pill text-bg-info">Текст про книгу</span>
+                                            <div class="notification-item alert shadow-none rounded-0 border-bottom p-0 pb-4 type-book-read" role="alert">
+                                                <div class="notification-item__type d-flex justify-content-between gap-4 mb-3">
+                                                    <span class="badge rounded-pill bg-light-beige text-body px-4">новая книга</span>
+                                                    <button type="button" class="btn-close flex-shrink-0" data-coreui-dismiss="alert" aria-label="Close"></button>
                                                 </div>
                                                 <div class="notification-item__content">
-                                                    <div class="notification-item__image">
+                                                    <div class="notification-item__image m-0">
                                                         <picture>
                                                             <source srcset="img/card-book-cover/03.webp" type="image/webp">
                                                             <img src="img/card-book-cover/03.jpg">
                                                         </picture>
                                                     </div>
                                                     <div>
-                                                        <div class="notification-item__title">Заголовок</div>
-                                                        <div class="notification-item__date">23.06.2025, 18:45</div>
-                                                        <div class="notification-item__text">
+                                                        <div class="d-flex flex-column flex-sm-row justify-content-between gap-3 row-gap-1 mb-1">
+                                                            <div class="fs-small text-muted">23.06.2025, 18:45</div>
+                                                            <div class="fs-small text-primary order-sm-first">Имя Фамилия</div>
+                                                        </div>
+                                                        <div class="notification-item__title">Я название новой книги</div>
+                                                        <div class="notification-item__text text-max-lines-4">
                                                             Используйте реферальную ссылку, чтобы делиться скидкой и зарабатывать процент с продаж.
                                                         </div>
+                                                        <div class="notification-item__action">
+                                                            <a href="#" class="btn btn-secondary rounded-pill py-1 px-4">подробнее</a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="notification-item__action">
-                                                    <a href="#">Читать</a>
                                                 </div>
                                             </div>
-    
-                                            <div class="notification-item rounded-0 border-bottom p-0 pb-4 type-book-rating">
-                                                <div class="notification-item__type">
-                                                    <div class="d-flex align-items-center gap-2">
-                                                        <div>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                                                <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
-                                                            </svg>
+
+                                            <div class="notification-item alert shadow-none rounded-0 border-bottom p-0 pb-4 type-book-read" role="alert">
+                                                <div class="notification-item__type d-flex justify-content-between gap-4 mb-3">
+                                                    <span class="badge rounded-pill bg-light-beige text-body px-4">серия завершена</span>
+                                                    <button type="button" class="btn-close flex-shrink-0" data-coreui-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+                                                <div class="notification-item__content">
+                                                    <div class="notification-item__image m-0">
+                                                        <picture>
+                                                            <img src="img/card-book-cover/card-series-cover.png">
+                                                        </picture>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex flex-column flex-sm-row justify-content-between gap-3 row-gap-1 mb-1">
+                                                            <div class="fs-small text-muted">23.06.2025, 18:45</div>
+                                                            <div class="fs-small text-primary order-sm-first">Имя Фамилия</div>
                                                         </div>
-                                                        <div class="small text-muted">
-                                                            оцените книгу
+                                                        <div class="notification-item__title">Я название завершенной серии</div>
+                                                        <div class="notification-item__text text-max-lines-4">
+                                                            Используйте реферальную ссылку, чтобы делиться скидкой и зарабатывать процент с продаж.
+                                                        </div>
+                                                        <div class="notification-item__action">
+                                                            <a href="#" class="btn btn-secondary rounded-pill py-1 px-4">подробнее</a>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+
+                                            <div class="notification-item alert shadow-none rounded-0 border-bottom p-0 pb-4 type-book-read" role="alert">
+                                                <div class="notification-item__type d-flex justify-content-between gap-4 mb-3">
+                                                    <span class="badge rounded-pill bg-light-beige text-body px-4">черновик обновлен</span>
+                                                    <button type="button" class="btn-close flex-shrink-0" data-coreui-dismiss="alert" aria-label="Close"></button>
+                                                </div>
                                                 <div class="notification-item__content">
-                                                    <div class="notification-item__image">
+                                                    <div class="notification-item__image m-0">
                                                         <picture>
                                                             <source srcset="img/card-book-cover/03.webp" type="image/webp">
                                                             <img src="img/card-book-cover/03.jpg">
                                                         </picture>
                                                     </div>
                                                     <div>
-                                                        <div class="notification-item__title">Заголовок</div>
-                                                        <div class="notification-item__date">23.06.2025, 18:45</div>
-                                                        <div class="notification-item__text">
+                                                        <div class="d-flex flex-column flex-sm-row justify-content-between gap-3 row-gap-1 mb-1">
+                                                            <div class="fs-small text-muted">23.06.2025, 18:45</div>
+                                                            <div class="fs-small text-primary order-sm-first">Имя Фамилия</div>
+                                                        </div>
+                                                        <div class="notification-item__title">Я название новой книги</div>
+                                                        <div class="notification-item__text text-max-lines-4">
                                                             Используйте реферальную ссылку, чтобы делиться скидкой и зарабатывать процент с продаж.
+                                                        </div>
+                                                        <div class="notification-item__action">
+                                                            <a href="#" class="btn btn-secondary rounded-pill py-1 px-4">подробнее</a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="notification-item__action">
-                                                    <a href="#">Оценить</a>
-                                                </div>
                                             </div>
-    
-                                            <div class="notification-item rounded-0 border-bottom p-0 pb-4 type-commentary">
-                                                <div class="notification-item__type">
-                                                    <span class="badge rounded-pill text-bg-success">Комментарии</span>
+
+                                            <div class="notification-item alert shadow-none rounded-0 border-bottom p-0 pb-4 type-commentary" role="alert">
+                                                <div class="notification-item__type d-flex justify-content-between gap-4 mb-3">
+                                                    <span class="badge rounded-pill text-bg-success px-4">Комментарий</span>
+                                                    <button type="button" class="btn-close flex-shrink-0" data-coreui-dismiss="alert" aria-label="Close"></button>
                                                 </div>
                                                 <div class="notification-item__content">
-                                                    <div class="notification-item__image">
+                                                    <div class="notification-item__image m-0">
                                                         <picture>
                                                             <img src="img/single-book/commentary-avatar.png">
                                                         </picture>
                                                     </div>
                                                     <div>
-                                                        <div class="notification-item__title">Заголовок про оставленные комментарий</div>
-                                                        <div class="notification-item__date">23.06.2025, 18:45</div>
+                                                        <div class="d-flex flex-column flex-sm-row justify-content-between gap-3 row-gap-1 mb-1">
+                                                            <div class="fs-small text-muted">23.06.2025, 18:45</div>
+                                                            <div class="fs-small text-muted order-sm-first">Имя Фамилия</div>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                                            <!-- stars -->
+                                                            <div>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                    <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                </svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                    <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                </svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                    <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                </svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                    <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#C3846F"/>
+                                                                </svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                                                    <path d="M7.52447 0.463526C7.67415 0.0028708 8.32585 0.00286996 8.47553 0.463525L9.90837 4.87336C9.97531 5.07937 10.1673 5.21885 10.3839 5.21885H15.0207C15.505 5.21885 15.7064 5.83865 15.3146 6.12336L11.5633 8.84878C11.3881 8.9761 11.3148 9.20179 11.3817 9.4078L12.8145 13.8176C12.9642 14.2783 12.437 14.6613 12.0451 14.3766L8.29389 11.6512C8.11865 11.5239 7.88135 11.5239 7.70611 11.6512L3.95488 14.3766C3.56303 14.6613 3.03578 14.2783 3.18546 13.8176L4.6183 9.4078C4.68524 9.20179 4.61191 8.9761 4.43667 8.84878L0.685441 6.12336C0.293584 5.83866 0.494972 5.21885 0.979333 5.21885H5.6161C5.83272 5.21885 6.02469 5.07937 6.09163 4.87336L7.52447 0.463526Z" fill="#D6D6D4"/>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="small text-muted lh-1">4</div>
+                                                        </div>
                                                         <div class="notification-item__text">
-                                                            Используйте реферальную ссылку, чтобы делиться скидкой и зарабатывать процент с продаж.
+                                                            <div class="collapse-text">
+                                                                <p>Арина Роз умеет писать так, чтобы читатель сразу оказался «внутри» истории: атмосфера складывается быстро, диалоги живые, а герои — слабыми и сильными одновременно. В центре — человеческие отношения: любовь (не всегда идеальная), испытания, ошибки и тихие открытия. Хотя сюжет может опираться на знакомые романтические штампы, авторка не боится добавить острых жизненных деталей, которые делают книгу честной и узнаваемой.</p>
+                                                            </div>
+                                                            <a href="#">читать</a>
+                                                        </div>
+                                                        <div class="notification-item__action d-flex justify-content-end">
+                                                            <a href="#" class="btn btn-primary rounded-pill py-1 px-4">Ответить</a>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+
+                                            <div class="notification-item alert shadow-none rounded-0 border-bottom p-0 pb-4 type-info" role="alert">
+                                                <div class="notification-item__type d-flex justify-content-between gap-4 mb-3">
+                                                    <span class="badge rounded-pill text-bg-info px-4">акция</span>
+                                                    <button type="button" class="btn-close flex-shrink-0" data-coreui-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+                                                <div class="notification-item__title">Скидка 20% на каждую 5 книгу</div>
+                                                <div class="notification-item__text">
+                                                    Выбирай и читай больше и больше<br> Промокод: SALE20-2026
+                                                </div>
                                                 <div class="notification-item__action">
-                                                    <a href="#">Ответить</a>
+                                                    <a href="#" class="btn btn-secondary rounded-pill py-1 px-4">скопировать</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="notification-item alert shadow-none rounded-0 border-bottom p-0 pb-4 type-book-read" role="alert">
+                                                <div class="notification-item__type d-flex justify-content-between gap-4 mb-3">
+                                                    <span class="badge rounded-pill text-bg-info px-4">скидка</span>
+                                                    <button type="button" class="btn-close flex-shrink-0" data-coreui-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+                                                <div class="notification-item__content">
+                                                    <div class="notification-item__image m-0">
+                                                        <picture>
+                                                            <source srcset="img/card-book-cover/03.webp" type="image/webp">
+                                                            <img src="img/card-book-cover/03.jpg">
+                                                        </picture>
+                                                    </div>
+                                                    <div>
+                                                        <div class="notification-item__title">Скидка на книгу добавленную в избранное</div>
+                                                        <div class="notification-item__text">
+                                                            Вот это ты хотел купить? Самое время купить по скидке
+                                                        </div>
+                                                        <div class="notification-item__action">
+                                                            <a href="#" class="btn btn-secondary rounded-pill py-1 px-4">за покупками</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="notification-item alert shadow-none rounded-0 border-bottom p-0 pb-4 type-info" role="alert">
+                                                <div class="notification-item__type d-flex justify-content-between gap-4 mb-3">
+                                                    <span class="badge rounded-pill text-bg-info px-4">акция</span>
+                                                    <button type="button" class="btn-close flex-shrink-0" data-coreui-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <img class="rounded img-fluid w-100" src="img/user/alert-promo.png" alt="">
+                                                </div>
+                                                <div class="notification-item__title">Скидка на книгу добавленную в избранное</div>
+                                                <div class="notification-item__text">
+                                                    Вот это ты хотел купить? Самое время купить по скидке
+                                                </div>
+                                                <div class="notification-item__action">
+                                                    <a href="#" class="btn btn-secondary rounded-pill py-1 px-4">за покупками</a>
                                                 </div>
                                             </div>
     
-                                            <div class="notification-item type-alert">
-                                                <div class="alert alert-danger">
+                                            <div class="notification-item alert alert-danger shadow-none type-alert" role="alert">
+                                                <div class="d-flex justify-content-between gap-4">
                                                     <div class="d-flex">
                                                         <svg class="flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                                             <path fill="currentColor" d="M1 21L12 2L23 21H1ZM3.6 19.5H20.4L12 5L3.6 19.5ZM12.1045 18.075C12.3181 18.075 12.4958 18.0026 12.6375 17.858C12.7792 17.7135 12.85 17.5343 12.85 17.3205C12.85 17.1068 12.7777 16.9292 12.633 16.7875C12.4885 16.6459 12.3094 16.575 12.0955 16.575C11.8819 16.575 11.7042 16.6473 11.5625 16.792C11.4208 16.9365 11.35 17.1157 11.35 17.3295C11.35 17.5431 11.4223 17.7208 11.567 17.8625C11.7115 18.0041 11.8906 18.075 12.1045 18.075ZM11.35 15.3H12.85V9.7H11.35V15.3Z"></path>
                                                         </svg>
                                                         <div class="mt-1">Информация о том требующая внимания пользователя сроки, предупреждение и тд</div>
                                                     </div>
+                                                    <button type="button" class="btn-close flex-shrink-0" data-coreui-dismiss="alert" aria-label="Close"></button>
                                                 </div>
                                             </div>
     
-                                            <div class="notification-item type-alert">
-                                                <div class="alert alert-success">
+                                            <div class="notification-item alert alert-success shadow-none type-alert" role="alert">
+                                                <div class="d-flex justify-content-between gap-4">
                                                     <div class="d-flex">
                                                         <svg class="flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
                                                             <path fill="currentColor" d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"/>
@@ -1611,6 +1708,7 @@
                                                         </svg>
                                                         <div class="mt-1">Важные комментарии уведомлении о чем либо вторая строка</div>
                                                     </div>
+                                                    <button type="button" class="btn-close flex-shrink-0" data-coreui-dismiss="alert" aria-label="Close"></button>
                                                 </div>
                                             </div>
     

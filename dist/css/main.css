@@ -150,6 +150,14 @@ hr {
   background-image: linear-gradient(90deg, #506C60 0%, #9DD3BC 100%);
 }
 
+.bg-light-beige {
+  background-color: #EBDFD5 !important;
+}
+
+.text-primary-dark {
+  color: #1F3326 !important;
+}
+
 .inline-icon {
   vertical-align: baseline;
 }
@@ -406,6 +414,13 @@ p {
 .text-max-lines-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-max-lines-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -3068,7 +3083,6 @@ label {
   --cui-info-rgb: 226, 233, 238;
   padding: 24px;
   border-radius: 10px;
-  background-color: #fff;
 }
 .account-notifications .notification-item__type {
   margin-bottom: 8px;
@@ -3097,7 +3111,7 @@ label {
 }
 .account-notifications .notification-item__content {
   display: grid;
-  grid-template-columns: 46px auto;
+  grid-template-columns: 60px auto;
   gap: 14px;
 }
 .account-notifications .notification-item__image {
@@ -3122,6 +3136,11 @@ label {
   --cui-alert-padding-x: 24px;
   --cui-alert-padding-y: 24px;
   --cui-alert-margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .account-notifications .notification-item__content {
+    grid-template-columns: 80px auto;
+  }
 }
 
 .nav-author-works {
