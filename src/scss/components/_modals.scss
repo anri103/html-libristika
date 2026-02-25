@@ -95,3 +95,31 @@
         }
     }
 }
+
+/* modal-reply-to-comment */
+
+.modal-reply-to-comment {
+    --cui-modal-color: #6A6969;
+    --cui-modal-bg: var(--cui-white);
+    --cui-modal-border-color: transparent;
+    --cui-modal-header-border-color: transparent;
+    --cui-modal-footer-border-color: transparent;
+    --cui-modal-header-padding: 24px;
+    --cui-modal-padding: 20px;
+
+    .modal-header {
+        padding-bottom: 0;
+    }
+
+    .modal-body {
+        font-size: 14px;
+    }
+
+    @media (min-width: 992px) {
+        --cui-modal-padding: 50px;
+
+        .modal-body {
+            font-size: 18px;
+        }
+    }
+}

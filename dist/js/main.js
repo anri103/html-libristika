@@ -166,32 +166,68 @@ window.onload = () => {
         new coreui.Rating(rating, optionsCustomIcons1);
     });
 
+    // collapse-text in notification
+    const notificationItems = document.querySelectorAll('.notification-item__text, .notification-item__answer-text');
+	notificationItems.forEach(item => {
+		const collapseText = item.querySelector('.collapse-text');
+		const toggle = item.querySelector('.collapse-toggle');
+		
+		if (!collapseText || !toggle) return;
+		
+		// Сначала применяем collapsed для корректного измерения
+		collapseText.classList.add('collapsed');
+		
+		const lineHeight = parseFloat(getComputedStyle(collapseText).lineHeight);
+		const maxHeight = lineHeight * 4;
+		const fullHeight = collapseText.scrollHeight;
+		
+		if (fullHeight > maxHeight) {
+			// Текст больше 4 строк - показываем кнопку
+			toggle.style.display = 'inline-block';
+			
+			toggle.addEventListener('click', function(e) {
+				e.preventDefault();
+				
+				if (collapseText.classList.contains('collapsed')) {
+					collapseText.classList.remove('collapsed');
+					toggle.textContent = 'скрыть';
+				} else {
+					collapseText.classList.add('collapsed');
+					toggle.textContent = 'читать';
+				}
+			});
+		} else {
+			// Текст меньше 4 строк - убираем collapsed и скрываем кнопку
+			collapseText.classList.remove('collapsed');
+			toggle.style.display = 'none';
+		}
+	});
 }
 
 // Дата при публикации книги
 document.addEventListener('change', (e) => {
-  const switchEl = e.target.closest('[data-disable-publication-date]');
-  if (!switchEl) return;
+    const switchEl = e.target.closest('[data-disable-publication-date]');
+    if (!switchEl) return;
 
-  const tab = switchEl.closest('.publication-tab');
-  if (!tab) return;
+    const tab = switchEl.closest('.publication-tab');
+    if (!tab) return;
 
-  const dateWrapper = tab.querySelector('[data-coreui-toggle="date-picker"]');
-  if (!dateWrapper) return;
+    const dateWrapper = tab.querySelector('[data-coreui-toggle="date-picker"]');
+    if (!dateWrapper) return;
 
-  const input = dateWrapper.querySelector('input');
-  if (!input) return;
+    const input = dateWrapper.querySelector('input');
+    if (!input) return;
 
-  if (switchEl.checked) {
-    // очищаем дату
-    input.value = '';
-    input.dispatchEvent(new Event('input', { bubbles: true }));
-    input.dispatchEvent(new Event('change', { bubbles: true }));
+    if (switchEl.checked) {
+        // очищаем дату
+        input.value = '';
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
 
-    // блокируем поле
-    input.disabled = true;
-  } else {
-    // разблокируем поле
-    input.disabled = false;
-  }
+        // блокируем поле
+        input.disabled = true;
+    } else {
+        // разблокируем поле
+        input.disabled = false;
+    }
 });

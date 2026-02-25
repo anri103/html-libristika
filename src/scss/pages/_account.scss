@@ -677,6 +677,14 @@
         &__text {
             color: #6A6969;
             font-size: 16px;
+
+            p {
+                margin-bottom: 0.5rem;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
         }
 
         &__content {
@@ -711,6 +719,37 @@
             --cui-alert-padding-x: 24px;
             --cui-alert-padding-y: 24px;
             --cui-alert-margin-bottom: 0;
+        }
+
+        &__answer {
+            color: #6A6969;
+            font-size: 16px;
+            padding-left: 10%;
+            margin-top: 1rem;
+        }
+
+        .collapse-text {
+            overflow: hidden;
+            transition: none;
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .collapse-text.collapsed {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .collapse-toggle {
+            margin-top: 8px;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         @media (min-width: 992px) {

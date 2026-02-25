@@ -211,6 +211,10 @@ hr {
   max-width: 560px;
 }
 
+.max-w-650px {
+  max-width: 650px;
+}
+
 .max-w-720 {
   max-width: 720px;
 }
@@ -2517,6 +2521,31 @@ label {
   }
 }
 
+/* modal-reply-to-comment */
+.modal-reply-to-comment {
+  --cui-modal-color: #6A6969;
+  --cui-modal-bg: var(--cui-white);
+  --cui-modal-border-color: transparent;
+  --cui-modal-header-border-color: transparent;
+  --cui-modal-footer-border-color: transparent;
+  --cui-modal-header-padding: 24px;
+  --cui-modal-padding: 20px;
+}
+.modal-reply-to-comment .modal-header {
+  padding-bottom: 0;
+}
+.modal-reply-to-comment .modal-body {
+  font-size: 14px;
+}
+@media (min-width: 992px) {
+  .modal-reply-to-comment {
+    --cui-modal-padding: 50px;
+  }
+  .modal-reply-to-comment .modal-body {
+    font-size: 18px;
+  }
+}
+
 /*------------------------------------------------------------------
 [ account ]*/
 .account-cover {
@@ -3109,6 +3138,12 @@ label {
   color: #6A6969;
   font-size: 16px;
 }
+.account-notifications .notification-item__text p {
+  margin-bottom: 0.5rem;
+}
+.account-notifications .notification-item__text > *:last-child {
+  margin-bottom: 0;
+}
 .account-notifications .notification-item__content {
   display: grid;
   grid-template-columns: 60px auto;
@@ -3136,6 +3171,31 @@ label {
   --cui-alert-padding-x: 24px;
   --cui-alert-padding-y: 24px;
   --cui-alert-margin-bottom: 0;
+}
+.account-notifications .notification-item__answer {
+  color: #6A6969;
+  font-size: 16px;
+  padding-left: 10%;
+  margin-top: 1rem;
+}
+.account-notifications .notification-item .collapse-text {
+  overflow: hidden;
+  transition: none;
+}
+.account-notifications .notification-item .collapse-text > *:last-child {
+  margin-bottom: 0;
+}
+.account-notifications .notification-item .collapse-text.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.account-notifications .notification-item .collapse-toggle {
+  margin-top: 8px;
+}
+.account-notifications .notification-item .collapse-toggle:hover {
+  text-decoration: underline;
 }
 @media (min-width: 992px) {
   .account-notifications .notification-item__content {
