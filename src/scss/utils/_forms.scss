@@ -28,6 +28,14 @@ label {
     --cui-date-picker-focus-box-shadow: none;
 }
 
+.date-picker-small {
+    --cui-date-picker-gap: 0.5rem;
+    --cui-date-picker-indicator-width: 1.025rem;
+    --cui-date-picker-cleaner-width: 1.025rem;
+    --cui-date-picker-separator-width: 0.5rem;
+    --cui-date-picker-separator-icon-size: 0.5rem;
+}
+
 .form-check-wrapper {
     display: flex;
     gap: 8px;
