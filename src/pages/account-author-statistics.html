@@ -2,9 +2,9 @@
 <html lang="ru">
 
 @@include('../components/head.html', {
-    "description": "",
-    "keywords": "",
-    "title": "ЛК - Автор - Читательская активность",
+"description": "",
+"keywords": "",
+"title": "ЛК - Автор - Читательская активность",
 })
 
 <body>
@@ -43,10 +43,17 @@
                                 <div class="account-name">
                                     <h1>Константин Длиннаяфамилия</h1>
                                     <span class="account-verify">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
-                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5" style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;"/>
-                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.00114"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z"
+                                                fill="#EBDFD5"
+                                                style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;" />
+                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5"
+                                                style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;" />
+                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C"
+                                                style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;"
+                                                stroke-width="1.00114" />
                                         </svg>
                                     </span>
                                 </div>
@@ -54,10 +61,12 @@
                                     <nav class="account-menu">
                                         <div class="links-wrapper">
                                             <a href="account-author.html" class="menu-link">Профиль автора</a>
-                                            <a href="account-author-upload-book.html" class="menu-link">Публикация книги</a>
+                                            <a href="account-author-upload-book.html" class="menu-link">Публикация
+                                                книги</a>
                                             <a href="account-author-upload.html" class="menu-link">Мои книги</a>
                                             <a href="account-author-persons.html" class="menu-link">Персоны</a>
-                                            <a href="account-author-statistics.html" class="menu-link active">Читательская активность</a>
+                                            <a href="account-author-statistics.html"
+                                                class="menu-link active">Читательская активность</a>
                                             <a href="#" class="menu-link">Уведомления</a>
                                             <a href="#" class="menu-link">Продажи</a>
                                             <a href="#" class="menu-link">Выплаты</a>
@@ -80,11 +89,15 @@
                                     <div class="mb-5 mb-lg-4">
                                         <div class="row gy-4">
                                             <div class="col-lg-6">
-                                                <label class="h5 fs-5 form-label" for="statisticsPeriodDate">Выбор периода</label>
-                                                <div data-coreui-locale="ru-RU" data-coreui-placeholder="__.__.____,__.__.____" data-coreui-toggle="date-range-picker"></div>
+                                                <label class="h5 fs-5 form-label" for="statisticsPeriodDate">Выбор
+                                                    периода</label>
+                                                <div data-coreui-locale="ru-RU"
+                                                    data-coreui-placeholder="__.__.____,__.__.____"
+                                                    data-coreui-toggle="date-range-picker"></div>
                                             </div>
                                             <div class="col-lg-6">
-                                                <label class="h5 fs-5 form-label" for="statisticsBookName">Выберете книгу</label>
+                                                <label class="h5 fs-5 form-label" for="statisticsBookName">Выберете
+                                                    книгу</label>
                                                 <select id="statisticsBookName" class="form-select">
                                                     <option selected="">выберите из списка</option>
                                                     <option value="1">One</option>
@@ -103,16 +116,30 @@
                                                             <div class="mb-1">Просмотры</div>
                                                             <div class="h2 mb-0">678</div>
                                                         </div>
-                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                                            <circle cx="16" cy="16" r="16" fill="#F7ECEA" style="fill:#F7ECEA;fill:color(display-p3 0.9686 0.9255 0.9176);fill-opacity:1;"/>
-                                                            <path d="M16 9C12.0023 9 10 12.4286 7 15.8571C10 19.2857 12.0023 22.7143 16 22.7143C19.9977 22.7143 22 19.2857 25 15.8571C22 12.4286 19.9977 9 16 9Z" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.2"/>
-                                                            <path d="M13.4286 15.8571C13.4286 16.1948 13.4951 16.5292 13.6243 16.8412C13.7536 17.1532 13.943 17.4366 14.1817 17.6754C14.4205 17.9142 14.704 18.1036 15.016 18.2328C15.328 18.3621 15.6623 18.4286 16 18.4286C16.3377 18.4286 16.6721 18.3621 16.9841 18.2328C17.296 18.1036 17.5795 17.9142 17.8183 17.6754C18.0571 17.4366 18.2465 17.1532 18.3757 16.8412C18.5049 16.5292 18.5714 16.1948 18.5714 15.8571C18.5714 15.5194 18.5049 15.1851 18.3757 14.8731C18.2465 14.5611 18.0571 14.2776 17.8183 14.0389C17.5795 13.8001 17.296 13.6107 16.9841 13.4814C16.6721 13.3522 16.3377 13.2857 16 13.2857C15.6623 13.2857 15.328 13.3522 15.016 13.4814C14.704 13.6107 14.4205 13.8001 14.1817 14.0389C13.943 14.2776 13.7536 14.5611 13.6243 14.8731C13.4951 15.1851 13.4286 15.5194 13.4286 15.8571Z" stroke="#B4664C" style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;" stroke-width="1.2"/>
+                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg"
+                                                            width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                            <circle cx="16" cy="16" r="16" fill="#F7ECEA"
+                                                                style="fill:#F7ECEA;fill:color(display-p3 0.9686 0.9255 0.9176);fill-opacity:1;" />
+                                                            <path
+                                                                d="M16 9C12.0023 9 10 12.4286 7 15.8571C10 19.2857 12.0023 22.7143 16 22.7143C19.9977 22.7143 22 19.2857 25 15.8571C22 12.4286 19.9977 9 16 9Z"
+                                                                stroke="#B4664C"
+                                                                style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;"
+                                                                stroke-width="1.2" />
+                                                            <path
+                                                                d="M13.4286 15.8571C13.4286 16.1948 13.4951 16.5292 13.6243 16.8412C13.7536 17.1532 13.943 17.4366 14.1817 17.6754C14.4205 17.9142 14.704 18.1036 15.016 18.2328C15.328 18.3621 15.6623 18.4286 16 18.4286C16.3377 18.4286 16.6721 18.3621 16.9841 18.2328C17.296 18.1036 17.5795 17.9142 17.8183 17.6754C18.0571 17.4366 18.2465 17.1532 18.3757 16.8412C18.5049 16.5292 18.5714 16.1948 18.5714 15.8571C18.5714 15.5194 18.5049 15.1851 18.3757 14.8731C18.2465 14.5611 18.0571 14.2776 17.8183 14.0389C17.5795 13.8001 17.296 13.6107 16.9841 13.4814C16.6721 13.3522 16.3377 13.2857 16 13.2857C15.6623 13.2857 15.328 13.3522 15.016 13.4814C14.704 13.6107 14.4205 13.8001 14.1817 14.0389C13.943 14.2776 13.7536 14.5611 13.6243 14.8731C13.4951 15.1851 13.4286 15.5194 13.4286 15.8571Z"
+                                                                stroke="#B4664C"
+                                                                style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;"
+                                                                stroke-width="1.2" />
                                                         </svg>
                                                     </div>
                                                     <div class="d-flex flex-wrap gap-2 row-gap-1">
-                                                        <div class="d-flex align-items-baseline gap-1" style="color: #1AB86D;">
-                                                            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
-                                                                <path d="M4.33014 0L8.66027 7.5H1.19209e-05L4.33014 0Z" fill="#1AB86D"/>
+                                                        <div class="d-flex align-items-baseline gap-1"
+                                                            style="color: #1AB86D;">
+                                                            <svg class="flex-shrink-0"
+                                                                xmlns="http://www.w3.org/2000/svg" width="9" height="8"
+                                                                viewBox="0 0 9 8" fill="none">
+                                                                <path d="M4.33014 0L8.66027 7.5H1.19209e-05L4.33014 0Z"
+                                                                    fill="#1AB86D" />
                                                             </svg>
                                                             <span class="fs-small">+40%</span>
                                                         </div>
@@ -127,15 +154,24 @@
                                                             <div class="mb-1">Конверсия</div>
                                                             <div class="h2 mb-0">678</div>
                                                         </div>
-                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                                            <circle cx="16" cy="16" r="16" fill="#F6F6F6" style="fill:#F6F6F6;fill:color(display-p3 0.9647 0.9647 0.9647);fill-opacity:1;"/>
-                                                            <path d="M5 16H10.5L13.5 11L18.5 21L21.5 16H27" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="1.2"/>
+                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg"
+                                                            width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                            <circle cx="16" cy="16" r="16" fill="#F6F6F6"
+                                                                style="fill:#F6F6F6;fill:color(display-p3 0.9647 0.9647 0.9647);fill-opacity:1;" />
+                                                            <path d="M5 16H10.5L13.5 11L18.5 21L21.5 16H27"
+                                                                stroke="#6A6969"
+                                                                style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;"
+                                                                stroke-width="1.2" />
                                                         </svg>
                                                     </div>
                                                     <div class="d-flex flex-wrap gap-2 row-gap-1">
-                                                        <div class="d-flex align-items-baseline gap-1" style="color: #A20808;">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
-                                                                <path d="M4.33014 7.5L1.20998e-05 -8.15666e-07L8.66027 -5.85621e-08L4.33014 7.5Z" fill="#A20808"/>
+                                                        <div class="d-flex align-items-baseline gap-1"
+                                                            style="color: #A20808;">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"
+                                                                viewBox="0 0 9 8" fill="none">
+                                                                <path
+                                                                    d="M4.33014 7.5L1.20998e-05 -8.15666e-07L8.66027 -5.85621e-08L4.33014 7.5Z"
+                                                                    fill="#A20808" />
                                                             </svg>
                                                             <span class="fs-small">-40%</span>
                                                         </div>
@@ -150,15 +186,24 @@
                                                             <div class="mb-1">Продажи</div>
                                                             <div class="h2 mb-0">678</div>
                                                         </div>
-                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                                            <circle cx="16" cy="16" r="16" fill="#F6F6F6" style="fill:#F6F6F6;fill:color(display-p3 0.9647 0.9647 0.9647);fill-opacity:1;"/>
-                                                            <path d="M13.6323 23V9H17.1595C18.798 9 20.0113 9.34641 20.7992 10.0392C21.5998 10.732 22 11.7386 22 13.0588C22 13.9477 21.8061 14.7124 21.4184 15.3529C21.0306 15.9804 20.4553 16.4641 19.6923 16.8039C18.9418 17.1438 18.01 17.3137 16.8968 17.3137H15.3208V23H13.6323ZM12 20.3333V19.0588H18.4165V20.3333H12ZM12 17.3137V15.8235H16.2964V17.3137H12ZM16.6529 15.8235C17.4159 15.8235 18.06 15.7386 18.5854 15.5686C19.1232 15.3987 19.536 15.1176 19.8236 14.7255C20.1113 14.3333 20.2552 13.7974 20.2552 13.1176C20.2552 12.2288 19.9925 11.5686 19.4672 11.1373C18.9418 10.7059 18.1226 10.4902 17.0094 10.4902H15.3208V15.8235H16.6529Z" fill="#6A6969" style="fill:#6A6969;fill:color(display-p3 0.4157 0.4118 0.4118);fill-opacity:1;"/>
+                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg"
+                                                            width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                            <circle cx="16" cy="16" r="16" fill="#F6F6F6"
+                                                                style="fill:#F6F6F6;fill:color(display-p3 0.9647 0.9647 0.9647);fill-opacity:1;" />
+                                                            <path
+                                                                d="M13.6323 23V9H17.1595C18.798 9 20.0113 9.34641 20.7992 10.0392C21.5998 10.732 22 11.7386 22 13.0588C22 13.9477 21.8061 14.7124 21.4184 15.3529C21.0306 15.9804 20.4553 16.4641 19.6923 16.8039C18.9418 17.1438 18.01 17.3137 16.8968 17.3137H15.3208V23H13.6323ZM12 20.3333V19.0588H18.4165V20.3333H12ZM12 17.3137V15.8235H16.2964V17.3137H12ZM16.6529 15.8235C17.4159 15.8235 18.06 15.7386 18.5854 15.5686C19.1232 15.3987 19.536 15.1176 19.8236 14.7255C20.1113 14.3333 20.2552 13.7974 20.2552 13.1176C20.2552 12.2288 19.9925 11.5686 19.4672 11.1373C18.9418 10.7059 18.1226 10.4902 17.0094 10.4902H15.3208V15.8235H16.6529Z"
+                                                                fill="#6A6969"
+                                                                style="fill:#6A6969;fill:color(display-p3 0.4157 0.4118 0.4118);fill-opacity:1;" />
                                                         </svg>
                                                     </div>
                                                     <div class="d-flex flex-wrap gap-2 row-gap-1">
-                                                        <div class="d-flex align-items-baseline gap-1" style="color: #1AB86D;">
-                                                            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
-                                                                <path d="M4.33014 0L8.66027 7.5H1.19209e-05L4.33014 0Z" fill="#1AB86D"/>
+                                                        <div class="d-flex align-items-baseline gap-1"
+                                                            style="color: #1AB86D;">
+                                                            <svg class="flex-shrink-0"
+                                                                xmlns="http://www.w3.org/2000/svg" width="9" height="8"
+                                                                viewBox="0 0 9 8" fill="none">
+                                                                <path d="M4.33014 0L8.66027 7.5H1.19209e-05L4.33014 0Z"
+                                                                    fill="#1AB86D" />
                                                             </svg>
                                                             <span class="fs-small">+40%</span>
                                                         </div>
@@ -173,19 +218,36 @@
                                                             <div class="mb-1">Отзывы</div>
                                                             <div class="h2 mb-0">678</div>
                                                         </div>
-                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                                            <circle cx="16" cy="16" r="16" fill="#F6F6F6" style="fill:#F6F6F6;fill:color(display-p3 0.9647 0.9647 0.9647);fill-opacity:1;"/>
-                                                            <path d="M23 9V21.8333H12.1109L9 23.7778V9H23Z" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="1.2"/>
-                                                            <path d="M11.3333 16.3889H16.7778" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="1.2"/>
-                                                            <path d="M11.3333 19.1111H14.4444" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="1.2"/>
-                                                            <path d="M16 19.1111H20.6667" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="1.2"/>
-                                                            <path d="M20.6666 16.3889H18.3333" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="1.2"/>
+                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg"
+                                                            width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                            <circle cx="16" cy="16" r="16" fill="#F6F6F6"
+                                                                style="fill:#F6F6F6;fill:color(display-p3 0.9647 0.9647 0.9647);fill-opacity:1;" />
+                                                            <path d="M23 9V21.8333H12.1109L9 23.7778V9H23Z"
+                                                                stroke="#6A6969"
+                                                                style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;"
+                                                                stroke-width="1.2" />
+                                                            <path d="M11.3333 16.3889H16.7778" stroke="#6A6969"
+                                                                style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;"
+                                                                stroke-width="1.2" />
+                                                            <path d="M11.3333 19.1111H14.4444" stroke="#6A6969"
+                                                                style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;"
+                                                                stroke-width="1.2" />
+                                                            <path d="M16 19.1111H20.6667" stroke="#6A6969"
+                                                                style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;"
+                                                                stroke-width="1.2" />
+                                                            <path d="M20.6666 16.3889H18.3333" stroke="#6A6969"
+                                                                style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;"
+                                                                stroke-width="1.2" />
                                                         </svg>
                                                     </div>
                                                     <div class="d-flex flex-wrap gap-2 row-gap-1">
-                                                        <div class="d-flex align-items-baseline gap-1" style="color: #1AB86D;">
-                                                            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
-                                                                <path d="M4.33014 0L8.66027 7.5H1.19209e-05L4.33014 0Z" fill="#1AB86D"/>
+                                                        <div class="d-flex align-items-baseline gap-1"
+                                                            style="color: #1AB86D;">
+                                                            <svg class="flex-shrink-0"
+                                                                xmlns="http://www.w3.org/2000/svg" width="9" height="8"
+                                                                viewBox="0 0 9 8" fill="none">
+                                                                <path d="M4.33014 0L8.66027 7.5H1.19209e-05L4.33014 0Z"
+                                                                    fill="#1AB86D" />
                                                             </svg>
                                                             <span class="fs-small">+40%</span>
                                                         </div>
@@ -200,16 +262,30 @@
                                                             <div class="mb-1">Отложенное</div>
                                                             <div class="h2 mb-0">678</div>
                                                         </div>
-                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                                            <circle cx="16" cy="16" r="16" fill="#F6F6F6" style="fill:#F6F6F6;fill:color(display-p3 0.9647 0.9647 0.9647);fill-opacity:1;"/>
-                                                            <path d="M15.9849 23.5151L9.10965 16.6399C8.39324 15.9078 7.99452 14.9227 8.00006 13.8984C8.00559 12.8741 8.41494 11.8934 9.13923 11.1691C9.86352 10.4448 10.8443 10.0355 11.8685 10.0299C12.8928 10.0244 13.8779 10.4231 14.61 11.1395L15.9849 12.5144L17.3598 11.1395C17.9267 10.5725 18.655 10.1945 19.445 10.0573C20.235 9.92017 21.0481 10.0305 21.773 10.3732C22.4979 10.716 23.0991 11.2744 23.4944 11.972C23.8898 12.6696 24.0598 13.4723 23.9813 14.2703" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="1.2"/>
-                                                            <path d="M18.7556 16.7915L19.503 17.5389L20.2497 16.7915C20.4459 16.5953 20.6788 16.4396 20.9351 16.3334C21.1915 16.2273 21.4662 16.1726 21.7437 16.1726C22.0212 16.1726 22.2959 16.2273 22.5523 16.3334C22.8086 16.4396 23.0416 16.5953 23.2378 16.7915C23.434 16.9877 23.5896 17.2206 23.6958 17.4769C23.802 17.7333 23.8566 18.0081 23.8566 18.2855C23.8566 18.563 23.802 18.8378 23.6958 19.0941C23.5896 19.3505 23.434 19.5834 23.2378 19.7796L19.503 23.5151L15.7675 19.7796C15.5713 19.5834 15.4156 19.3505 15.3095 19.0941C15.2033 18.8378 15.1486 18.563 15.1486 18.2855C15.1486 18.0081 15.2033 17.7333 15.3095 17.4769C15.4156 17.2206 15.5713 16.9877 15.7675 16.7915C15.9637 16.5953 16.1966 16.4396 16.453 16.3334C16.7093 16.2273 16.9841 16.1726 17.2615 16.1726C17.539 16.1726 17.8138 16.2273 18.0701 16.3334C18.3265 16.4396 18.5594 16.5953 18.7556 16.7915Z" stroke="#6A6969" style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;" stroke-width="1.2"/>
+                                                        <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg"
+                                                            width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                            <circle cx="16" cy="16" r="16" fill="#F6F6F6"
+                                                                style="fill:#F6F6F6;fill:color(display-p3 0.9647 0.9647 0.9647);fill-opacity:1;" />
+                                                            <path
+                                                                d="M15.9849 23.5151L9.10965 16.6399C8.39324 15.9078 7.99452 14.9227 8.00006 13.8984C8.00559 12.8741 8.41494 11.8934 9.13923 11.1691C9.86352 10.4448 10.8443 10.0355 11.8685 10.0299C12.8928 10.0244 13.8779 10.4231 14.61 11.1395L15.9849 12.5144L17.3598 11.1395C17.9267 10.5725 18.655 10.1945 19.445 10.0573C20.235 9.92017 21.0481 10.0305 21.773 10.3732C22.4979 10.716 23.0991 11.2744 23.4944 11.972C23.8898 12.6696 24.0598 13.4723 23.9813 14.2703"
+                                                                stroke="#6A6969"
+                                                                style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;"
+                                                                stroke-width="1.2" />
+                                                            <path
+                                                                d="M18.7556 16.7915L19.503 17.5389L20.2497 16.7915C20.4459 16.5953 20.6788 16.4396 20.9351 16.3334C21.1915 16.2273 21.4662 16.1726 21.7437 16.1726C22.0212 16.1726 22.2959 16.2273 22.5523 16.3334C22.8086 16.4396 23.0416 16.5953 23.2378 16.7915C23.434 16.9877 23.5896 17.2206 23.6958 17.4769C23.802 17.7333 23.8566 18.0081 23.8566 18.2855C23.8566 18.563 23.802 18.8378 23.6958 19.0941C23.5896 19.3505 23.434 19.5834 23.2378 19.7796L19.503 23.5151L15.7675 19.7796C15.5713 19.5834 15.4156 19.3505 15.3095 19.0941C15.2033 18.8378 15.1486 18.563 15.1486 18.2855C15.1486 18.0081 15.2033 17.7333 15.3095 17.4769C15.4156 17.2206 15.5713 16.9877 15.7675 16.7915C15.9637 16.5953 16.1966 16.4396 16.453 16.3334C16.7093 16.2273 16.9841 16.1726 17.2615 16.1726C17.539 16.1726 17.8138 16.2273 18.0701 16.3334C18.3265 16.4396 18.5594 16.5953 18.7556 16.7915Z"
+                                                                stroke="#6A6969"
+                                                                style="stroke:#6A6969;stroke:color(display-p3 0.4157 0.4118 0.4118);stroke-opacity:1;"
+                                                                stroke-width="1.2" />
                                                         </svg>
                                                     </div>
                                                     <div class="d-flex flex-wrap gap-2 row-gap-1">
-                                                        <div class="d-flex align-items-baseline gap-1" style="color: #1AB86D;">
-                                                            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
-                                                                <path d="M4.33014 0L8.66027 7.5H1.19209e-05L4.33014 0Z" fill="#1AB86D"/>
+                                                        <div class="d-flex align-items-baseline gap-1"
+                                                            style="color: #1AB86D;">
+                                                            <svg class="flex-shrink-0"
+                                                                xmlns="http://www.w3.org/2000/svg" width="9" height="8"
+                                                                viewBox="0 0 9 8" fill="none">
+                                                                <path d="M4.33014 0L8.66027 7.5H1.19209e-05L4.33014 0Z"
+                                                                    fill="#1AB86D" />
                                                             </svg>
                                                             <span class="fs-small">+40%</span>
                                                         </div>
@@ -219,15 +295,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-0">
+                                    <div class="mb-5 mb-lg-4">
                                         <!-- sorting -->
                                         <div class="d-flex flex-wrap justify-content-between mb-3 mb-lg-4">
                                             <div class="position-relative">
-                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="btn btn-dropdown-arrow border-0 p-0"
+                                                    data-coreui-toggle="dropdown" aria-expanded="false">
                                                     <span>Просмотры</span>
                                                     <span class="icon-arrow-down">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                            <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 20 20" fill="none">
+                                                            <path
+                                                                d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495"
+                                                                stroke="#474A51" stroke-linecap="round"
+                                                                stroke-linejoin="round"></path>
                                                         </svg>
                                                     </span>
                                                 </button>
@@ -241,6 +322,95 @@
                                             </div>
                                         </div>
                                         <img class="img-fluid" src="img/user/Rectangle-999.png" alt="">
+                                    </div>
+                                    <div class="mb-5 mb-lg-4">
+                                        <div class="table-responsive scrollbar-thin rounded-3">
+                                            <table class="table tableStatistic">
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th style="min-width: 220px;">Книга</th>
+                                                        <th style="min-width: 200px;">
+                                                            Просмотры карточки 
+                                                            <span
+                                                                data-coreui-toggle="tooltip"
+                                                                data-coreui-title="Тестовое описание, но не очень длинное, БЕЗ ссылок"
+                                                            >
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                                                </svg>
+                                                            </span>
+                                                        </th>
+                                                        <th style="min-width: 200px;">
+                                                            Отложенные
+                                                            <span
+                                                                data-coreui-toggle="tooltip"
+                                                                data-coreui-title="Тестовое описание, но не очень длинное, БЕЗ ссылок"
+                                                            >
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                                                </svg>
+                                                            </span>
+                                                        </th>
+                                                        <th style="min-width: 200px;">
+                                                            Прочтения
+                                                            <span
+                                                                data-coreui-toggle="tooltip"
+                                                                data-coreui-title="Тестовое описание, но не очень длинное, БЕЗ ссылок"
+                                                            >
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                                                </svg>
+                                                            </span>
+                                                        </th>
+                                                        <th style="min-width: 200px;">Глубина прочтения</th>
+                                                    </tr>
+                                                </thead>
+                                                <thead class="tableStatistic__summary">
+                                                    <tr>
+                                                        <td>Все книги</td>
+                                                        <td>407</td>
+                                                        <td>37</td>
+                                                        <td>24</td>
+                                                        <td>4%</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" class="d-flex gap-2">
+                                                                <svg class="flex-shrink-0 icon-format-text" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+                                                                    <path d="M9.56461 8.53772H0.14978V9.76002H9.56461V8.53772ZM15.2135 3.00586H0.14978V4.33703H15.2135V3.00586ZM0.14978 7.0162H15.2135V5.77179H0.14978V7.0162ZM0.14978 0.239929V1.44085H15.2135V0.239929H0.14978Z" fill="#566B61"></path>
+                                                                </svg>
+                                                                Истинная для оборотней-близнецов
+                                                            </a>
+                                                        </td>
+                                                        <td>16</td>
+                                                        <td>3</td>
+                                                        <td>0</td>
+                                                        <td>5%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" class="d-flex gap-2">
+                                                                <svg class="flex-shrink-0 icon-format-audio" xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                                                    <path d="M11.2135 14C12.5396 14 13.8114 13.4205 14.749 12.3891C15.6867 11.3576 16.2135 9.95869 16.2135 8.5C16.2135 7.04131 15.6867 5.64236 14.749 4.61091C13.8114 3.57946 12.5396 3 11.2135 3" stroke="#566B61"></path>
+                                                                    <path d="M11.2135 11C11.7439 11 12.2526 10.7366 12.6277 10.2678C13.0028 9.79893 13.2135 9.16304 13.2135 8.5C13.2135 7.83696 13.0028 7.20107 12.6277 6.73223C12.2526 6.26339 11.7439 6 11.2135 6" stroke="#566B61"></path>
+                                                                    <path d="M9.2135 1L3.6135 4.88889H1.2135V11.1111H3.6135L9.2135 15V1Z" stroke="#566B61"></path>
+                                                                </svg>
+                                                                Загробная любовь или дело лесной девы
+                                                            </a>
+                                                        </td>
+                                                        <td>2</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

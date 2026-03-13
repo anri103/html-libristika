@@ -132,6 +132,10 @@ hr {
     max-height: 360px;
 }
 
+.scrollbar-thin {
+    scrollbar-width: thin;
+}
+
 @media (min-width: 992px) {
 
     .g-lg-2rem,

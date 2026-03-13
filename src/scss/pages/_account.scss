@@ -814,3 +814,18 @@
         }
     }
 }
+
+.tableStatistic {
+    --cui-table-bg: #fff;
+    font-size: 0.875rem;
+    vertical-align: middle;
+    margin-bottom: 0;
+
+    &>:not(caption)>*>* {
+        padding: 0.875rem 0.875rem;
+    }
+
+    &__summary {
+        --cui-table-color: var(--cui-secondary-color);
+    }
+}
