@@ -98,6 +98,10 @@ label {
     font-size: 0.75em;
 }
 
+.fields-white {
+    --cui-body-bg: #fff;
+}
+
 @media screen and (max-width: 991px) {
     .form-label {
         font-size: 0.875rem;

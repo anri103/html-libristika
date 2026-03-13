@@ -816,16 +816,35 @@
 }
 
 .tableStatistic {
+    --cui-table-color: #6A6969;
     --cui-table-bg: #fff;
     font-size: 0.875rem;
     vertical-align: middle;
     margin-bottom: 0;
 
+    thead>*>* {
+        font-weight: 500;
+    }
+
     &>:not(caption)>*>* {
-        padding: 0.875rem 0.875rem;
+        padding: 12px 10px;
+    }
+
+    .table-light-beige {
+        --cui-table-color: #566B61;
+        --cui-table-bg: rgb(235, 223, 213);
+        --cui-table-border-color: rgb(235, 223, 213);
+        --cui-table-striped-bg: rgb(210.92, 210.64, 235.06);
+        --cui-table-striped-color: #080a0c;
+        --cui-table-active-bg: rgb(200.24, 200.08, 223.32);
+        --cui-table-active-color: #080a0c;
+        --cui-table-hover-bg: rgb(205.58, 205.36, 229.19);
+        --cui-table-hover-color: #080a0c;
+        color: var(--cui-table-color);
+        border-color: var(--cui-table-border-color);
     }
 
     &__summary {
-        --cui-table-color: var(--cui-secondary-color);
+        --cui-table-color: #6A6969;
     }
 }

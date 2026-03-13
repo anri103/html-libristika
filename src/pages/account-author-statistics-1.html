@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('../components/head.html', {
+"description": "",
+"keywords": "",
+"title": "ЛК - Автор - Читательская активность",
+})
+
+<body>
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- section__navigation -->
+        <section class="section section__navigation">
+            <div class="container">
+                <!-- Навигация / Хлебные крошки -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="account-author.html">Личный кабинет автора</a></li>
+                        <li class="breadcrumb-item"><a href="account-author-statistics.html">Читательская активность</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Детальная статистика</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="account-area">
+                    <div class="row gy-4 justify-content-center">
+
+                        <!-- sidebar -->
+                        <div class="col-lg-3">
+                            <div class="account-info-area">
+                                <div class="account-age">
+                                    <div><span>зарегистрирован</span> 21.08.2007</div>
+                                </div>
+                                <div class="account-name">
+                                    <h1>Константин Длиннаяфамилия</h1>
+                                    <span class="account-verify">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M12 0L14.8319 4.21935L19.7135 2.80747L19.1707 7.86L23.8177 9.91622L20.1542 13.4378L22.3923 18L17.3223 18.3428L16.1042 23.2763L12 20.28L7.89576 23.2763L6.67772 18.3428L1.6077 18L3.84579 13.4378L0.182307 9.91622L4.82931 7.86L4.28655 2.80747L9.16807 4.21935L12 0Z"
+                                                fill="#EBDFD5"
+                                                style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;" />
+                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" fill="#EBDFD5"
+                                                style="fill:#EBDFD5;fill:color(display-p3 0.9216 0.8745 0.8353);fill-opacity:1;" />
+                                            <path d="M17.1406 9.47363L11.3332 15.281L7.57895 11.5268" stroke="#B4664C"
+                                                style="stroke:#B4664C;stroke:color(display-p3 0.7059 0.4000 0.2980);stroke-opacity:1;"
+                                                stroke-width="1.00114" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="account-menu-wrapper">
+                                    <nav class="account-menu">
+                                        <div class="links-wrapper">
+                                            <a href="account-author.html" class="menu-link">Профиль автора</a>
+                                            <a href="account-author-upload-book.html" class="menu-link">Публикация книги</a>
+                                            <a href="account-author-upload.html" class="menu-link">Мои книги</a>
+                                            <a href="account-author-persons.html" class="menu-link">Персоны</a>
+                                            <a href="account-author-statistics.html" class="menu-link active">Читательская активность</a>
+                                            <a href="#" class="menu-link">Уведомления</a>
+                                            <a href="#" class="menu-link">Продажи</a>
+                                            <a href="#" class="menu-link">Выплаты</a>
+                                            <a href="sign-in.html" class="menu-link logout-link">Выход</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- content -->
+                        <div class="col-lg-7">
+                            <!-- account-content-widget -->
+                            <div class="account-content-widget">
+                                <div class="d-flex flex-wrap align-items-baseline gap-2 row-gap-2 mb-3">
+                                    <h2 class="widget-title mb-0">Детальная статистика</h2>
+                                </div>
+                                <div>
+                                    <div class="fields-white mb-5 mb-lg-4">
+                                        <div class="row gy-4">
+                                            <div class="col-lg-4">
+                                                <label class="form-label h5 fs-5 text-primary" for="statisticsPeriodDate">Выбор периода</label>
+                                                <div data-coreui-locale="ru-RU"
+                                                    data-coreui-placeholder="__.__.____,__.__.____"
+                                                    data-coreui-toggle="date-range-picker"></div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="form-label h5 fs-5 text-primary" for="statisticsPeriodTime">Временной диапозон</label>
+                                                <select id="statisticsPeriodTime" class="form-select">
+                                                    <option value="0">сегодня</option>
+                                                    <option value="1">последние 7 дней</option>
+                                                    <option value="2">последние 30 дней</option>
+                                                    <option value="3">этот месяц</option>
+                                                    <option value="3">предыдущий месяц</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="form-label h5 fs-5 text-primary" for="statisticsBookFormat">Все форматы</label>
+                                                <select id="statisticsBookFormat" class="form-select">
+                                                    <option value="0">выберите из списка</option>
+                                                    <option value="1">текст и аудио</option>
+                                                    <option value="2">текст</option>
+                                                    <option value="3">аудио</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <label class="form-label h5 fs-5 text-primary" for="statisticsBookItems">Книги</label>
+                                                <select
+                                                id="statisticsBookItems"
+                                                class="form-multi-select"
+                                                name="statistics-book-items"
+                                                multiple data-coreui-search="global"
+                                                data-coreui-placeholder="выберете из списка"
+                                                data-coreui-select-all="false">
+                                                    <option value="0">Истинная для оборотней-близнецов</option>
+                                                    <option value="1">Загробная любовь или дело лесной девы</option>
+                                                    <option value="2">Горячая Жоржетта</option>
+                                                    <option value="3">Кровавый ланч</option>
+                                                    <option value="4">Волк на семерых</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-0">
+                                        <div class="table-responsive scrollbar-thin rounded-3">
+                                            <table class="table tableStatistic">
+                                                <thead class="table-light-beige align-middle">
+                                                    <tr>
+                                                        <th style="min-width: 220px;">Книга</th>
+                                                        <th style="min-width: 145px;">
+                                                            Просмотры карточки 
+                                                            <span
+                                                                data-coreui-toggle="tooltip"
+                                                                data-coreui-title="Тестовое описание, но не очень длинное, БЕЗ ссылок"
+                                                            >
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                                                </svg>
+                                                            </span>
+                                                        </th>
+                                                        <th style="min-width: 145px;">
+                                                            Отложенные
+                                                            <span
+                                                                data-coreui-toggle="tooltip"
+                                                                data-coreui-title="Тестовое описание, но не очень длинное, БЕЗ ссылок"
+                                                            >
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                                                </svg>
+                                                            </span>
+                                                        </th>
+                                                        <th style="min-width: 145px;">
+                                                            Прочтения
+                                                            <span
+                                                                data-coreui-toggle="tooltip"
+                                                                data-coreui-title="Тестовое описание, но не очень длинное, БЕЗ ссылок"
+                                                            >
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                                                </svg>
+                                                            </span>
+                                                        </th>
+                                                        <th style="min-width: 145px;">Глубина прочтения</th>
+                                                    </tr>
+                                                </thead>
+                                                <thead class="tableStatistic__summary">
+                                                    <tr>
+                                                        <td>Все книги</td>
+                                                        <td>407</td>
+                                                        <td>37</td>
+                                                        <td>24</td>
+                                                        <td>4%</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" class="d-flex gap-2">
+                                                                <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                                    <path d="M10.5 0.75V11.25H2.78571C2.44472 11.25 2.1177 11.1117 1.87658 10.8656C1.63546 10.6194 1.5 10.2856 1.5 9.9375V2.0625C1.5 1.7144 1.63546 1.38056 1.87658 1.13442C2.1177 0.888281 2.44472 0.75 2.78571 0.75H10.5Z" stroke="#566B61" style="stroke:#566B61;stroke:color(display-p3 0.3373 0.4196 0.3804);stroke-opacity:1;" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M10.5 9H2.78571C2.44472 9 2.1177 9.11853 1.87658 9.32951C1.63546 9.54048 1.5 9.82663 1.5 10.125" stroke="#566B61" style="stroke:#566B61;stroke:color(display-p3 0.3373 0.4196 0.3804);stroke-opacity:1;" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M4.125 3.375H7.875" stroke="#566B61" style="stroke:#566B61;stroke:color(display-p3 0.3373 0.4196 0.3804);stroke-opacity:1;" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                                <span class="fw-medium">Истинная для оборотней-близнецов</span>
+                                                            </a>
+                                                        </td>
+                                                        <td>16</td>
+                                                        <td>3</td>
+                                                        <td>0</td>
+                                                        <td>5%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" class="d-flex gap-2">
+                                                                <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                                                                    <path d="M7.15039 12.6992L6.83594 12.4814L2.19629 9.25879H0V3.44141H2.19629L7.15039 0V12.6992ZM8.0752 2.02441C9.24085 2.02441 10.3464 2.5345 11.1523 3.4209C11.9566 4.30554 12.4003 5.49493 12.4004 6.72461C12.4004 7.95427 11.9565 9.14364 11.1523 10.0283C10.3464 10.9147 9.24086 11.4248 8.0752 11.4248H7.875V10.2744H8.0752C8.89866 10.2744 9.7012 9.9155 10.3018 9.25488C10.9039 8.59244 11.25 7.68281 11.25 6.72461C11.2499 5.76663 10.9037 4.85767 10.3018 4.19531C9.7012 3.5347 8.89866 3.1748 8.0752 3.1748H7.875V2.02441H8.0752ZM2.70312 4.48926L2.60645 4.55566L2.55469 4.5918H1.15039V8.1084H2.55469L2.60645 8.14355L2.70312 8.20996L6 10.499V2.19922L2.70312 4.48926ZM8.0752 4.27441C8.67234 4.27441 9.21092 4.57249 9.58496 5.04004C9.95631 5.50432 10.1503 6.11144 10.1504 6.72461C10.1504 7.33793 9.95644 7.94579 9.58496 8.41016C9.21093 8.87762 8.67228 9.1748 8.0752 9.1748H7.875V8.02441H8.0752C8.27388 8.02441 8.49814 7.92681 8.68652 7.69141C8.87775 7.45236 9 7.10561 9 6.72461C8.99995 6.34379 8.87763 5.99778 8.68652 5.75879C8.49811 5.52327 8.27392 5.4248 8.0752 5.4248H7.875V4.27441H8.0752Z" fill="#566B61" style="fill:#566B61;fill:color(display-p3 0.3373 0.4196 0.3804);fill-opacity:1;"/>
+                                                                </svg>
+                                                                <span class="fw-medium">Загробная любовь или дело лесной девы</span>
+                                                            </a>
+                                                        </td>
+                                                        <td>2</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" class="d-flex gap-2">
+                                                                <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                                    <path d="M10.5 0.75V11.25H2.78571C2.44472 11.25 2.1177 11.1117 1.87658 10.8656C1.63546 10.6194 1.5 10.2856 1.5 9.9375V2.0625C1.5 1.7144 1.63546 1.38056 1.87658 1.13442C2.1177 0.888281 2.44472 0.75 2.78571 0.75H10.5Z" stroke="#566B61" style="stroke:#566B61;stroke:color(display-p3 0.3373 0.4196 0.3804);stroke-opacity:1;" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M10.5 9H2.78571C2.44472 9 2.1177 9.11853 1.87658 9.32951C1.63546 9.54048 1.5 9.82663 1.5 10.125" stroke="#566B61" style="stroke:#566B61;stroke:color(display-p3 0.3373 0.4196 0.3804);stroke-opacity:1;" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M4.125 3.375H7.875" stroke="#566B61" style="stroke:#566B61;stroke:color(display-p3 0.3373 0.4196 0.3804);stroke-opacity:1;" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
+                                                                <span class="fw-medium">Истинная для оборотней-близнецов</span>
+                                                            </a>
+                                                        </td>
+                                                        <td>16</td>
+                                                        <td>3</td>
+                                                        <td>0</td>
+                                                        <td>5%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" class="d-flex gap-2">
+                                                                <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                                                                    <path d="M7.15039 12.6992L6.83594 12.4814L2.19629 9.25879H0V3.44141H2.19629L7.15039 0V12.6992ZM8.0752 2.02441C9.24085 2.02441 10.3464 2.5345 11.1523 3.4209C11.9566 4.30554 12.4003 5.49493 12.4004 6.72461C12.4004 7.95427 11.9565 9.14364 11.1523 10.0283C10.3464 10.9147 9.24086 11.4248 8.0752 11.4248H7.875V10.2744H8.0752C8.89866 10.2744 9.7012 9.9155 10.3018 9.25488C10.9039 8.59244 11.25 7.68281 11.25 6.72461C11.2499 5.76663 10.9037 4.85767 10.3018 4.19531C9.7012 3.5347 8.89866 3.1748 8.0752 3.1748H7.875V2.02441H8.0752ZM2.70312 4.48926L2.60645 4.55566L2.55469 4.5918H1.15039V8.1084H2.55469L2.60645 8.14355L2.70312 8.20996L6 10.499V2.19922L2.70312 4.48926ZM8.0752 4.27441C8.67234 4.27441 9.21092 4.57249 9.58496 5.04004C9.95631 5.50432 10.1503 6.11144 10.1504 6.72461C10.1504 7.33793 9.95644 7.94579 9.58496 8.41016C9.21093 8.87762 8.67228 9.1748 8.0752 9.1748H7.875V8.02441H8.0752C8.27388 8.02441 8.49814 7.92681 8.68652 7.69141C8.87775 7.45236 9 7.10561 9 6.72461C8.99995 6.34379 8.87763 5.99778 8.68652 5.75879C8.49811 5.52327 8.27392 5.4248 8.0752 5.4248H7.875V4.27441H8.0752Z" fill="#566B61" style="fill:#566B61;fill:color(display-p3 0.3373 0.4196 0.3804);fill-opacity:1;"/>
+                                                                </svg>
+                                                                <span class="fw-medium">Загробная любовь или дело лесной девы</span>
+                                                            </a>
+                                                        </td>
+                                                        <td>2</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+</body>
+
+</html>
