@@ -471,6 +471,7 @@ label {
 }
 
 .date-picker-small {
+  --cui-date-picker-font-size: .875rem;
   --cui-date-picker-gap: 0.5rem;
   --cui-date-picker-indicator-width: 1.025rem;
   --cui-date-picker-cleaner-width: 1.025rem;
