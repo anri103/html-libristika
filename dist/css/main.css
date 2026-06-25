@@ -227,6 +227,10 @@ hr {
   scrollbar-width: thin;
 }
 
+.text-box *:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 992px) {
   .g-lg-2rem,
   .gy-lg-2rem {
@@ -3322,7 +3326,7 @@ label {
 }
 @media screen and (max-width: 991px) {
   .product-cover-big {
-    padding: 0 24px;
+    padding: 0 20%;
   }
 }
 .product-cover-big img {
@@ -3394,6 +3398,25 @@ label {
 }
 .btn-product-main-action.btn-add-whishlist.js-active svg path.icon-small-heart {
   fill: currentColor;
+}
+
+.collapse-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.collapse-text.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.btn-read-more svg {
+  transition: transform 0.2s ease;
+}
+.btn-read-more.is-expanded svg {
+  transform: rotate(180deg);
 }
 
 /*------------------------------------------------------------------

@@ -136,6 +136,10 @@ hr {
     scrollbar-width: thin;
 }
 
+.text-box *:last-child {
+    margin-bottom: 0;
+}
+
 @media (min-width: 992px) {
 
     .g-lg-2rem,

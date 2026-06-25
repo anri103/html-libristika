@@ -231,3 +231,37 @@ document.addEventListener('change', (e) => {
         input.disabled = false;
     }
 });
+
+// Collapsing Text Box
+document.querySelectorAll('.collapse-text').forEach(textBox => {
+    const btnWrap = textBox.nextElementSibling;
+    const btn = btnWrap?.querySelector('.btn-read-more');
+    if (!btn) return;
+
+    function checkOverflow() {
+        // Сбрасываем expanded чтобы корректно измерить высоту
+        const wasExpanded = textBox.classList.contains('expanded');
+        if (wasExpanded) textBox.classList.remove('expanded');
+
+        const isOverflowing = textBox.scrollHeight > textBox.clientHeight;
+
+        if (wasExpanded) textBox.classList.add('expanded');
+
+        btnWrap.hidden = !isOverflowing;
+    }
+
+    checkOverflow();
+
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const isExpanded = textBox.classList.toggle('expanded');
+        this.classList.toggle('is-expanded', isExpanded);
+
+        const span = this.querySelector('span');
+        if (span) span.textContent = isExpanded ? 'скрыть' : 'читать';
+    });
+
+    const resizeObserver = new ResizeObserver(checkOverflow);
+    resizeObserver.observe(textBox);
+});
