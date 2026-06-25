@@ -21,6 +21,10 @@ const paths = {
     src: 'src/js/**/*.js',
     dest: 'dist/js/'
   },
+  css: {
+    src: 'src/css/**/*.css',
+    dest: 'dist/css/'
+  },
   vendorCSS: {
     src: [
       'node_modules/@coreui/coreui-pro/dist/css/coreui.min.css',
@@ -69,6 +73,13 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
+// CSS
+function css() {
+  return src(paths.css.src)
+    .pipe(dest(paths.css.dest))
+    .pipe(browserSync.stream());
+}
+
 // JS
 function scripts() {
   return src(paths.scripts.src)
@@ -113,6 +124,7 @@ function watchFiles() {
   });
 
   watch(paths.styles.src, styles);
+  watch(paths.css.src, css);
   watch(paths.scripts.src, scripts);
   watch(paths.images.src, images);
   watch(paths.fonts.src, fonts);
@@ -123,6 +135,7 @@ function watchFiles() {
 exports.clean = clean;
 exports.html = html;
 exports.styles = styles;
+exports.css = css;
 exports.scripts = scripts;
 exports.vendorCSS = vendorCSS;
 exports.vendorJS = vendorJS;
@@ -131,11 +144,11 @@ exports.fonts = fonts;
 
 exports.default = series(
   clean,
-  parallel(html, styles, scripts, vendorCSS, vendorJS, images, fonts),
+  parallel(html, styles, css, scripts, vendorCSS, vendorJS, images, fonts),
   watchFiles
 );
 
 exports.build = series(
   clean,
-  parallel(html, styles, scripts, vendorCSS, vendorJS, images, fonts)
+  parallel(html, styles, css, scripts, vendorCSS, vendorJS, images, fonts)
 );
