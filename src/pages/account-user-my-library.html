@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('../components/head.html', {
+    "description": "",
+    "keywords": "",
+    "title": "ЛК - Читатель - Моя библиотека",
+})
+
+<body>
+
+    <!-- header -->
+    @@include('../components/header.html')
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- section__navigation -->
+        <section class="section section__navigation">
+            <div class="container">
+                <!-- Навигация / Хлебные крошки -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="account-user.html">Личный кабинет читателя</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Моя библиотека</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="account-area">
+                    <div class="row gy-4 justify-content-center">
+
+                        <!-- account-info-area -->
+                        <div class="col-lg-3">
+                            <div class="account-info-area">
+                                <div class="account-avatar">
+                                    <div class="avatar-wrapper">
+                                        <div class="avatar-preview">
+                                            <img class="avatar-img" src="img/user/account-avatar-xl.jpg" alt="">
+                                        </div>
+                                        <div class="avatar-edit">
+                                            <input type="file" accept=".png, .jpg, .jpeg" id="imageUpload">
+                                            <label for="imageUpload" class="btn-change_img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M14.2647 15.9377L12.5473 14.2346C11.758 13.4519 11.3633 13.0605 10.9089 12.9137C10.5092 12.7845 10.079 12.7845 9.67922 12.9137C9.22485 13.0605 8.83017 13.4519 8.04082 14.2346L4.04193 18.2622M14.2647 15.9377L14.606 15.5991C15.412 14.7999 15.8149 14.4003 16.2773 14.2545C16.6839 14.1262 17.1208 14.1312 17.5244 14.2688C17.9832 14.4253 18.3769 14.834 19.1642 15.6515L20 16.5001M14.2647 15.9377L18.22 19.9628M18.22 19.9628C17.8703 20 17.4213 20 16.8 20H7.2C6.07989 20 5.51984 20 5.09202 19.782C4.7157 19.5903 4.40973 19.2843 4.21799 18.908C4.12583 18.7271 4.07264 18.5226 4.04193 18.2622M18.22 19.9628C18.5007 19.9329 18.7175 19.8791 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V13M11 4H7.2C6.07989 4 5.51984 4 5.09202 4.21799C4.7157 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.0799 4 7.2V16.8C4 17.4466 4 17.9066 4.04193 18.2622M18 9V6M18 6V3M18 6H21M18 6H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-age">
+                                    <div><span>зарегистрирован</span> 21.08.2007</div>
+                                </div>
+                                <div class="account-name">
+                                    <h1>Константин Длиннаяфамилия</h1>
+                                </div>
+                                <div class="account-menu-wrapper">
+                                    <nav class="account-menu">
+                                        <div class="links-wrapper">
+                                            <a href="account-user.html" class="menu-link active">Мой профиль</a>
+                                            <a href="account-author-verification.html" class="menu-link">Стать автором</a>
+                                            <a href="#" class="menu-link">Предпочтения</a>
+                                            <a href="#" class="menu-link">Приватность</a>
+                                            <a href="account-user-notifications.html" class="menu-link">Уведомления</a>
+                                            <a href="account-user-subscribe.html" class="menu-link">Подписка</a>
+                                            <a href="#" class="menu-link">Способ оплаты</a>
+                                            <a href="account-user-purchase-history.html" class="menu-link">История покупок</a>
+                                            <a href="sign-in.html" class="menu-link logout-link">Выход</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- account-content-area -->
+                        <div class="col-lg-7">
+                            <div class="account-content-widget">
+
+                                <nav class="scrollable-container mb-2rem">
+                                    <div class="scrollable-wrapper nav nav-author-works" id="nav-tab" role="tablist">
+                                        <button type="button" class="btn btn-gray-light active" data-coreui-toggle="tab" data-coreui-target="#tabMyBooks" role="tab" aria-selected="true">
+                                            <svg class="flex-shrink-0 me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M1.875 13.5C1.875 12.4644 2.71447 11.625 3.74999 11.625H12.2187C13.2542 11.625 14.0937 10.7855 14.0937 9.74997V2.49999C14.0937 1.46446 13.2542 0.624996 12.2187 0.624996H3.74999C2.71447 0.624996 1.875 1.46446 1.875 2.49999V13.5ZM1.875 13.5C1.875 14.5355 2.71447 15.375 3.74999 15.375H12.2187C13.2542 15.375 14.0937 14.5355 14.0937 13.5" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M5.65625 4.21876H10.3437" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span>Мои книги</span>
+                                        </button>
+                                        <button type="button" class="btn btn-gray-light" data-coreui-toggle="tab" data-coreui-target="#tabMyFavorites" role="tab" aria-selected="false">
+                                            <svg class="flex-shrink-0 me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M13.2852 7.14473C13.5955 7.14475 13.9028 7.20515 14.1895 7.32247C14.4762 7.43981 14.7374 7.61133 14.9571 7.82832C15.1767 8.04527 15.3508 8.30333 15.4698 8.58711C15.5888 8.87093 15.6504 9.17534 15.6504 9.48262C15.6504 9.78991 15.5888 10.0943 15.4698 10.3781C15.3508 10.6619 15.1767 10.92 14.9571 11.1369L11.4454 14.6066L11.3399 14.7111L11.2344 14.6066L7.72174 11.1369C7.50218 10.92 7.32804 10.6619 7.20904 10.3781C7.09005 10.0943 7.02838 9.78991 7.02838 9.48262C7.02838 9.17533 7.09005 8.87093 7.20904 8.58711C7.32804 8.30333 7.50218 8.04526 7.72174 7.82832C7.94139 7.61133 8.20262 7.43981 8.48931 7.32247C8.776 7.20515 9.08343 7.14477 9.39361 7.14473C9.70381 7.14476 10.0112 7.20516 10.2979 7.32247C10.5846 7.43979 10.8458 7.61135 11.0655 7.82832L11.3389 8.09883L11.6133 7.82832C11.833 7.61141 12.0943 7.43977 12.3809 7.32247C12.6677 7.20514 12.975 7.14474 13.2852 7.14473ZM10.7266 1.90645C11.5197 1.77044 12.3366 1.87991 13.0645 2.21993C13.7923 2.55997 14.3967 3.11425 14.794 3.80684C15.1913 4.49954 15.3621 5.29746 15.2833 6.09004L15.2686 6.23946L14.3624 6.15059L14.2129 6.13692L14.2276 5.98653C14.2848 5.41068 14.1609 4.83106 13.8721 4.32735C13.5831 3.8234 13.143 3.41898 12.6124 3.1711C12.0817 2.92321 11.4858 2.84432 10.9073 2.94356C10.3289 3.04281 9.79567 3.31595 9.38092 3.72579L7.91803 5.1711L7.81353 5.27461L7.70806 5.1711L6.2442 3.72579C5.70914 3.21105 4.98987 2.92305 4.24224 2.92696C3.49218 2.93096 2.7741 3.22774 2.2442 3.75118C1.71442 4.27462 1.41524 4.98335 1.41119 5.72286C1.40724 6.46091 1.69761 7.17073 2.21978 7.69942L8.18756 13.5959L8.29595 13.7023L8.18756 13.8098L7.64947 14.341L7.544 14.4455L7.43853 14.341L1.47467 8.44844L1.4649 8.44063C0.745165 7.7139 0.345137 6.73441 0.350642 5.717C0.356224 4.69943 0.767434 3.72508 1.49517 3.00606C2.22282 2.28726 3.20813 1.88075 4.23638 1.8752C5.14003 1.87046 6.0134 2.17608 6.71099 2.73262L6.84869 2.84688L6.85162 2.84981L6.98638 2.97383L6.99127 2.97774L7.81256 3.78926L8.63189 2.98067C9.2015 2.41785 9.93343 2.04251 10.7266 1.90645ZM13.2852 8.19649C13.1138 8.1965 12.9436 8.22934 12.7852 8.29415C12.6468 8.35083 12.52 8.43132 12.4092 8.53047L12.4083 8.5295L12.3594 8.57637L11.3399 9.58516L10.3165 8.57344C10.1955 8.45397 10.0518 8.35891 9.89361 8.29415C9.73527 8.22935 9.56497 8.19651 9.39361 8.19649C9.22246 8.19653 9.05272 8.22951 8.89459 8.29415C8.73633 8.35892 8.59174 8.45394 8.47076 8.57344C8.34979 8.693 8.25386 8.8356 8.18853 8.99141C8.12334 9.1471 8.0899 9.314 8.0899 9.48262C8.0899 9.65124 8.12334 9.81814 8.18853 9.97383C8.25386 10.1296 8.34979 10.2722 8.47076 10.3918L11.3389 13.2258L14.2081 10.3918L14.254 10.343C14.3532 10.2343 14.4335 10.1093 14.4903 9.97383C14.5556 9.81793 14.5889 9.65102 14.5889 9.48262C14.5889 9.31422 14.5556 9.14732 14.4903 8.99141C14.4249 8.83538 14.329 8.69289 14.2081 8.57344C14.0872 8.45399 13.9427 8.35898 13.7842 8.29415C13.626 8.22947 13.4564 8.1965 13.2852 8.19649Z" fill="currentColor"/>
+                                            </svg>
+                                            <span>Отложенные</span>
+                                        </button>
+                                        <button type="button" class="btn btn-gray-light" data-coreui-toggle="tab" data-coreui-target="#tabMyAuthors" role="tab" aria-selected="false">
+                                            <svg class="flex-shrink-0 me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M5.25277 12.4716C3.91302 11.5473 3.53537 10.0129 4.16721 7.64339C5.21408 3.71776 8.10125 0 10.5042 0C11.2826 0 11.7858 0.524184 11.9994 1.37849C12.1633 2.03402 12.1697 2.90758 12.0449 3.93885C11.8339 5.68322 11.233 7.82989 10.6899 8.91629C9.80915 10.6777 8.94903 11.2941 7.79838 11.2941C7.53847 11.2941 7.32779 11.0834 7.32779 10.8235C7.32779 10.5636 7.53847 10.3529 7.79838 10.3529C8.56512 10.3529 9.11706 9.95741 9.84805 8.49539C10.34 7.51152 10.9119 5.46831 11.1106 3.82582C11.335 1.97077 11.0776 0.941182 10.5043 0.941182C8.65447 0.941182 6.02601 4.32576 5.07664 7.88592C4.6099 9.63619 4.73708 10.7579 5.51342 11.4821C5.74892 10.6353 6.01004 9.81354 6.29679 9.01701C7.01357 7.02596 7.89047 5.19244 8.92765 3.51698C9.06443 3.29598 9.35449 3.22776 9.57546 3.36454C9.79643 3.50135 9.86468 3.79138 9.72787 4.01238C8.72584 5.63103 7.87728 7.40533 7.18229 9.33582C6.87223 10.1971 6.59273 11.0895 6.34385 12.013C6.79291 12.2135 7.34275 12.3637 7.99663 12.4775C8.25266 12.522 8.42415 12.7656 8.37959 13.0217C8.33506 13.2778 8.09141 13.4492 7.83535 13.4047C7.17997 13.2907 6.60426 13.1341 6.10936 12.9294C5.89914 13.7965 5.71473 14.6897 5.5562 15.6093C5.51205 15.8654 5.26861 16.0372 5.01249 15.993C4.75636 15.9488 4.58455 15.7054 4.62871 15.4493C4.80527 14.4258 5.01324 13.4332 5.25277 12.4716Z" fill="currentColor"/>
+                                            </svg>
+                                            <span>Я слежу</span>
+                                        </button>
+                                    </div>
+                                </nav>
+
+                                <div class="tab-content">
+                                    <!-- tab 1 -->
+                                    <div class="tab-pane fade show active" id="tabMyBooks" role="tabpanel" tabindex="0">
+                                        <!-- Сортировка -->
+                                        <div class="catalog-sorting">
+                                            <div class="d-flex align-items-center justify-content-between gap-4">
+                                                <div class="d-flex align-items-center flex-wrap gap-2 gap-lg-4 row-gap-1">
+                                                    <div>
+                                                        <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
+                                                            По дате покупки
+                                                            <span class="icon-arrow-down">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                                    <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-select">
+                                                            <li><a class="dropdown-item" href="#">Более новые</a></li>
+                                                            <li><a class="dropdown-item" href="#">Менее новые</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Сетка каталога -->
+                                        <div class="catalog-grid">
+                                            <!-- card -->
+                                            @@include('../components/card/book-my-library.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/01.webp",
+                                                "imgJpg": "img/card-book-cover/01.jpg",
+                                                "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
+                                                "title": "Девушка с татуировкой дракона",
+                                                "author": "Стиг Ларссон",
+                                                "ratingAverage": "4.8",
+                                                "ratingTotal": "12",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": false,
+                                                "infoPrice": "бесплатно",
+                                                "priceClass": "text-success"
+                                            })
+                                            <!-- card -->
+                                            @@include('../components/card/book-my-library.html', {
+                                                "badgeClass": "badge-bestseller",
+                                                "badgeText": "Хит продаж",
+                                                "imgWebp": "img/card-book-cover/02.webp",
+                                                "imgJpg": "img/card-book-cover/02.jpg",
+                                                "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
+                                                "title": "Ведьмак в озвучке Всеволода Кузнецова",
+                                                "author": "Анджей Сапковский",
+                                                "ratingAverage": "4.8",
+                                                "ratingTotal": "229",
+                                                "infoFormat": "Аудио",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                            <!-- card -->
+                                            @@include('../components/card/book-my-library.html', {
+                                                "badgeClass": "badge-new",
+                                                "badgeText": "Новинка",
+                                                "imgWebp": "img/card-book-cover/03.webp",
+                                                "imgJpg": "img/card-book-cover/03.jpg",
+                                                "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
+                                                "title": "Тайна мертвого ректора. Книга 2",
+                                                "author": "Виктор Дашкевич",
+                                                "ratingAverage": "4.7",
+                                                "ratingTotal": "413",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": false,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                            <!-- card -->
+                                            @@include('../components/card/book-my-library.html', {
+                                                "badgeClass": "",
+                                                "badgeText": "",
+                                                "imgWebp": "img/card-book-cover/04.webp",
+                                                "imgJpg": "img/card-book-cover/04.jpg",
+                                                "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
+                                                "title": "Тайна мертвого ректора. Книга 1",
+                                                "author": "Виктор Дашкевич",
+                                                "ratingAverage": "4.7",
+                                                "ratingTotal": "910",
+                                                "infoFormat": "Аудио",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                            <!-- card -->
+                                            @@include('../components/card/book-my-library.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/05.webp",
+                                                "imgJpg": "img/card-book-cover/05.jpg",
+                                                "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
+                                                "title": "Ведьмак: Сезон гроз. Дорога без возврата",
+                                                "author": "Анджей Сапковский",
+                                                "ratingAverage": "5",
+                                                "ratingTotal": "1",
+                                                "infoFormat": "Текстовая книга",
+                                                "formatIconText": true,
+                                                "formatIconAudio": false,
+                                                "infoPrice": "1 700 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                            <!-- card -->
+                                            @@include('../components/card/book-my-library.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/06.webp",
+                                                "imgJpg": "img/card-book-cover/06.jpg",
+                                                "imgAlt": "АтакА. Anne Dar. Либристика.",
+                                                "title": "АтакА",
+                                                "author": "Anne Dar",
+                                                "ratingAverage": "4.9",
+                                                "ratingTotal": "92",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                    </div>
+                                    <!-- tab 2 -->
+                                    <div class="tab-pane fade" id="tabMyFavorites" role="tabpanel" tabindex="0">
+                                        <!-- Сортировка -->
+                                        <div class="catalog-sorting">
+                                            <div class="d-flex align-items-center justify-content-between gap-4">
+                                                <div class="d-flex align-items-center flex-wrap gap-2 gap-lg-4 row-gap-1">
+                                                    <div>
+                                                        <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
+                                                            По дате добавления
+                                                            <span class="icon-arrow-down">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                                    <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-select">
+                                                            <li><a class="dropdown-item" href="#">Более новые</a></li>
+                                                            <li><a class="dropdown-item" href="#">Менее новые</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Сетка каталога -->
+                                        <div class="catalog-grid">
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/01.webp",
+                                                "imgJpg": "img/card-book-cover/01.jpg",
+                                                "imgAlt": "Девушка с татуировкой дракона. Стиг Ларссон. Либристика.",
+                                                "title": "Девушка с татуировкой дракона",
+                                                "author": "Стиг Ларссон",
+                                                "ratingAverage": "4.8",
+                                                "ratingTotal": "12",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "бесплатно",
+                                                "priceClass": "text-success"
+                                            })
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-bestseller",
+                                                "badgeText": "Хит продаж",
+                                                "imgWebp": "img/card-book-cover/02.webp",
+                                                "imgJpg": "img/card-book-cover/02.jpg",
+                                                "imgAlt": "Ведьмак в озвучке Всеволода Кузнецова. Анджей Сапковский. Либристика.",
+                                                "title": "Ведьмак в озвучке Всеволода Кузнецова",
+                                                "author": "Анджей Сапковский",
+                                                "ratingAverage": "4.8",
+                                                "ratingTotal": "229",
+                                                "infoFormat": "Аудио",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-new",
+                                                "badgeText": "Новинка",
+                                                "imgWebp": "img/card-book-cover/03.webp",
+                                                "imgJpg": "img/card-book-cover/03.jpg",
+                                                "imgAlt": "Тайна мертвого ректора. Книга 2. Виктор Дашкевич. Либристика.",
+                                                "title": "Тайна мертвого ректора. Книга 2",
+                                                "author": "Виктор Дашкевич",
+                                                "ratingAverage": "4.7",
+                                                "ratingTotal": "413",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "",
+                                                "badgeText": "",
+                                                "imgWebp": "img/card-book-cover/04.webp",
+                                                "imgJpg": "img/card-book-cover/04.jpg",
+                                                "imgAlt": "Тайна мертвого ректора. Книга 1. Виктор Дашкевич. Либристика.",
+                                                "title": "Тайна мертвого ректора. Книга 1",
+                                                "author": "Виктор Дашкевич",
+                                                "ratingAverage": "4.7",
+                                                "ratingTotal": "910",
+                                                "infoFormat": "Аудио",
+                                                "formatIconText": false,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/05.webp",
+                                                "imgJpg": "img/card-book-cover/05.jpg",
+                                                "imgAlt": "Ведьмак: Сезон гроз. Дорога без возврата. Анджей Сапковский. Либристика.",
+                                                "title": "Ведьмак: Сезон гроз. Дорога без возврата",
+                                                "author": "Анджей Сапковский",
+                                                "ratingAverage": "5",
+                                                "ratingTotal": "1",
+                                                "infoFormat": "Текстовая книга",
+                                                "formatIconText": true,
+                                                "formatIconAudio": false,
+                                                "infoPrice": "1 700 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                            <!-- card -->
+                                            @@include('../components/card/book.html', {
+                                                "badgeClass": "badge-exclusive",
+                                                "badgeText": "Эксклюзив",
+                                                "imgWebp": "img/card-book-cover/06.webp",
+                                                "imgJpg": "img/card-book-cover/06.jpg",
+                                                "imgAlt": "АтакА. Anne Dar. Либристика.",
+                                                "title": "АтакА",
+                                                "author": "Anne Dar",
+                                                "ratingAverage": "4.9",
+                                                "ratingTotal": "92",
+                                                "infoFormat": "Текстовая книга с аудиоверсией",
+                                                "formatIconText": true,
+                                                "formatIconAudio": true,
+                                                "infoPrice": "499 ₽",
+                                                "priceClass": "text-primary"
+                                            })
+                                        </div>
+                                    </div>
+                                    <!-- tab 3 -->
+                                    <div class="tab-pane fade" id="tabMyAuthors" role="tabpanel" tabindex="0">
+                                        <!-- Сортировка -->
+                                        <div class="catalog-sorting">
+                                            <div class="d-flex align-items-center justify-content-between gap-4">
+                                                <div class="d-flex align-items-center flex-wrap gap-2 gap-lg-4 row-gap-1">
+                                                    <div>
+                                                        <button type="button" class="btn btn-dropdown-arrow fs-16px border-0 p-0" data-coreui-toggle="dropdown" aria-expanded="false">
+                                                            По дате подписки
+                                                            <span class="icon-arrow-down">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                                    <path d="M4.54492 6.94495L9.54688 12.8277C9.60544 12.8996 9.67578 12.9568 9.75367 12.9959C9.83154 13.035 9.91533 13.0552 10 13.0552C10.0847 13.0552 10.1685 13.035 10.2464 12.9959C10.3242 12.9568 10.3946 12.8996 10.4532 12.8277L15.4551 6.94495" stroke="#474A51" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-select">
+                                                            <li><a class="dropdown-item" href="#">Более новые</a></li>
+                                                            <li><a class="dropdown-item" href="#">Менее новые</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-grid">
+                                            @@include('../components/card/author-my-library.html', {
+                                                "imgCover": "img/card-author/cover-01.jpg",
+                                                "avatar": "img/card-author/author-avatar-xs-01.jpg",
+                                                "avatarAlt": "Автор Александра Кронос. Либристика.",
+                                                "title": "Александра Кронос",
+                                                "subscribers": "35"
+                                            })
+                                            @@include('../components/card/author-my-library.html', {
+                                                "imgCover": "img/card-author/cover-01.jpg",
+                                                "avatar": "img/card-author/author-avatar-xs-01.jpg",
+                                                "avatarAlt": "Автор Александра Кронос. Либристика.",
+                                                "title": "Александра Кронос",
+                                                "subscribers": "1,2 К"
+                                            })
+                                            @@include('../components/card/author-my-library.html', {
+                                                "imgCover": "img/card-author/cover-01.jpg",
+                                                "avatar": "img/card-author/author-avatar-xs-01.jpg",
+                                                "avatarAlt": "Автор Александра Кронос. Либристика.",
+                                                "title": "Александра Кронос",
+                                                "subscribers": "99,2 К"
+                                            })
+                                            @@include('../components/card/author-my-library.html', {
+                                                "imgCover": "img/card-author/cover-01.jpg",
+                                                "avatar": "img/card-author/author-avatar-xs-01.jpg",
+                                                "avatarAlt": "Автор Александра Кронос. Либристика.",
+                                                "title": "Александра Кронос",
+                                                "subscribers": "500"
+                                            })
+                                            @@include('../components/card/author-my-library.html', {
+                                                "imgCover": "img/card-author/cover-01.jpg",
+                                                "avatar": "img/card-author/author-avatar-xs-01.jpg",
+                                                "avatarAlt": "Автор Александра Кронос. Либристика.",
+                                                "title": "Александра Кронос",
+                                                "subscribers": "1 К"
+                                            })
+                                            @@include('../components/card/author-my-library.html', {
+                                                "imgCover": "img/card-author/cover-01.jpg",
+                                                "avatar": "img/card-author/author-avatar-xs-01.jpg",
+                                                "avatarAlt": "Автор Александра Кронос. Либристика.",
+                                                "title": "Александра Кронос",
+                                                "subscribers": "35"
+                                            })
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    @@include('../components/footer.html')
+</body>
+
+</html>
