@@ -123,3 +123,22 @@
         }
     }
 }
+
+/* modalCoopSuccess */
+
+#modalCoopSuccess {
+    --cui-modal-width: 530px;
+    --cui-modal-color: #6A6969;
+    --cui-modal-padding: 20px;
+
+    @media (min-width: 992px) {
+        --cui-modal-padding: 50px;
+
+        .btn-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 10;
+        }
+    }
+}

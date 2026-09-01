@@ -2567,6 +2567,24 @@ label {
   }
 }
 
+/* modalCoopSuccess */
+#modalCoopSuccess {
+  --cui-modal-width: 530px;
+  --cui-modal-color: #6A6969;
+  --cui-modal-padding: 20px;
+}
+@media (min-width: 992px) {
+  #modalCoopSuccess {
+    --cui-modal-padding: 50px;
+  }
+  #modalCoopSuccess .btn-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 10;
+  }
+}
+
 /*------------------------------------------------------------------
 [ account ]*/
 .account-cover {
@@ -3958,4 +3976,28 @@ label {
   color: #9B9B9B;
   font-size: 16px;
   text-decoration: line-through;
+}
+
+/*------------------------------------------------------------------
+[ cooperation ]*/
+.section-cooperation .section-img {
+  max-width: 100%;
+  height: auto;
+}
+.section-cooperation .section-descr {
+  color: #6A6969;
+  margin-top: -2rem;
+}
+@media screen and (min-width: 1200px) {
+  .section-cooperation .section-img {
+    position: absolute;
+    bottom: 2rem;
+    left: 27.5%;
+    max-width: none;
+    width: 638px;
+  }
+  .section-cooperation .section-descr {
+    max-width: 320px;
+    margin-top: 0;
+  }
 }
